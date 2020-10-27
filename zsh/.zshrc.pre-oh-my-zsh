@@ -1,0 +1,4 @@
+alias ll='ls -alC'
+alias la='ls -al'
+alias cv='clear'
+PROMPT='%B%F{240}%1~%f%b > '

@@ -1,0 +1,8 @@
+/*------ HOME/NEWTAB PAGE (About:home, about:newtab) ------*/ 
+@-moz-document url-prefix(about:home), url-prefix(about:newtab) {
+
+body { 
+	background-color: #393838!important;
+	color: var(--home-text) !important;
+	overflow: auto !important}
+

@@ -1,0 +1,10 @@
+# Mac 
+
+.DS_Store 
+
+.dotfilesrc
+
+
+.netrwhist
+plugged/
+todo*

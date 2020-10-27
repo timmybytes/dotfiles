@@ -1,0 +1,5 @@
+* scheduled gitcheck
+* scheduled updates for npm, brew, zsh, etc.
+* scheduled backups for dots
+* send daily tweet with #100Days info
+
