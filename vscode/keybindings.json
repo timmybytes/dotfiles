@@ -25,5 +25,15 @@
   {
     "key": "shift+alt+cmd+left",
     "command": "workbench.action.splitEditorLeft"
+  },
+  {
+    "key": "ctrl+shift+p",
+    "command": "editor.action.peekDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+  },
+  {
+    "key": "alt+f12",
+    "command": "-editor.action.peekDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
   }
 ]

@@ -10,9 +10,13 @@
 "              https://github.com/timmybytes
 " //////////////////////////////////////////////////////////
 
+" VS Code Neovim Extension compatibility
+if !exists('g:vscode')
+
 " ---------------------------------------------------------
 " VimPlug - Plugin Manager
 " ---------------------------------------------------------
+
 call plug#begin()
 
 " Themes
@@ -104,3 +108,4 @@ setlocal wrapmargin=0
 " ---------------------------------------------------------
 source ~/.config/nvim/statusline.vim
 
+endif

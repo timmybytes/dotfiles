@@ -26,7 +26,7 @@
   // * Gutter
   // ---------------------------------------------------
   "editor.folding": true,
-  "editor.glyphMargin": false,
+  "editor.glyphMargin": true,
   // * * Margin between line numbers and code
   "editor.lineDecorationsWidth": 5,
   "git.decorations.enabled": true,
@@ -72,7 +72,7 @@
   "editor.minimap.size": "fit",
   "editor.minimap.side": "right",
   "editor.minimap.maxColumn": 85,
-  "editor.multiCursorModifier": "alt",
+  "editor.multiCursorModifier": "ctrlCmd",
   "editor.padding.bottom": 40,
   "editor.padding.top": 10,
   "editor.parameterHints.enabled": false,
@@ -148,7 +148,7 @@
   "materialTheme.accent": "Pink",
   "oneDarkPro.editorTheme": "oneDarkPro",
   "oneDarkPro.vivid": false,
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "vscode-icons",
   "workbench.colorCustomizations": {
     "workbench.list.keyboardNavigation": "simple",
     "workbench.startupEditor": "newUntitledFile",
@@ -170,7 +170,12 @@
       "tab.border": "#2a2426",
       "panel.background": "#2a2426",
       "panel.border": "#2a2426"
-    }
+    },
+    "sideBar.border": "#868d80",
+    "sideBarSectionHeader.border": "#868d80",
+    "panel.border": "#1c181a",
+    "debugToolBar.border": "#868d80",
+    "statusBar.border": "#c9ffe5"
   },
 
   // ---------------------------------------------------
@@ -250,7 +255,7 @@
   // ---------------------------------------------------
   //* Code UI
   // ---------------------------------------------------
-  "codeui.targetingMode": "themeSpecific",
+  "codeui.targetingMode": "general",
   // ---------------------------------------------------
   //* cSpell
   // ---------------------------------------------------
@@ -362,6 +367,10 @@
   // ---------------------------------------------------
   "markdown-preview-enhanced.automaticallyShowPreviewOfMarkdownBeingEdited": false,
   // ---------------------------------------------------
+  //* Neovim - Not currently configured/working
+  // ---------------------------------------------------
+  // "vscode-neovim.neovimPat": "/Users/nym/.local/share/nvim",
+  // ---------------------------------------------------
   // * Prettier
   // ---------------------------------------------------
   // Keep print width >=100 to avoid closing brackets on empty lines
@@ -377,9 +386,10 @@
   "sync.gist": "cf16c02e0234c0c7adbe5c305f30c5b5",
   "sync.autoUpload": true,
   "sync.quietSync": true,
-  "prettier.disableLanguages": ["HTML"],
+  // "prettier.disableLanguages": ["HTML"],
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.acceptSuggestionOnEnter": "smart",
   // Faded icon saturation to better match Forest Night colorscheme
-  "material-icon-theme.saturation": 0.6
+  "material-icon-theme.saturation": 0.6,
+  "zenMode.fullScreen": false
 }
