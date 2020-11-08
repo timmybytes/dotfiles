@@ -76,7 +76,7 @@
   "editor.padding.bottom": 40,
   "editor.padding.top": 10,
   "editor.parameterHints.enabled": false,
-  "editor.quickSuggestions": false,
+  "editor.quickSuggestions": true,
   // instantaneous suggestions
   "editor.quickSuggestionsDelay": 0,
   "editor.renderControlCharacters": false,
@@ -173,7 +173,7 @@
     },
     "sideBar.border": "#868d80",
     "sideBarSectionHeader.border": "#868d80",
-    "panel.border": "#1c181a",
+    "panel.border": "#868d80",
     "debugToolBar.border": "#868d80",
     "statusBar.border": "#c9ffe5"
   },
@@ -389,5 +389,6 @@
   "material-icon-theme.saturation": 0.6,
   "zenMode.fullScreen": false,
   "editor.suggestFontSize": 11,
-  "editor.suggestLineHeight": 18
+  "editor.suggestLineHeight": 18,
+  "editor.acceptSuggestionOnCommitCharacter": false
 }
