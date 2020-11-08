@@ -154,7 +154,7 @@ alias gap="git add -p"
 alias gc="git commit -m "
 alias gac="git add . && git commit -m "
 # Check git status of all repos in #Repos directory at once
-alias gitcheck="mgitstatus ~/Projects/\#Repos/"
+alias gitcheck="mgitstatus -d 1 ."
 
 # ------------------------ * * MACOS * * ----------------------------#
 # Quicklook

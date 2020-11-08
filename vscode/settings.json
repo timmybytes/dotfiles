@@ -76,7 +76,7 @@
   "editor.padding.bottom": 40,
   "editor.padding.top": 10,
   "editor.parameterHints.enabled": false,
-  "editor.quickSuggestions": true,
+  "editor.quickSuggestions": false,
   // instantaneous suggestions
   "editor.quickSuggestionsDelay": 0,
   "editor.renderControlCharacters": false,
@@ -85,7 +85,7 @@
   "editor.renderWhitespace": "none",
   "editor.renderIndentGuides": true,
   "editor.smoothScrolling": true,
-  "editor.snippetSuggestions": "top",
+  "editor.snippetSuggestions": "bottom",
   "editor.suggestSelection": "first",
   "editor.suggest.showIcons": true,
   "editor.tabCompletion": "on",
@@ -377,7 +377,6 @@
   "prettier.bracketSpacing": true,
   "prettier.printWidth": 100,
   "prettier.jsxBracketSameLine": true,
-  "prettier.jsxSingleQuote": true,
   "prettier.singleQuote": true,
   "prettier.arrowParens": "always",
   // ---------------------------------------------------
@@ -386,10 +385,9 @@
   "sync.gist": "cf16c02e0234c0c7adbe5c305f30c5b5",
   "sync.autoUpload": true,
   "sync.quietSync": true,
-  // "prettier.disableLanguages": ["HTML"],
-  "editor.acceptSuggestionOnCommitCharacter": false,
-  "editor.acceptSuggestionOnEnter": "smart",
   // Faded icon saturation to better match Forest Night colorscheme
   "material-icon-theme.saturation": 0.6,
-  "zenMode.fullScreen": false
+  "zenMode.fullScreen": false,
+  "editor.suggestFontSize": 11,
+  "editor.suggestLineHeight": 18
 }
