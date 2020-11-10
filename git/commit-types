@@ -1,0 +1,9 @@
+feat - A new feature
+fix - A bug fix
+docs - Changes to documentation only
+style - Style/format changes (whitespace, double/single quotes, etc.)
+refactor - Changes not related to a bug or feature
+perf - Changes that affects performance
+test - Changes that add, modify, or correct tests
+build - Changes to build system (scripts, configs, dependencies, etc.)
+ci - Changes to CI pipeline/workflow
