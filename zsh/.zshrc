@@ -152,8 +152,9 @@ alias gs="git status"
 alias ga="git add ."
 alias gap="git add -p"
 alias gc="git commit -m "
+alias gmsg="git commit"
+alias gct="echo 'Git Commit Types'; printf '%.s-' {1..30}; echo; cat ~/.dotfiles/git/commit-types" 
 alias gac="git add . && git commit -m "
-# Check git status of all repos in #Repos directory at once
 alias gitcheck="mgitstatus -d 1 ."
 
 # ------------------------ * * MACOS * * ----------------------------#
