@@ -1,0 +1,14 @@
+[user]
+	name = Timothy Merritt
+	email = timmybytes@gmail.com
+[color]
+	ui = auto
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[init]
+	defaultBranch = main
+[commit]
+	template = commit-conventions.txt
