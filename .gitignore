@@ -1,10 +1,7 @@
 # Mac 
-
 .DS_Store 
-
 .dotfilesrc
-
-
+dot-test.txt
 .netrwhist
 plugged/
 todo*
