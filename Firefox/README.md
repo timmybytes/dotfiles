@@ -4,17 +4,22 @@ This is my custom barebones Firefox configuration. I prefer a minimal, compact a
 
 Accessing the address/search bar requires using the keyboard shortcut `⌘ + l` (`ctrl + l` on Windows).
 
-<img align="center" alt="A blue, filled-in circle" src="./traffic.png" />
-<figcaption align="center" style="font-size: small">Custom new tab favicon</figcaption>
+## Custom new tab default favicon
 
-<img align="center" alt="" src="./screenshots/firefox-blank-window.png" />
-<figcaption align="center" style="font-size: small">A blank new window</figcaption>
+<img alt="A blue, filled-in circle" src="./traffic.png" />
 
-<img align="center" src="./screenshots/firefox-blank-window-url-bar.png" />
-<figcaption align="center" style="font-size: small">The address bar made visible with ⌘ + l</figcaption>
+## A blank new window
 
-<img align="center" src="./screenshots/firefox-blank-window-dropdown.png" />
-<figcaption align="center" style="font-size: small">The dropdown search results and highlighting colors</figcaption>
+<img alt="" src="./screenshots/firefox-blank-window.png" />
 
-<img align="center" src="./screenshots/firefox-webpage.png" />
-<figcaption align="center" style="font-size: small">timmybytes.com with the address bar collapsed</figcaption>
+## The address bar made visible with ⌘ + l
+
+<img src="./screenshots/firefox-blank-window-url-bar.png" />
+
+## The dropdown search results and highlighting colors
+
+<img src="./screenshots/firefox-blank-window-dropdown.png" />
+
+## timmybytes.com with the address bar collapsed
+
+<img src="./screenshots/firefox-webpage.png" />
