@@ -11,4 +11,4 @@
 [init]
 	defaultBranch = main
 [commit]
-	template = commit-conventions.txt
+	template = /Users/nym/.dotfiles/git/commit-conventions.txt
