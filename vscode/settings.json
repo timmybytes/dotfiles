@@ -390,5 +390,6 @@
   "zenMode.fullScreen": false,
   "editor.suggestFontSize": 11,
   "editor.suggestLineHeight": 18,
-  "editor.acceptSuggestionOnCommitCharacter": false
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "workbench.editor.pinnedTabSizing": "shrink"
 }

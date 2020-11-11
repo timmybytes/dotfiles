@@ -31,20 +31,20 @@ setup.
 # Header - mandatory
 (type): Short description
 ^....^: ^...............^
-│       └── Less than 60 characters
-│       └── Present tense
-│       └── Concise
+│       * Less than 60 characters
+│       * Present tense
+│       * Concise
 │
 └── Contains one of the following:
-    └── feat - A new feature
-    └── fix - A bug fix
-    └── docs - Changes to documentation only
-    └── style - Style/format changes (whitespace, double/single quotes, etc.)
-    └── refactor - Changes not related to a bug or feature
-    └── perf - Changes that affects performance
-    └── test - Changes that add, modify, or correct tests
-    └── build - Changes to build system (scripts, configs, dependencies, etc.)
-    └── ci - Changes to CI pipeline/workflow
+    * feat        A new feature
+    * fix         A bug fix
+    * docs        Changes to documentation only
+    * style       Style/format changes (whitespace, etc.)
+    * refactor    Changes not related to a bug or feature
+    * perf        Changes that affects performance
+    * test        Changes that add/modify/correct tests
+    * build       Changes to build system (configs, etc.)
+    * ci          Changes to CI pipeline/workflow
 
 # Body - optional
 Introduces motivation behind changes and/or more detailed information
