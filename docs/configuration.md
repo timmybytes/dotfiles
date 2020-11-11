@@ -1,38 +1,6 @@
 # Configurations
 
-## macOS
-
-These are the core System Preferences for my macOS setup.
-
-- Applications (installs & configs)
-<!-- My config -->
-
-
-
-****************************************
-<!-- Taken from others' dotfiles  -->
-
-## Name Device and Elevate Privileges
-
-```bash
-COMPUTER_NAME=""
-
-osascript -e 'tell application "System Preferences" to quit'
-```
-
-### Ask for the administrator password upfront
-
-```bash
-sudo -v
-```
-
-### Keep-alive: update existing `sudo` time stamp until this script has finished
-
-```bash
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-```
-
-### General UI/UX
+### General macOS UI/UX
 
 #### Set computer name (as done via System Preferences → Sharing)
 
