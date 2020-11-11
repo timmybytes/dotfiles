@@ -1,36 +1,13 @@
-Initial Installs/Config
+# Configurations
 
-## System Config
+## macOS
 
 These are the core System Preferences for my macOS setup.
 
 - Applications (installs & configs)
 <!-- My config -->
 
-  - zsh
-  - ohmyzsh
-    - .zshrc
-      - aliases & commands
-        - ll
-        - t
-        - cv
-        - clean (caches)
-        -
-  - VS Code
-    - settings.json
-  - .vimrc
-    - VimPlug
-    - Goyo
-    - Limelight
-  - iTerm
-    - Varnika profile
-  - Rectangle
-  - Bear
-  - Bitwarden
-  - Cryptomator
-  - Firefox
 
-    - userChrome.css
 
 ****************************************
 <!-- Taken from others' dotfiles  -->

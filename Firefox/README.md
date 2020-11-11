@@ -2,7 +2,7 @@
 
 This is my custom barebones Firefox configuration. I prefer a minimal, compact aesthetic to stay out of the way, and use custom colors to unify much of the browser's look.
 
-Accessing the address/search bar requires using the keyboard shortcut `⌘ + l` (`ctrl + l` on Windows).
+Note: Accessing the address/search bar requires using the keyboard shortcut `⌘ + l` (`ctrl + l` on Windows).
 
 ## Custom new tab default favicon
 
