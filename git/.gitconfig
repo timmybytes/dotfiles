@@ -12,3 +12,5 @@
 	defaultBranch = main
 [commit]
 	template = /Users/nym/.dotfiles/git/commit-conventions.txt
+[core]
+	editor = vim +14 -c 'startinsert'
