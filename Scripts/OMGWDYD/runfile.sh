@@ -1,39 +1,46 @@
 #! /usr/bin/env bash
+# -------------------------------
+# OH MY GOD, WHAT DID YOU DO?!
+# --------------------------------
+# title          :mkscript.sh
+# description    :Checks previous day's git commits
+# author         :Timothy Merritt
+# date           :2020-11-12
+# version        :0.0.1
+# usage          :./runfile.sh
+# notes          :chmod +x runfile.sh to use this script
+# bash_version   :5.0.18(1)-release
+
+# Clear screen
 clear
-# Current parent directory only
-dirs=${PWD##*/}
 
-# Yesterday's date - Uses 'gdate' from GNU coreutils - NOT NEEDED
-# yesterday=${gdate --date="yesterday" +"%Y-%m-%d 00:00"}
-
+# Header
 printf '=%.0s' {1..40}
 echo
 printf '%s\n' "LOOK AT WHAT YOU DID"
 
 # For each directory in #Repos
 for dir in /Users/nym/Projects/\#Repos/* ; do
-  # 1. ADD - If dir is a directory, cd into it
+  # If dir is a directory, cd into it and silence errors (for non-directories)
   cd "$dir" 2>/dev/null
-  # 2. ADD - If directory contains .git directory, continue; else, next loop
-  # iteration
+  # If directory is git repo, continue; else, next loop iteration
   if [ -d .git ]; then
-    # 3. Print name of current directory removed from full filepath
-    # echo $dirs
-    # 4. Print git log since yesterday
-    # git --no-pager log --oneline --since="yesterday"
+    # If repo has commits since yesterday, continue; else, next loop iteration
     if [[ $(git log --pretty=format:'%h was %an, %ar, message: %s' --since="yesterday") ]]; then
       printf '=%.0s' {1..40}
       echo
       printf "Repository: "
+      # Print name of current directory removed from full filepath
       printf '%s\n' "${PWD##*/}"
       printf '=%.0s' {1..40}
       echo
+      # Print git log since yesterday, show only commits
       git --no-pager log --since="yesterday" --pretty=tformat:"%x20%x20%s"
     else
       continue
     fi
-    # 5. cd back to #Repos
   else
+    # cd back to #Repos
     cd ..
     continue
   fi
