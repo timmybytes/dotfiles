@@ -98,6 +98,7 @@ let g:indentLine_char = '│'
 
 " Writing/Prose
 " ---------------------------------------------------------
+set spellfile=~/.dotfiles/nvim/spell/en.utf-8.add
 autocmd FileType markdown set spell spelllang=en_us
 autocmd FileType markdown set foldexpr=NestedMarkdownFolds()
 " inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u 
