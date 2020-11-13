@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
-# ------------------------------------------------------
+# ------------------------------------------------------------------
 # OH MY GOD, WHAT DID YOU DO?!
-# ------------------------------------------------------
+# ------------------------------------------------------------------
 # title          :what_you_did.sh
 # description    :Checks previous day's git commits
 # author         :Timothy Merritt
@@ -10,7 +10,7 @@
 # usage          :./what_you_did.sh
 # notes          :chmod +x runfile.sh to make executable
 # bash_version   :5.0.18(1)-release
-# ------------------------------------------------------
+# ------------------------------------------------------------------
 
 # Clear screen
 clear
@@ -23,7 +23,8 @@ printf -- ' %.0s' {1..32}
 printf '%s\n' "|"
 
 # For each directory in #Repos
-for dir in /Users/nym/Projects/\#Repos/* ; do
+# ---> Change this line to the parent folder of your repos <---
+for dir in ~/Projects/\#Repos/* ; do
   # If dir is a directory, cd into it and silence errors (for non-directories)
   cd "$dir" 2>/dev/null
   # If directory is git repo, continue; else, next loop iteration
