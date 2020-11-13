@@ -24,9 +24,9 @@ printf '%s\n' "|"
 
 # For each directory in #Repos
 # ---> Change this line to the parent folder of your repos <---
-for dir in ~/Projects/\#Repos/* ; do
+for dir in ~/Projects/\#Repos/*; do
   # If dir is a directory, cd into it and silence errors (for non-directories)
-  cd "$dir" 2>/dev/null
+  cd "$dir" 2>/dev/null || exit
   # If directory is git repo, continue; else, next loop iteration
   if [ -d .git ]; then
     # If repo has commits since yesterday, continue; else, next loop iteration
