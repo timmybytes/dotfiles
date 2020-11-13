@@ -146,6 +146,8 @@ alias code="code-insiders"
 alias cache="cd ~/.dotfiles/Scripts/ && ./clear_caches.sh"
 # npm
 alias fix="npm audit fix"
+# Create new bash script with header template
+alias shead="make_header.sh"
 
 # ------------------------- * * GIT * * -----------------------------#
 alias gs="git status"
@@ -177,6 +179,7 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin"
+export PATH="$PATH:/Users/nym/.dotfiles/scripts"
 
 # bear autocomplete setup
 BEAR_AC_ZSH_SETUP_PATH=/Users/nym/Library/Caches/@sloansparger/bear/autocomplete/zsh_setup && test -f $BEAR_AC_ZSH_SETUP_PATH && source $BEAR_AC_ZSH_SETUP_PATH;
