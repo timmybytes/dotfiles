@@ -33,7 +33,7 @@
   // ---------------------------------------------------
   // * Editor
   // ---------------------------------------------------
-  "breadcrumbs.enabled": false,
+  "breadcrumbs.enabled": true,
   "debug.console.wordWrap": false,
   "editor.accessibilitySupport": "off",
   "editor.codeActionsOnSave": {
