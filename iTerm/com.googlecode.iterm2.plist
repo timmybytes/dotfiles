@@ -1258,6 +1258,8 @@
 	<string>Workflow</string>
 	<key>Default Bookmark Guid</key>
 	<string>AA3829B9-CFC2-4758-BDD5-1BFE29938F00</string>
+	<key>DefaultTabBarHeight</key>
+	<real>14</real>
 	<key>DeleteProfile_SilenceUntil</key>
 	<real>615909054.94327104</real>
 	<key>DeleteProfile_selection</key>
@@ -1342,11 +1344,11 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 381 620 392 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>44 63 1354 792 0 0 1440 900 </string>
+	<string>0 0 1440 900 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>44 38 304 830 0 0 1440 900 </string>
+	<string>0 0 1440 900 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>431 64 990 811 0 0 1440 900 </string>
+	<string>431 292 535 583 0 0 1440 900 </string>
 	<key>NavigatePanesInReadingOrder</key>
 	<false/>
 	<key>New Bookmarks</key>
@@ -3831,14 +3833,14 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1440, 900}}</string>
 		<key>topLeft</key>
-		<string>{229, 812}</string>
+		<string>{182, 799}</string>
 	</dict>
 	<key>NoSyncHaveUsedCopyMode</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>B21C4B68-E577-4F92-AC41-104BB1200CED</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>71</integer>
+	<integer>72</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>605556627.58189797</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
@@ -4631,13 +4633,13 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-10-27T03:00:24Z</date>
+	<date>2020-11-16T15:36:43Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>
-	<integer>429946689</integer>
+	<integer>3839121155</integer>
 	<key>SUUpdateRelaunchingMarker</key>
-	<false/>
+	<true/>
 	<key>SensitiveScrollWheel</key>
 	<true/>
 	<key>SeparateStatusBarsPerPane</key>
@@ -4645,7 +4647,7 @@
 	<key>SeparateWindowTitlePerTab</key>
 	<true/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>ShowHintsInSplitPaneMenuItems</key>
 	<true/>
 	<key>ShowPaneTitles</key>
@@ -4669,6 +4671,8 @@
 		<string>Recent Directories</string>
 	</array>
 	<key>UseBorder</key>
+	<true/>
+	<key>UseCustomTabBarFontSize</key>
 	<true/>
 	<key>VisualIndicatorForEsc</key>
 	<false/>
