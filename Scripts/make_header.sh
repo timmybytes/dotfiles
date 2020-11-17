@@ -71,4 +71,4 @@ chmod +x $title
 /usr/bin/clear
 
 # Open with default editor on 12th line
-$EDITOR +12 $title
+nvim +12 $title
