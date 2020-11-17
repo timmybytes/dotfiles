@@ -148,6 +148,8 @@ alias cache="cd ~/.dotfiles/Scripts/ && ./clear_caches.sh"
 alias fix="npm audit fix"
 # Create new bash script with header template
 alias shead="make_header.sh"
+# Run OMGWDYD
+alias omg="omgwdyd.sh"
 
 # ------------------------- * * GIT * * -----------------------------#
 alias gs="git status"
@@ -180,6 +182,7 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin"
 export PATH="$PATH:/Users/nym/.dotfiles/scripts"
+export PATH="$PATH:/Users/nym/Projects/#Repos/OMGWDYD"
 
 # bear autocomplete setup
 BEAR_AC_ZSH_SETUP_PATH=/Users/nym/Library/Caches/@sloansparger/bear/autocomplete/zsh_setup && test -f $BEAR_AC_ZSH_SETUP_PATH && source $BEAR_AC_ZSH_SETUP_PATH;
