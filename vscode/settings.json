@@ -100,6 +100,10 @@
   "files.autoSave": "onFocusChange",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
+  // Show .git directory by default
+  "files.exclude": {
+    "**/.git": false
+  },
   "telemetry.enableTelemetry": false,
   "telemetry.enableCrashReporter": false,
   "terminal.external.osxExec": "iTerm.app",
