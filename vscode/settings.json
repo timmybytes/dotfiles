@@ -395,5 +395,26 @@
   "editor.suggestFontSize": 11,
   "editor.suggestLineHeight": 18,
   "editor.acceptSuggestionOnCommitCharacter": false,
-  "workbench.editor.pinnedTabSizing": "shrink"
+  "workbench.editor.pinnedTabSizing": "shrink",
+  //* TODO Highlight
+  "todohighlight.keywords": [
+    {
+      "text": "NOTE:",
+      "color": "#000",
+      "backgroundColor": "#B7CECE",
+      "overviewRulerColor": "grey",
+      "isWholeLine": true
+    },
+    {
+      "text": "FIXME:",
+      "color": "#1d1d1d",
+      "backgroundColor": "#ee6868",
+      "isWholeLine": true
+    },
+    {
+      "text": "TODO:",
+      "color": "#1d1d1d",
+      "isWholeLine": true
+    }
+  ]
 }
