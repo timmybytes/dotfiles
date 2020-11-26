@@ -80,11 +80,16 @@ set numberwidth=6
 
 " Highlight search results
 set hlsearch
-
+" Press F4 to toggle highlighting on/off, and show current value.
+:noremap <C-Bslash> :set hlsearch! hlsearch?<CR>
+" Seach is case-insensitive
+set ignorecase
 " Go to last cursor position in file on reopening
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+
+
 
 " Coding
 " ---------------------------------------------------------
