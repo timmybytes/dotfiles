@@ -10,9 +10,6 @@
 "              https://github.com/timmybytes
 " //////////////////////////////////////////////////////////
 
-" VS Code Neovim Extension compatibility
-if !exists('g:vscode')
-
 " ---------------------------------------------------------
 " VimPlug - Plugin Manager
 " ---------------------------------------------------------
@@ -52,20 +49,21 @@ Plug 'airblade/vim-gitgutter'
 " Comfort
 " ---------------------------------------------------------
 " Plug 'tpope/vim-sleuth'
-" Usage: 
+" Usage:
 Plug 'tpope/vim-commentary'
 " Usage: ':gcc' - Comment/Uncomment line
 
 " Languages
 " ---------------------------------------------------------
-" Plug 'sheerun/vim-polyglot'
-" Plug 'tmhedberg/SimpylFold'
-" Plug 'masukomi/vim-markdown-folding'
+Plug 'sheerun/vim-polyglot'
+Plug 'tmhedberg/SimpylFold'
+Plug 'masukomi/vim-markdown-folding'
 
 call plug#end()
 
-" --------------------------------------------------------- 
-" General 
+
+" ---------------------------------------------------------
+" General
 " ---------------------------------------------------------
 
 set nocompatible
@@ -86,11 +84,17 @@ set hlsearch
 :noremap <C-Bslash> :set hlsearch! hlsearch?<CR>
 " Seach is case-insensitive
 set ignorecase
-" Go to last cursor position in file on reopening
-if has("autocmd")
-  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-endif
 
+augroup myautocommands
+  " au commands - keep these grouped for performance
+  autocmd FileType markdown set spell spelllang=en_us
+  autocmd FileType markdown set foldexpr=NestedMarkdownFolds()
+  " Go to last cursor position in file on reopening
+augroup end
+
+  if has("autocmd")
+    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+  endif
 
 
 " Coding
@@ -106,14 +110,10 @@ let g:indentLine_char = '│'
 " Writing/Prose
 " ---------------------------------------------------------
 set spellfile=~/.dotfiles/nvim/spell/en.utf-8.add
-autocmd FileType markdown set spell spelllang=en_us
-autocmd FileType markdown set foldexpr=NestedMarkdownFolds()
-" inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u 
+" inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 setlocal textwidth=80
 setlocal wrapmargin=0
 
 " Statusline
 " ---------------------------------------------------------
 source ~/.config/nvim/statusline.vim
-
-endif
