@@ -158,6 +158,7 @@ alias gap="git add -p"
 alias gc="git commit"
 alias gmsg="git commit"
 alias gac="git add . && git commit -m "
+alias gpo="git push origin"
 alias gitcheck="mgitstatus -d 1 ."
 
 # ------------------------ * * MACOS * * ----------------------------#

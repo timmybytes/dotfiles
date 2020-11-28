@@ -381,6 +381,7 @@
   "prettier.bracketSpacing": true,
   "prettier.printWidth": 100,
   "prettier.jsxBracketSameLine": true,
+  "prettier.jsxSingleQuote": true,
   "prettier.singleQuote": true,
   "prettier.arrowParens": "always",
   // ---------------------------------------------------
