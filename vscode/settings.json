@@ -35,11 +35,13 @@
   // ---------------------------------------------------
   "breadcrumbs.enabled": true,
   "debug.console.wordWrap": false,
+  "editor.acceptSuggestionOnEnter": "on",
   "editor.accessibilitySupport": "off",
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
   "editor.codeLens": false,
+  "editor.colorDecorators": true,
   "editor.cursorBlinking": "phase",
   "editor.cursorWidth": 3,
   "editor.detectIndentation": false,
@@ -59,8 +61,9 @@
   // "editor.fontFamily": "IBM Plex Mono",
   // "editor.fontFamily": "Anonymous Pro",
   "editor.fontLigatures": "true",
-  "editor.fontSize": 12,
+  "editor.fontSize": 14,
   "editor.fontWeight": "200",
+  "editor.formatOnType": true,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.highlightActiveIndentGuide": true,
@@ -88,7 +91,7 @@
   "editor.snippetSuggestions": "bottom",
   "editor.suggestSelection": "first",
   "editor.suggest.showIcons": true,
-  "editor.tabCompletion": "on",
+  "editor.tabCompletion": "off",
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
   "editor.wordWrapColumn": 65,
@@ -110,7 +113,7 @@
   "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
   "window.zoomLevel": 0,
   "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "Forest Night (Italic)",
+  "workbench.colorTheme": "Forest Night",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
   "workbench.startupEditor": "newUntitledFile",
@@ -378,12 +381,14 @@
   // * Prettier
   // ---------------------------------------------------
   // Keep print width >=100 to avoid closing brackets on empty lines
+  "prettier.arrowParens": "always",
   "prettier.bracketSpacing": true,
-  "prettier.printWidth": 100,
   "prettier.jsxBracketSameLine": true,
   "prettier.jsxSingleQuote": true,
+  "prettier.printWidth": 100,
   "prettier.singleQuote": true,
-  "prettier.arrowParens": "always",
+  "prettier.proseWrap": "always",
+  "prettier.tabWidth": 2,
   // ---------------------------------------------------
   //* Settings Sync
   // ---------------------------------------------------
