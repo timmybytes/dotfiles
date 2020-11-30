@@ -115,6 +115,7 @@ alias repos="cd -P /Users/nym/Projects/#Repos; cv; pwd; t"
 alias practice="cd ~/.dotfiles/Scripts/ && ./practice.py"
 alias vinit="nvim ~/.config/nvim/init.vim"
 alias viminit="nvim ~/.config/nvim/init.vim"
+alias jobsearch="cd ~/.dotfiles/scripts/ && ./job_search.py; cd -"
 
 # ------------------------ * * SHELL * * ----------------------------#
 # Clear screen
