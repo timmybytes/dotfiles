@@ -36,6 +36,7 @@
   "breadcrumbs.enabled": true,
   "debug.console.wordWrap": false,
   "editor.acceptSuggestionOnEnter": "on",
+  "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.accessibilitySupport": "off",
   "editor.codeActionsOnSave": {
     "source.fixAll": true
@@ -51,31 +52,33 @@
   // * * Fonts () => <=
   // ---------------------------------------------------
   // * * * Ligatures
-  // "editor.fontFamily": "JetBrainsMono nerd font",
+  "editor.fontFamily": "JetBrains Mono",
   // "editor.fontFamily": "victor mono",
   // "editor.fontFamily": "monoisome",
-  "editor.fontFamily": "dank mono",
+  // "editor.fontFamily": "dank mono",
   // "editor.fontFamily": "fira code",
   // * * * No ligatures
   // "editor.fontFamily": "operator mono",
   // "editor.fontFamily": "IBM Plex Mono",
   // "editor.fontFamily": "Anonymous Pro",
   "editor.fontLigatures": "true",
-  "editor.fontSize": 14,
-  "editor.fontWeight": "600",
+  "editor.fontSize": 12,
+  "editor.fontWeight": "300",
   "editor.formatOnType": true,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.highlightActiveIndentGuide": true,
-  "editor.lineHeight": 28,
+  "editor.lineHeight": 22,
   "editor.matchBrackets": "never",
   "editor.minimap.enabled": false,
+  "editor.minimap.maxColumn": 85,
   "editor.minimap.renderCharacters": false,
   "editor.minimap.scale": 1,
   "editor.minimap.size": "fit",
   "editor.minimap.side": "right",
-  "editor.minimap.maxColumn": 85,
   "editor.multiCursorModifier": "ctrlCmd",
+  "editor.suggestFontSize": 11,
+  "editor.suggestLineHeight": 18,
   "editor.padding.bottom": 40,
   "editor.padding.top": 10,
   "editor.parameterHints.enabled": false,
@@ -94,7 +97,7 @@
   "editor.tabCompletion": "off",
   "editor.tabSize": 2,
   "editor.wordWrap": "wordWrapColumn",
-  "editor.wordWrapColumn": 75,
+  "editor.wordWrapColumn": 85,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.incrementalNaming": "smart",
@@ -400,9 +403,7 @@
   // Faded icon saturation to better match Forest Night colorscheme
   "material-icon-theme.saturation": 0.6,
   "zenMode.fullScreen": false,
-  "editor.suggestFontSize": 11,
-  "editor.suggestLineHeight": 18,
-  "editor.acceptSuggestionOnCommitCharacter": false,
+
   "workbench.editor.pinnedTabSizing": "shrink",
   //* TODO Highlight
   "todohighlight.keywords": [
@@ -430,5 +431,6 @@
       "viewType": "jupyter-notebook",
       "filenamePattern": "*.ipynb"
     }
-  ]
+  ],
+  "yaml.format.printWidth": 85
 }
