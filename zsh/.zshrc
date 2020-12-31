@@ -184,7 +184,7 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin"
 export PATH="$PATH:/Users/nym/.dotfiles/scripts"
-export PATH="$PATH:/Users/nym/Projects/#Repos/OMGWDYD"
+export PATH="$PATH:/Users/nym/.dotfiles/scripts/OMGWDYD"
 
 # bear autocomplete setup
 BEAR_AC_ZSH_SETUP_PATH=/Users/nym/Library/Caches/@sloansparger/bear/autocomplete/zsh_setup && test -f $BEAR_AC_ZSH_SETUP_PATH && source $BEAR_AC_ZSH_SETUP_PATH;
