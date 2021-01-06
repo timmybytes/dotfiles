@@ -118,7 +118,7 @@
   "terminal.external.osxExec": "iTerm.app",
   "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
   "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "Forest Night",
+  "workbench.colorTheme": "Forest Night (Italic)",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
   "workbench.startupEditor": "newUntitledFile",
