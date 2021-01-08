@@ -22,11 +22,11 @@ Happy hacking!
 ## Contents
 
 - [Docs](./docs/)
-- [Firefox Settings](./Firefox/README)
-- [git Settings](./git/README)
-- [iTerm Settings](./iTerm/README)
+- [Firefox Settings](./Firefox/README.md)
+- [git Settings](./git/README.md)
+- [iTerm Settings](./iTerm/README.md)
 - [macOS Settings](./macOS/)
-- [Neofetch Settings](./neofetch/README)
+- [Neofetch Settings](./neofetch/README.md)
 - [Neovim Settings](./nvim/)
 - [Scripts](./Scripts/)
 - [VS Code Settings](./vscode/)
