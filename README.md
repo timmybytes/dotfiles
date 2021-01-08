@@ -1,8 +1,19 @@
-# Dotfiles
+<h1 align="center">
+  <img src="dotfiles-logo.svg" alt="dotfiles logo" />
+</h1>
 
-These are my personal dotfile/configurations, geared mostly towards a macOS-based web development environment. 
+<div align="center">
+  <strong>Configurations and Customizations</strong>
+</div>
 
-Forking or just implementing the configs here might end up breaking your stuff, but feel free to use whatever appeals to you. 
+<p align="center">
+  <sub>Built with  💾  by (and for)
+  <a href="https://timmybytes.com">Timothy Merritt</a>
+</div>
+
+These are my personal dotfile/configurations, geared mostly towards a macOS-based web development environment.
+
+Forking or just implementing the configs here might end up breaking your stuff, but feel free to use whatever appeals to you.
 
 I've tried to credit any inspirations for these files, but over a few years of constant tweaking I'm sure some sources have been lost along the way.
 
@@ -11,11 +22,11 @@ Happy hacking!
 ## Contents
 
 - [Docs](./docs/)
-- [Firefox Settings](./Firefox/)
-- [git Settings](./git/)
-- [iTerm Settings](./iTerm/)
+- [Firefox Settings](./Firefox/README)
+- [git Settings](./git/README)
+- [iTerm Settings](./iTerm/README)
 - [macOS Settings](./macOS/)
-- [Neofetch Settings](./neofetch/)
+- [Neofetch Settings](./neofetch/README)
 - [Neovim Settings](./nvim/)
 - [Scripts](./Scripts/)
 - [VS Code Settings](./vscode/)

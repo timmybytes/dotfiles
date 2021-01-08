@@ -117,7 +117,6 @@
   "telemetry.enableCrashReporter": false,
   "terminal.external.osxExec": "iTerm.app",
   "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
-  "workbench.activityBar.visible": false,
   "workbench.colorTheme": "Forest Night (Italic)",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
@@ -168,28 +167,51 @@
     "workbench.tree.indent": 25,
     "workbench.tree.renderIndentGuides": "never",
     "[Forest Night (Italic)]": {
-      "editor.background": "#2a2426",
-      "sideBar.background": "#2a2426",
-      "tab.inactiveBackground": "#2a2426",
-      "tab.activeBackground": "#2a2426",
-      "titleBar.activeBackground": "#2a2426",
-      "titleBar.border": "#2a2426",
       "activityBar.background": "#2a2426",
+      "editor.background": "#2a2426",
+      "editorGroupHeader.tabsBackground": "#2a2426",
+      // Git repo-specific
+      // Tab & explorer foreground for files added (e.g., git add [file]) but not committed to repo
+      "gitDecoration.addedResourceForeground": "#9ae65c",
+      // Tab & explorer foreground for ignored files in repo
+      "gitDecoration.ignoredResourceForeground": "#5a5557",
+      // Tab & explorer foreground for modified files in repo
+      "gitDecoration.modifiedResourceForeground": "#e6d15c",
+      // Tab & explorer foreground for untracked/unstaged new files in repo
+      "gitDecoration.untrackedResourceForeground": "#e67c5c",
+      "panel.background": "#2a2426",
+      "panel.border": "#a7c080",
+      "quickInput.background": "#2a2426",
+      "quickInputTitle.background": "#2a2426",
+      "sideBar.background": "#2a2426",
       "statusBar.background": "#2a2426",
       "statusBar.border": "#2a2426",
-      "titleBar.inactiveBackground": "#2a2426",
-      "editorGroupHeader.tabsBackground": "#2a2426",
+      // Tab foreground overriden by git status changes
+      "tab.activeBackground": "#2a2426",
+      "tab.activeForeground": "#d8caac",
       "tab.border": "#2a2426",
-      "panel.background": "#2a2426",
-      "panel.border": "#2a2426"
+      "tab.hoverBackground": "#868d80",
+      "tab.hoverBorder": "#868d80",
+      "tab.hoverForeground": "#2a2426",
+      "tab.inactiveBackground": "#2a2426",
+      "tab.inactiveForeground": "#868d80",
+      "tab.unfocusedActiveBackground": "#2a2426",
+      "tab.unfocusedActiveForeground": "#868d80",
+      "tab.unfocusedHoverBackground": "#868d80",
+      "tab.unfocusedHoverForeground": "#2a2426",
+      "tab.unfocusedInactiveBackground": "#2a2426",
+      "tab.unfocusedInactiveForeground": "#868d80",
+      "titleBar.activeBackground": "#2a2426",
+      "titleBar.border": "#2a2426",
+      "titleBar.inactiveBackground": "#2a2426"
     },
     "sideBar.border": "#868d80",
     "sideBarSectionHeader.border": "#868d80",
-    "panel.border": "#868d80",
     "debugToolBar.border": "#868d80",
     "statusBar.border": "#c9ffe5",
     "tab.inactiveBackground": "#1f2129",
-    "tab.activeBackground": "#1f2128"
+    "tab.activeBackground": "#1f2128",
+    "activityBar.border": "#323d43"
   },
 
   // ---------------------------------------------------
@@ -380,6 +402,7 @@
   //* Markdown Preview Enhanced
   // ---------------------------------------------------
   "markdown-preview-enhanced.automaticallyShowPreviewOfMarkdownBeingEdited": false,
+  "markdown-preview-enhanced.previewTheme": "github-light.css",
   // ---------------------------------------------------
   //* Neovim - Not currently configured/working
   // ---------------------------------------------------
@@ -434,5 +457,44 @@
       "filenamePattern": "*.ipynb"
     }
   ],
-  "yaml.format.printWidth": 85
+  "yaml.format.printWidth": 85,
+  "workbench.activityBar.visible": false,
+  "gitlens.menus": {
+    "editor": {
+      "blame": false,
+      "clipboard": true,
+      "compare": true,
+      "history": false,
+      "remote": false
+    },
+    "editorGroup": {
+      "blame": true,
+      "compare": true
+    },
+    "editorTab": false,
+    "explorer": {
+      "clipboard": true,
+      "compare": true,
+      "history": true,
+      "remote": true
+    },
+    "scm": {
+      "authors": true
+    },
+    "scmGroupInline": {
+      "stash": true
+    },
+    "scmGroup": {
+      "compare": true,
+      "openClose": true,
+      "stash": true
+    },
+    "scmItem": {
+      "clipboard": true,
+      "compare": true,
+      "history": true,
+      "remote": false,
+      "stash": true
+    }
+  }
 }
