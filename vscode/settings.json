@@ -53,23 +53,23 @@
   // * * Fonts () => <=
   // ---------------------------------------------------
   // * * * Ligatures
-  "editor.fontFamily": "JetBrains Mono",
+  // "editor.fontFamily": "JetBrains Mono",
   // "editor.fontFamily": "victor mono",
   // "editor.fontFamily": "monoisome",
-  // "editor.fontFamily": "dank mono",
+  "editor.fontFamily": "dank mono",
   // "editor.fontFamily": "fira code",
   // * * * No ligatures
   // "editor.fontFamily": "operator mono",
   // "editor.fontFamily": "IBM Plex Mono",
   // "editor.fontFamily": "Anonymous Pro",
   "editor.fontLigatures": "true",
-  "editor.fontSize": 12,
-  "editor.fontWeight": "300",
+  "editor.fontSize": 14,
+  "editor.fontWeight": "200",
   "editor.formatOnType": true,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.highlightActiveIndentGuide": true,
-  "editor.lineHeight": 22,
+  "editor.lineHeight": 24,
   "editor.matchBrackets": "never",
   "editor.minimap.enabled": false,
   "editor.minimap.maxColumn": 85,
