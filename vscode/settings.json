@@ -26,9 +26,9 @@
   // * Gutter
   // ---------------------------------------------------
   "editor.folding": true,
-  "editor.glyphMargin": true,
+  "editor.glyphMargin": false,
   // * * Margin between line numbers and code
-  "editor.lineDecorationsWidth": 5,
+  "editor.lineDecorationsWidth": 0,
   "git.decorations.enabled": true,
   // ---------------------------------------------------
   // * Editor
@@ -48,9 +48,9 @@
   "editor.cursorWidth": 3,
   "editor.detectIndentation": false,
   "editor.emptySelectionClipboard": false,
-  "editor.foldingHighlight": false,
+  "editor.foldingHighlight": true,
   // ---------------------------------------------------
-  // * * Fonts () => <=
+  // * * Fonts () => <= 0 O 1 l
   // ---------------------------------------------------
   // * * * Ligatures
   // "editor.fontFamily": "JetBrains Mono",
@@ -63,8 +63,8 @@
   // "editor.fontFamily": "IBM Plex Mono",
   // "editor.fontFamily": "Anonymous Pro",
   "editor.fontLigatures": "true",
-  "editor.fontSize": 14,
-  "editor.fontWeight": "200",
+  "editor.fontSize": 13,
+  "editor.fontWeight": "400",
   "editor.formatOnType": true,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
@@ -78,7 +78,7 @@
   "editor.minimap.size": "fit",
   "editor.minimap.side": "right",
   "editor.multiCursorModifier": "ctrlCmd",
-  "editor.suggestFontSize": 11,
+  "editor.suggestFontSize": 13,
   "editor.suggestLineHeight": 18,
   "editor.padding.bottom": 40,
   "editor.padding.top": 10,
@@ -116,6 +116,7 @@
   "telemetry.enableTelemetry": false,
   "telemetry.enableCrashReporter": false,
   "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.fontSize": 13,
   "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
   "workbench.colorTheme": "Forest Night (Italic)",
   "workbench.editor.enablePreviewFromQuickOpen": false,
