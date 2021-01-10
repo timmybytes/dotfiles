@@ -25,6 +25,8 @@ setup.
 
 ### Commit Message Conventions
 
+> 📖 Read my article on [Keeping Git Commit Messages Consistent with a Custom Template](https://dev.to/timmybytes/keeping-git-commit-messages-consistent-with-a-custom-template-1jkm).
+
 ```sh
 # Commit messages should loosely follow the following conventions:
 
