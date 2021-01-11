@@ -10,6 +10,7 @@
 #    * test        Changes that add/modify/correct tests
 #    * build       Changes to build system (configs, etc.)
 #    * ci          Changes to CI pipeline/workflow
+#    * chore       General tool, config, simple refactoring
 # ----------------------------------------------------------
 
 

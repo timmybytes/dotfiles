@@ -13,4 +13,4 @@
 [commit]
 	template = /Users/nym/.dotfiles/git/commit-conventions.txt
 [core]
-	editor = nvim +14 -c 'startinsert'
+	editor = nvim +15 -c 'startinsert'
