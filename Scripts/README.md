@@ -4,6 +4,7 @@ These are some of the scripts I use in development, mostly written in Bash or Py
 
 * [OMGWDYD](#omgwdyd) - git commits from the last 24 hours
 * [Clear Caches](#clear-caches) - Clear user and system caches
+* [Bash Header Generator](#bash-header-generator) - Create header information for new bash scripts
 
 ---
 
