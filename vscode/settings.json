@@ -26,9 +26,9 @@
   // * Gutter
   // ---------------------------------------------------
   "editor.folding": true,
-  "editor.glyphMargin": false,
+  "editor.glyphMargin": true,
   // * * Margin between line numbers and code
-  "editor.lineDecorationsWidth": 0,
+  "editor.lineDecorationsWidth": 15,
   "git.decorations.enabled": true,
   // ---------------------------------------------------
   // * Editor
@@ -63,13 +63,13 @@
   // "editor.fontFamily": "IBM Plex Mono",
   // "editor.fontFamily": "Anonymous Pro",
   "editor.fontLigatures": "true",
-  "editor.fontSize": 13,
-  "editor.fontWeight": "400",
+  "editor.fontSize": 14,
+  "editor.fontWeight": "200",
   "editor.formatOnType": true,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.highlightActiveIndentGuide": true,
-  "editor.lineHeight": 24,
+  "editor.lineHeight": 28,
   "editor.matchBrackets": "never",
   "editor.minimap.enabled": false,
   "editor.minimap.maxColumn": 85,
@@ -98,7 +98,7 @@
   "editor.tabCompletion": "off",
   "editor.tabSize": 2,
   "editor.wordWrap": "wordWrapColumn",
-  "editor.wordWrapColumn": 85,
+  "editor.wordWrapColumn": 100,
   "explorer.sortOrder": "mixed",
   "explorer.compactFolders": false,
   "explorer.confirmDelete": false,
@@ -118,7 +118,7 @@
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.fontSize": 13,
   "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
-  "workbench.colorTheme": "Forest Night (Italic)",
+  "workbench.colorTheme": "Horizon Italic",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
   "workbench.startupEditor": "newUntitledFile",
@@ -161,59 +161,59 @@
   "oneDarkPro.editorTheme": "oneDarkPro",
   "oneDarkPro.vivid": false,
   "workbench.iconTheme": "vscode-icons",
-  "workbench.colorCustomizations": {
-    "workbench.list.keyboardNavigation": "simple",
-    "workbench.startupEditor": "newUntitledFile",
-    "workbench.statusBar.visible": true,
-    "workbench.tree.indent": 25,
-    "workbench.tree.renderIndentGuides": "never",
-    "[Forest Night (Italic)]": {
-      "activityBar.background": "#2a2426",
-      "editor.background": "#2a2426",
-      "editorGroupHeader.tabsBackground": "#2a2426",
-      // Git repo-specific
-      // Tab & explorer foreground for files added (e.g., git add [file]) but not committed to repo
-      "gitDecoration.addedResourceForeground": "#9ae65c",
-      // Tab & explorer foreground for ignored files in repo
-      "gitDecoration.ignoredResourceForeground": "#5a5557",
-      // Tab & explorer foreground for modified files in repo
-      "gitDecoration.modifiedResourceForeground": "#e6d15c",
-      // Tab & explorer foreground for untracked/unstaged new files in repo
-      "gitDecoration.untrackedResourceForeground": "#e67c5c",
-      "panel.background": "#2a2426",
-      "panel.border": "#a7c080",
-      "quickInput.background": "#2a2426",
-      "quickInputTitle.background": "#2a2426",
-      "sideBar.background": "#2a2426",
-      "statusBar.background": "#2a2426",
-      "statusBar.border": "#2a2426",
-      // Tab foreground overriden by git status changes
-      "tab.activeBackground": "#2a2426",
-      "tab.activeForeground": "#d8caac",
-      "tab.border": "#2a2426",
-      "tab.hoverBackground": "#868d80",
-      "tab.hoverBorder": "#868d80",
-      "tab.hoverForeground": "#2a2426",
-      "tab.inactiveBackground": "#2a2426",
-      "tab.inactiveForeground": "#868d80",
-      "tab.unfocusedActiveBackground": "#2a2426",
-      "tab.unfocusedActiveForeground": "#868d80",
-      "tab.unfocusedHoverBackground": "#868d80",
-      "tab.unfocusedHoverForeground": "#2a2426",
-      "tab.unfocusedInactiveBackground": "#2a2426",
-      "tab.unfocusedInactiveForeground": "#868d80",
-      "titleBar.activeBackground": "#2a2426",
-      "titleBar.border": "#2a2426",
-      "titleBar.inactiveBackground": "#2a2426"
-    },
-    "sideBar.border": "#868d80",
-    "sideBarSectionHeader.border": "#868d80",
-    "debugToolBar.border": "#868d80",
-    "statusBar.border": "#c9ffe5",
-    "tab.inactiveBackground": "#1f2129",
-    "tab.activeBackground": "#1f2128",
-    "activityBar.border": "#323d43"
-  },
+  // "workbench.colorCustomizations": {
+  //   "workbench.list.keyboardNavigation": "simple",
+  //   "workbench.startupEditor": "newUntitledFile",
+  //   "workbench.statusBar.visible": true,
+  //   "workbench.tree.indent": 25,
+  //   "workbench.tree.renderIndentGuides": "never",
+  //   "[Forest Night (Italic)]": {
+  //     "activityBar.background": "#2a2426",
+  //     "editor.background": "#2a2426",
+  //     "editorGroupHeader.tabsBackground": "#2a2426",
+  //     // Git repo-specific
+  //     // Tab & explorer foreground for files added (e.g., git add [file]) but not committed to repo
+  //     "gitDecoration.addedResourceForeground": "#9ae65c",
+  //     // Tab & explorer foreground for ignored files in repo
+  //     "gitDecoration.ignoredResourceForeground": "#5a5557",
+  //     // Tab & explorer foreground for modified files in repo
+  //     "gitDecoration.modifiedResourceForeground": "#e6d15c",
+  //     // Tab & explorer foreground for untracked/unstaged new files in repo
+  //     "gitDecoration.untrackedResourceForeground": "#e67c5c",
+  //     "panel.background": "#2a2426",
+  //     "panel.border": "#a7c080",
+  //     "quickInput.background": "#2a2426",
+  //     "quickInputTitle.background": "#2a2426",
+  //     "sideBar.background": "#2a2426",
+  //     "statusBar.background": "#2a2426",
+  //     "statusBar.border": "#2a2426",
+  //     // Tab foreground overriden by git status changes
+  //     "tab.activeBackground": "#2a2426",
+  //     "tab.activeForeground": "#d8caac",
+  //     "tab.border": "#2a2426",
+  //     "tab.hoverBackground": "#868d80",
+  //     "tab.hoverBorder": "#868d80",
+  //     "tab.hoverForeground": "#2a2426",
+  //     "tab.inactiveBackground": "#2a2426",
+  //     "tab.inactiveForeground": "#868d80",
+  //     "tab.unfocusedActiveBackground": "#2a2426",
+  //     "tab.unfocusedActiveForeground": "#868d80",
+  //     "tab.unfocusedHoverBackground": "#868d80",
+  //     "tab.unfocusedHoverForeground": "#2a2426",
+  //     "tab.unfocusedInactiveBackground": "#2a2426",
+  //     "tab.unfocusedInactiveForeground": "#868d80",
+  //     "titleBar.activeBackground": "#2a2426",
+  //     "titleBar.border": "#2a2426",
+  //     "titleBar.inactiveBackground": "#2a2426"
+  //   },
+  //   "sideBar.border": "#868d80",
+  //   "sideBarSectionHeader.border": "#868d80",
+  //   "debugToolBar.border": "#868d80",
+  //   "statusBar.border": "#c9ffe5",
+  //   "tab.inactiveBackground": "#1f2129",
+  //   "tab.activeBackground": "#1f2128",
+  //   "activityBar.border": "#323d43"
+  // },
 
   // ---------------------------------------------------
   // ////////////////// EXTENSIONS /////////////////////
@@ -416,7 +416,7 @@
   "prettier.bracketSpacing": true,
   "prettier.jsxBracketSameLine": true,
   "prettier.jsxSingleQuote": true,
-  "prettier.printWidth": 100,
+  // "prettier.printWidth": 100,
   "prettier.singleQuote": true,
   "prettier.proseWrap": "always",
   "prettier.tabWidth": 2,
