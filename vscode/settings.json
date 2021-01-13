@@ -397,7 +397,9 @@
     // Allow trailing heading punctuation
     "MD026": false,
     // Allow inline HTML
-    "MD033": false
+    "MD033": false,
+    // First line should be top-level heading
+    "MD041": false
   },
   // ---------------------------------------------------
   //* Markdown Preview Enhanced
