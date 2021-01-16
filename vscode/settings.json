@@ -118,7 +118,7 @@
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.fontSize": 13,
   "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
-  "workbench.colorTheme": "Horizon Italic",
+  "workbench.colorTheme": "Gruvbox Material Dark",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
   "workbench.startupEditor": "newUntitledFile",
@@ -160,7 +160,7 @@
   "materialTheme.accent": "Pink",
   "oneDarkPro.editorTheme": "oneDarkPro",
   "oneDarkPro.vivid": false,
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.iconTheme": "vscode-seedling-icon-theme",
   // "workbench.colorCustomizations": {
   //   "workbench.list.keyboardNavigation": "simple",
   //   "workbench.startupEditor": "newUntitledFile",
