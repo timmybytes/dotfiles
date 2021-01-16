@@ -137,7 +137,7 @@ alias tags="mdls -raw -name kMDItemUserTags"
 
 # ----------------------- * * CLI TOOLS * * -------------------------#
 # Task CLI
-alias tasks="cv; task list; task projects"
+# alias tasks="cv; task list; task projects"
 eval $(thefuck --alias)
 # Use Neovim over vim
 alias vim="nvim"
@@ -177,6 +177,7 @@ fi
 
 # Show CLI tools info
 alias tools="cat ~/tools"
+alias todo="clear; cal; echo; printf "%s\n" "TASKS"; task list"
 
 # --------------------------------------------------------------------
 # * TERM & PATH
