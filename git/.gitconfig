@@ -1,16 +1,16 @@
 [user]
-	name = Timothy Merritt
-	email = timmybytes@gmail.com
+name = Timothy Merritt
+email = timmybytes@gmail.com
 [color]
-	ui = auto
+ui = auto
 [filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+required = true
+clean = git-lfs clean -- %f
+smudge = git-lfs smudge -- %f
+process = git-lfs filter-process
 [init]
-	defaultBranch = main
+defaultBranch = main
 [commit]
-	template = /Users/nym/.dotfiles/git/commit-conventions.txt
+template = /Users/nym/.dotfiles/git/commit-conventions.txt
 [core]
-	editor = nvim +15 -c 'startinsert'
+editor = nvim +16 -c 'startinsert'

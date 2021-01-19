@@ -25,33 +25,50 @@ setup.
 
 ### Commit Message Conventions
 
+The [commit conventions document](./commit-conventions.txt) serves as a template for git commit messages. For configuation instructions:
+
 > 📖 Read my article on [Keeping Git Commit Messages Consistent with a Custom Template](https://dev.to/timmybytes/keeping-git-commit-messages-consistent-with-a-custom-template-1jkm).
 
-```sh
-# Commit messages should loosely follow the following conventions:
+For information on Semantic Versioning conventions, [see the spec](https://semver.org/#semantic-versioning-specification-semver).
 
+#### Commit messages should adhere to the following conventions:
+
+```sh
 # Header - mandatory
-(type): Short description
-^....^: ^...............^
-│       * Less than 60 characters
-│       * Present tense
-│       * Concise
+type(optional scope): Short description
+^..................^: ^...............^
+│   * Less than 60 characters
+│   * Present tense
+│   * Concise
+│   * Ex: 'docs: correct spelling of CHANGELOG'
 │
 └── Contains one of the following:
-    * feat        A new feature
-    * fix         A bug fix
-    * docs        Changes to documentation only
-    * style       Style/format changes (whitespace, etc.)
-    * refactor    Changes not related to a bug or feature
-    * perf        Changes that affects performance
-    * test        Changes that add/modify/correct tests
-    * build       Changes to build system (configs, etc.)
-    * ci          Changes to CI pipeline/workflow
+    * feat             A new feature - SemVar PATCH
+    └── MUST coincide with 0.0.x patch version
+    * fix              A bug fix - SemVar MINOR
+    └── MUST coincide with 0.x.0 minor version
+    * BREAKING CHANGE  Breaking API change - SemVar MAJOR
+    └── MUST coincide with x.0.0 major version, MUST include
+        ! before colon e.g., 'BREAKING CHANGE!: message'
+    * docs             Change to documentation only
+    * style            Change to style (whitespace, etc.)
+    * refactor         Change not related to a bug or feat
+    * perf             Change that affects performance
+    * test             Change that adds/modifies tests
+    * build            Change to build system
+    * ci               Change to CI pipeline/workflow
+    * chore            General tooling/config/min refactor
 
 # Body - optional
-Introduces motivation behind changes and/or more detailed information
+Free form structure. Introduces motivation behind changes
+and/or more detailed information
 
 # Footer - optional
-Consequences of the change(s), such as related issues resolved by commit, etc.
+word-token: string value
+          OR
+word-token #string value
+^.........^: ^.........^
+Consequences of the change(s), such as related issues resolved
+by commit, etc. 'word-token' must not contain whitespace.
 
 ```
