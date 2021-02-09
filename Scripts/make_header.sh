@@ -59,7 +59,7 @@ printf "%-16s\n\
 %-16s%-8s\n\
 %-16s%-8s\n\
 %-16s%-8s\n\
-%s\n\n\n" '#!/usr/bin/env bash -' '#title' ":$title" '#description' \
+%s\n\n\n" '#!/usr/bin/env bash' '#title' ":$title" '#description' \
   ":${dscrpt}" '#author' ":$name" '#date' ":$today" '#version' \
   ":$vnum" '#usage' ":./$title" '#notes' ':' '#bash_version' \
   ":${BASH_VERSION}" \#$div${div} >$title
