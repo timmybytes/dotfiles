@@ -103,7 +103,7 @@
   "editor.tabCompletion": "off",
   "editor.tabSize": 2,
   "editor.wordWrap": "wordWrapColumn",
-  "editor.wordWrapColumn": 100,
+  // "editor.wordWrapColumn": 100,
   "explorer.sortOrder": "default",
   "explorer.compactFolders": false,
   "explorer.confirmDelete": false,
