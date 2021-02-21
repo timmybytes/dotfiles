@@ -123,7 +123,7 @@
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.fontSize": 13,
   "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
-  "workbench.colorTheme": "In Bed by 7pm",
+  "workbench.colorTheme": "Forest Night (Italic)",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
   "workbench.startupEditor": "newUntitledFile",
