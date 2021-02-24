@@ -27,9 +27,9 @@ d_sys() {
 
 main() {
   clear
-  printf "%s" "// DELETE CACHES"
-  printf "%s\n" "" "- To list current system caches, enter 'sys'"
-  printf "%s" "" "- To list current user caches, enter 'usr'"
+  printf "%s\n" "// DELETE CACHES"
+  printf "%s" "" "- To list current system caches, enter 'sys'"
+  printf "%s\n" "" "- To list current user caches, enter 'usr'"
   printf "%s" "" "- To delete both caches immediately, enter 'da'"
   printf "%s\n" "" "- Press 'Enter' to exit"
   printf "%s" "> "
