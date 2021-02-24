@@ -124,12 +124,12 @@ alias cv="clear"
 alias ll="ls -alFC"
 # List detailed
 alias la="ls -alh"
-# Tree list all files one level deep, with summary
-alias t="tree -aFL 1"
+# Tree list all files one level deep, with summary, sizes, and color
+alias t="tree -aFL 1 -s -h -C --du"
 # Tree list all files two levels deep, with summary
-alias t2="tree -aFL 2"
+alias t2="tree -aFL 2 -s -h -C --du"
 # Tree list all files three levels deep, with summary
-alias t3="tree -aFL 3"
+alias t3="tree -aFL 3 -s -h -C --du"
 # Clear screen, then list contents in tree
 alias ct="clear; pwd; tree -aFL 1"
 # Check files/directories for associated macos tags
