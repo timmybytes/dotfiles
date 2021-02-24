@@ -95,11 +95,12 @@
   "editor.scrollbar.horizontal": "visible",
   "editor.scrollbar.horizontalScrollbarSize": 10,
   "editor.smoothScrolling": true,
-  "editor.snippetSuggestions": "bottom",
-  "editor.suggestSelection": "first",
+  "editor.snippetSuggestions": "top",
+  "editor.suggestSelection": "recentlyUsed",
   "editor.suggestFontSize": 13,
   "editor.suggestLineHeight": 18,
   "editor.suggest.showIcons": true,
+  "editor.suggest.filterGraceful": true,
   "editor.tabCompletion": "off",
   "editor.tabSize": 2,
   "editor.wordWrap": "wordWrapColumn",
@@ -123,7 +124,6 @@
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.fontSize": 13,
   "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
-  "workbench.colorTheme": "Forest Night (Italic)",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
   "workbench.startupEditor": "newUntitledFile",
@@ -517,5 +517,6 @@
     }
   },
   "workbench.iconTheme": "material-icon-theme",
-  "tabnine.experimentalAutoImports": true
+  "tabnine.experimentalAutoImports": true,
+  "workbench.colorTheme": "In Bed by 7pm"
 }

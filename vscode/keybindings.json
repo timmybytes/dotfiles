@@ -60,5 +60,9 @@
     "key": "shift+cmd+'",
     "command": "deleteInsideWord",
     "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "tab",
+    "command": "-acceptSelectedSuggestion"
   }
 ]
