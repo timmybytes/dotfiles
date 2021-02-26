@@ -4,7 +4,7 @@ cache     : run clear_cache script   - cache
 gitcheck  : mgitstatus for all repos
             in current directory     - gitcheck [above repo]
 j         : autojump                 - j [keyword]
-mac-cli   : macos cli tools
+mac [cmd] : macos cli tools
 omg       : git repo commit changes
             in last 24 hours         - omg
 onefetch  : git repo summary         - onefetch [inside repo]
