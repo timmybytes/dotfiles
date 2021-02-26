@@ -1,94 +1,6 @@
-/* *MEGABAR NIGHTMARE FIX via u/skyyblaze - reddit */
-#urlbar,
-#searchbar,
-.searchbar-textbox {
-  margin: 0px !important;
-  min-height: 0px !important;
-  height: 24px !important;
-  font-size: 12px !important;
-  /* color: #ff8888 !important; */
+::-moz-selection {
+  background-color: #fd3b6f !important;
 }
-
-/* Urlbar frame/border color */
-#urlbar[breakout][breakout-extend]>#urlbar-background {
-  /* border-color: rgb(238, 104, 104) !important; */
-  border-color: #383838 !important;
-  color: #383838 !important;
-  background: #383838 !important;
-}
-
-.urlbar-icon,
-#main-window[uidensity="compact"] .urlbar-icon,
-#main-window[uidensity="touch"] .urlbar-icon {
-  width: 16px !important;
-  height: 16px !important;
-  padding: 0px 1px !important;
-  margin: 1 !important;
-  margin-left: 5px !important;
-  margin-right: 5px !important;
-}
-
-#urlbar #reader-mode-button,
-#main-window[uidensity="compact"] #urlbar #reader-mode-button,
-#main-window[uidensity="touch"] #urlbar #reader-mode-button {
-  padding: 1px !important;
-}
-
-.searchbar-search-icon {
-  margin-inline-start: 4px !important;
-  margin-inline-end: 4px !important;
-}
-
-/* reduce toolbar button height to match location bars button height (this will cause major glitches) */
-#nav-bar .toolbarbutton-1 {
-  padding-top: 1px !important;
-  padding-bottom: 1px !important;
-  min-height: 0px !important;
-  height: 24px !important;
-}
-
-/* No Search Suggestion Icons */
-/* #urlbar .search-one-offs:not([hidden]) {
-  display: none !important;
-} */
-
-/* We don't need the text */
-/* #urlbar .search-one-offs .search-panel-header {
-  display: none !important;
-} */
-
-#urlbar-background {
-  border-radius: 5px 5px 5px 5px !important;
-  box-shadow: 0px 0px 0px 0px rgb(208, 61, 120) !important;
-}
-
-#urlbar[focused="true"] {
-  /*! Dont touch */
-  margin-top: 2px !important;
-}
-
-/* Dropdown search results */
-#urlbar-results {
-  background: #383838 !important;
-  /* border: 1px solid rgb(238, 104, 104) !important; */
-  border: 1px solid #383838 !important;
-  border-radius: 0px 5px 0px 5px !important;
-  margin-top: 0px !important;
-}
-
-/*  */
-#urlbar-results {
-  padding: 0px 0px !important;
-}
-
-/* border color between result rows */
-.urlbarView-row:not(:last-of-type) {
-  border-bottom: var(--mbarstyler-bottom-border-width) solid #383838 !important;
-}
-
-/*** Megabar Styler General - version 2020-04-19 ***/
-
-/*** General Preferences ***/
 
 :root {
   /* Number of pixels of enlargement when URL bar is focused */
@@ -128,6 +40,98 @@
   /* [0.0,0.05,0.1] */
 }
 
+/* *MEGABAR NIGHTMARE FIX via u/skyyblaze - reddit */
+#urlbar,
+#searchbar,
+.searchbar-textbox {
+  margin: 0px !important;
+  min-height: 0px !important;
+  height: 24px !important;
+  font-size: 12px !important;
+}
+
+/* Urlbar frame/border color */
+#urlbar[breakout][breakout-extend] > #urlbar-background {
+  border-color: #383838 !important;
+  color: #383838 !important;
+  background: #383838 !important;
+}
+
+.urlbar-icon,
+#main-window[uidensity='compact'] .urlbar-icon,
+#main-window[uidensity='touch'] .urlbar-icon {
+  width: 16px !important;
+  height: 16px !important;
+  padding: 0px 1px !important;
+  margin: 1 !important;
+  margin-left: 5px !important;
+  margin-right: 5px !important;
+}
+
+#urlbar #reader-mode-button,
+#main-window[uidensity='compact'] #urlbar #reader-mode-button,
+#main-window[uidensity='touch'] #urlbar #reader-mode-button {
+  padding: 1px !important;
+}
+
+.searchbar-search-icon {
+  margin-inline-start: 4px !important;
+  margin-inline-end: 4px !important;
+}
+
+/* reduce toolbar button height to match location bars button height (this will cause major glitches) */
+#nav-bar .toolbarbutton-1 {
+  padding-top: 1px !important;
+  padding-bottom: 1px !important;
+  min-height: 0px !important;
+  height: 24px !important;
+}
+
+/* No Search Suggestion Icons */
+/* #urlbar .search-one-offs:not([hidden]) {
+  display: none !important;
+} */
+
+/* We don't need the text */
+/* #urlbar .search-one-offs .search-panel-header {
+  display: none !important;
+} */
+
+#urlbar-background {
+  background-color: yellow;
+  border-radius: 5px 5px 5px 5px !important;
+  /* box-shadow: 0px 0px 0px 0px rgb(208, 61, 120) !important; */
+  box-shadow: 0px 0px 0px 0px #98c4ef !important;
+}
+
+#urlbar[focused='true'] {
+  /*! Dont touch */
+  margin-top: 2px !important;
+}
+
+/* Dropdown search results */
+#urlbar-results {
+  background: #383838 !important;
+  /* border: 1px solid rgb(238, 104, 104) !important; */
+  border: 1px solid #383838 !important;
+  border-radius: 0px 5px 0px 5px !important;
+  margin-top: 0px !important;
+}
+
+/*  */
+#urlbar-results {
+  padding: 0px 0px !important;
+}
+
+/* border color between result rows */
+.urlbarView-row:not(:last-of-type) {
+  border-bottom: var(--mbarstyler-bottom-border-width) solid #383838 !important;
+}
+
+/*** Megabar Styler General - version 2020-04-19 ***/
+
+/*** General Preferences ***/
+
 /*** URL bar enlargement or lack thereof ***/
 
 /* Compute new position, width, and padding */
@@ -142,28 +146,28 @@
   padding: var(--mbarstyler-popout-pixels) !important;
 }
 
-[uidensity="compact"] #urlbar[breakout][breakout-extend] {
+[uidensity='compact'] #urlbar[breakout][breakout-extend] {
   top: calc(3px - var(--mbarstyler-popout-pixels)) !important;
 }
 
-[uidensity="touch"] #urlbar[breakout][breakout-extend] {
+[uidensity='touch'] #urlbar[breakout][breakout-extend] {
   top: calc(4px - var(--mbarstyler-popout-pixels)) !important;
 }
 
 /* Prevent shift of URL bar contents */
-#urlbar[breakout][breakout-extend]>#urlbar-input-container {
+#urlbar[breakout][breakout-extend] > #urlbar-input-container {
   height: var(--urlbar-height) !important;
 
   padding: 0 !important;
 }
 
 /* Do not animate */
-#urlbar[breakout][breakout-extend]>#urlbar-background {
+#urlbar[breakout][breakout-extend] > #urlbar-background {
   animation: none !important;
 }
 
 /* Remove shadows */
-#urlbar[breakout][breakout-extend]>#urlbar-background {
+#urlbar[breakout][breakout-extend] > #urlbar-background {
   box-shadow: none !important;
 }
 
@@ -189,34 +193,6 @@
   overflow-y: auto !important;
 }
 
-/* Match Styling Like Fx43-47 */
-
-/* [lwt-popup-darktext] .urlbarView-row:not([selected]) .urlbarView-title strong,
-[lwt-popup-darktext] .urlbarView-row:not([selected]) .urlbarView-url strong {
-  font-weight: var(--mbarstyler-match-weight) !important;
-
-  box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, calc(var(--mbarstyler-match-background-opacity) * 2));
-
-  background-color: rgba(0, 0, 0, var(--mbarstyler-match-background-opacity));
-
-  border-radius: 2px;
-}
-
-[lwt-popup-brighttext] .urlbarView-row:not([selected]) .urlbarView-title strong,
-[lwt-popup-brighttext] .urlbarView-row:not([selected]) .urlbarView-url strong {
-  font-weight: var(--mbarstyler-match-weight) !important;
-
-  box-shadow: inset 0 0 1px 1px
-    rgba(255, 255, 255, calc(var(--mbarstyler-match-background-opacity) * 2));
-
-  background-color: rgba(255, 255, 255, var(--mbarstyler-match-background-opacity));
-
-  border-radius: 2px;
-} */
-
-/*** End of: Megabar Styler General ***/
-
-/* No color around the url bar when focused */
 #urlbar,
 .searchbar-textbox {
   background-color: #383838 !important;
@@ -244,7 +220,7 @@
   max-height: 0;
   height: 0;
   /* This will hide dropdown for search results */
-  /* overflow: hidden !important; */
+  /* overflow: scroll !important; */
   border: none !important;
 }
 
@@ -257,13 +233,13 @@
 
 /* **************************** T A B S ******************************** */
 
-:root:not([customizing]) .tabbrowser-tab:not([pinned="true"]) {
+:root:not([customizing]) .tabbrowser-tab:not([pinned='true']) {
   --tab-min-width: fit-content;
   -moz-box-flex: 0 !important;
   max-width: 70px;
 }
 
-:root:not([customizing]) .tabbrowser-tab:not([pinned="true"]) .tab-stack {
+:root:not([customizing]) .tabbrowser-tab:not([pinned='true']) .tab-stack {
   flex-basis: 1;
 }
 
@@ -301,7 +277,7 @@
 }
 
 /* Removes space just to left of tabs */
-.titlebar-spacer[type="pre-tabs"] {
+.titlebar-spacer[type='pre-tabs'] {
   display: none;
 }
 
@@ -311,8 +287,8 @@
 }
 
 /* Default tab favicon */
-.tabbrowser-tab[label^="New Tab"] .tab-icon-image {
-  background: url("traffic.png") !important;
+.tabbrowser-tab[label^='New Tab'] .tab-icon-image {
+  background: url('traffic.png') !important;
   background-repeat: no-repeat !important;
   background-size: 16px !important;
   margin-right: 3.5px !important;
@@ -334,8 +310,8 @@ tabbrowser tabpanels {
 }
 
 /* white flash fix */
-browser[type="content-primary"],
-browser[type="content"] {
+browser[type='content-primary'],
+browser[type='content'] {
   background: #383838 !important;
 }
 
@@ -373,3 +349,43 @@ browser[type="content"] {
 /*color of the "tab-burst" effect you see when a tab finishes loading*/
 /* --tab-loading-fill: <COLOR> !important; */
 /* } */
+
+/* CONTEXT MENUS */
+
+menupopup,
+popup,
+popup > menu > menupopup,
+menupopup > menu > menupopup {
+  -moz-appearance: none !important;
+  background: #383838 !important;
+  border: 0px !important;
+  border-radius: 5px !important;
+  padding: 2px 0px 2px 0px !important;
+}
+
+menupopup menuseparator {
+  -moz-appearance: none !important;
+  background: #525a6d !important;
+  margin: 2px 0px 2px 0px !important;
+  padding: 0 !important;
+  border-top: none !important;
+  border-color: transparent !important;
+}
+
+menupopup menu,
+menuitem {
+  -moz-appearance: none !important;
+  color: #f7f7f7 !important;
+}
+
+menupopup menu:hover,
+menuitem:hover {
+  -moz-appearance: none !important;
+  color: #f7f7f7 !important;
+  background-color: #4c5ff9 !important;
+}
+
+/*Invert submenu arrow > color*/
+.menu-right {
+  filter: invert(95%) !important;
+}
