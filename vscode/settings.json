@@ -377,7 +377,7 @@
   // ---------------------------------------------------
   //* Intellicode
   // ---------------------------------------------------
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "vsintellicode.modify.editor.suggestSelection": "disabled",
   // ---------------------------------------------------
   //* Live SASS
   // ---------------------------------------------------
