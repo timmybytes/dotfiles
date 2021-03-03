@@ -64,5 +64,9 @@
   {
     "key": "tab",
     "command": "-acceptSelectedSuggestion"
+  },
+  {
+    "key": "shift+cmd+,",
+    "command": "workbench.action.openSettingsJson"
   }
 ]
