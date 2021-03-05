@@ -181,6 +181,10 @@
     "workbench.statusBar.visible": true,
     "workbench.tree.indent": 25,
     "workbench.tree.renderIndentGuides": "never",
+    "[In Bed by 7pm]": {
+      "editorSuggestWidget.highlightForeground": "#aa82ee",
+      "editorSuggestWidget.selectedBackground": "#666A79"
+    },
     "[Forest Night (Italic)]": {
       "activityBar.background": "#2a2426",
       "editor.background": "#2a2426",
