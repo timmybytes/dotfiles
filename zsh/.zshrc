@@ -130,6 +130,12 @@ alias t="tree -aFL 1 -s -h -C --du"
 alias t2="tree -aFL 2 -s -h -C --du"
 # Tree list all files three levels deep, with summary
 alias t3="tree -aFL 3 -s -h -C --du"
+# Tree list all directories only, one level deep, with summary, sizes, and color
+alias td="tree -dFL 1 -s -h -C --du"
+# Tree list all directories only, two levels deep, with summary, sizes, and color
+alias td2="tree -dFL 2 -s -h -C --du"
+# Tree list all directories only, three levels deep, with summary, sizes, and color
+alias td3="tree -dFL 3 -s -h -C --du"
 # Clear screen, then list contents in tree
 alias ct="clear; pwd; tree -aFL 1"
 # Check files/directories for associated macos tags
