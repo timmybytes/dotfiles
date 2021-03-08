@@ -26,12 +26,26 @@ check_ohmyzsh() {
 }
 
 check_npm() {
-  npm
+  npm update
 }
 
 main() {
   printf "%s\n" "Checking for updates..."
+  printf "─%.0s" {1..36}
+  printf "%s\n" "--Checking macOS"
+  printf "─%.0s" {1..36}
   check_system
+  printf "%s\n" "--Checking Oh My Zsh"
+  printf "─%.0s" {1..36}
+  check_ohmyzsh
+  printf "%s\n" "--Checking brew"
+  printf "─%.0s" {1..36}
+  check_brew
+  printf "%s\n" "--Checking npm"
+  printf "─%.0s" {1..36}
+  check_npm
+  printf "─%.0s" {1..36}
+  printf "%s\n" "Done."
 }
 
 main
