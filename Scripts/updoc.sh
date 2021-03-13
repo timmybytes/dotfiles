@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 #title          :updoc.sh
 #description    :Update Doctor - check for user & system updates
 #author         :Timothy Merritt
@@ -30,21 +30,35 @@ check_npm() {
 }
 
 main() {
+  clear
   printf "%s\n" "Checking for updates..."
   printf "─%.0s" {1..36}
+  echo
   printf "%s\n" "--Checking macOS"
   printf "─%.0s" {1..36}
+  echo
   check_system
+  printf "─%.0s" {1..36}
+  echo
   printf "%s\n" "--Checking Oh My Zsh"
   printf "─%.0s" {1..36}
-  check_ohmyzsh
+  echo
+  # check_ohmyzsh
+  omz update
+  printf "─%.0s" {1..36}
+  echo
   printf "%s\n" "--Checking brew"
   printf "─%.0s" {1..36}
+  echo
   check_brew
+  printf "─%.0s" {1..36}
+  echo
   printf "%s\n" "--Checking npm"
   printf "─%.0s" {1..36}
+  echo
   check_npm
   printf "─%.0s" {1..36}
+  echo
   printf "%s\n" "Done."
 }
 
