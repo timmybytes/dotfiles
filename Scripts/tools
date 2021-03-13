@@ -1,17 +1,24 @@
-COMMAND   | DESCRIPTION              | USAGE
---------------------------------------------------------------
-cache     : run clear_cache script   - cache
-gitcheck  : mgitstatus for all repos
-            in current directory     - gitcheck [above repo]
-j         : autojump                 - j [keyword]
-mac [cmd] : macos cli tools
-omg       : git repo commit changes
-            in last 24 hours         - omg
-onefetch  : git repo summary         - onefetch [inside repo]
-ql        : quicklook preview        - ql [file]
-shead     : new sh script w/ header  - shead
-tasks     : show task-master list w/ 
-            projects                 - tasks
-thefuck   : command name finder      - thefuck [keyword]
-tldr      : command summaries        - tldr [command] 
-todo      : show calendar and tasks  - todo
+┌───────────┬──────────────────────────┬────────────────────────┐
+│ COMMAND   │ DESCRIPTION              │ USAGE                  │
+├───────────┼──────────────────────────┴────────────────────────┤
+│ CUSTOM    │ Homemade helpers, commands, and scripts           │
+└───────────┴───────────────────────────────────────────────────┘
+cache       : run clear_cache script   - cache
+omg         : git repo commit changes
+              in last 24 hours         - omg
+┌───────────┬───────────────────────────────────────────────────┐
+│ TOOLS     │ Third-party tools and utilities                   │
+└───────────┴───────────────────────────────────────────────────┘
+j           : (zsh) autojump           - j [keyword]
+zsh_stats   : (zsh) list most used commands
+gitcheck    : mgitstatus for all repos
+              in current directory     - gitcheck [above repo]
+mac [cmd]   : macos cli tools
+onefetch    : git repo summary         - onefetch [inside repo]
+ql          : quicklook preview        - ql [file]
+shead       : new sh script w/ header  - shead
+tasks       : show task-master list w/
+              projects                 - tasks
+thefuck     : command name finder      - thefuck [keyword]
+tldr        : command summaries        - tldr [command]
+todo        : show calendar and tasks  - todo
