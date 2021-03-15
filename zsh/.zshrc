@@ -159,7 +159,7 @@ alias omg="omgwdyd.sh"
 
 # ------------------------- * * GIT * * -----------------------------#
 alias gs="git status"
-alias ga="git add ."
+alias ga="git add"
 alias gap="git add -p"
 alias gc="git commit"
 alias gmsg="git commit"
