@@ -1,0 +1,13 @@
+# Global Git Ignore
+#-----------------------------------------
+# System
+.DS_Store
+
+# Local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Dependencies
+/node_modules
