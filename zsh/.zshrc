@@ -1,4 +1,4 @@
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/nym/.oh-my-zsh"
@@ -187,6 +187,7 @@ alias todo="clear; cal; echo; printf "%s\n" "TASKS"; task list"
 # --------------------------------------------------------------------
 # * TERM & PATH
 # --------------------------------------------------------------------
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 export TERM="xterm-256color"
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
