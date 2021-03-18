@@ -22,7 +22,7 @@ check_brew() {
 }
 
 check_ohmyzsh() {
-  omz update
+  _omz::update
 }
 
 check_npm() {
@@ -62,4 +62,5 @@ main() {
   printf "%s\n" "Done."
 }
 
-main
+echo "testing"
+omz
