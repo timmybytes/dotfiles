@@ -13,6 +13,6 @@
 clear
 echo "Checking repos..."
 cd ~
-mgitstatus -e -d 2 
+mgitstatus -d 2 
 cd ~/Projects\/#Repos 
-mgitstatus -e -d 2
+mgitstatus -d 2
