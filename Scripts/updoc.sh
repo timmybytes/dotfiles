@@ -14,7 +14,7 @@
 # Brown/Orange 0;33     Yellow        1;33
 # Blue         0;34     Light Blue    1;34
 # Purple       0;35     Light Purple  1;35
-# Cyan         0;36     Light Cyan    1;36
+# Cyan         0;48     Light Cyan    1;48
 # Light Gray   0;37     White         1;37
 
 RED='\033[0;31m'
@@ -34,137 +34,152 @@ logo="
              /_/
 "
 
-# If preexisting tmpfile exists, delete
-if test -f "/tmp/temp_results"; then
-  rm /tmp/temp_results
-fi
-
 # Create tmpfile to store final update results
 tmpfile=$(mktemp /tmp/temp_results)
 
 check_system() {
   # Ignoring certain updates (Big Sur)
   # ex: sudo softwareupdate --ignore iWeb3.0.2-3.0.2
-  printf "─%.0s" {1..36}
+  printf "%s" "┌"
+  printf "─%.0s" {1..46}
+  printf "%s" "┐"
   echo
-  printf "${PENDING} Checking for macOS updates..."
-  echo
-  printf "─%.0s" {1..36}
+  printf "%b\n" "│ ${PENDING} Checking for macOS updates...              │"
+  printf "%s" "└"
+  printf "─%.0s" {1..46}
+  printf "%s" "┘"
   echo
   if softwareupdate -l; then
-    printf "%s\n" "$SUCCEEDED macOS updates fetch successful." | tee -a "${tmpfile}"
+    printf "%b\n" "${SUCCEEDED} macOS updates fetch successful." | tee -a "${tmpfile}"
   else
-    printf "%s\n" "$FAILED macOS updates fetch unsuccessful." | tee -a "${tmpfile}"
+    printf "%b\n" "${FAILED} macOS updates fetch unsuccessful." | tee -a "${tmpfile}"
   fi
 }
 
 check_brew() {
-  printf "─%.0s" {1..36}
+  printf "%s" "┌"
+  printf "─%.0s" {1..46}
+  printf "%s" "┐"
   echo
-  echo -e "${PENDING} Checking for brew updates..."
-  printf "─%.0s" {1..36}
+  printf "%b\n" "│ ${PENDING} Checking for brew updates...               │"
+  printf "%s" "└"
+  printf "─%.0s" {1..46}
+  printf "%s" "┘"
   echo
   if brew update; then
-    echo "${SUCCEEDED} brew updated." | tee -a "${tmpfile}"
+    printf "%b\n" "${SUCCEEDED} brew updated." | tee -a "${tmpfile}"
   else
-    echo "${FAILED} brew update unsuccessful." | tee -a "${tmpfile}"
+    printf "%b\n" "${FAILED} brew update unsuccessful." | tee -a "${tmpfile}"
   fi
   if
     brew upgrade
     brew upgrade --cask
   then
-    echo "${SUCCEEDED} brew formulae upgraded." | tee -a "${tmpfile}"
+    printf "%b\n" "${SUCCEEDED} brew formulae upgraded." | tee -a "${tmpfile}"
   else
-    echo "${FAILED} brew formulae upgrades unsuccessful." | tee -a "${tmpfile}"
+    printf "%b\n" "${FAILED} brew formulae upgrades unsuccessful." | tee -a "${tmpfile}"
   fi
   if
     brew cleanup
   then
-    echo "${SUCCEEDED} brew cleanup successful." | tee -a "${tmpfile}"
+    printf "%b\n" "${SUCCEEDED} brew cleanup successful." | tee -a "${tmpfile}"
   else
-    echo "${FAILED} brew cleanup unsuccessful." | tee -a "${tmpfile}"
+    printf "%b\n" "${FAILED} brew cleanup unsuccessful." | tee -a "${tmpfile}"
   fi
 }
 
 check_ohmyzsh() {
-  printf "─%.0s" {1..36}
+  printf "%s" "┌"
+  printf "─%.0s" {1..46}
+  printf "%s" "┐"
   echo
-  echo "${PENDING} Checking for oh my zsh updates..."
-  printf "─%.0s" {1..36}
+  printf "%b\n" "│ ${PENDING} Checking for oh my zsh updates...          │"
+  printf "%s" "└"
+  printf "─%.0s" {1..46}
+  printf "%s" "┘"
   echo
   if /bin/zsh -i -c "omz update"; then
-    echo "${SUCCEEDED} oh my zsh update successful." | tee -a "${tmpfile}"
+    printf "%b\n" "${SUCCEEDED} oh my zsh update successful." | tee -a "${tmpfile}"
   else
-    echo "${FAILED} oh my zsh update unsuccessful." | tee -a "${tmpfile}"
+    printf "%b\n" "${FAILED} oh my zsh update unsuccessful." | tee -a "${tmpfile}"
   fi
 }
 
 check_npm() {
-  printf "─%.0s" {1..36}
+  printf "%s" "┌"
+  printf "─%.0s" {1..46}
+  printf "%s" "┐"
   echo
-  echo "${PENDING} Checking for npm updates..."
-  printf "─%.0s" {1..36}
+  printf "%b\n" "│ ${PENDING} Checking for npm updates...                │"
+  printf "%s" "└"
+  printf "─%.0s" {1..46}
+  printf "%s" "┘"
   echo
   if npm update; then
-    echo
-    echo "${SUCCEEDED} npm updates successful." | tee -a "${tmpfile}"
+    printf "%b\n" "${SUCCEEDED} npm updates successful." | tee -a "${tmpfile}"
   else
-    echo
-    echo "${FAILED} npm updates unsuccessful." | tee -a "${tmpfile}"
+    printf "%b\n" "${FAILED} npm updates unsuccessful." | tee -a "${tmpfile}"
   fi
-  printf "─%.0s" {1..36}
 }
 
 check_tools() {
-  printf "─%.0s" {1..36}
+  printf "%s" "┌"
+  printf "─%.0s" {1..46}
+  printf "%s" "┐"
   echo
-  echo "${PENDING} Checking for VimPlug updates..."
-  printf "─%.0s" {1..36}
+  printf "%b\n" "│ ${PENDING} Checking for VimPlug updates...            │"
+  printf "%s" "└"
+  printf "─%.0s" {1..46}
+  printf "%s" "┘"
   echo
   if
     nvim -c "PlugUpgrade" +qa
     nvim -c "PlugUpdate" +qa
   then
-    echo
-    echo "${SUCCEEDED} VimPlug updates successful." | tee -a "${tmpfile}"
+    printf "%b\n" "${SUCCEEDED} VimPlug updates successful." | tee -a "${tmpfile}"
   else
-    echo
-    echo "${FAILED} VimPlug updates unsuccessful." | tee -a "${tmpfile}"
+    printf "%b\n" "${FAILED} VimPlug updates unsuccessful." | tee -a "${tmpfile}"
   fi
-  printf "─%.0s" {1..36}
+  printf "%s" "┌"
+  printf "─%.0s" {1..46}
+  printf "%s" "┐"
   echo
-  echo "${PENDING} Checking for tldr updates..." | tee -a "${tmpfile}"
+  printf "%b\n" "│ ${PENDING} Checking for tldr updates...               │"
+  printf "%s" "└"
+  printf "─%.0s" {1..46}
+  printf "%s" "┘"
+  echo
   if
     tldr --update
   then
-    echo
-    echo "${SUCCEEDED} tldr updates successful." | tee -a "${tmpfile}"
+    printf "%b\n" "${SUCCEEDED} tldr updates successful." | tee -a "${tmpfile}"
   else
-    echo
-    echo "${FAILED} tldr updates unsuccessful." | tee -a "${tmpfile}"
+    printf "%b\n" "${FAILED} tldr updates unsuccessful." | tee -a "${tmpfile}"
   fi
 }
 
 main() {
   clear
-  ${tmpfile}
+  # If preexisting tmpfile exists, delete
+  if test -f "/tmp/temp_results"; then
+    rm /tmp/temp_results
+  else
+    ${tmpfile}
+  fi
   echo "${logo}"
   echo "A CLI Updates Doctor"
-  echo
-  printf "%s\n" "Checking for updates..."
-  echo
   check_system
   check_ohmyzsh
   check_brew
   check_npm
   check_tools
-  printf "─%.0s" {1..36}
+  printf "─%.0s" {1..48}
   echo
   printf "%s\n" "Done."
   clear
-  echo "${logo}"
-  echo "${SUCCEEDED} ${FAILED} ${PENDING} Results"
-  printf "─%.0s" {1..36}
+  printf "%b\n" "${logo}"
+  printf "%b\n" "Update Results"
+  printf "─%.0s" {1..48}
   echo
   cat /tmp/temp_results
   rm /tmp/temp_results
