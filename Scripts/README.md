@@ -8,6 +8,19 @@ These are some of the scripts I use in development, mostly written in Bash or Py
 
 ---
 
+## upDoc
+
+<p align="center">
+  <strong>A CLI updates doctor</strong>
+</p>
+
+[**upDoc**](./updoc.sh) is a simple script to update a variety of my configs at the same time. It's still an early version that needs to be slimmed down and better adapted for scaling, but it works by running a series of updates, recording the results (pass/fail) for each process in a temporary file, and displaying final results. Eventually this will be run as a cron/launchd job to fully automate the process.
+
+<img src="./updoc-1.png" alt="Screenshot of OMGWDYD script on CLI" />
+
+<img src="./updoc-2.png" alt="Screenshot of OMGWDYD script on CLI" />
+
+
 ## OMGWDYD
 
 <h2 align="center">
