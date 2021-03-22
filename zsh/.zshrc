@@ -156,6 +156,8 @@ alias fix="npm audit fix"
 alias shead="make_header.sh"
 # Run OMGWDYD
 alias omg="omgwdyd.sh"
+# Run upDoc
+alias updoc="updoc.sh"
 
 # ------------------------- * * GIT * * -----------------------------#
 alias gs="git status"
