@@ -158,6 +158,8 @@ alias shead="make_header.sh"
 alias omg="omgwdyd.sh"
 # Run upDoc
 alias updoc="updoc.sh"
+# Run gitchecks on all local repos
+alias gitcheckall="gitcheckall.sh"
 
 # ------------------------- * * GIT * * -----------------------------#
 alias gs="git status"
