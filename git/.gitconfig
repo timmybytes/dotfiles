@@ -15,5 +15,6 @@
 [core]
 	editor = nvim +16 -c 'startinsert'
 	excludesfile = /Users/nym/.dotfiles/git/.gitignore_global
+	ignorecase = false
 [diff]
 	tool = vimdiff
