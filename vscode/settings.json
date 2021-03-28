@@ -461,18 +461,18 @@
       "color": "#000",
       "backgroundColor": "#B7CECE",
       "overviewRulerColor": "grey",
-      "isWholeLine": true
+      "isWholeLine": false
     },
     {
       "text": "FIXME:",
       "color": "#1d1d1d",
       "backgroundColor": "#ee6868",
-      "isWholeLine": true
+      "isWholeLine": false
     },
     {
       "text": "TODO:",
       "color": "#1d1d1d",
-      "isWholeLine": true
+      "isWholeLine": false
     }
   ],
   "workbench.editorAssociations": [
