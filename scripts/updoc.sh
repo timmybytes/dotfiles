@@ -180,7 +180,7 @@ main() {
   printf "%s\n" "Done."
   clear
   printf "%b\n" "${logo}"
-  printf "%b\n" "Update Results"
+  printf "%b\n" "$(date +"UpDoc Results for %c")"
   printf "─%.0s" {1..48}
   echo
   cat /tmp/updoc-log
