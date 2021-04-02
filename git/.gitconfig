@@ -18,3 +18,5 @@
 	ignorecase = false
 [diff]
 	tool = vimdiff
+[log]
+	date = local
