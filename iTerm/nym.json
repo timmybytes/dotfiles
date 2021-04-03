@@ -65,7 +65,7 @@
     "telnet"
   ],
   "Scrollback With Status Bar" : false,
-  "Scrollback Lines" : 0,
+  "Scrollback Lines" : 1000,
   "Scrollback in Alternate Screen" : false,
   "Draw Powerline Glyphs" : true,
   "Status Bar Layout" : {
@@ -123,7 +123,7 @@
   },
   "Use Cursor Guide" : false,
   "Custom Window Title" : "",
-  "Unlimited Scrollback" : true,
+  "Unlimited Scrollback" : false,
   "Allow Title Setting" : true,
   "Custom Command" : "No",
   "AWDS Tab Option" : "No",
@@ -376,7 +376,7 @@
   },
   "Smart Cursor Color" : true,
   "Ambiguous Double Width" : false,
-  "Blur Radius" : 30.078557265228426,
+  "Blur Radius" : 30,
   "Ansi 0 Color" : {
     "Red Component" : 0.16470588743686676,
     "Color Space" : "sRGB",
@@ -387,8 +387,8 @@
   "Cursor Type" : 2,
   "AWDS Pane Directory" : "",
   "Blur" : false,
-  "Normal Font" : "JetBrainsMonoNerdFontComplete-Regular 12",
-  "Vertical Spacing" : 1.2,
+  "Normal Font" : "FantasqueSansMono-Regular 13",
+  "Vertical Spacing" : 1.1000000000000001,
   "Ansi 7 Color" : {
     "Red Component" : 0.90196079015731812,
     "Color Space" : "sRGB",
@@ -433,7 +433,7 @@
   },
   "Screen" : -1,
   "AWDS Window Option" : "No",
-  "Initial Use Transparency" : true,
+  "Initial Use Transparency" : false,
   "Bound Hosts" : [
 
   ],
