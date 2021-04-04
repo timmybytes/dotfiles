@@ -65,7 +65,6 @@ main() {
     fi
   else
     clear
-    cd
     exit 0
   fi
 }
