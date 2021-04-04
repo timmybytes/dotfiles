@@ -149,7 +149,7 @@ alias vim="nvim"
 # Prefer VS Code-Insiders over VS Code
 alias code="code-insiders"
 # Check/delete contents and size of User/System caches
-alias cache="cd ~/.dotfiles/Scripts/ && ./clear_caches.sh"
+alias cache="clear_caches.sh"
 # npm
 alias fix="npm audit fix"
 # Create new bash script with header template
