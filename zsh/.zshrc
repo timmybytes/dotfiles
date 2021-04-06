@@ -140,6 +140,12 @@ alias ct="clear; pwd; tree -aFL 1"
 # Check files/directories for associated macos tags
 alias tags="mdls -raw -name kMDItemUserTags"
 
+# For kitty autocompletion
+autoload -Uz compinit 
+compinit 
+# Completion for kitty 
+kitty + complete setup zsh | source /dev/stdin 
+
 # ----------------------- * * CLI TOOLS * * -------------------------#
 # Task CLI
 # alias tasks="cv; task list; task projects"
