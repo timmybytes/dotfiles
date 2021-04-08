@@ -68,5 +68,57 @@
   {
     "key": "shift+cmd+,",
     "command": "workbench.action.openSettingsJson"
+  },
+  {
+    "key": "ctl+1",
+    "command": "workbench.action.focusFirstEditorGroup"
+  },
+  {
+    "key": "ctl+2",
+    "command": "workbench.action.focusSecondEditorGroup"
+  },
+  {
+    "key": "shift+cmd+0",
+    "command": "editor.action.replaceOne",
+    "when": "editorFocus && findWidgetVisible"
+  },
+  {
+    "key": "shift+cmd+1",
+    "command": "-editor.action.replaceOne",
+    "when": "editorFocus && findWidgetVisible"
+  },
+  {
+    "key": "shift+cmd+0",
+    "command": "search.action.replace",
+    "when": "matchFocus && replaceActive && searchViewletVisible"
+  },
+  {
+    "key": "shift+cmd+1",
+    "command": "-search.action.replace",
+    "when": "matchFocus && replaceActive && searchViewletVisible"
+  },
+  {
+    "key": "shift+cmd+0",
+    "command": "search.action.replaceAllInFile",
+    "when": "fileMatchFocus && replaceActive && searchViewletVisible"
+  },
+  {
+    "key": "shift+cmd+1",
+    "command": "-search.action.replaceAllInFile",
+    "when": "fileMatchFocus && replaceActive && searchViewletVisible"
+  },
+  {
+    "key": "shift+cmd+0",
+    "command": "search.action.replaceAllInFolder",
+    "when": "folderMatchFocus && replaceActive && searchViewletVisible"
+  },
+  {
+    "key": "shift+cmd+1",
+    "command": "-search.action.replaceAllInFolder",
+    "when": "folderMatchFocus && replaceActive && searchViewletVisible"
+  },
+  {
+    "key": "shift+cmd+1",
+    "command": "workbench.action.focusNextGroup"
   }
 ]
