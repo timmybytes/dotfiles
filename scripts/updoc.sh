@@ -8,6 +8,7 @@
 #notes          :
 #bash_version   :5.0.18(1)-release
 #============================================================================
+# COLOR REFERENCE
 # Black        0;30     Dark Gray     1;30
 # Red          0;31     Light Red     1;31
 # Green        0;32     Light Green   1;32
@@ -23,7 +24,10 @@ GREEN='\033[0;32m'
 NC='\033[0m' # No Color, resets
 PENDING="${YELLOW}●${NC}"
 FAILED="${RED}𐄂${NC}"
-SUCCEEDED="${GREEN}✓${NC}"
+SUCCEEDED="${GREEN}✔${NC}"
+
+mktmpfile=$(mktemp /tmp/updoc-log)
+tmpfile="/tmp/updoc-log"
 
 logo="
                         ____
@@ -32,42 +36,61 @@ logo="
 /_  __/  / /_/ / /_/ / /_/ / /_/ / /__   /_  __/
  /_/     \__,_/ .___/_____/\____/\___/    /_/
              /_/
+                 What's up, Doc?
 "
 
-# Create tmpfile to store final update results
-mktmpfile=$(mktemp /tmp/updoc-log)
-tmpfile="/tmp/updoc-log"
+check_temp() {
+  # If preexisting tmpfile exists, delete
+  if test -f "/tmp/updoc-log"; then
+    rm /tmp/updoc-log
+  else
+    # Create tmpfile to store final update results
+    ${mktmpfile}
+  fi
+}
 
-check_system() {
-  # Ignoring certain updates (Big Sur)
-  # ex: sudo softwareupdate --ignore iWeb3.0.2-3.0.2
+function box_wrap() {
+  # Limit app name to prevent overflowing
+  app=$(printf "%b" "${@}" | cut -c 1-18)
+  # Get length of app name
+  app_len=$(printf "%b" "${#app}")
+  # Calculate whitespace needed to maintain box shape
+  get_whitespace=$((18 - ${app_len}))
+  whitespace=$(printf "%${get_whitespace}s\n")
+  # Print the box!
   printf "%s" "┌"
   printf "─%.0s" {1..46}
   printf "%s" "┐"
   echo
-  printf "%b\n" "│ ${PENDING} Checking for macOS updates...              │"
+  printf "%b\n" "│ ${PENDING} Checking for ${app} updates...${whitespace} │"
   printf "%s" "└"
   printf "─%.0s" {1..46}
-  printf "%s" "┘"
-  echo
-  ware=$(softwareupdate --list --verbose | grep --after-context=2 "Label")
-  if [ "$ware" ]; then
-    printf "%b\n" "${SUCCEEDED} macOS updates fetch successful." "  $ware" | tee -a "${tmpfile}"
+  printf "%s\n" "┘"
+}
+
+check_system() {
+  box_wrap macOS
+  # TODO: Discern between "No new software available" and specifically listed packages, receiving exit 0 for either.
+
+  # Run as background process and wait for results --WIP
+  # softwareupdate --list &
+  # process_id=$!
+  # wait $process_id
+  # echo "Exit status: $?"
+
+  ware=$(softwareupdate --list)
+  # ware_specific=$($ware | grep --after-context=2 "Label")
+  if [ "$?" ]; then
+    # parse_ware=$("$ware" | grep -e "No" -e "Label" | tr -d '\n')
+    printf "%b\n" "${SUCCEEDED} macOS updates fetch successful." | tee -a "${tmpfile}"
   else
     printf "%b\n" "${FAILED} macOS updates fetch unsuccessful." | tee -a "${tmpfile}"
   fi
 }
 
 check_brew() {
-  printf "%s" "┌"
-  printf "─%.0s" {1..46}
-  printf "%s" "┐"
-  echo
-  printf "%b\n" "│ ${PENDING} Checking for brew updates...               │"
-  printf "%s" "└"
-  printf "─%.0s" {1..46}
-  printf "%s" "┘"
-  echo
+  box_wrap brew
+  # TODO: Less verbose output
   if brew update; then
     printf "%b\n" "${SUCCEEDED} brew update successful." | tee -a "${tmpfile}"
   else
@@ -91,15 +114,8 @@ check_brew() {
 }
 
 check_ohmyzsh() {
-  printf "%s" "┌"
-  printf "─%.0s" {1..46}
-  printf "%s" "┐"
-  echo
-  printf "%b\n" "│ ${PENDING} Checking for oh my zsh updates...          │"
-  printf "%s" "└"
-  printf "─%.0s" {1..46}
-  printf "%s" "┘"
-  echo
+  box_wrap ohmyzsh
+  # TODO: Less verbose output
   if /bin/zsh -i -c "omz update"; then
     printf "%b\n" "${SUCCEEDED} oh my zsh update successful." | tee -a "${tmpfile}"
   else
@@ -108,15 +124,7 @@ check_ohmyzsh() {
 }
 
 check_npm() {
-  printf "%s" "┌"
-  printf "─%.0s" {1..46}
-  printf "%s" "┐"
-  echo
-  printf "%b\n" "│ ${PENDING} Checking for npm updates...                │"
-  printf "%s" "└"
-  printf "─%.0s" {1..46}
-  printf "%s" "┘"
-  echo
+  box_wrap npm
   if npm update; then
     printf "%b\n" "${SUCCEEDED} npm updates successful." | tee -a "${tmpfile}"
   else
@@ -124,16 +132,8 @@ check_npm() {
   fi
 }
 
-check_tools() {
-  printf "%s" "┌"
-  printf "─%.0s" {1..46}
-  printf "%s" "┐"
-  echo
-  printf "%b\n" "│ ${PENDING} Checking for VimPlug updates...            │"
-  printf "%s" "└"
-  printf "─%.0s" {1..46}
-  printf "%s" "┘"
-  echo
+check_vimplug() {
+  box_wrap VimPlug
   if
     nvim -c "PlugUpgrade" +qa
     nvim -c "PlugUpdate" +qa
@@ -142,15 +142,10 @@ check_tools() {
   else
     printf "%b\n" "${FAILED} VimPlug updates unsuccessful." | tee -a "${tmpfile}"
   fi
-  printf "%s" "┌"
-  printf "─%.0s" {1..46}
-  printf "%s" "┐"
-  echo
-  printf "%b\n" "│ ${PENDING} Checking for tldr updates...               │"
-  printf "%s" "└"
-  printf "─%.0s" {1..46}
-  printf "%s" "┘"
-  echo
+}
+
+check_tldr() {
+  box_wrap tldr
   if
     tldr --update
   then
@@ -160,21 +155,8 @@ check_tools() {
   fi
 }
 
-main() {
-  clear
-  # If preexisting tmpfile exists, delete
-  if test -f "/tmp/updoc-log"; then
-    rm /tmp/updoc-log
-  else
-    ${mktmpfile}
-  fi
-  echo "${logo}"
-  echo "A CLI Updates Doctor"
-  check_system
-  check_ohmyzsh
-  check_brew
-  check_npm
-  check_tools
+results() {
+  # TODO: Add box around results
   printf "─%.0s" {1..48}
   echo
   printf "%s\n" "Done."
@@ -185,6 +167,19 @@ main() {
   echo
   cat /tmp/updoc-log
   rm /tmp/updoc-log
+}
+
+main() {
+  clear
+  check_temp
+  echo "${logo}"
+  check_system
+  check_ohmyzsh
+  check_brew
+  check_npm
+  check_vimplug
+  check_tldr
+  results
 }
 
 main
