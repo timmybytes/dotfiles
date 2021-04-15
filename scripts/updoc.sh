@@ -36,7 +36,8 @@ logo="
 /_  __/  / /_/ / /_/ / /_/ / /_/ / /__   /_  __/
  /_/     \__,_/ .___/_____/\____/\___/    /_/
              /_/
-                 What's up, Doc?
+
+   What's up with your software updates, Doc?
 "
 
 check_temp() {
@@ -162,7 +163,7 @@ results() {
   printf "%s\n" "Done."
   clear
   printf "%b\n" "${logo}"
-  printf "%b\n" "$(date +"UpDoc Results for %c")"
+  printf "%b\n" "$(date +"upDoc results for %c")"
   printf "─%.0s" {1..48}
   echo
   cat /tmp/updoc-log
