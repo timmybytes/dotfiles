@@ -36,8 +36,9 @@ logo="
 /_  __/  / /_/ / /_/ / /_/ / /_/ / /__   /_  __/
  /_/     \__,_/ .___/_____/\____/\___/    /_/
              /_/
+                     v0.1.0
 
-   What's up with your software updates, Doc?
+              What's updated, Doc?
 "
 
 check_temp() {
