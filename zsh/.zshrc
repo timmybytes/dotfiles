@@ -213,3 +213,4 @@ BEAR_AC_ZSH_SETUP_PATH=/Users/nym/Library/Caches/@sloansparger/bear/autocomplete
 # added for npm-completion https://github.com/Jephuff/npm-bash-completion
 PATH_TO_NPM_COMPLETION="/usr/local/lib/node_modules/npm-completion"
 source $PATH_TO_NPM_COMPLETION/npm-completion.sh
+export PATH="/usr/local/bin:$PATH"
