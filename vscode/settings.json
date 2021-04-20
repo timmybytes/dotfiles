@@ -29,7 +29,7 @@
   "editor.glyphMargin": true,
 
   // * * Margin between line numbers and code
-  "editor.lineDecorationsWidth": 10,
+  "editor.lineDecorationsWidth": 30,
   "editor.lineNumbers": "on",
   "git.decorations.enabled": true,
   // ---------------------------------------------------
@@ -58,22 +58,28 @@
   // "editor.fontFamily": "JetBrains Mono",
   // "editor.fontFamily": "victor mono",
   // "editor.fontFamily": "monoisome",
-  "editor.fontFamily": "dank mono",
+  // "editor.fontFamily": "dank mono",
   // "editor.fontFamily": "fira code",
   // "editor.fontFamily": "fantasque sans mono",
+  "editor.fontFamily": "Iosevka",
   // * * * No ligatures
+  // "editor.fontFamily": "BPMono",
+  // "editor.fontFamily": "Source Code Pro",
+  // "editor.fontFamily": "VT323",
+  // "editor.fontFamily": "Share Tech Mono",
   // "editor.fontFamily": "operator mono",
   // "editor.fontFamily": "IBM Plex Mono",
   // "editor.fontFamily": "Anonymous Pro",
   "editor.fontLigatures": "true",
   "editor.fontSize": 14,
-  "editor.fontWeight": "600",
-  "editor.inlineHints.fontFamily": "fantasque sans mono",
+  "editor.fontWeight": "400",
+  "editor.inlineHints.fontFamily": "Iosevka",
   "editor.formatOnType": true,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.highlightActiveIndentGuide": true,
-  "editor.lineHeight": 20,
+  "editor.letterSpacing": 0,
+  "editor.lineHeight": 21,
   "editor.matchBrackets": "never",
   "editor.minimap.enabled": false,
   "editor.minimap.maxColumn": 85,
@@ -86,8 +92,7 @@
   "editor.padding.top": 10,
   "editor.parameterHints.enabled": false,
   "editor.quickSuggestions": true,
-  // instantaneous suggestions
-  "editor.quickSuggestionsDelay": 0,
+  "editor.quickSuggestionsDelay": 0, // instantaneous suggestions
   "editor.renderControlCharacters": false,
   "editor.renderLineHighlight": "gutter",
   "editor.occurrencesHighlight": false,
@@ -124,7 +129,12 @@
   "telemetry.enableTelemetry": false,
   "telemetry.enableCrashReporter": false,
   "terminal.external.osxExec": "iTerm.app",
-  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontFamily": "Iosevka",
+  "terminal.integrated.fontWeight": "400",
+  "terminal.integrated.gpuAcceleration": "on",
+  "terminal.integrated.lineHeight": 1,
+  "terminal.integrated.fontWeightBold": "600",
   "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
@@ -190,7 +200,7 @@
       "editorSuggestWidget.highlightForeground": "#aa82ee",
       "editorSuggestWidget.selectedBackground": "#666A79"
     },
-    "[Forest Night (Italic)]": {
+    "[Everforest Dark]": {
       "activityBar.background": "#2a2426",
       "editor.background": "#2a2426",
       "editor.findMatchBackground": "#2a2426",
@@ -467,8 +477,8 @@
   },
   "workbench.iconTheme": "material-icon-theme",
   "tabnine.experimentalAutoImports": true,
-  "workbench.colorTheme": "Forest All-Nighter",
+  "workbench.colorTheme": "Gruvbox Dark Soft",
   "vsicons.dontShowNewVersionMessage": true,
-  "scm.inputFontFamily": "fantasque sans mono",
-  "debug.console.fontFamily": "fantasque sans mono"
+  "scm.inputFontFamily": "Iosevka",
+  "debug.console.fontFamily": "Iosevka"
 }
