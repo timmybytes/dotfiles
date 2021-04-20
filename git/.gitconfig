@@ -9,7 +9,7 @@
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
 [init]
-  defaultBranch = main
+	defaultBranch = main
 [commit]
   template = /Users/nym/.dotfiles/git/commit-conventions.txt
 [core]
