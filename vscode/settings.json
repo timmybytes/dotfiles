@@ -59,12 +59,12 @@
   // "editor.fontFamily": "victor mono",
   // "editor.fontFamily": "monoisome",
   // "editor.fontFamily": "dank mono",
-  // "editor.fontFamily": "fira code",
+  "editor.fontFamily": "fira code",
   // "editor.fontFamily": "fantasque sans mono",
   // "editor.fontFamily": "Iosevka",
   // * * * No ligatures
   // "editor.fontFamily": "Sometype Mono",
-  "editor.fontFamily": "APL385",
+  // "editor.fontFamily": "APL385",
   // "editor.fontFamily": "BPMono",
   // "editor.fontFamily": "Source Code Pro",
   // "editor.fontFamily": "VT323",
@@ -75,7 +75,7 @@
   "editor.fontLigatures": "true",
   "editor.fontSize": 14,
   "editor.fontWeight": "400",
-  "editor.inlineHints.fontFamily": "APL385",
+  "editor.inlineHints.fontFamily": "Fira Code",
   "editor.formatOnType": true,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
@@ -132,7 +132,7 @@
   "telemetry.enableCrashReporter": false,
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.fontSize": 14,
-  "terminal.integrated.fontFamily": "APL385",
+  "terminal.integrated.fontFamily": "Fira Code",
   "terminal.integrated.fontWeight": "400",
   "terminal.integrated.gpuAcceleration": "on",
   "terminal.integrated.letterSpacing": -0.75,
@@ -482,6 +482,6 @@
   "tabnine.experimentalAutoImports": true,
   "workbench.colorTheme": "Everforest Dark",
   "vsicons.dontShowNewVersionMessage": true,
-  "scm.inputFontFamily": "Iosevka",
-  "debug.console.fontFamily": "Iosevka"
+  "scm.inputFontFamily": "Fira Code",
+  "debug.console.fontFamily": "Fira Code"
 }
