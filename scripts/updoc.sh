@@ -73,17 +73,16 @@ function box_wrap() {
 check_system() {
   box_wrap macOS
   # TODO: Discern between "No new software available" and specifically listed packages, receiving exit 0 for either.
-
   # Run as background process and wait for results --WIP
   # softwareupdate --list &
   # process_id=$!
   # wait $process_id
   # echo "Exit status: $?"
 
-  ware=$(softwareupdate --list)
-  # ware_specific=$($ware | grep --after-context=2 "Label")
+  softup=$(softwareupdate --list --all | grep --after-context=2 "Label")
+
   if [ "$?" ]; then
-    # parse_ware=$("$ware" | grep -e "No" -e "Label" | tr -d '\n')
+    printf "%b\n" "${softup}" | tee -a "${tmpfile}"
     printf "%b\n" "${SUCCEEDED} macOS updates fetch successful." | tee -a "${tmpfile}"
   else
     printf "%b\n" "${FAILED} macOS updates fetch unsuccessful." | tee -a "${tmpfile}"
