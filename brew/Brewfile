@@ -1,3 +1,4 @@
+# Brew taps
 tap "browsh-org/browsh"
 tap "dart-lang/dart"
 tap "homebrew/bundle"
@@ -8,11 +9,14 @@ tap "homebrew/services"
 tap "koekeishiya/formulae"
 tap "sass/sass"
 
-# Brew packages
+# Brew installs
+brew "readline"
 brew "python@3.9"
 brew "autojump"
 brew "bash"
 brew "bash-completion"
+brew "node"
+brew "bitwarden-cli"
 brew "glib"
 brew "coreutils"
 brew "cowsay"
@@ -28,11 +32,11 @@ brew "htop"
 brew "imagemagick"
 brew "lolcat"
 brew "lynx"
+brew "mas"
 brew "moreutils"
 brew "neofetch"
 brew "neovim"
 brew "nmap"
-brew "node"
 brew "onefetch"
 brew "pandoc"
 brew "pngquant"
@@ -52,16 +56,26 @@ brew "youtube-dl"
 brew "browsh-org/browsh/browsh"
 brew "sass/sass/sass"
 
-# Brew casks
+# Brew casks - brew install [cask "name"]
 cask "cheatsheet"
+cask "dropbox"
 cask "epubquicklook"
+cask "figma"
+cask "firefox"
+cask "firefox-developer-edition"
 cask "font-fantasque-sans-mono"
 cask "font-hack-nerd-font"
 cask "font-iosevka"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-victor-mono"
+cask "gimp"
+cask "google-chrome"
+cask "keka"
 cask "kitty"
+cask "malwarebytes"
 cask "mkvtools"
+cask "mullvadvpn"
+cask "notion"
 cask "phantomjs"
 cask "ql-ansilove"
 cask "qladdict"
@@ -72,4 +86,27 @@ cask "qlstephen"
 cask "qlvideo"
 cask "quicklook-csv"
 cask "quicklook-json"
+cask "raindropio"
+cask "rectangle"
 cask "responsively"
+cask "signal"
+cask "vlc"
+cask "vncviewer"
+cask "virtualbox"
+cask "visual-studio-code-insiders"
+cask "yac-reader"
+cask "iterm2"
+
+# App Store
+mas "Xcode", id: 497799835
+mas "Bear", id: 1091189122
+mas "Trello", id: 1278508951
+mas "Twitter", id: 1482454543
+mas "SimpleMind Lite", id: 439654198
+mas "Pages", id: 409201541
+mas "Simple Comic", id: 1497435571
+mas "Amphetamine", id: 937984704
+mas "Sorted", id: 1306893526
+mas "Numbers", id: 409203825
+mas "Bitwarden", id: 1352778147
+mas "Cryptomator", id:953086535
