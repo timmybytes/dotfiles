@@ -480,7 +480,7 @@
   },
   "workbench.iconTheme": "material-icon-theme",
   "tabnine.experimentalAutoImports": true,
-  "workbench.colorTheme": "Everforest Dark",
+  "workbench.colorTheme": "Gruvbox Material Dark",
   "vsicons.dontShowNewVersionMessage": true,
   "scm.inputFontFamily": "Fira Code",
   "debug.console.fontFamily": "Fira Code"
