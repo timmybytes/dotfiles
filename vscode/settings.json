@@ -432,12 +432,9 @@
       "isWholeLine": false
     }
   ],
-  "workbench.editorAssociations": [
-    {
-      "viewType": "jupyter-notebook",
-      "filenamePattern": "*.ipynb"
-    }
-  ],
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
   "yaml.format.printWidth": 85,
   "workbench.activityBar.visible": false,
   "gitlens.menus": {
