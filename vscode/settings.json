@@ -5,27 +5,6 @@
   "css.remoteStyleSheets": [
     // TODO: Add custom css library
   ],
-  // ---------------------------------------------------
-  // * Hacks
-  // ---------------------------------------------------
-  // * Border Hacks
-  // "titleBar.border": "#2E3440",
-  // "editorGroupHeader.tabsBorder": "#2E3440",
-  // * Background Hacks
-  // "list.activeSelectionBackground": "#2E3440",
-  // "list.inactiveSelectionBackground": "#2E3440",
-  // "tab.inactiveBackground": "#2E3440",
-  // "tab.activeBackground": "#a5929449",
-  // "editorGroupHeader.tabsBackground": "#2E3440",
-  // "editorGroupHeader.noTabsBackground": "#2E3440",
-  // "sideBar.border": "#2E3440",
-  // "sideBar.background": "#2E3440",
-  // "sideBarSectionHeader.background": "#747474",
-  // "activityBar.border": "#0b1015"
-  // ---------------------------------------------------
-  // * Gutter
-  // ---------------------------------------------------
-  "editor.folding": false,
   "editor.glyphMargin": true,
 
   // * * Margin between line numbers and code
