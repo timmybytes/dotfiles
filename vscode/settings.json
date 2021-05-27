@@ -460,5 +460,6 @@
   "vsicons.dontShowNewVersionMessage": true,
   "scm.inputFontFamily": "Fira Code",
   "debug.console.fontFamily": "Fira Code",
-  "terminal.integrated.scrollback": 10000
+  "terminal.integrated.scrollback": 10000,
+  "eslint.format.enable": true
 }
