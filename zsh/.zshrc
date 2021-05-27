@@ -186,8 +186,11 @@ alias shor-code="qlmanage -p /Users/nym/vs_code_shortcuts.pdf"
 # ------------------------ * * RANDOM * * ---------------------------#
 # Python
 alias py="python3"
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
+  eval "$(pyenv init --path)"
 fi
 
 # Show CLI tools info
