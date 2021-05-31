@@ -58,7 +58,6 @@
   "editor.formatOnType": true,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
-  "editor.highlightActiveIndentGuide": true,
   "editor.letterSpacing": -0.35,
   "editor.lineHeight": 20,
   "editor.matchBrackets": "never",
@@ -78,7 +77,7 @@
   "editor.renderLineHighlight": "gutter",
   "editor.occurrencesHighlight": false,
   "editor.renderWhitespace": "none",
-  "editor.renderIndentGuides": true,
+  "editor.renderIndentGuides": false,
   "editor.scrollbar.verticalScrollbarSize": 10,
   "editor.scrollbar.horizontal": "visible",
   "editor.scrollbar.horizontalScrollbarSize": 10,
@@ -454,12 +453,16 @@
       "stash": true
     }
   },
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "eq-material-theme-icons",
   "tabnine.experimentalAutoImports": true,
-  "workbench.colorTheme": "Community Material Theme Palenight",
+  "workbench.colorTheme": "Everforest Dark",
   "vsicons.dontShowNewVersionMessage": true,
   "scm.inputFontFamily": "Fira Code",
   "debug.console.fontFamily": "Fira Code",
   "terminal.integrated.scrollback": 10000,
-  "eslint.format.enable": true
+  "eslint.format.enable": true,
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  }
 }
