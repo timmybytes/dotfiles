@@ -34,11 +34,11 @@
   // * * Fonts () => <= 0 O 1 l
   // ---------------------------------------------------
   // * * * Ligatures
-  // "editor.fontFamily": "JetBrains Mono",
+  "editor.fontFamily": "JetBrains Mono",
   // "editor.fontFamily": "victor mono",
   // "editor.fontFamily": "monoisome",
   // "editor.fontFamily": "dank mono",
-  "editor.fontFamily": "fira code",
+  // "editor.fontFamily": "fira code",
   // "editor.fontFamily": "fantasque sans mono",
   // "editor.fontFamily": "Iosevka",
   // * * * No ligatures
@@ -54,12 +54,12 @@
   "editor.fontLigatures": "true",
   "editor.fontSize": 14,
   "editor.fontWeight": "400",
-  "editor.inlineHints.fontFamily": "Fira Code",
+  "editor.inlineHints.fontFamily": "JetBrains Mono",
   "editor.formatOnType": true,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
-  "editor.letterSpacing": -0.35,
-  "editor.lineHeight": 20,
+  // "editor.letterSpacing": -0.15,
+  "editor.lineHeight": 24,
   "editor.matchBrackets": "never",
   "editor.minimap.enabled": false,
   "editor.minimap.maxColumn": 85,
@@ -77,7 +77,6 @@
   "editor.renderLineHighlight": "gutter",
   "editor.occurrencesHighlight": false,
   "editor.renderWhitespace": "none",
-  "editor.renderIndentGuides": false,
   "editor.scrollbar.verticalScrollbarSize": 10,
   "editor.scrollbar.horizontal": "visible",
   "editor.scrollbar.horizontalScrollbarSize": 10,
@@ -110,10 +109,10 @@
   "telemetry.enableCrashReporter": false,
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.fontSize": 14,
-  "terminal.integrated.fontFamily": "Fira Code",
+  "terminal.integrated.fontFamily": "JetBrains Mono",
   "terminal.integrated.fontWeight": "400",
   "terminal.integrated.gpuAcceleration": "on",
-  "terminal.integrated.letterSpacing": -0.75,
+  // "terminal.integrated.letterSpacing": -0.75,
   "terminal.integrated.lineHeight": 1,
   "terminal.integrated.fontWeightBold": "600",
   "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
@@ -453,16 +452,16 @@
       "stash": true
     }
   },
-  "workbench.iconTheme": "eq-material-theme-icons",
+  "workbench.iconTheme": "material-icon-theme",
   "tabnine.experimentalAutoImports": true,
-  "workbench.colorTheme": "Everforest Dark",
   "vsicons.dontShowNewVersionMessage": true,
-  "scm.inputFontFamily": "Fira Code",
-  "debug.console.fontFamily": "Fira Code",
+  "scm.inputFontFamily": "JetBrains Mono",
+  "debug.console.fontFamily": "JetBrains Mono",
   "terminal.integrated.scrollback": 10000,
   "eslint.format.enable": true,
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "left"
-  }
+  },
+  "workbench.colorTheme": "In Bed by 7pm"
 }
