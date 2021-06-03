@@ -4471,7 +4471,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>FiraCode-Regular 14</string>
+			<string>CascadiaCodePL-Roman 14</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Open Toolbelt</key>
@@ -4593,7 +4593,7 @@
 			<key>Use Tab Color</key>
 			<false/>
 			<key>Vertical Spacing</key>
-			<real>1.0700000000000001</real>
+			<real>1.1599999999999999</real>
 			<key>Visual Bell</key>
 			<false/>
 			<key>Window Type</key>
