@@ -90,7 +90,7 @@
   "editor.suggest.filterGraceful": true,
   "editor.tabCompletion": "off",
   "editor.tabSize": 2,
-  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrap": "bounded",
   // "editor.wordWrapColumn": 100,
   "explorer.sortOrder": "default",
   "explorer.compactFolders": false,
