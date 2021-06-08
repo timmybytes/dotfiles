@@ -122,7 +122,7 @@
   "workbench.startupEditor": "newUntitledFile",
   "workbench.statusBar.visible": true,
   "workbench.tree.indent": 15,
-  "workbench.tree.renderIndentGuides": "always",
+  "workbench.tree.renderIndentGuides": "none",
   "workbench.editor.tabSizing": "shrink",
   "zenMode.hideTabs": true,
   "zenMode.hideActivityBar": true,
