@@ -197,6 +197,8 @@ fi
 alias tools="cat ~/tools"
 alias todo="clear; cal; echo; printf "%s\n" "TASKS"; task list"
 
+alias ytdl="youtube-dl -f mp4 --write-auto-sub --write-description -o '%(upload_date)s-%(title)s.%(ext)s' -x --sub-lang en --convert-subtitles srt -k "
+
 # --------------------------------------------------------------------
 # * TERM & PATH
 # --------------------------------------------------------------------
