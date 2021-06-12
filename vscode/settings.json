@@ -14,7 +14,7 @@
   // ---------------------------------------------------
   // * Editor
   // ---------------------------------------------------
-  "breadcrumbs.enabled": true,
+  "breadcrumbs.enabled": false,
   "debug.console.wordWrap": false,
   "editor.roundedSelection": true,
   "editor.acceptSuggestionOnEnter": "on",
@@ -414,7 +414,6 @@
     "*.ipynb": "jupyter-notebook"
   },
   "yaml.format.printWidth": 85,
-  "workbench.activityBar.visible": false,
   "gitlens.menus": {
     "editor": {
       "blame": false,
@@ -464,5 +463,6 @@
     "default": "right",
     "jupyter-notebook": "left"
   },
-  "workbench.colorTheme": "Everforest Dark"
+  "workbench.colorTheme": "Everforest Dark",
+  "workbench.activityBar.visible": false
 }
