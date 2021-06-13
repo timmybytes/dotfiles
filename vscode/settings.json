@@ -164,19 +164,6 @@
   "material-icon-theme.hidesExplorerArrows": true,
   "material-icon-theme.showWelcomeMessage": false,
   "workbench.colorCustomizations": {
-    // "activityBar.border": "#323d43",
-    // "debugToolBar.border": "#868d80",
-    // "dropdown.background": "#2a2426",
-    // "editorIndentGuide.activeBackground": "#7affa286",
-    // "gitDecoration.addedResourceForeground": "#9ae65c",
-    // "gitDecoration.ignoredResourceForeground": "#5a5557",
-    // "gitDecoration.modifiedResourceForeground": "#e6d15c",
-    // "gitDecoration.untrackedResourceForeground": "#e67c5c",
-    // "workbench.list.keyboardNavigation": "simple",
-    // "workbench.startupEditor": "newUntitledFile",
-    // "workbench.statusBar.visible": true,
-    // "workbench.tree.indent": 25,
-    // "workbench.tree.renderIndentGuides": "never",
     "[In Bed by 7pm]": {
       "editorSuggestWidget.highlightForeground": "#aa82ee",
       "editorSuggestWidget.selectedBackground": "#666A79"
@@ -228,7 +215,8 @@
       "titleBar.activeBackground": "#2a2426",
       "titleBar.border": "#2a2426",
       "titleBar.inactiveBackground": "#2a2426"
-    }
+    },
+    "editorIndentGuide.activeBackground": "#a7c080"
   },
 
   // ---------------------------------------------------
