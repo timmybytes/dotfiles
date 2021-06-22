@@ -72,7 +72,7 @@
   "editor.highlightActiveIndentGuide": true,
   "editor.hover.delay": 800,
   "editor.hover.sticky": true,
-  "editor.renderIndentGuides": false,
+  "editor.renderIndentGuides": true,
   "editor.formatOnType": true,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
