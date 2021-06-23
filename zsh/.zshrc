@@ -109,7 +109,7 @@ alias resource="source ~/.zshrc"
 # Shortcut to custom Firefox CSS
 alias userchrome="cd -P /Users/nym/Library/Application\ Support/Firefox/Profiles/p3khxkfo.default-release/chrome"
 # Repository Directory
-alias repos="cd -P /Users/nym/Projects/#Repos; cv; pwd; t"
+alias repos="cd -P /Users/nym/Projects/Repos; cv; pwd; t"
 # Open coding practice sites in Firefox
 alias practice="cd ~/.dotfiles/Scripts/ && ./practice.py"
 alias vinit="nvim ~/.config/nvim/init.vim"
