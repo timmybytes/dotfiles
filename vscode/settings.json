@@ -466,5 +466,6 @@
     "jupyter-notebook": "left"
   },
   "workbench.colorTheme": "Everforest Dark",
-  "workbench.activityBar.visible": false
+  "workbench.activityBar.visible": false,
+  "redhat.telemetry.enabled": false
 }
