@@ -341,6 +341,11 @@
   "liveSassCompile.settings.excludeList": ["**/node_modules/**", ".vscode/**"],
   "liveSassCompile.settings.generateMap": false,
   // ---------------------------------------------------
+  //* Licenser
+  // ---------------------------------------------------
+  "licenser.license": "MIT",
+  "licenser.author": "Timothy Merritt",
+  // ---------------------------------------------------
   //* Live Server
   // ---------------------------------------------------
   "liveServer.settings.CustomBrowser": "firefox",
