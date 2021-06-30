@@ -470,7 +470,7 @@
     "default": "right",
     "jupyter-notebook": "left"
   },
-  "workbench.colorTheme": "Everforest Dark",
+  "workbench.colorTheme": "In Bed by 7pm",
   "workbench.activityBar.visible": false,
   "redhat.telemetry.enabled": false
 }
