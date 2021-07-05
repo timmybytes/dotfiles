@@ -198,7 +198,7 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 # Show CLI tools info
-alias tools="cat ~/tools"
+alias tools="bat ~/tools"
 alias todo="clear; cal; echo; printf "%s\n" "TASKS"; task list"
 
 alias ytdl="youtube-dl -f mp4 --write-auto-sub --write-description -o '%(upload_date)s-%(title)s.%(ext)s' -x --sub-lang en --convert-subtitles srt -k "
