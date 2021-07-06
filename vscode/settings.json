@@ -2,14 +2,10 @@
   // ---------------------------------------------------
   // ////////////////////// CORE ///////////////////////
   // ---------------------------------------------------
-  "css.remoteStyleSheets": [
-    // TODO: Add custom css library
-  ],
-  "editor.glyphMargin": true,
-
+  "editor.glyphMargin": false,
   // * * Margin between line numbers and code
   "editor.lineDecorationsWidth": 30,
-  "editor.lineNumbers": "on",
+  "editor.lineNumbers": "off",
   "git.decorations.enabled": true,
   // ---------------------------------------------------
   // * * Fonts () => <= 0 O 1 l
@@ -37,7 +33,7 @@
   "editor.fontLigatures": "true",
   "editor.fontSize": 14,
   "editor.fontWeight": "400",
-  "editor.inlineHints.fontFamily": "Cascadia Code PL",
+  "workbench.editor.showTabs": false,
   // "editor.letterSpacing": -0.15,
   "editor.lineHeight": 26,
   "scm.inputFontFamily": "Cascadia Code PL",
@@ -61,7 +57,7 @@
     "source.organizeImports": true
   },
   "editor.codeLens": false,
-  "editor.colorDecorators": true,
+  "editor.colorDecorators": false,
   "editor.comments.insertSpace": true,
   "editor.cursorBlinking": "phase",
   "editor.cursorWidth": 3,
@@ -72,7 +68,7 @@
   "editor.highlightActiveIndentGuide": true,
   "editor.hover.delay": 800,
   "editor.hover.sticky": true,
-  "editor.renderIndentGuides": true,
+  "editor.renderIndentGuides": false,
   "editor.formatOnType": true,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
@@ -90,7 +86,7 @@
   "editor.quickSuggestions": true,
   "editor.quickSuggestionsDelay": 0, // instantaneous suggestions
   "editor.renderControlCharacters": false,
-  "editor.renderLineHighlight": "gutter",
+  "editor.renderLineHighlight": "none",
   "editor.occurrencesHighlight": false,
   "editor.renderWhitespace": "none",
   "editor.scrollbar.verticalScrollbarSize": 10,
@@ -129,13 +125,15 @@
   "telemetry.enableCrashReporter": false,
   "terminal.external.osxExec": "kitty.app",
   "terminal.integrated.gpuAcceleration": "on",
-  "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
+  // "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
+  "window.title": "${activeEditorMedium}",
   "workbench.editor.enablePreview": false,
   "workbench.editor.showIcons": true,
-
+  "window.titleBarStyle": "custom",
+  "workbench.activityBar.visible": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
   "workbench.startupEditor": "newUntitledFile",
-  "workbench.statusBar.visible": true,
+  "workbench.statusBar.visible": false,
   "workbench.tips.enabled": false,
   "workbench.tree.indent": 15,
   "workbench.tree.renderIndentGuides": "none",
@@ -258,62 +256,14 @@
   // ---------------------------------------------------
   "codeui.targetingMode": "general",
   // ---------------------------------------------------
-  //* cSpell
+  //* Customize UI
   // ---------------------------------------------------
-  "cSpell.userWords": [
-    "Bootcamp",
-    "Bulma",
-    "Chakra",
-    "Durden",
-    "Giraudel",
-    "Grindsome",
-    "Nuxt",
-    "OWASP",
-    "PRPL",
-    "PWAs",
-    "Politik",
-    "Preprocessors",
-    "Rascia's",
-    "SCSS",
-    "SCSS’s",
-    "SPLATE",
-    "Spotify",
-    "Traversy",
-    "Vuepress",
-    "WASM",
-    "Yu's",
-    "browserslist",
-    "clearfix",
-    "codecademy",
-    "crossorigin",
-    "darkgray",
-    "entrypoints",
-    "figma",
-    "filetree",
-    "flexbox",
-    "gatsbyjs",
-    "gigasecond",
-    "inclusivity",
-    "linkedin",
-    "minmax",
-    "mixins",
-    "playthrough",
-    "precache",
-    "preconnect",
-    "predeploy",
-    "prettierrc",
-    "repo's",
-    "roadmap",
-    "s",
-    "soundcloud",
-    "srcset",
-    "tabindex",
-    "templating",
-    "timmybytes",
-    "webdev",
-    "xlarge",
-    "xsmall"
-  ],
+  "customizeUI.stylesheet": {
+    "div.title.show-file-icons": "display: none !important",
+    ".monaco-editor.scroll-decoration": "box-shadow: none !important",
+    "div.composite.title": "display: none !important",
+    "div.split-view-view.visible": "background-color: rgb(42, 36, 38) !important"
+  },
   // ---------------------------------------------------
   //* Dimmer
   // ---------------------------------------------------
@@ -466,6 +416,6 @@
     "jupyter-notebook": "left"
   },
   "workbench.colorTheme": "Everforest Dark",
-  "workbench.activityBar.visible": false,
+
   "redhat.telemetry.enabled": false
 }
