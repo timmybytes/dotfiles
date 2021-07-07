@@ -262,7 +262,8 @@
     "div.title.show-file-icons": "display: none !important",
     ".monaco-editor.scroll-decoration": "box-shadow: none !important",
     "div.composite.title": "display: none !important",
-    "div.split-view-view.visible": "background-color: rgb(42, 36, 38) !important"
+    "div.split-view-view.visible": "background-color: rgb(42, 36, 38) !important",
+    "div.scroll-decoration": "display: none !important"
   },
   // ---------------------------------------------------
   //* Dimmer
