@@ -2,10 +2,9 @@
   // ---------------------------------------------------
   // ////////////////////// CORE ///////////////////////
   // ---------------------------------------------------
-  "editor.glyphMargin": false,
+  "editor.glyphMargin": true,
   // * * Margin between line numbers and code
   "editor.lineDecorationsWidth": 30,
-  "editor.lineNumbers": "off",
   "git.decorations.enabled": true,
   // ---------------------------------------------------
   // * * Fonts () => <= 0 O 1 l
@@ -68,7 +67,8 @@
   "editor.highlightActiveIndentGuide": true,
   "editor.hover.delay": 800,
   "editor.hover.sticky": true,
-  "editor.renderIndentGuides": false,
+  "editor.renderIndentGuides": true,
+
   "editor.formatOnType": true,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
@@ -133,7 +133,6 @@
   "workbench.activityBar.visible": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
   "workbench.startupEditor": "newUntitledFile",
-  "workbench.statusBar.visible": false,
   "workbench.tips.enabled": false,
   "workbench.tree.indent": 15,
   "workbench.tree.renderIndentGuides": "none",
@@ -230,7 +229,8 @@
       "titleBar.border": "#2a2426",
       "titleBar.inactiveBackground": "#2a2426"
     },
-    "editorIndentGuide.activeBackground": "#a7c080"
+    "editorIndentGuide.activeBackground": "#a7c080",
+    "editorIndentGuide.background": "#2a2426"
   },
 
   // ---------------------------------------------------
@@ -246,11 +246,11 @@
     "borderColor : {color}; opacity: 0.5"
   ],
   "bracket-pair-colorizer-2.colorMode": "Independent",
-  "bracket-pair-colorizer-2.forceIterationColorCycle": false,
   "bracket-pair-colorizer-2.forceUniqueOpeningColor": true,
   "bracket-pair-colorizer-2.highlightActiveScope": true,
   "bracket-pair-colorizer-2.showHorizontalScopeLine": true,
   "bracket-pair-colorizer-2.showVerticalScopeLine": true,
+  "bracket-pair-colorizer-2.scopeLineRelativePosition": true,
   // ---------------------------------------------------
   //* Code UI
   // ---------------------------------------------------
@@ -260,10 +260,10 @@
   // ---------------------------------------------------
   "customizeUI.stylesheet": {
     "div.title.show-file-icons": "display: none !important",
-    ".monaco-editor.scroll-decoration": "box-shadow: none !important",
-    "div.composite.title": "display: none !important",
-    "div.split-view-view.visible": "background-color: rgb(42, 36, 38) !important",
-    "div.scroll-decoration": "display: none !important"
+    ".monaco-editor.scroll-decoration": "box-shadow: none !important"
+    // "div.composite.title": "display: none !important"
+    // "div.split-view-view.visible": "background-color: rgb(42, 36, 38) !important"
+    // "div.scroll-decoration": "display: none !important"
   },
   // ---------------------------------------------------
   //* Dimmer
