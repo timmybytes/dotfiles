@@ -416,7 +416,8 @@
     "default": "right",
     "jupyter-notebook": "left"
   },
-  "workbench.colorTheme": "Everforest Dark",
+  "workbench.colorTheme": "In Bed by 7pm",
 
-  "redhat.telemetry.enabled": false
+  "redhat.telemetry.enabled": false,
+  "editor.inlineSuggest.enabled": true
 }
