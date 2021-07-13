@@ -41,17 +41,12 @@
   "terminal.integrated.fontWeight": "400",
   "terminal.integrated.lineHeight": 1,
   "terminal.integrated.fontWeightBold": "800",
-  // "terminal.integrated.letterSpacing": -0.75,
-  // ---------------------------------------------------
-  // * Editor
-  // ---------------------------------------------------
-  "breadcrumbs.enabled": false,
   "debug.console.wordWrap": false,
   "editor.roundedSelection": true,
   "editor.accessibilitySupport": "off",
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
-    "source.organizeImports": true
+    "source.organizeImports": false
   },
   "editor.codeLens": false,
   "editor.colorDecorators": false,
@@ -81,9 +76,9 @@
   "editor.suggest.filterGraceful": true,
   "editor.wordBasedSuggestions": true,
   // ---------------------------------------
-  "editor.formatOnType": true,
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
+  "editor.formatOnType": false,
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": false,
   "editor.matchBrackets": "never",
   "editor.minimap.enabled": false,
   "editor.minimap.maxColumn": 85,
@@ -423,5 +418,11 @@
   "redhat.telemetry.enabled": false,
   "editor.inlineSuggest.enabled": true,
   "github.copilot.autocomplete.enable": true,
-  "typescript.updateImportsOnFileMove.enabled": "always"
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "github.copilot.enable": {
+    "*": false,
+    "yaml": false,
+    "plaintext": true,
+    "markdown": true
+  }
 }
