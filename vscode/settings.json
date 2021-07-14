@@ -354,12 +354,12 @@
       "text": "FIXME:",
       "color": "#1d1d1d",
       "backgroundColor": "#ee6868",
-      "isWholeLine": false
+      "isWholeLine": true
     },
     {
       "text": "TODO:",
       "color": "#1d1d1d",
-      "isWholeLine": false
+      "isWholeLine": true
     }
   ],
   "workbench.editorAssociations": {
@@ -413,7 +413,7 @@
     "default": "right",
     "jupyter-notebook": "left"
   },
-  "workbench.colorTheme": "Everforest Dark",
+  "workbench.colorTheme": "In Bed by 7pm",
 
   "redhat.telemetry.enabled": false,
   "editor.inlineSuggest.enabled": true,
