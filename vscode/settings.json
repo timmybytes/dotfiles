@@ -420,7 +420,7 @@
   "github.copilot.autocomplete.enable": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "github.copilot.enable": {
-    "*": false,
+    "*": true,
     "yaml": false,
     "plaintext": true,
     "markdown": true
