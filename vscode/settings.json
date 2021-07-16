@@ -34,7 +34,7 @@
   "editor.fontWeight": "400",
   "workbench.editor.showTabs": true,
   // "editor.letterSpacing": -0.15,
-  "editor.lineHeight": 26,
+  "editor.lineHeight": 28,
   "scm.inputFontFamily": "Cascadia Code PL",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.fontFamily": "Cascadia Code PL",
@@ -45,8 +45,12 @@
   "editor.roundedSelection": true,
   "editor.accessibilitySupport": "off",
   "editor.codeActionsOnSave": {
-    "source.fixAll": true,
-    "source.organizeImports": false
+    "source.fixAll": true
+    // "source.organizeImports": true,
+    // "source.format.json": true,
+    // "source.format.js": true,
+    // "source.format.css": true,
+    // "source.format.html": true
   },
   "editor.codeLens": false,
   "editor.colorDecorators": false,
@@ -77,9 +81,9 @@
   "editor.suggest.filterGraceful": true,
   "editor.wordBasedSuggestions": true,
   // ---------------------------------------
-  "editor.formatOnType": false,
-  "editor.formatOnPaste": false,
-  "editor.formatOnSave": false,
+  "editor.formatOnType": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
   "editor.matchBrackets": "never",
   "editor.minimap.enabled": false,
   "editor.minimap.maxColumn": 85,
@@ -282,15 +286,15 @@
   // ---------------------------------------------------
   // LiveSassCompiler is no longer maintained and can be buggy
   // Use node-sass with npm for more reliability
-  "liveSassCompile.settings.formats": [
-    {
-      "format": "compressed",
-      "extensionName": ".min.css",
-      "savePath": null
-    }
-  ],
-  "liveSassCompile.settings.excludeList": ["**/node_modules/**", ".vscode/**"],
-  "liveSassCompile.settings.generateMap": false,
+  // "liveSassCompile.settings.formats": [
+  //   {
+  //     "format": "compressed",
+  //     "extensionName": ".min.css",
+  //     "savePath": null
+  //   }
+  // ],
+  // "liveSassCompile.settings.excludeList": ["**/node_modules/**", ".vscode/**"],
+  // "liveSassCompile.settings.generateMap": false,
   // ---------------------------------------------------
   //* Live Server
   // ---------------------------------------------------
@@ -421,11 +425,20 @@
   "redhat.telemetry.enabled": false,
   "editor.inlineSuggest.enabled": true,
   "github.copilot.autocomplete.enable": true,
+  "github.copilot.advanced": {
+    "enable": true,
+    "autoComplete": true,
+    "autoComplete.maxItems": 10,
+    "autoComplete.maxItemsToShow": 10,
+    "autoComplete.maxItemsToShowInDropdown": 10
+  },
   "typescript.updateImportsOnFileMove.enabled": "always",
   "github.copilot.enable": {
     "*": true,
     "yaml": false,
     "plaintext": true,
-    "markdown": true
+    "markdown": true,
+    "json": true,
+    "yml": true
   }
 }
