@@ -62,7 +62,8 @@
   "editor.hover.sticky": true,
   // Intellisense --------------------------
   "editor.acceptSuggestionOnEnter": "on",
-  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.autoClosingBrackets": "always",
+  "editor.acceptSuggestionOnCommitCharacter": true,
   "editor.parameterHints.enabled": true,
   "editor.quickSuggestions": true,
   "editor.quickSuggestionsDelay": 0, // instantaneous suggestions
@@ -99,8 +100,9 @@
   "editor.scrollbar.horizontalScrollbarSize": 10,
   "editor.scrollPredominantAxis": true,
   "editor.smoothScrolling": true,
-  "editor.tabCompletion": "off",
+  "editor.tabCompletion": "on",
   "editor.tabSize": 2,
+
   "editor.wordWrap": "bounded",
   // "editor.wordWrapColumn": 100,
   "explorer.sortOrder": "default",
@@ -168,6 +170,7 @@
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
+  "emmet.triggerExpansionOnTab": true,
   // ---------------------------------------------------
   //* Color & Theme
   // ---------------------------------------------------
