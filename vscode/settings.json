@@ -133,7 +133,6 @@
   "workbench.editor.enablePreview": false,
   "workbench.editor.showIcons": true,
   "window.titleBarStyle": "custom",
-  "workbench.activityBar.visible": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
   "workbench.startupEditor": "newUntitledFile",
   "workbench.tips.enabled": false,
@@ -440,5 +439,6 @@
     "markdown": true,
     "json": true,
     "yml": true
-  }
+  },
+  "workbench.activityBar.visible": false
 }
