@@ -24,31 +24,31 @@
     "screenEdgeGapTop" : {
       "float" : 0
     },
-    "fullIgnoreBundleIds" : {
-
-    },
-    "gapSize" : {
-      "float" : 10
-    },
     "SUEnableAutomaticChecks" : {
       "bool" : true
-    },
-    "disabledApps" : {
-
-    },
-    "todoApplication" : {
-
     },
     "todoSidebarWidth" : {
       "float" : 400
     },
+    "gapSize" : {
+      "float" : 0
+    },
     "specifiedHeight" : {
       "float" : 1050
     },
-    "unsnapRestore" : {
-      "int" : 0
+    "todoApplication" : {
+
+    },
+    "fullIgnoreBundleIds" : {
+
+    },
+    "disabledApps" : {
+
     },
     "centeredDirectionalMove" : {
+      "int" : 0
+    },
+    "unsnapRestore" : {
       "int" : 0
     },
     "snapEdgeMarginTop" : {
@@ -57,11 +57,11 @@
     "snapModifiers" : {
       "int" : 0
     },
-    "altThirdCycle" : {
-      "int" : 0
-    },
     "moveCursorAcrossDisplays" : {
       "int" : 1
+    },
+    "altThirdCycle" : {
+      "int" : 0
     },
     "launchOnLogin" : {
       "bool" : true
@@ -69,20 +69,20 @@
     "hideMenubarIcon" : {
       "bool" : false
     },
-    "footprintFade" : {
+    "traverseSingleScreen" : {
       "int" : 0
     },
     "snapEdgeMarginBottom" : {
       "float" : 5
     },
-    "traverseSingleScreen" : {
+    "footprintFade" : {
       "int" : 0
-    },
-    "specifiedWidth" : {
-      "float" : 1680
     },
     "minimumWindowHeight" : {
       "float" : 0
+    },
+    "specifiedWidth" : {
+      "float" : 1680
     },
     "screenEdgeGapRight" : {
       "float" : 0
@@ -93,13 +93,13 @@
     "screenEdgeGapLeft" : {
       "float" : 0
     },
-    "showAllActionsInMenu" : {
-      "int" : 0
-    },
     "alternateDefaultShortcuts" : {
       "bool" : false
     },
     "subsequentExecutionMode" : {
+      "int" : 0
+    },
+    "showAllActionsInMenu" : {
       "int" : 0
     },
     "footprintBorderWidth" : {
@@ -123,17 +123,17 @@
     "snapEdgeMarginRight" : {
       "float" : 5
     },
-    "footprintAlpha" : {
-      "float" : 0.30000001192092896
-    },
     "footprintColor" : {
 
+    },
+    "minimumWindowWidth" : {
+      "float" : 0
     },
     "attemptMatchOnNextPrevDisplay" : {
       "int" : 0
     },
-    "minimumWindowWidth" : {
-      "float" : 0
+    "footprintAlpha" : {
+      "float" : 0.30000001192092896
     },
     "almostMaximizeHeight" : {
       "float" : 0
