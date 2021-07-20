@@ -116,6 +116,7 @@
   "explorer.decorations.badges": true,
   "explorer.incrementalNaming": "smart",
   "explorer.openEditors.visible": 0,
+  "explorer.autoReveal": "focusNoScroll",
   "files.autoSave": "onFocusChange",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
