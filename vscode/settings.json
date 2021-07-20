@@ -53,7 +53,7 @@
     // "source.format.html": true
   },
   "editor.codeLens": false,
-  "editor.colorDecorators": false,
+  "editor.colorDecorators": true,
   "editor.comments.insertSpace": true,
   "editor.cursorBlinking": "phase",
   "editor.cursorWidth": 3,
