@@ -45,8 +45,8 @@
   "editor.roundedSelection": true,
   "editor.accessibilitySupport": "off",
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
-    // "source.organizeImports": true,
+    "source.fixAll": true,
+    "source.organizeImports": true
     // "source.format.json": true,
     // "source.format.js": true,
     // "source.format.css": true,
@@ -67,12 +67,12 @@
   // Intellisense --------------------------
   "editor.acceptSuggestionOnEnter": "on",
   "editor.autoClosingBrackets": "always",
-  "editor.acceptSuggestionOnCommitCharacter": true,
+  "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.parameterHints.enabled": true,
   "editor.quickSuggestions": true,
   "editor.quickSuggestionsDelay": 0, // instantaneous suggestions
   "editor.snippetSuggestions": "inline",
-  "editor.suggestSelection": "recentlyUsed",
+  "editor.suggestSelection": "first",
   "editor.suggestFontSize": 14,
   "editor.suggestLineHeight": 18,
   "editor.suggest.localityBonus": true,
@@ -124,13 +124,12 @@
   "files.exclude": {
     "**/.git": false
   },
-  "notebook.experimental.useMarkdownRenderer": true,
+  // "notebook.experimental.useMarkdownRenderer": true,
   "telemetry.enableTelemetry": false,
   "telemetry.enableCrashReporter": false,
   "terminal.external.osxExec": "kitty.app",
   "terminal.integrated.gpuAcceleration": "on",
-  // "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
-  "window.title": "${activeEditorMedium}",
+  "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
   "workbench.editor.enablePreview": false,
   "workbench.editor.showIcons": true,
   "window.titleBarStyle": "custom",
@@ -145,36 +144,6 @@
   "zenMode.hideLineNumbers": true,
   "zenMode.hideStatusBar": true,
   "html.format.contentUnformatted": "pre,code,textarea",
-  // ---------------------------------------------------
-  //* Language-specific rules
-  // ---------------------------------------------------
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[python]": {
-    "editor.formatOnPaste": false
-  },
-
-  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  // ---------------------------------------------------
-  //* Emmet
-  // ---------------------------------------------------
-  "emmet.syntaxProfiles": {
-    "javascript": "jsx"
-  },
-  "html-css-class-completion.enableEmmetSupport": true,
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact"
-  },
-  "emmet.triggerExpansionOnTab": true,
   // ---------------------------------------------------
   //* Color & Theme
   // ---------------------------------------------------
@@ -236,7 +205,53 @@
     "editorIndentGuide.activeBackground": "#a7c080",
     "editorIndentGuide.background": "#2a2426"
   },
+  // ---------------------------------------------------
+  //* Language-specific rules
+  // ---------------------------------------------------
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.autoClosingBrackets": "always"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.autoClosingBrackets": "always"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.suggest.autoImports": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": true,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.formatOnPaste": false
+  },
 
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.autoClosingBrackets": "always"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.autoClosingBrackets": "always"
+  },
+  "typescript.suggest.autoImports": true,
+
+  // ---------------------------------------------------
+  //* Emmet
+  // ---------------------------------------------------
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx"
+  },
+  "html-css-class-completion.enableEmmetSupport": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "emmet.triggerExpansionOnTab": true,
   // ---------------------------------------------------
   // ////////////////// EXTENSIONS /////////////////////
   // ---------------------------------------------------
@@ -280,7 +295,7 @@
   // ---------------------------------------------------
   //* Intellicode
   // ---------------------------------------------------
-  "vsintellicode.modify.editor.suggestSelection": "disabled",
+  // "vsintellicode.modify.editor.suggestSelection": "disabled",
   // ---------------------------------------------------
   //* Live SASS
   // ---------------------------------------------------
@@ -323,8 +338,8 @@
   // ---------------------------------------------------
   //* Markdown Preview Enhanced
   // ---------------------------------------------------
-  "markdown-preview-enhanced.automaticallyShowPreviewOfMarkdownBeingEdited": false,
-  "markdown-preview-enhanced.previewTheme": "github-light.css",
+  // "markdown-preview-enhanced.automaticallyShowPreviewOfMarkdownBeingEdited": false,
+  // "markdown-preview-enhanced.previewTheme": "github-light.css",
   // ---------------------------------------------------
   // * Prettier
   // ---------------------------------------------------
@@ -333,7 +348,6 @@
   "prettier.bracketSpacing": true,
   "prettier.jsxBracketSameLine": true,
   "prettier.jsxSingleQuote": true,
-  // "prettier.printWidth": 100,
   "prettier.singleQuote": true,
   "prettier.proseWrap": "always",
   "prettier.tabWidth": 2,
@@ -431,14 +445,15 @@
     "autoComplete.maxItemsToShow": 10,
     "autoComplete.maxItemsToShowInDropdown": 10
   },
-  "typescript.updateImportsOnFileMove.enabled": "always",
   "github.copilot.enable": {
-    "*": true,
+    "*": false,
     "yaml": false,
     "plaintext": true,
     "markdown": true,
     "json": true,
     "yml": true
   },
-  "workbench.activityBar.visible": false
+  "workbench.activityBar.visible": false,
+  "editor.linkedEditing": true,
+  "vsintellicode.modify.editor.suggestSelection": "choseToUpdateConfiguration"
 }
