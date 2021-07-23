@@ -1,7 +1,17 @@
-# Mac 
-.DS_Store 
+# Mac
+.DS_Store
 .dotfilesrc
 dot-test.txt
 .netrwhist
 plugged/
 todo*
+# Local env files
+.env
+*/.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Dependencies
+/node_modules
