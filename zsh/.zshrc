@@ -1,7 +1,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/nym/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -107,9 +107,9 @@ alias resource="source ~/.zshrc"
 
 # ---------------------- * * SHORTCUTS * * --------------------------#
 # Shortcut to custom Firefox CSS
-alias userchrome="cd -P /Users/nym/Library/Application\ Support/Firefox/Profiles/p3khxkfo.default-release/chrome"
+alias userchrome="cd -P $HOME/Library/Application\ Support/Firefox/Profiles/p3khxkfo.default-release/chrome"
 # Repository Directory
-alias repos="cd -P /Users/nym/Projects/Repos; cv; pwd; t"
+alias repos="cd -P $HOME/Projects/Repos; cv; pwd; t"
 # Open coding practice sites in Firefox
 alias practice="cd ~/.dotfiles/Scripts/ && ./practice.py"
 alias vinit="nvim ~/.config/nvim/init.vim"
@@ -141,10 +141,10 @@ alias ct="clear; pwd; tree -aFL 1"
 alias tags="mdls -raw -name kMDItemUserTags"
 
 # For kitty autocompletion
-autoload -Uz compinit 
-compinit 
-# Completion for kitty 
-kitty + complete setup zsh | source /dev/stdin 
+autoload -Uz compinit
+compinit
+# Completion for kitty
+kitty + complete setup zsh | source /dev/stdin
 
 # ----------------------- * * CLI TOOLS * * -------------------------#
 # Task CLI
@@ -184,8 +184,8 @@ alias gitcheck="mgitstatus -d 1 ."
 # ------------------------ * * MACOS * * ----------------------------#
 # Quicklook
 alias ql="qlmanage -p"
-alias short="qlmanage -p /Users/nym/Projects/SystemShortcuts/shortcuts.md"
-alias shor-code="qlmanage -p /Users/nym/vs_code_shortcuts.pdf"
+alias short="qlmanage -p $HOME/Projects/SystemShortcuts/shortcuts.md"
+alias shor-code="qlmanage -p $HOME/vs_code_shortcuts.pdf"
 
 # ------------------------ * * RANDOM * * ---------------------------#
 # Python
@@ -212,12 +212,12 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin"
-export PATH="$PATH:/Users/nym/.dotfiles/scripts"
-export PATH="$PATH:/Users/nym/.dotfiles/scripts/OMGWDYD"
+export PATH="$PATH:$HOME/.dotfiles/scripts"
+export PATH="$PATH:$HOME/.dotfiles/scripts/OMGWDYD"
 export HOMEBREW_NO_AUTO_UPDATE=1
 
 # bear autocomplete setup
-BEAR_AC_ZSH_SETUP_PATH=/Users/nym/Library/Caches/@sloansparger/bear/autocomplete/zsh_setup && test -f $BEAR_AC_ZSH_SETUP_PATH && source $BEAR_AC_ZSH_SETUP_PATH
+BEAR_AC_ZSH_SETUP_PATH=$HOME/Library/Caches/@sloansparger/bear/autocomplete/zsh_setup && test -f $BEAR_AC_ZSH_SETUP_PATH && source $BEAR_AC_ZSH_SETUP_PATH
 
 # added for npm-completion https://github.com/Jephuff/npm-bash-completion
 PATH_TO_NPM_COMPLETION="/usr/local/lib/node_modules/npm-completion"

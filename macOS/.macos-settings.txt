@@ -136,13 +136,13 @@
         "com.apple.finder.SyncExtensions" =         {
             dirMap =             {
                 "com.getdropbox.dropbox.garcon" =                 (
-                    "file:///Users/nym/Movies/",
-                    "file:///Users/nym/Documents/",
-                    "file:///Users/nym/Music/",
-                    "file:///Users/nym/Desktop/",
-                    "file:///Users/nym/Dropbox/",
-                    "file:///Users/nym/Downloads/",
-                    "file:///Users/nym/Pictures/"
+                    "file:///$USER/Movies/",
+                    "file:///$USER/Documents/",
+                    "file:///$USER/Music/",
+                    "file:///$USER/Desktop/",
+                    "file:///$USER/Dropbox/",
+                    "file:///$USER/Downloads/",
+                    "file:///$USER/Pictures/"
                 );
             };
         };
@@ -615,7 +615,7 @@
         };
     };
     "com.apple.CallHistorySyncHelper" =     {
-        "/Users/nym/Library/Application Support/CallHistoryTransactions/transactions.log" = 0;
+        "/$USER/Library/Application Support/CallHistoryTransactions/transactions.log" = 0;
         SyncHistory =         (
             "2020-08-16 11:19:12 +0000",
             "2020-08-12 04:11:32 +0000",
@@ -13211,7 +13211,7 @@
         UserAgentQuirksConfigurationUpdateDate = "2020-08-14 12:52:50 +0000";
         UserHasUsedNonVirtualCardPreference = 1;
         UserStyleSheetEnabled = 0;
-        UserStyleSheetLocationURLString = "/Users/nym/Library/Application Support/Firefox/Profiles/p3khxkfo.default-release/chrome/userChrome.css";
+        UserStyleSheetLocationURLString = "/$USER/Library/Application Support/Firefox/Profiles/p3khxkfo.default-release/chrome/userChrome.css";
         WBSParsecABGroupIdentifier = 9;
         WBSParsecABGroupIdentifierGenerationDate = "2020-08-14 12:52:40 +0000";
         WBSRemoteAutoFillQuirksLastUpdateTime = "2020-08-14 12:52:44 +0000";
@@ -13300,7 +13300,7 @@
             CFVendedServices =             (
                                 {
                     NSBackgroundColorName = background;
-                    NSBundlePath = "/Users/nym/Library/Services/LaunchFlux.workflow";
+                    NSBundlePath = "/$USER/Library/Services/LaunchFlux.workflow";
                     NSIconName = NSActionTemplate;
                     NSKeyEquivalent =                     {
                     };
@@ -13312,7 +13312,7 @@
                 },
                                 {
                     NSBackgroundColorName = background;
-                    NSBundlePath = "/Users/nym/Library/Services/SublimeLaunch.workflow";
+                    NSBundlePath = "/$USER/Library/Services/SublimeLaunch.workflow";
                     NSIconName = NSActionTemplate;
                     NSKeyEquivalent =                     {
                     };
@@ -13327,7 +13327,7 @@
                 },
                                 {
                     NSBackgroundColorName = background;
-                    NSBundlePath = "/Users/nym/Library/Services/Vim.workflow";
+                    NSBundlePath = "/$USER/Library/Services/Vim.workflow";
                     NSIconName = NSActionTemplate;
                     NSKeyEquivalent =                     {
                     };
@@ -13339,7 +13339,7 @@
                 },
                                 {
                     NSBackgroundColorName = background;
-                    NSBundlePath = "/Users/nym/Library/Services/iTermLaunch.workflow";
+                    NSBundlePath = "/$USER/Library/Services/iTermLaunch.workflow";
                     NSIconName = NSActionTemplate;
                     NSKeyEquivalent =                     {
                     };
@@ -26305,9 +26305,9 @@
     };
     "com.apple.cloudphotod" =     {
         CPLEngineInfo =         {
-            clientLibraryBasePath = "/Users/nym/Pictures/Photos Library.photoslibrary/resources/cpl/cloudsync.noindex";
-            cloudLibraryResourceStoragePath = "/Users/nym/Pictures/Photos Library.photoslibrary/resources/cpl/cloudsync.noindex/storage";
-            cloudLibraryStateStoragePath = "/Users/nym/Pictures/Photos Library.photoslibrary/resources/cpl/cloudsync.noindex/storage";
+            clientLibraryBasePath = "/$USER/Pictures/Photos Library.photoslibrary/resources/cpl/cloudsync.noindex";
+            cloudLibraryResourceStoragePath = "/$USER/Pictures/Photos Library.photoslibrary/resources/cpl/cloudsync.noindex/storage";
+            cloudLibraryStateStoragePath = "/$USER/Pictures/Photos Library.photoslibrary/resources/cpl/cloudsync.noindex/storage";
             libraryIdentifier = MobileSlideShow;
             options = 1;
         };
@@ -27850,7 +27850,7 @@
             };
         };
         NewWindowTarget = PfHm;
-        NewWindowTargetPath = "file:///Users/nym/";
+        NewWindowTargetPath = "file:///$USER/";
         PackageViewSettings =         {
             WindowState =             {
                 ContainerShowSidebar = 1;
@@ -27868,15 +27868,15 @@
         QuitMenuItem = 1;
         RecentMoveAndCopyDestinations =         (
             "file:///Volumes/OnyxDrive/%23ISOs/Comics/%2302%20Marvel/X-Men%20Titles/(2019)%20Dawn%20of%20X/House%20of%20X%20-%20Powers%20of%20X%20(Story%20Arc)%20(2019)/",
-            "file:///Users/nym/Projects/%23Repos/WebDevPractice/Landing-Page/",
-            "file:///Users/nym/Projects/",
-            "file:///Users/nym/Yoink/Books/",
+            "file:///$USER/Projects/%23Repos/WebDevPractice/Landing-Page/",
+            "file:///$USER/Projects/",
+            "file:///$USER/Yoink/Books/",
             "file:///Applications/",
-            "file:///Users/nym/Projects/%23Repos/bytes-blog/Millennial-gh-pages/",
-            "file:///Users/nym/Projects/%23Repos/bytes-blog/",
-            "file:///Users/nym/Projects/%23Repos/bytes-blog/Millennial-gh-pages/assets/img/",
-            "file:///Users/nym/Projects/%23Drafts/Blog/",
-            "file:///Users/nym/Documents/Unemployment/"
+            "file:///$USER/Projects/%23Repos/bytes-blog/Millennial-gh-pages/",
+            "file:///$USER/Projects/%23Repos/bytes-blog/",
+            "file:///$USER/Projects/%23Repos/bytes-blog/Millennial-gh-pages/assets/img/",
+            "file:///$USER/Projects/%23Drafts/Blog/",
+            "file:///$USER/Documents/Unemployment/"
         );
         RecentsArrangeGroupViewBy = "Date Last Opened";
         SGTRecentFileSearches =         (
@@ -30003,8 +30003,8 @@
         RecentWhatsNewPanelVersion = 3;
         ShowMoreDownloadsDialogGB = 1;
         TouchBarAssignments = {length = 294, bytes = 0x789cedda 4b6e8330 1000506c bec7f001 ... c97fea27 e88c2a30 };
-        WebDatabaseDirectory = "/Users/nym/Library/Containers/com.apple.garageband10/Data/Library/Application Support/GarageBand/WebKit/WebDatabase";
-        WebKitLocalStorageDatabasePathPreferenceKey = "/Users/nym/Library/Containers/com.apple.garageband10/Data/Library/Application Support/GarageBand/WebKit/LocalStorage";
+        WebDatabaseDirectory = "/$USER/Library/Containers/com.apple.garageband10/Data/Library/Application Support/GarageBand/WebKit/WebDatabase";
+        WebKitLocalStorageDatabasePathPreferenceKey = "/$USER/Library/Containers/com.apple.garageband10/Data/Library/Application Support/GarageBand/WebKit/LocalStorage";
         "_MT_firstLaunchTime" = "616034755.703516";
         lastSelectedKeyCommandsDeviateFromPresetForCurrentKeyboardLayout = 1;
         lastSelectedKeyCommandsPath = "/Applications/GarageBand.app/Contents/Resources/Key Commands/U.S..logikcs";
@@ -31472,7 +31472,7 @@
     };
     "com.apple.mediaanalysisd" =     {
         PhotoLibraries =         (
-            "/Users/nym/Pictures/Photos Library.photoslibrary"
+            "/$USER/Pictures/Photos Library.photoslibrary"
         );
     };
     "com.apple.menuextra.battery" =     {
@@ -33444,8 +33444,8 @@
     };
     "com.apple.photoanalysisd" =     {
         PHAPhotoLibraryList =         {
-            "/Users/nym/Pictures/Photos Library.photoslibrary" =             {
-                path = "/Users/nym/Pictures/Photos Library.photoslibrary";
+            "/$USER/Pictures/Photos Library.photoslibrary" =             {
+                path = "/$USER/Pictures/Photos Library.photoslibrary";
                 version = 1;
             };
         };
@@ -33458,7 +33458,7 @@
         );
         PLDeviceDataFeedbackDate = "2020-03-05 01:50:02 +0000";
         PLLibraryBookmarkManagerBookmarksByPath =         {
-            "/Users/nym/Pictures/Photos Library.photoslibrary" = {length = 704, bytes = 0x626f6f6b c0020000 00000410 30000000 ... 04000000 00000000 };
+            "/$USER/Pictures/Photos Library.photoslibrary" = {length = 704, bytes = 0x626f6f6b c0020000 00000410 30000000 ... 04000000 00000000 };
         };
         "com.apple.photolibraryd.purgeNotification.purge_markers" =         {
             "3E28CB69-827F-3F7A-9C51-66425C03CA96" =             (
@@ -36344,7 +36344,7 @@
                 "Vertical Spacing" = "1.1";
                 "Visual Bell" = 1;
                 "Window Type" = 0;
-                "Working Directory" = "/Users/nym";
+                "Working Directory" = "/$USER";
             },
                         {
                 "ASCII Anti Aliased" = 1;
@@ -37312,7 +37312,7 @@
         ClipboardClearTimeout = 60;
         EnableQuicklookPreview = 1;
         EntryTableSortDescriptors = {length = 140, bytes = 0x040b7374 7265616d 74797065 6481e803 ... 70617265 3a868686 };
-        LastDatabasePath = "file:///Users/nym/Downloads/logins-1.kdbx";
+        LastDatabasePath = "file:///$USER/Downloads/logins-1.kdbx";
         NSColorPanelMode = 6;
         NSColorPickerPreferredRGBEntryMode = 2;
         NSDocumentSuppressTempVersionStoreWarning = 0;
@@ -37555,8 +37555,8 @@
     "com.thoughtbot.Markoff" =     {
         NSNavLastRootDirectory = "~";
         NSNavPanelExpandedSizeForOpenMode = "{799, 448}";
-        "NSWindow Frame /Users/nym/Projects/#Repos/#CodeSnippets/pop-pop.css-master/README.md" = "479 250 480 422 0 0 1440 900 ";
-        "NSWindow Frame /Users/nym/Projects/#Repos/100DaysOfCode/100-days-of-code/log.md" = "480 0 960 900 0 0 1440 900 ";
+        "NSWindow Frame /$USER/Projects/#Repos/#CodeSnippets/pop-pop.css-master/README.md" = "479 250 480 422 0 0 1440 900 ";
+        "NSWindow Frame /$USER/Projects/#Repos/100DaysOfCode/100-days-of-code/log.md" = "480 0 960 900 0 0 1440 900 ";
         "NSWindow Frame NSNavPanelAutosaveName" = "320 339 799 448 0 0 1440 900 ";
         defaultEditorName = "Sublime Text.app";
         defaultEditorPath = "file:///Applications/Sublime%20Text.app/";
@@ -37624,12 +37624,12 @@
     };
     "fr.handbrake.HandBrake" =     {
         HBLastDestinationDirectoryBookmark = {length = 644, bytes = 0x626f6f6b 84020000 00000410 30000000 ... 04000000 00000000 };
-        HBLastDestinationDirectoryURL = "/Users/nym/Yoink";
+        HBLastDestinationDirectoryURL = "/$USER/Yoink";
         HBLastSourceDirectoryURL = "/Volumes/OnyxDrive/#ISOs/Movies/- #Temp/Amelie.2001.INTERNAL.1080p.BluRay.x264-USURY[rarbg]";
         HBPreviewViewExpandedStatus =         (
             3688406146179949894
         );
-        LastExternalSubImportDirectoryURL = "/Users/nym/Yoink/The.Game.1997.1080p.BluRay.x264.AAC-ETRG";
+        LastExternalSubImportDirectoryURL = "/$USER/Yoink/The.Game.1997.1080p.BluRay.x264.AAC-ETRG";
         NSNavLastRootDirectory = "/Volumes/OnyxDrive/#ISOs/Movies/- #Temp/Amelie.2001.INTERNAL.1080p.BluRay.x264-USURY[rarbg]";
         NSNavPanelExpandedSizeForOpenMode = "{799, 448}";
         "NSSplitView Subview Frames HBQueueSplitViewAutosave" =         (
@@ -37878,11 +37878,11 @@
         VideoEffectSelectedProfile = 0;
         language = auto;
         recentlyPlayedMedia =         {
-            "file:///Users/nym/Movies/Learn JavaScript - Full Course for Beginners-PkZNo7MFNFg.webm" = 3573;
-            "file:///Users/nym/Yoink/Birds.of.Prey.And.the.Fantabulous.Emancipation.of.One.Harley.Quinn.2020.1080p.HC.HDRip.AC3.x264-CMRG[EtHD]/Birds.of.Prey.And.the.Fantabulous.Emancipation.of.One.Harley.Quinn.2020.1080p.HC.HDRip.AC3.x264-CMRG[EtHD].mkv" = 3216;
-            "file:///Users/nym/Yoink/Code/The Complete 2020 Web Development Bootcamp/17. Node.js/7. The NPM Package Manager and Installing External Node Modules.mp4" = 276;
-            "file:///Users/nym/Yoink/Code/The Complete 2020 Web Development Bootcamp/8. Introduction to Javascript ES6/15. Functions Part 1 Challenge - The Karel Robot.mp4" = 193;
-            "file:///Users/nym/Yoink/Zombieland (2009) (2160p BluRay x265 HEVC 10bit HDR AAC 7.1 Tigole)/Zombieland (2009) (2160p BluRay x265 10bit HDR Tigole).mkv" = 3208;
+            "file:///$USER/Movies/Learn JavaScript - Full Course for Beginners-PkZNo7MFNFg.webm" = 3573;
+            "file:///$USER/Yoink/Birds.of.Prey.And.the.Fantabulous.Emancipation.of.One.Harley.Quinn.2020.1080p.HC.HDRip.AC3.x264-CMRG[EtHD]/Birds.of.Prey.And.the.Fantabulous.Emancipation.of.One.Harley.Quinn.2020.1080p.HC.HDRip.AC3.x264-CMRG[EtHD].mkv" = 3216;
+            "file:///$USER/Yoink/Code/The Complete 2020 Web Development Bootcamp/17. Node.js/7. The NPM Package Manager and Installing External Node Modules.mp4" = 276;
+            "file:///$USER/Yoink/Code/The Complete 2020 Web Development Bootcamp/8. Introduction to Javascript ES6/15. Functions Part 1 Challenge - The Karel Robot.mp4" = 193;
+            "file:///$USER/Yoink/Zombieland (2009) (2160p BluRay x265 HEVC 10bit HDR AAC 7.1 Tigole)/Zombieland (2009) (2160p BluRay x265 10bit HDR Tigole).mkv" = 3208;
             "file:///Volumes/OnyxDrive/#ISOs/Movies/- #Temp/#Done/#ReduxSubs/Birdman (2014) (1080p BluRay x265 10bit AAC 5.1 afm72)/Birdman (2014) (1080p BluRay x265 afm72).mkv" = 127;
             "file:///Volumes/OnyxDrive/#ISOs/Movies/- #Temp/#Done/#ReduxSubs/Cars (2006) (1080p BluRay x265 HEVC 10bit AAC 5.1 Tigole)/Cars (2006) (1080p BluRay x265 10bit Tigole).mkv" = 401;
             "file:///Volumes/OnyxDrive/#ISOs/Movies/- #Temp/#Done/#ReduxSubs/Dark City (1998) DC (1080p BluRay x265 HEVC 10bit AAC 7.1 Tigole)/Dark City (1998) DC (1080p BluRay x265 10bit Tigole).mkv" = 432;
@@ -37903,8 +37903,8 @@
             "file:///private/var/folders/pz/_tpr6p5x7557sbyg56xwm3400000gn/T/.qBittorrent/61031853feda3024624f6d9613330ccfae6aba6c/Cowboy Bebop [BD 1448x1080 HEVC-10bit AC3]/Cowboy Bebop 01 [BD 1448x1080 HEVC-10bit AC3 ASSx2].mkv" = 234;
         };
         recentlyPlayedMediaList =         (
-            "file:///Users/nym/Yoink/Birds.of.Prey.And.the.Fantabulous.Emancipation.of.One.Harley.Quinn.2020.1080p.HC.HDRip.AC3.x264-CMRG[EtHD]/Birds.of.Prey.And.the.Fantabulous.Emancipation.of.One.Harley.Quinn.2020.1080p.HC.HDRip.AC3.x264-CMRG[EtHD].mkv",
-            "file:///Users/nym/Yoink/Zombieland (2009) (2160p BluRay x265 HEVC 10bit HDR AAC 7.1 Tigole)/Zombieland (2009) (2160p BluRay x265 10bit HDR Tigole).mkv",
+            "file:///$USER/Yoink/Birds.of.Prey.And.the.Fantabulous.Emancipation.of.One.Harley.Quinn.2020.1080p.HC.HDRip.AC3.x264-CMRG[EtHD]/Birds.of.Prey.And.the.Fantabulous.Emancipation.of.One.Harley.Quinn.2020.1080p.HC.HDRip.AC3.x264-CMRG[EtHD].mkv",
+            "file:///$USER/Yoink/Zombieland (2009) (2160p BluRay x265 HEVC 10bit HDR AAC 7.1 Tigole)/Zombieland (2009) (2160p BluRay x265 10bit HDR Tigole).mkv",
             "file:///Volumes/OnyxDrive/#Important/#Archive/20170316080148/CH03-2017-03-14-17-18-10.avi",
             "file:///private/var/folders/pz/_tpr6p5x7557sbyg56xwm3400000gn/T/.qBittorrent/61031853feda3024624f6d9613330ccfae6aba6c/Cowboy Bebop [BD 1448x1080 HEVC-10bit AC3]/Cowboy Bebop 01 [BD 1448x1080 HEVC-10bit AC3 ASSx2].mkv",
             "file:///Volumes/OnyxDrive/iTunes/iTunes Media/TV Shows/Ghost in the Shell_ Stand Alone Complex/Season 1/GITS_ SAC - 1st _ E01 'Section 9' (SA).m4v",
@@ -37922,9 +37922,9 @@
             "file:///Volumes/OnyxDrive/#ISOs/Movies/- #Temp/#Done/#ReduxSubs/Memento.(2000).[Remastered.Edition].1080p.BluRay.DTS.ITA.AC3.ENG.Subs.x264.mkv",
             "file:///Volumes/lywNI_WyS8l8_0/Video/2020.06.05-PORTLAND.OR-RobertEvans-11.01-PM.mp4",
             "file:///Volumes/OnyxDrive/#ISOs/Movies/- #Temp/When.The.Wind.Blows.1986.1080p.BluRay.x264-SiNNERS.m4v",
-            "file:///Users/nym/Movies/Learn JavaScript - Full Course for Beginners-PkZNo7MFNFg.webm",
-            "file:///Users/nym/Yoink/Code/The Complete 2020 Web Development Bootcamp/8. Introduction to Javascript ES6/15. Functions Part 1 Challenge - The Karel Robot.mp4",
-            "file:///Users/nym/Yoink/Code/The Complete 2020 Web Development Bootcamp/17. Node.js/7. The NPM Package Manager and Installing External Node Modules.mp4",
+            "file:///$USER/Movies/Learn JavaScript - Full Course for Beginners-PkZNo7MFNFg.webm",
+            "file:///$USER/Yoink/Code/The Complete 2020 Web Development Bootcamp/8. Introduction to Javascript ES6/15. Functions Part 1 Challenge - The Karel Robot.mp4",
+            "file:///$USER/Yoink/Code/The Complete 2020 Web Development Bootcamp/17. Node.js/7. The NPM Package Manager and Installing External Node Modules.mp4",
             "file:///Volumes/OnyxDrive/The Complete 2020 Web Development Bootcamp/32. React.js/005. JSX Code Practice.mp4"
         );
     };
