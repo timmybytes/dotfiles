@@ -72,7 +72,6 @@
   "editor.quickSuggestions": true,
   "editor.quickSuggestionsDelay": 0, // instantaneous suggestions
   "editor.snippetSuggestions": "inline",
-  "editor.suggestSelection": "first",
   "editor.suggestFontSize": 14,
   "editor.suggestLineHeight": 18,
   "editor.suggest.localityBonus": true,
@@ -251,7 +250,8 @@
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
-  "emmet.triggerExpansionOnTab": true,
+  "emmet.triggerExpansionOnTab": false,
+
   // ---------------------------------------------------
   // ////////////////// EXTENSIONS /////////////////////
   // ---------------------------------------------------
@@ -455,5 +455,8 @@
   },
   "workbench.activityBar.visible": false,
   "editor.linkedEditing": true,
-  "vsintellicode.modify.editor.suggestSelection": "choseToUpdateConfiguration"
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "editor.suggest.insertMode": "replace",
+  "editor.suggest.showStatusBar": true,
+  "editor.suggestSelection": "first"
 }
