@@ -167,10 +167,6 @@ alias updoc="updoc.sh"
 # Run gitchecks on all local repos
 alias gitcheckall="gitcheckall.sh"
 
-# New tool reminders
-# Use bat instead of cat
-alias cat="echo Use bat instead!"
-
 # ------------------------- * * GIT * * -----------------------------#
 alias gs="git status"
 alias ga="git add"
