@@ -221,9 +221,9 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[markdown]": {
-    "editor.wordWrap": "on",
+    // "editor.wordWrap": "on",
     "editor.quickSuggestions": true,
-    "editor.formatOnSave": true,
+    // "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[python]": {
@@ -349,7 +349,7 @@
   "prettier.jsxBracketSameLine": true,
   "prettier.jsxSingleQuote": true,
   "prettier.singleQuote": true,
-  "prettier.proseWrap": "always",
+  "prettier.proseWrap": "never",
   "prettier.tabWidth": 2,
   // ---------------------------------------------------
   //* Settings Sync
