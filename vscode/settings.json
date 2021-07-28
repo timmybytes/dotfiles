@@ -46,7 +46,7 @@
   "editor.accessibilitySupport": "off",
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
-    "source.organizeImports": true
+    "source.organizeImports": false
     // "source.format.json": true,
     // "source.format.js": true,
     // "source.format.css": true,
@@ -384,7 +384,7 @@
     {
       "text": "TODO:",
       "color": "#1d1d1d",
-      "isWholeLine": true
+      "isWholeLine": false
     }
   ],
   "workbench.editorAssociations": {
