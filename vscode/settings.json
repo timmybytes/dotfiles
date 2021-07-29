@@ -46,7 +46,7 @@
   "editor.accessibilitySupport": "off",
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
-    "source.organizeImports": false
+    "source.organizeImports": true
     // "source.format.json": true,
     // "source.format.js": true,
     // "source.format.css": true,
