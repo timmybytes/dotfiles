@@ -1,0 +1,10 @@
+{
+  "prettier.arrowParens": "avoid",
+  "prettier.bracketSpacing": true,
+  "prettier.jsxBracketSameLine": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "prettier.proseWrap": "never",
+  "prettier.tabWidth": 2,
+  "prettier.requireConfig": true
+}
