@@ -217,7 +217,7 @@
       "titleBar.inactiveBackground": "#2a2426"
     },
     "editorIndentGuide.activeBackground": "#a7c080",
-    "editorIndentGuide.background": "#2a2426"
+    // "editorIndentGuide.background": "#2a2426"
   },
   // ---------------------------------------------------
   //* Language-specific rules
