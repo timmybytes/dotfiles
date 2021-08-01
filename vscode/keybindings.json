@@ -141,5 +141,15 @@
   {
     "key": "cmd+enter",
     "command": "list.select"
+  },
+  {
+    "key": "tab",
+    "command": "tabout",
+    "when": "editorTextFocus && !editorHasMultipleSelections && !inSnippetMode &&  !suggestWidgetVisible && suggestWidgetVisible"
+  },
+  {
+    "key": "tab",
+    "command": "-tabout",
+    "when": "editorTextFocus && !editorHasMultipleSelections && !inSnippetMode && !suggestWidgetVisible"
   }
 ]
