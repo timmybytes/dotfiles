@@ -19,9 +19,9 @@
   "editor.emptySelectionClipboard": false,
   "editor.find.seedSearchStringFromSelection": "selection",
   "editor.foldingHighlight": true,
-  "editor.formatOnPaste": false,
-  "editor.formatOnSave": false,
-  "editor.formatOnType": false,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
   "editor.glyphMargin": true,
   "editor.highlightActiveIndentGuide": true,
   "editor.hover.delay": 800,
@@ -358,7 +358,7 @@
     "autoComplete.maxItemsToShowInDropdown": 10
   },
   "github.copilot.enable": {
-    "*": false,
+    "*": true,
     "yaml": false,
     "plaintext": true,
     "markdown": true,
