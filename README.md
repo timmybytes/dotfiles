@@ -21,13 +21,16 @@ Happy hacking!
 
 ## Contents
 
-- [Docs](./docs/)
 - [Firefox Settings](./Firefox/README.md)
+- [macOS System Settings](./docs/configuration.md)
 - [git Settings](./git/README.md)
 - [iTerm Settings](./iTerm/README.md)
-- [macOS Settings](./macOS/)
-- [Neofetch Settings](./neofetch/README.md)
-- [Neovim Settings](./nvim/)
-- [Scripts](./Scripts/)
+- [Karabiner Settings](./karabiner/)
+- [Kitty Settings](./kitty/README.md)
+- [neofetch Settings](./neofetch/README.md)
+- [Neovim Settings](./nvim/README.md)
+- [Rectangle Settings](./rectangle/)
+- [Scripts](./scripts/README.md)
+- [Tools](./tools/)
 - [VS Code Settings](./vscode/)
-- [ZSH Settings](./zsh/)
+- [Zsh+Oh My Zsh Settings](./zsh/README.md)
