@@ -2,7 +2,7 @@
   // ---------------------------------------------------
   // ////////////////////// CORE ///////////////////////
   // ---------------------------------------------------
-   "editor.codeActionsOnSave": {
+  "editor.codeActionsOnSave": {
     "source.fixAll": true,
     "source.organizeImports": true,
     "source.format.json": true,
@@ -86,7 +86,7 @@
   "workbench.editor.showIcons": true,
   "workbench.editor.showTabs": true,
   "workbench.editor.tabSizing": "shrink",
-    "workbench.editorAssociations": {
+  "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
   },
   "workbench.settings.enableNaturalLanguageSearch": false,
@@ -166,7 +166,7 @@
   "workbench.colorCustomizations": {
     "[In Bed by 7pm]": {
       "editorSuggestWidget.highlightForeground": "#aa82ee",
-      "editorSuggestWidget.selectedBackground": "#666A79",
+      "editorSuggestWidget.selectedBackground": "#666A79"
     },
     "[Everforest Dark]": {
       "activityBar.background": "#2a2426",
@@ -216,7 +216,7 @@
       "titleBar.border": "#2a2426",
       "titleBar.inactiveBackground": "#2a2426"
     },
-    "editorIndentGuide.activeBackground": "#a7c080",
+    "editorIndentGuide.activeBackground": "#a7c080"
     // "editorIndentGuide.background": "#2a2426"
   },
   // ---------------------------------------------------
@@ -225,7 +225,7 @@
   "html.format.contentUnformatted": "pre,code,textarea",
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingBrackets": "always"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -450,8 +450,8 @@
     {
       "text": "TODO:",
       "color": "#1d1d1d",
-      "isWholeLine": false,
+      "isWholeLine": false
     }
   ],
-  "warmUp.changeCount": "15",
+  "warmUp.changeCount": "15"
 }
