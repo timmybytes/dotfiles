@@ -453,5 +453,8 @@
       "isWholeLine": false
     }
   ],
-  "warmUp.changeCount": "15"
+  "warmUp.changeCount": "15",
+  "markdown.preview.scrollEditorWithPreview": false,
+  "markdown.preview.scrollPreviewWithEditor": false,
+  "markdown-preview-enhanced.scrollSync": false
 }
