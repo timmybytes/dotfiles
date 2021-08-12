@@ -1,8 +1,8 @@
 # ----------------------------------------------------------
 # Header - type(scope): Brief description
 # ----------------------------------------------------------
-#    * feat             A new feature - SemVar PATCH
-#    * fix              A bug fix - SemVar MINOR
+#    * feat             A new feature - SemVar MINOR
+#    * fix              A bug fix - SemVar PATCH
 #    * BREAKING CHANGE  Breaking API change - SemVar MAJOR
 #    * docs             Change to documentation only
 #    * style            Change to style (whitespace, etc.)
