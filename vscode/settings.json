@@ -456,5 +456,5 @@
   "warmUp.changeCount": "15",
   "markdown.preview.scrollEditorWithPreview": false,
   "markdown.preview.scrollPreviewWithEditor": false,
-  "markdown-preview-enhanced.scrollSync": false
+  "markdown-preview-enhanced.scrollSync": true
 }
