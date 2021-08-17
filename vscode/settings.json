@@ -412,7 +412,6 @@
   // ---------------------------------------------------
   // * Prettier
   // ---------------------------------------------------
-  // Keep print width >=100 to avoid closing brackets on empty lines
   "prettier.arrowParens": "avoid",
   "prettier.bracketSpacing": true,
   "prettier.jsxBracketSameLine": true,
