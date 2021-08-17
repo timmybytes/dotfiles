@@ -1,4 +1,11 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-./test.sh
+TERM=vscode
+check_commit=$(git status | grep $TERM)
+
+if [ "$check_commit" ]; then
+  code --list-extensions > vscode/extensions.txt
+else
+  echo "false"
+fi
