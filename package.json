@@ -1,0 +1,15 @@
+{
+  "name": "dotfiles",
+  "version": "1.0.0",
+  "description": "My personal dotfiles",
+  "main": "index.js",
+  "repository": "https://github.com/timmybytes/dotfiles.git",
+  "author": "Timothy Merritt",
+  "license": "MIT",
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "husky": "^7.0.1"
+  }
+}
