@@ -1,11 +1,12 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-TERM=vscode
-check_commit=$(git status | grep $TERM)
+# TODO: Update vscode/extensions.txt when vscode/* files are staged
+# TERM=vscode
+# check_commit=$(git status | grep $TERM)
 
-if [ "$check_commit" ]; then
-  code --list-extensions > vscode/extensions.txt
-else
-  echo "false"
-fi
+# if [ "$check_commit" ]; then
+#   code --list-extensions > vscode/extensions.txt
+# else
+#   echo "false"
+# fi
