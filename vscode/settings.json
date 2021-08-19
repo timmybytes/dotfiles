@@ -166,7 +166,13 @@
   "workbench.colorCustomizations": {
     "[In Bed by 7pm]": {
       "editorSuggestWidget.highlightForeground": "#aa82ee",
-      "editorSuggestWidget.selectedBackground": "#666A79"
+      // "editorSuggestWidget.selectedBackground": "#666A79",
+      // "editor.findMatchBackground": "#e6acd3",
+      // "editor.findMatchHighlightBackground": "#e6acd3",
+      // "editor.selectionBackground": "#e6acd3",
+      // "editor.selectionHighlightBackground": "#e6acd3",
+      // Command Palette selection color
+      "quickInputList.focusBackground": "#aa82ee8e"
     },
     "[Everforest Dark]": {
       "activityBar.background": "#2a2426",
@@ -456,5 +462,6 @@
   "markdown.preview.scrollEditorWithPreview": false,
   "markdown.preview.scrollPreviewWithEditor": false,
   "markdown-preview-enhanced.scrollSync": true,
-  "editor.accessibilitySupport": "off"
+  "editor.accessibilitySupport": "off",
+  "editor.inlayHints.enabled": false
 }
