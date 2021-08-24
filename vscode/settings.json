@@ -364,7 +364,7 @@
     "autoComplete.maxItemsToShowInDropdown": 10
   },
   "github.copilot.enable": {
-    "*": true,
+    "*": false,
     "yaml": false,
     "plaintext": true,
     "markdown": true,
