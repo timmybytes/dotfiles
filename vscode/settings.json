@@ -364,7 +364,7 @@
     "autoComplete.maxItemsToShowInDropdown": 10
   },
   "github.copilot.enable": {
-    "*": false,
+    "*": true,
     "yaml": false,
     "plaintext": true,
     "markdown": true,
@@ -463,5 +463,6 @@
   "markdown.preview.scrollPreviewWithEditor": false,
   "markdown-preview-enhanced.scrollSync": true,
   "editor.accessibilitySupport": "off",
-  "editor.inlayHints.enabled": false
+  "editor.inlayHints.enabled": false,
+  "typescript.updateImportsOnFileMove.enabled": "always"
 }
