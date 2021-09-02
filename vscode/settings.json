@@ -355,7 +355,6 @@
   // ---------------------------------------------------
   //* GitHub Copilot
   // ---------------------------------------------------
-  "github.copilot.autocomplete.enable": true,
   "github.copilot.advanced": {
     "enable": false,
     "autoComplete": true,
