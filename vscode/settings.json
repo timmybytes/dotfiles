@@ -402,6 +402,8 @@
     "MD013": false,
     // Allow duplicate headings
     "MD024": false,
+    // Allow more than one top-level heading
+    "MD025": false,
     // Allow trailing heading punctuation
     "MD026": false,
     // Allow inline HTML
