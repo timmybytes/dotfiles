@@ -417,6 +417,11 @@
   "markdown-preview-enhanced.automaticallyShowPreviewOfMarkdownBeingEdited": false,
   "markdown-preview-enhanced.previewTheme": "github-light.css",
   // ---------------------------------------------------
+  // * Polacode
+  // ---------------------------------------------------
+  "polacode.transparentBackground": true,
+  "polacode.shadow": "rgba(0, 0, 0, 0.55) 0px 20px 68px",
+  // ---------------------------------------------------
   // * Prettier
   // ---------------------------------------------------
   "prettier.arrowParens": "avoid",
