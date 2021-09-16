@@ -1290,6 +1290,8 @@
 	<real>0.15000000596046448</real>
 	<key>HotkeyWindowFloatsAboveOtherWindows</key>
 	<true/>
+	<key>IRMemory</key>
+	<integer>4</integer>
 	<key>InvalidateShadowTimesPerSecond</key>
 	<real>0.0</real>
 	<key>MaxVertically</key>
