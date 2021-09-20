@@ -74,7 +74,6 @@
     "jupyter-notebook": "left"
   },
   "telemetry.enableCrashReporter": false,
-  "telemetry.enableTelemetry": false,
   "terminal.external.osxExec": "kitty.app",
   "terminal.integrated.gpuAcceleration": "on",
   "terminal.integrated.scrollback": 10000,
@@ -431,6 +430,7 @@
   "prettier.singleQuote": true,
   "prettier.proseWrap": "never",
   "prettier.tabWidth": 2,
+  "prettier.semi": false,
   // ---------------------------------------------------
   //* Settings Sync
   // ---------------------------------------------------
