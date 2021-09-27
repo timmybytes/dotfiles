@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-bash code --list-extensions > ~/.dotfiles/vscode/extensions.txt
+yarn run vscode:extensions
