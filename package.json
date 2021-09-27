@@ -7,9 +7,10 @@
   "author": "Timothy Merritt",
   "license": "MIT",
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "vscode:extensions": "code --list-extensions > ~/.dotfiles/vscode/extensions.txt"
   },
   "devDependencies": {
-    "husky": "^7.0.1"
+    "husky": "^7.0.2"
   }
 }
