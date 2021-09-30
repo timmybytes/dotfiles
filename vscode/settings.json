@@ -2,6 +2,7 @@
   // ---------------------------------------------------
   // ////////////////////// CORE ///////////////////////
   // ---------------------------------------------------
+  "editor.accessibilitySupport": "off",
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
     "source.organizeImports": true,
@@ -26,11 +27,12 @@
   "editor.highlightActiveIndentGuide": true,
   "editor.hover.delay": 800,
   "editor.hover.sticky": true,
+  "editor.inlayHints.enabled": false,
   "editor.inlineSuggest.enabled": true,
   "editor.lineDecorationsWidth": 30, // Margin between line numbers and code
   "editor.linkedEditing": true,
   "editor.matchBrackets": "never",
-  "editor.minimap.enabled": false,
+  // "editor.minimap.enabled": false,
   "editor.minimap.maxColumn": 85,
   "editor.minimap.renderCharacters": false,
   "editor.minimap.scale": 1,
@@ -73,7 +75,7 @@
     "default": "right",
     "jupyter-notebook": "left"
   },
-  "telemetry.enableCrashReporter": false,
+  "telemetry.telemetryLevel": "off",
   "terminal.external.osxExec": "kitty.app",
   "terminal.integrated.gpuAcceleration": "on",
   "terminal.integrated.scrollback": 10000,
@@ -415,6 +417,9 @@
   // ---------------------------------------------------
   "markdown-preview-enhanced.automaticallyShowPreviewOfMarkdownBeingEdited": false,
   "markdown-preview-enhanced.previewTheme": "github-light.css",
+  "markdown.preview.scrollEditorWithPreview": false,
+  "markdown.preview.scrollPreviewWithEditor": false,
+  "markdown-preview-enhanced.scrollSync": true,
   // ---------------------------------------------------
   // * Polacode
   // ---------------------------------------------------
@@ -464,11 +469,6 @@
       "isWholeLine": false
     }
   ],
-  "warmUp.changeCount": "15",
-  "markdown.preview.scrollEditorWithPreview": false,
-  "markdown.preview.scrollPreviewWithEditor": false,
-  "markdown-preview-enhanced.scrollSync": true,
-  "editor.accessibilitySupport": "off",
-  "editor.inlayHints.enabled": false,
+
   "typescript.updateImportsOnFileMove.enabled": "always"
 }
