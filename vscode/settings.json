@@ -266,6 +266,7 @@
     "editor.autoClosingBrackets": "always"
   },
   "typescript.suggest.autoImports": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
   // ---------------------------------------------------
   //* Emmet
   // ---------------------------------------------------
@@ -428,6 +429,7 @@
   // ---------------------------------------------------
   // * Prettier
   // ---------------------------------------------------
+  // TODO: Create global config file for dots
   "prettier.arrowParens": "avoid",
   "prettier.bracketSpacing": true,
   "prettier.jsxBracketSameLine": true,
@@ -468,7 +470,5 @@
       "color": "#1d1d1d",
       "isWholeLine": false
     }
-  ],
-
-  "typescript.updateImportsOnFileMove.enabled": "always"
+  ]
 }
