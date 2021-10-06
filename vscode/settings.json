@@ -2,6 +2,7 @@
   // ---------------------------------------------------
   // ////////////////////// CORE ///////////////////////
   // ---------------------------------------------------
+  "editor.find.autoFindInSelection": "always",
   "editor.accessibilitySupport": "off",
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
@@ -24,16 +25,17 @@
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
   "editor.glyphMargin": true,
+  "editor.glyphMarginRightPadding": 0,
   "editor.highlightActiveIndentGuide": true,
   "editor.hover.delay": 800,
   "editor.hover.sticky": true,
   "editor.inlayHints.enabled": false,
   "editor.inlineSuggest.enabled": true,
-  "editor.lineDecorationsWidth": 30, // Margin between line numbers and code
+  "editor.lineDecorationsWidth": 20, // Margin between line numbers and code
   "editor.linkedEditing": true,
   "editor.matchBrackets": "never",
   // "editor.minimap.enabled": false,
-  "editor.minimap.maxColumn": 85,
+  "editor.minimap.maxColumn": 65,
   "editor.minimap.renderCharacters": false,
   "editor.minimap.scale": 1,
   "editor.minimap.side": "right",
@@ -55,7 +57,7 @@
   "editor.tabCompletion": "on",
   "editor.tabSize": 2,
   "editor.wordWrap": "bounded",
-  "editor.wordWrapColumn": 100,
+  "editor.wordWrapColumn": 80,
   "explorer.autoReveal": "focusNoScroll",
   "explorer.compactFolders": false,
   "explorer.confirmDelete": false,
@@ -376,7 +378,10 @@
   //* Live SASS
   // ---------------------------------------------------
   // NOTE: LiveSassCompiler is no longer maintained and can be buggy
-  // Use node-sass with npm for more reliability
+  //
+  // It's recommended to use a Dart Sass implementation instead:
+  // https://sass-lang.com/blog/libsass-is-deprecated
+  //
   // "liveSassCompile.settings.formats": [
   //   {
   //     "format": "compressed",
