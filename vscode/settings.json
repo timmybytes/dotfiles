@@ -21,7 +21,7 @@
   "editor.emptySelectionClipboard": false,
   "editor.find.seedSearchStringFromSelection": "selection",
   "editor.foldingHighlight": true,
-  "editor.formatOnPaste": true,
+  "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
   "editor.glyphMargin": true,
@@ -434,7 +434,7 @@
   // ---------------------------------------------------
   // * Prettier
   // ---------------------------------------------------
-  // TODO: Create global config file for dots
+  "prettier.configPath": "", // Makes Prettier respect local configs
   "prettier.arrowParens": "avoid",
   "prettier.bracketSpacing": true,
   "prettier.jsxBracketSameLine": true,
