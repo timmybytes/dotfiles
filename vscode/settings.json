@@ -19,7 +19,7 @@
   "editor.cursorWidth": 3,
   "editor.detectIndentation": false,
   "editor.emptySelectionClipboard": false,
-  "editor.find.seedSearchStringFromSelection": "selection",
+  "editor.find.seedSearchStringFromSelection": "always",
   "editor.foldingHighlight": true,
   "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
