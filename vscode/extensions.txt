@@ -41,6 +41,7 @@ monokai.theme-monokai-pro-vscode
 ms-python.python
 ms-python.vscode-pylance
 ms-toolsai.jupyter
+ms-toolsai.jupyter-keymap
 ms-vscode.sublime-keybindings
 msjsdiag.debugger-for-chrome
 naumovs.color-highlight

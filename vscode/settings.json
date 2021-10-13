@@ -160,7 +160,7 @@
   // ---------------------------------------------------
   //* Color & Theme
   // ---------------------------------------------------
-  "workbench.colorTheme": "In Bed by 7pm",
+  "workbench.colorTheme": "Everforest Dark",
   "workbench.iconTheme": "material-icon-theme",
   "material-icon-theme.hidesExplorerArrows": true,
   "material-icon-theme.showWelcomeMessage": false,
