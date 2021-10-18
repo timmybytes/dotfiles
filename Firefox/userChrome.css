@@ -58,8 +58,8 @@
 }
 
 .urlbar-icon,
-#main-window[uidensity='compact'] .urlbar-icon,
-#main-window[uidensity='touch'] .urlbar-icon {
+#main-window[uidensity="compact"] .urlbar-icon,
+#main-window[uidensity="touch"] .urlbar-icon {
   width: 16px !important;
   height: 16px !important;
   padding: 0px 1px !important;
@@ -69,8 +69,8 @@
 }
 
 #urlbar #reader-mode-button,
-#main-window[uidensity='compact'] #urlbar #reader-mode-button,
-#main-window[uidensity='touch'] #urlbar #reader-mode-button {
+#main-window[uidensity="compact"] #urlbar #reader-mode-button,
+#main-window[uidensity="touch"] #urlbar #reader-mode-button {
   padding: 1px !important;
 }
 
@@ -104,7 +104,7 @@
   box-shadow: 0px 0px 0px 0px #98c4ef !important;
 }
 
-#urlbar[focused='true'] {
+#urlbar[focused="true"] {
   /*! Dont touch */
   margin-top: 2px !important;
 }
@@ -146,11 +146,11 @@
   padding: var(--mbarstyler-popout-pixels) !important;
 }
 
-[uidensity='compact'] #urlbar[breakout][breakout-extend] {
+[uidensity="compact"] #urlbar[breakout][breakout-extend] {
   top: calc(3px - var(--mbarstyler-popout-pixels)) !important;
 }
 
-[uidensity='touch'] #urlbar[breakout][breakout-extend] {
+[uidensity="touch"] #urlbar[breakout][breakout-extend] {
   top: calc(4px - var(--mbarstyler-popout-pixels)) !important;
 }
 
@@ -233,13 +233,13 @@
 
 /* **************************** T A B S ******************************** */
 
-:root:not([customizing]) .tabbrowser-tab:not([pinned='true']) {
+:root:not([customizing]) .tabbrowser-tab:not([pinned="true"]) {
   --tab-min-width: fit-content;
   -moz-box-flex: 0 !important;
   max-width: 70px;
 }
 
-:root:not([customizing]) .tabbrowser-tab:not([pinned='true']) .tab-stack {
+:root:not([customizing]) .tabbrowser-tab:not([pinned="true"]) .tab-stack {
   flex-basis: 1;
 }
 
@@ -277,7 +277,7 @@
 }
 
 /* Removes space just to left of tabs */
-.titlebar-spacer[type='pre-tabs'] {
+.titlebar-spacer[type="pre-tabs"] {
   display: none;
 }
 
@@ -287,8 +287,8 @@
 }
 
 /* Default tab favicon */
-.tabbrowser-tab[label^='New Tab'] .tab-icon-image {
-  background: url('traffic.png') !important;
+.tabbrowser-tab[label^="New Tab"] .tab-icon-image {
+  background: url("traffic.png") !important;
   background-repeat: no-repeat !important;
   background-size: 16px !important;
   margin-right: 3.5px !important;
@@ -310,8 +310,8 @@ tabbrowser tabpanels {
 }
 
 /* white flash fix */
-browser[type='content-primary'],
-browser[type='content'] {
+browser[type="content-primary"],
+browser[type="content"] {
   background: #383838 !important;
 }
 
@@ -375,7 +375,7 @@ menupopup menuseparator {
 menupopup menu,
 menuitem {
   -moz-appearance: none !important;
-  color: #f7f7f7 !important;
+  /* color: #f7f7f7 !important; */
 }
 
 menupopup menu:hover,
