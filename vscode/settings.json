@@ -475,5 +475,6 @@
       "color": "#1d1d1d",
       "isWholeLine": false
     }
-  ]
+  ],
+  "editor.minimap.enabled": false
 }
