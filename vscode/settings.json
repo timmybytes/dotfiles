@@ -128,7 +128,7 @@
   "debug.console.wordWrap": false,
   "editor.fontLigatures": "true",
   "editor.fontSize": 14,
-  "editor.fontWeight": "400",
+  "editor.fontWeight": "300",
   "editor.lineHeight": 28,
   "scm.inputFontFamily": "Cascadia Code PL",
   "terminal.integrated.fontFamily": "Cascadia Code PL",
