@@ -11,6 +11,8 @@
   <a href="https://timmybytes.com">Timothy Merritt</a>
 </div>
 
+<!-- TODO: Fix extensions script for VS Code -->
+
 These are my personal dotfile/configurations, geared mostly towards a macOS-based web development environment.
 
 Forking or just implementing the configs here might end up breaking your stuff, but feel free to use whatever appeals to you.
