@@ -2,15 +2,15 @@
   // ---------------------------------------------------
   // ////////////////////// CORE ///////////////////////
   // ---------------------------------------------------
-  "editor.find.autoFindInSelection": "always",
+  "editor.find.autoFindInSelection": "never",
   "editor.accessibilitySupport": "off",
   "editor.codeActionsOnSave": {
-    "source.fixAll": true,
-    "source.organizeImports": true,
-    "source.format.json": true,
-    "source.format.js": true,
-    "source.format.css": true,
-    "source.format.html": true
+    "source.fixAll": false,
+    "source.organizeImports": false,
+    "source.format.json": false,
+    "source.format.js": false,
+    "source.format.css": false,
+    "source.format.html": false
   },
   "editor.codeLens": false,
   "editor.colorDecorators": true,
@@ -127,7 +127,7 @@
   // "editor.fontFamily": "Anonymous Pro",
   "debug.console.wordWrap": false,
   "editor.fontLigatures": "true",
-  "editor.fontSize": 14,
+  "editor.fontSize": 15,
   "editor.fontWeight": "300",
   "editor.lineHeight": 28,
   "scm.inputFontFamily": "Cascadia Code PL",
