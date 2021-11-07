@@ -127,7 +127,7 @@
   // "editor.fontFamily": "Anonymous Pro",
   "debug.console.wordWrap": false,
   "editor.fontLigatures": "true",
-  "editor.fontSize": 15,
+  "editor.fontSize": 14,
   "editor.fontWeight": "300",
   "editor.lineHeight": 28,
   "scm.inputFontFamily": "Cascadia Code PL",
