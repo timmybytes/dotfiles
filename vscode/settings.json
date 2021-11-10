@@ -105,14 +105,14 @@
   // ---------------------------------------------------
   // * * Fonts & Typography () => <= 0 O 1 l
   // ---------------------------------------------------
-  "debug.console.fontFamily": "Cascadia Code PL",
+  "debug.console.fontFamily": "Cascadia Mono PL",
   // * * * Ligatures
   // "editor.fontFamily": "JetBrains Mono",
   // "editor.fontFamily": "victor mono",
   // "editor.fontFamily": "monoisome",
   // "editor.fontFamily": "dank mono",
   // "editor.fontFamily": "fira code",
-  "editor.fontFamily": "Cascadia Code PL",
+  "editor.fontFamily": "Cascadia Mono PL",
   // "editor.fontFamily": "fantasque sans mono",
   // "editor.fontFamily": "Iosevka",
   // * * * No ligatures
@@ -127,11 +127,11 @@
   // "editor.fontFamily": "Anonymous Pro",
   "debug.console.wordWrap": false,
   "editor.fontLigatures": "true",
-  "editor.fontSize": 14,
-  "editor.fontWeight": "300",
-  "editor.lineHeight": 28,
-  "scm.inputFontFamily": "Cascadia Code PL",
-  "terminal.integrated.fontFamily": "Cascadia Code PL",
+  "editor.fontSize": 12,
+  "editor.fontWeight": "400",
+  "editor.lineHeight": 24,
+  "scm.inputFontFamily": "Cascadia Mono PL",
+  "terminal.integrated.fontFamily": "Cascadia Mono PL",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.fontWeight": "400",
   "terminal.integrated.fontWeightBold": "800",
