@@ -67,7 +67,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git alias-finder autojump wakatime zsh-autosuggestions)
+plugins=(git alias-finder autojump zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -140,11 +140,14 @@ alias ct="clear; pwd; tree -aFL 1"
 # Check files/directories for associated macos tags
 alias tags="mdls -raw -name kMDItemUserTags"
 
-# For kitty autocompletion
-autoload -Uz compinit
-compinit
-# Completion for kitty
-kitty + complete setup zsh | source /dev/stdin
+if command -v kitty &> /dev/null
+then
+  # For kitty autocompletion
+  autoload -Uz compinit
+  compinit
+  # Completion for kitty
+  kitty + complete setup zsh | source /dev/stdin
+fi
 
 # ----------------------- * * CLI TOOLS * * -------------------------#
 # Task CLI
@@ -216,8 +219,12 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 BEAR_AC_ZSH_SETUP_PATH=$HOME/Library/Caches/@sloansparger/bear/autocomplete/zsh_setup && test -f $BEAR_AC_ZSH_SETUP_PATH && source $BEAR_AC_ZSH_SETUP_PATH
 
 # added for npm-completion https://github.com/Jephuff/npm-bash-completion
-PATH_TO_NPM_COMPLETION="/usr/local/lib/node_modules/npm-completion"
+[ -d "/usr/local/lib/node_modules/npm-completion" ] && PATH_TO_NPM_COMPLETION="/usr/local/lib/node_modules/npm-completion" ||  PATH_TO_NPM_COMPLETION="/Users/$USER/.nvm/versions/node/v14.18.1/lib/node_modules/npm-completion"
+
 source $PATH_TO_NPM_COMPLETION/npm-completion.sh
+
 export PATH="/usr/local/bin:$PATH"
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
