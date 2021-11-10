@@ -11,10 +11,10 @@
 [init]
 	defaultBranch = main
 [commit]
-  template = /Users/nym/.dotfiles/git/commit-conventions.txt
+  template = /Users/timothymerritt/.dotfiles/git/commit-conventions.txt
 [core]
 	editor = nvim +16 -c 'startinsert'
-	excludesfile = /Users/nym/.dotfiles/git/.gitignore_global
+	excludesfile = /Users/timothymerritt/.dotfiles/git/.gitignore_global
 	ignorecase = false
 [diff]
   tool = vscode
