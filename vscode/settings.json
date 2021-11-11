@@ -31,7 +31,7 @@
   "editor.hover.sticky": true,
   "editor.inlayHints.enabled": false,
   "editor.inlineSuggest.enabled": true,
-  "editor.lineDecorationsWidth": 20, // Margin between line numbers and code
+  "editor.lineDecorationsWidth": 10, // Margin between line numbers and code
   "editor.linkedEditing": true,
   "editor.matchBrackets": "never",
   // "editor.minimap.enabled": false,
@@ -42,7 +42,7 @@
   "editor.minimap.size": "fit",
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.occurrencesHighlight": false,
-  "editor.padding.bottom": 40,
+  "editor.padding.bottom": 0,
   "editor.padding.top": 20,
   "editor.renderControlCharacters": false,
   "editor.renderIndentGuides": true,
@@ -57,7 +57,7 @@
   "editor.tabCompletion": "on",
   "editor.tabSize": 2,
   "editor.wordWrap": "bounded",
-  "editor.wordWrapColumn": 80,
+  // "editor.wordWrapColumn": 80,
   "explorer.autoReveal": "focusNoScroll",
   "explorer.compactFolders": false,
   "explorer.confirmDelete": false,
@@ -132,7 +132,7 @@
   "editor.lineHeight": 24,
   "scm.inputFontFamily": "Cascadia Mono PL",
   "terminal.integrated.fontFamily": "Cascadia Mono PL",
-  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontSize": 12,
   "terminal.integrated.fontWeight": "400",
   "terminal.integrated.fontWeightBold": "800",
   "terminal.integrated.lineHeight": 1,
@@ -152,7 +152,7 @@
   "editor.suggest.preview": true,
   "editor.suggest.showIcons": true,
   "editor.suggest.showStatusBar": true,
-  "editor.suggestFontSize": 14,
+  "editor.suggestFontSize": 12,
   "editor.suggestLineHeight": 18,
   "editor.suggestSelection": "first",
   "editor.wordBasedSuggestions": true,
@@ -475,5 +475,7 @@
       "color": "#1d1d1d",
       "isWholeLine": false
     }
-  ]
+  ],
+  "security.workspace.trust.enabled": false,
+  "editor.minimap.enabled": false
 }
