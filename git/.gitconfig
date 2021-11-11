@@ -26,3 +26,5 @@
   cmd = code --wait $MERGED
 [log]
 	date = local
+[pull]
+	rebase = false
