@@ -151,5 +151,9 @@
     "key": "tab",
     "command": "-tabout",
     "when": "editorTextFocus && !editorHasMultipleSelections && !inSnippetMode && !suggestWidgetVisible"
+  },
+  {
+    "key": "cmd+]",
+    "command": "workbench.action.quickOpenTerm"
   }
 ]
