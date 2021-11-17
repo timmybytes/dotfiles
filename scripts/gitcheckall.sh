@@ -14,5 +14,7 @@ clear
 echo "Checking repos..."
 cd ~
 mgitstatus -d 2
+cd ~/Work
+mgitstatus -d 3
 cd ~/Projects/Repos
 mgitstatus -d 2
