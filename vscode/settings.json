@@ -146,7 +146,6 @@
   "editor.parameterHints.enabled": true,
   "editor.quickSuggestions": true,
   "editor.quickSuggestionsDelay": 500,
-  "editor.snippetSuggestions": "inline",
   "editor.suggest.filterGraceful": true,
   "editor.suggest.insertMode": "replace",
   "editor.suggest.localityBonus": true,
@@ -484,5 +483,7 @@
   "editor.gotoLocation.multipleImplementations": "goto",
   "editor.gotoLocation.multipleReferences": "goto",
   "editor.gotoLocation.multipleTypeDefinitions": "goto",
-  "diffEditor.ignoreTrimWhitespace": false
+  "diffEditor.ignoreTrimWhitespace": false,
+  "redhat.telemetry.enabled": false,
+  "editor.suggest.snippetsPreventQuickSuggestions": false
 }
