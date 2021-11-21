@@ -23,6 +23,7 @@ firefox-devtools.vscode-firefox-debug
 formulahendry.auto-close-tag
 formulahendry.auto-complete-tag
 formulahendry.auto-rename-tag
+foxundermoon.shell-format
 humao.rest-client
 JayanthSrinivasan.jayanth-s-devil-dark-theme
 jpoissonnier.vscode-styled-components
@@ -42,6 +43,7 @@ pflannery.vscode-versionlens
 PKief.material-icon-theme
 pnp.polacode
 redhat.vscode-yaml
+Remisa.shellman
 ritwickdey.LiveServer
 ryanraposo.codeui
 sainnhe.everforest
@@ -53,6 +55,7 @@ silvenon.mdx
 SumitSaha.learn-with-sumit-theme
 svelte.svelte-vscode
 teabyii.ayu
+timonwong.shellcheck
 tombonnike.vscode-status-bar-format-toggle
 Tyriar.sort-lines
 VisualStudioExptTeam.vscodeintellicode
