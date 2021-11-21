@@ -51,6 +51,7 @@ Shan.code-settings-sync
 shd101wyy.markdown-preview-enhanced
 silvenon.mdx
 SumitSaha.learn-with-sumit-theme
+svelte.svelte-vscode
 teabyii.ayu
 tombonnike.vscode-status-bar-format-toggle
 Tyriar.sort-lines
