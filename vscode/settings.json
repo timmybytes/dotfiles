@@ -106,14 +106,14 @@
   // ---------------------------------------------------
   // * * Fonts & Typography () => <= 0 O 1 l
   // ---------------------------------------------------
-  "debug.console.fontFamily": "Cascadia Mono PL",
+  "debug.console.fontFamily": "Cascadia Code PL",
   // * * * Ligatures
   // "editor.fontFamily": "JetBrains Mono",
   // "editor.fontFamily": "victor mono",
   // "editor.fontFamily": "monoisome",
   // "editor.fontFamily": "dank mono",
   // "editor.fontFamily": "fira code",
-  "editor.fontFamily": "Cascadia Mono PL",
+  "editor.fontFamily": "Cascadia Code PL",
   // "editor.fontFamily": "fantasque sans mono",
   // "editor.fontFamily": "Iosevka",
   // * * * No ligatures
@@ -131,8 +131,8 @@
   "editor.fontSize": 14,
   "editor.fontWeight": "400",
   "editor.lineHeight": 24,
-  "scm.inputFontFamily": "Cascadia Mono PL",
-  "terminal.integrated.fontFamily": "Cascadia Mono PL",
+  "scm.inputFontFamily": "Cascadia Code PL",
+  "terminal.integrated.fontFamily": "Cascadia Code PL",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.fontWeight": "400",
   "terminal.integrated.fontWeightBold": "800",
@@ -486,5 +486,6 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "redhat.telemetry.enabled": false,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
-  "svelte.enable-ts-plugin": true
+  "svelte.enable-ts-plugin": true,
+  "editor.snippetSuggestions": "none"
 }
