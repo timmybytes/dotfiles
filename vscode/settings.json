@@ -5,12 +5,12 @@
   "editor.find.autoFindInSelection": "never",
   "editor.accessibilitySupport": "off",
   "editor.codeActionsOnSave": {
-    "source.fixAll": false,
-    "source.organizeImports": false,
-    "source.format.json": false,
-    "source.format.js": false,
-    "source.format.css": false,
-    "source.format.html": false
+    "source.fixAll": true,
+    "source.organizeImports": true,
+    "source.format.json": true,
+    "source.format.js": true,
+    "source.format.css": true,
+    "source.format.html": true
   },
   "editor.codeLens": false,
   "editor.colorDecorators": true,
@@ -21,9 +21,9 @@
   "editor.emptySelectionClipboard": false,
   "editor.find.seedSearchStringFromSelection": "always",
   "editor.foldingHighlight": true,
-  "editor.formatOnPaste": false,
-  "editor.formatOnSave": false,
-  "editor.formatOnType": false,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
   "editor.glyphMargin": true,
   "editor.glyphMarginRightPadding": 0,
   "editor.highlightActiveIndentGuide": true,
@@ -487,5 +487,5 @@
   "redhat.telemetry.enabled": false,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "svelte.enable-ts-plugin": true,
-  "editor.snippetSuggestions": "none"
+  "editor.snippetSuggestions": "inline"
 }
