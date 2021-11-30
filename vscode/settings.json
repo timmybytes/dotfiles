@@ -487,5 +487,6 @@
   "redhat.telemetry.enabled": false,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "svelte.enable-ts-plugin": true,
-  "editor.snippetSuggestions": "inline"
+  "editor.snippetSuggestions": "inline",
+  "editor.unicodeHighlight.ambiguousCharacters": false
 }
