@@ -159,5 +159,23 @@
   {
     "key": "cmd+backspace",
     "command": "workbench.action.terminal.kill"
+  },
+  {
+    "key": "shift+cmd+enter",
+    "command": "editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "f12",
+    "command": "-editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "ctrl+shift+cmd",
+    "command": "workbench.action.navigateToLastEditLocation"
+  },
+  {
+    "key": "cmd+k cmd+q",
+    "command": "-workbench.action.navigateToLastEditLocation"
   }
 ]
