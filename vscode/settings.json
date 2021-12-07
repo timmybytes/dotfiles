@@ -34,7 +34,7 @@
   "editor.lineDecorationsWidth": 10, // Margin between line numbers and code
   "editor.linkedEditing": true,
   "editor.matchBrackets": "never",
-  "editor.minimap.enabled": true,
+  "editor.minimap.enabled": false,
   "editor.minimap.maxColumn": 85,
   "editor.minimap.renderCharacters": false,
   "editor.minimap.showSlider": "always",
