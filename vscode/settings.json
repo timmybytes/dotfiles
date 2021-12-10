@@ -84,6 +84,7 @@
   "terminal.integrated.scrollback": 10000,
   "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
   "window.titleBarStyle": "custom",
+
   "workbench.activityBar.visible": false,
   "workbench.editor.enablePreview": false,
   "workbench.editor.pinnedTabSizing": "shrink",
