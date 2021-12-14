@@ -12,6 +12,7 @@ DennisVash.summer-time
 donjayamanne.githistory
 dracula-theme.theme-dracula
 dsznajder.es7-react-js-snippets
+dunstontc.viml
 eamodio.gitlens
 ecmel.vscode-html-css
 EditorConfig.EditorConfig

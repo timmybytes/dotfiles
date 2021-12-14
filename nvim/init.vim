@@ -68,7 +68,10 @@ call plug#end()
 
 set nocompatible
 syntax on
+syntax enable
 set termguicolors
+
+let g:miramare_enable_italic = 1
 colorscheme miramare
 set nowrap
 set noshowmode
@@ -84,7 +87,6 @@ set hlsearch
 :noremap <C-Bslash> :set hlsearch! hlsearch?<CR>
 " Seach is case-insensitive
 set ignorecase
-
 augroup myautocommands
   " au commands - keep these grouped for performance
   autocmd FileType markdown set spell spelllang=en_us
@@ -99,13 +101,24 @@ augroup end
 
 " Coding
 " ---------------------------------------------------------
+" Two spaces for tabs everywhere
+set expandtab shiftwidth=2 tabstop=2
 set foldenable
 set foldmethod=syntax
 set foldlevel=99
+
 let NERDTreeShowHidden=1
 
 let g:indentLine_setColors = 0
 let g:indentLine_char = '│'
+
+" Auto reload changed files
+set autoread
+
+set scrolloff=5 
+" Leave 5 lines of buffer when scrolling
+set sidescrolloff=10 
+" Leave 10 characters of horizontal buffer when scrolling
 
 " Writing/Prose
 " ---------------------------------------------------------
