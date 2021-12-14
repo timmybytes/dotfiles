@@ -26,7 +26,6 @@ formulahendry.auto-rename-tag
 foxundermoon.shell-format
 humao.rest-client
 JayanthSrinivasan.jayanth-s-devil-dark-theme
-jpoissonnier.vscode-styled-components
 kumar-harsh.graphql-for-vscode
 lightyen.tailwindcss-intellisense-twin
 mgmcdermott.vscode-language-babel
