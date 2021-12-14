@@ -52,6 +52,7 @@ shailen.netlify
 Shan.code-settings-sync
 shd101wyy.markdown-preview-enhanced
 silvenon.mdx
+styled-components.vscode-styled-components
 SumitSaha.learn-with-sumit-theme
 svelte.svelte-vscode
 teabyii.ayu
