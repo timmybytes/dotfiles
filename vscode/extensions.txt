@@ -12,7 +12,6 @@ DennisVash.summer-time
 donjayamanne.githistory
 dracula-theme.theme-dracula
 dsznajder.es7-react-js-snippets
-dunstontc.viml
 eamodio.gitlens
 ecmel.vscode-html-css
 EditorConfig.EditorConfig
@@ -27,6 +26,7 @@ formulahendry.auto-rename-tag
 foxundermoon.shell-format
 humao.rest-client
 JayanthSrinivasan.jayanth-s-devil-dark-theme
+jpoissonnier.vscode-styled-components
 kumar-harsh.graphql-for-vscode
 lightyen.tailwindcss-intellisense-twin
 mgmcdermott.vscode-language-babel
