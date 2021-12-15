@@ -168,6 +168,9 @@
   // Faded icon saturation to better match Forest Night colorscheme
   "material-icon-theme.saturation": 0.8,
   "workbench.colorCustomizations": {
+    // TODO: Check if these are usable when an actual merge conflict is available
+    "merge.commonHeaderBackground": "#aa82ee",
+    "merge.currentContentBackground": "#e6acd3",
     "[In Bed by 7pm]": {
       "editorSuggestWidget.highlightForeground": "#aa82ee",
       // "editorSuggestWidget.selectedBackground": "#666A79",
