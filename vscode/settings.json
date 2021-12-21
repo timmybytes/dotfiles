@@ -4,6 +4,10 @@
   // ---------------------------------------------------
   "editor.find.autoFindInSelection": "never",
   "editor.accessibilitySupport": "off",
+  // Brackets
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.guides.highlightActiveBracketPair": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
     "source.organizeImports": true,
@@ -21,17 +25,16 @@
   "editor.emptySelectionClipboard": false,
   "editor.find.seedSearchStringFromSelection": "always",
   "editor.foldingHighlight": true,
-  "editor.formatOnPaste": false,
-  "editor.formatOnSave": false,
-  "editor.formatOnType": false,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
   "editor.glyphMargin": true,
   "editor.glyphMarginRightPadding": 0,
-  "editor.highlightActiveIndentGuide": true,
   "editor.hover.delay": 800,
   "editor.hover.sticky": true,
   "editor.inlayHints.enabled": false,
   "editor.inlineSuggest.enabled": true,
-  "editor.lineDecorationsWidth": 10, // Margin between line numbers and code
+  "editor.lineDecorationsWidth": 20, // Margin between line numbers and code
   "editor.linkedEditing": true,
   "editor.matchBrackets": "never",
   "editor.minimap.enabled": false,
@@ -46,8 +49,7 @@
   "editor.padding.bottom": 100,
   "editor.padding.top": 100,
   "editor.renderControlCharacters": false,
-  "editor.renderIndentGuides": true,
-  "editor.renderLineHighlight": "none",
+  "editor.renderLineHighlight": "line",
   "editor.renderWhitespace": "none",
   "editor.roundedSelection": true,
   "editor.scrollbar.horizontal": "visible",
@@ -58,7 +60,8 @@
   "editor.tabCompletion": "on",
   "editor.tabSize": 2,
   "editor.wordWrap": "bounded",
-  "editor.wordWrapColumn": 180,
+  "editor.wrappingIndent": "deepIndent",
+  "editor.wordWrapColumn": 80,
   "explorer.autoReveal": "focusNoScroll",
   "explorer.compactFolders": false,
   "explorer.confirmDelete": false,
@@ -79,13 +82,12 @@
     "jupyter-notebook": "left"
   },
   "telemetry.telemetryLevel": "off",
-  "terminal.external.osxExec": "kitty.app",
+  "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.gpuAcceleration": "on",
   "terminal.integrated.scrollback": 10000,
   "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
   "window.titleBarStyle": "custom",
-
-  "workbench.activityBar.visible": false,
+  "workbench.activityBar.visible": true,
   "workbench.editor.enablePreview": false,
   "workbench.editor.pinnedTabSizing": "shrink",
   "workbench.editor.showIcons": true,
@@ -292,22 +294,6 @@
   // ---------------------------------------------------
   // ////////////////// EXTENSIONS /////////////////////
   // ---------------------------------------------------
-
-  // ---------------------------------------------------
-  //* Bracket Pair Colorizer 2
-  // ---------------------------------------------------
-  "bracket-pair-colorizer-2.activeScopeCSS": [
-    "borderStyle : solid",
-    "borderWidth : 1px",
-    "borderColor : {color}; opacity: 0.5"
-  ],
-  "bracket-pair-colorizer-2.colorMode": "Independent",
-  "bracket-pair-colorizer-2.forceUniqueOpeningColor": true,
-  "bracket-pair-colorizer-2.highlightActiveScope": true,
-  "bracket-pair-colorizer-2.showHorizontalScopeLine": true,
-  "bracket-pair-colorizer-2.showVerticalScopeLine": true,
-  "bracket-pair-colorizer-2.scopeLineRelativePosition": true,
-  // ---------------------------------------------------
   //* Code UI
   // ---------------------------------------------------
   "codeui.targetingMode": "general",
@@ -490,11 +476,11 @@
   "editor.gotoLocation.multipleDeclarations": "goto",
   "editor.gotoLocation.multipleImplementations": "goto",
   "editor.gotoLocation.multipleReferences": "goto",
+  "editor.snippetSuggestions": "inline",
+  "editor.unicodeHighlight.ambiguousCharacters": false,
   "editor.gotoLocation.multipleTypeDefinitions": "goto",
   "diffEditor.ignoreTrimWhitespace": false,
   "redhat.telemetry.enabled": false,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "svelte.enable-ts-plugin": true,
-  "editor.snippetSuggestions": "inline",
-  "editor.unicodeHighlight.ambiguousCharacters": false
 }
