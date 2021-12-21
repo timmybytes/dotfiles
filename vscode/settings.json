@@ -169,7 +169,11 @@
   "material-icon-theme.saturation": 0.8,
   "workbench.colorCustomizations": {
     // TODO: Check if these are usable when an actual merge conflict is available
+<<<<<<< HEAD
     "merge.commonHeaderBackground": "#aa82ee",
+=======
+    "merge.commonHeaderBackground": "#000000",
+>>>>>>> 5369c19a5b3d8b4046669b857456fa9a165201f7
     "merge.currentContentBackground": "#e6acd3",
     "[In Bed by 7pm]": {
       "editorSuggestWidget.highlightForeground": "#aa82ee",
