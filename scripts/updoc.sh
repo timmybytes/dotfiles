@@ -27,7 +27,7 @@ PENDING="${YELLOW}●${NC}"
 FAILED="${RED}𐄂${NC}"
 SUCCEEDED="${GREEN}✔${NC}"
 
-# TEMPORARY LOGFILE FOR RESULTS OUTPUT
+# TEMPORARY LOGFILE FOR RESULTS OUTPUT - DELETED AFTER EACH RUN
 MAKE_TMPFILE=$(mktemp /tmp/updoc-log)
 TMPFILE="/tmp/updoc-log"
 
@@ -55,7 +55,7 @@ LOGO="
               What's updated, Doc?
 "
 
-# WRAPS A STRING IN FANCY ASCII BOX
+# WRAPS A STRING IN FANCY ASCII BOX THE HARD WAY
 function box_wrap() {
   # Limit app name to prevent overflowing
   app=$(printf "%b" "${@}" | cut -c 1-18)
