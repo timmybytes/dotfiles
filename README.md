@@ -1,5 +1,3 @@
-<!-- TODO: Add updated MacOS settings -->
-
 <h1 align="center">
   <img src="dotfiles-logo.svg" alt="dotfiles logo" />
 </h1>
@@ -36,5 +34,5 @@ Happy hacking!
 - [Rectangle Settings](./rectangle/)
 - [Scripts](./scripts/README.md)
 - [Tools](./tools/)
-- [VS Code Settings](./vscode/)
+- [VS Code Settings](./vscode/) - _Note that these settings change most often, and might not always be stable_
 - [Zsh+Oh My Zsh Settings](./zsh/README.md)
