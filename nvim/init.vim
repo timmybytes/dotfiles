@@ -130,4 +130,4 @@ setlocal wrapmargin=0
 
 " Statusline
 " ---------------------------------------------------------
-" source ~/.config/nvim/statusline.vim
+source ~/.config/nvim/statusline.vim

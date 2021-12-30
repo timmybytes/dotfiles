@@ -1,4 +1,4 @@
-" Who23 Github
+" Based on https://github.com/Who23/dots/blob/master/config/nvim/statusline.vim
 
 let s:colors = {}
 
@@ -32,6 +32,16 @@ let s:colors = {}
 :  let s:colors.green = "#c3e88d"
 :  let s:colors.cyan = "#89ddff"
 :  let s:colors.purple = "#c792ea"
+:
+:elseif g:colors_name == "catppuccin"
+:  let s:colors.black = "#1e1e28"
+:  let s:colors.lightblack = "#6E6C7E"
+:  let s:colors.white = "#DFDEF1"
+:  let s:colors.red = "#E38C8F"
+:  let s:colors.golden = "#ECDDAA"
+:  let s:colors.green = "#B1E1A6"
+:  let s:colors.cyan = "#92D2E8"
+:  let s:colors.purple = "#C6AAE8"
 :
 :endif
 
