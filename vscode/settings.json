@@ -170,7 +170,7 @@
   // ---------------------------------------------------
   //* Color & Theme
   // ---------------------------------------------------
-  "workbench.colorTheme": "In Bed by 7pm",
+  "workbench.colorTheme": "Catppuccin",
   "workbench.iconTheme": "material-icon-theme",
   "material-icon-theme.hidesExplorerArrows": true,
   "material-icon-theme.showWelcomeMessage": false,
@@ -256,7 +256,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[markdown]": {
-    // "editor.wordWrap": "on",
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn": 80,
     "editor.quickSuggestions": true,
     // "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
