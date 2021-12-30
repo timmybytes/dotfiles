@@ -1,4 +1,5 @@
 <!-- TODO: Add scripts for Plex Server -->
+<!-- TODO: Update nvim stausline compatibility w/ catpuccin theme -->
 
 <h1 align="center">
   <img src="dotfiles-logo.svg" alt="dotfiles logo" />
