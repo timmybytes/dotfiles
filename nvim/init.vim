@@ -25,6 +25,7 @@ Plug 'sainnhe/vim-color-forest-night' " e.g., 'forest-night'
 " Usage: colorscheme forest-night
 Plug 'franbach/miramare'
 " Usage: colorscheme miramare - DEFAULT
+Plug 'catppuccin/nvim', { 'branch': 'main', 'as': 'catppuccin' }
 
 " Enhancements
 " ---------------------------------------------------------
@@ -72,7 +73,7 @@ syntax enable
 set termguicolors
 
 let g:miramare_enable_italic = 1
-colorscheme miramare
+colorscheme catppuccin
 set nowrap
 set noshowmode
 set autoindent
@@ -129,4 +130,4 @@ setlocal wrapmargin=0
 
 " Statusline
 " ---------------------------------------------------------
-source ~/.config/nvim/statusline.vim
+" source ~/.config/nvim/statusline.vim
