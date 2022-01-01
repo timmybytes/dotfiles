@@ -1,4 +1,5 @@
 <!-- TODO: Add scripts for Plex Server -->
+<!-- TODO: Add palette reference for catppuccin theme -->
 <!-- TODO: Update nvim stausline compatibility w/ catpuccin theme -->
 
 <h1 align="center">
