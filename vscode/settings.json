@@ -167,10 +167,6 @@
   "editor.suggestSelection": "first",
   "editor.wordBasedSuggestions": true,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  // ---------------------------------------------------
-  //* Color & Theme
-  // ---------------------------------------------------
-  "workbench.colorTheme": "Catppuccin",
   "workbench.iconTheme": "material-icon-theme",
   "material-icon-theme.hidesExplorerArrows": true,
   "material-icon-theme.showWelcomeMessage": false,
