@@ -472,5 +472,6 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "redhat.telemetry.enabled": false,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
-  "svelte.enable-ts-plugin": true
+  "svelte.enable-ts-plugin": true,
+  "workbench.colorTheme": "In Bed by 7pm"
 }
