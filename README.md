@@ -1,4 +1,4 @@
-<!-- TODO: Add scripts for Plex Server -->
+<!-- TODO: Add scripts for Plex Server/port forwarding -->
 <!-- TODO: Add palette reference for catppuccin theme -->
 <!-- TODO: Update nvim stausline compatibility w/ catpuccin theme -->
 
