@@ -2,6 +2,7 @@ aaron-bond.better-comments
 AhmedAbdulrahman.aylin
 albert.TabOut
 anseki.vscode-color
+AntiAntiSepticeye.vscode-color-picker
 ccy.ayu-adaptive
 cssho.vscode-svgviewer
 dahong.theme-bear
