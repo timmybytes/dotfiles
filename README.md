@@ -1,4 +1,3 @@
-<!-- TODO: Add scripts for Plex Server/port forwarding -->
 <!-- TODO: Add palette reference for catppuccin theme -->
 
 <h1 align="center">
