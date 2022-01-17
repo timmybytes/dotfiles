@@ -1,5 +1,3 @@
-<!-- TODO: Add palette reference for catppuccin theme -->
-
 <h1 align="center">
   <img src="dotfiles-logo.svg" alt="dotfiles logo" />
 </h1>
