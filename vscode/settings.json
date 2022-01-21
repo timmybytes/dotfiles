@@ -67,7 +67,7 @@
   "editor.tabSize": 2,
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "editor.wordWrap": "bounded",
-  "editor.wordWrapColumn": 80,
+  "editor.wordWrapColumn": 85, // line length
   "editor.wrappingIndent": "deepIndent",
   "explorer.autoReveal": "focusNoScroll",
   "explorer.compactFolders": false,
@@ -449,6 +449,16 @@
   // ---------------------------------------------------
   //* TODO Highlight
   // ---------------------------------------------------
+  "todohighlight.include": [
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.html",
+    "**/*.php",
+    "**/*.css",
+    "**/*.scss"
+  ],
   "todohighlight.keywords": [
     {
       "text": "NOTE:",
