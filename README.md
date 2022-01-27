@@ -1,6 +1,5 @@
-<!-- TODO: Add scripts for Plex Server -->
-<!-- TODO: Add palette reference for catppuccin theme -->
-<!-- TODO: Update nvim stausline compatibility w/ catpuccin theme -->
+<!-- TODO: Add comic search scripts-->
+
 
 <h1 align="center">
   <img src="dotfiles-logo.svg" alt="dotfiles logo" />

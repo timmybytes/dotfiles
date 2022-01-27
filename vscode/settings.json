@@ -95,7 +95,6 @@
   "window.title": "${rootName}${separator}${dirty}${separator}${activeEditorMedium}",
   "window.titleSeparator": " — ",
   "window.titleBarStyle": "custom",
-  "workbench.activityBar.visible": true,
   "workbench.editor.enablePreview": false,
   "workbench.editor.pinnedTabSizing": "shrink",
   "workbench.editor.showIcons": true,
@@ -489,6 +488,5 @@
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "svelte.enable-ts-plugin": true,
   "tailwindcss.hoverColorHint": "hex",
-  "workbench.colorTheme": "In Bed by 7pm",
-  "window.zoomLevel": -1
+  "workbench.colorTheme": "In Bed by 7pm"
 }
