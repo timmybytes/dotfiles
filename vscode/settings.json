@@ -67,7 +67,7 @@
   "editor.tabSize": 2,
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "editor.wordWrap": "bounded",
-  "editor.wordWrapColumn": 80,
+  "editor.wordWrapColumn": 85, // line length
   "editor.wrappingIndent": "deepIndent",
   "explorer.autoReveal": "focusNoScroll",
   "explorer.compactFolders": false,
@@ -92,7 +92,8 @@
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.gpuAcceleration": "on",
   "terminal.integrated.scrollback": 10000,
-  "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
+  "window.title": "${rootName}${separator}${dirty}${separator}${activeEditorMedium}",
+  "window.titleSeparator": " — ",
   "window.titleBarStyle": "custom",
   "workbench.activityBar.visible": true,
   "workbench.editor.enablePreview": false,
@@ -167,16 +168,16 @@
   "editor.suggestSelection": "first",
   "editor.wordBasedSuggestions": true,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  // ---------------------------------------------------
-  //* Color & Theme
-  // ---------------------------------------------------
-  "workbench.colorTheme": "Catppuccin",
   "workbench.iconTheme": "material-icon-theme",
   "material-icon-theme.hidesExplorerArrows": true,
   "material-icon-theme.showWelcomeMessage": false,
   // Faded icon saturation to better match Forest Night colorscheme
   "material-icon-theme.saturation": 0.8,
   "workbench.colorCustomizations": {
+    "merge.currentHeaderBackground": "#ffb54775",
+    "merge.currentContentBackground": "#ffb54711",
+    "merge.incomingHeaderBackground": "#ff000071",
+    "merge.incomingContentBackground": "#ff000013",
     "[In Bed by 7pm]": {
       "editorSuggestWidget.highlightForeground": "#aa82ee",
       // "editorSuggestWidget.selectedBackground": "#666A79",
@@ -452,6 +453,16 @@
   // ---------------------------------------------------
   //* TODO Highlight
   // ---------------------------------------------------
+  "todohighlight.include": [
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.html",
+    "**/*.php",
+    "**/*.css",
+    "**/*.scss"
+  ],
   "todohighlight.keywords": [
     {
       "text": "NOTE:",
@@ -476,5 +487,8 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "redhat.telemetry.enabled": false,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
-  "svelte.enable-ts-plugin": true
+  "svelte.enable-ts-plugin": true,
+  "tailwindcss.hoverColorHint": "hex",
+  "workbench.colorTheme": "In Bed by 7pm",
+  "window.zoomLevel": -1
 }
