@@ -169,6 +169,8 @@ alias omg="omgwdyd.sh"
 alias updoc="updoc.sh"
 # Run gitchecks on all local repos
 alias gitcheckall="gitcheckall.sh"
+# Use preferred Node version if .nvmrc exists
+alias nu="nvm use"
 
 # ------------------------- * * GIT * * -----------------------------#
 alias gs="git status"
