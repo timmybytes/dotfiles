@@ -28,4 +28,4 @@ Mostly self-explanatory; often these are just to specify the default formatter.
 
 These are arranged alphabetically by Extension name, and are mostly self-explanatory. There are a few inactive or uninstalled extension settings here I keep for reference, or when I decide to toggle something on and off.
 
-Note that the current list of extensions I use can also be found in [extensions.txt](extensions.txt), which thanks to a githook with Husky updates each time the repo is changed.
+Note that the current list of extensions I use can also be found in [extensions.txt](extensions.txt), which thanks to a githook with Husky updates each time the repo is changed (see the script in this repo's package.json).
