@@ -1,6 +1,3 @@
-<!-- TODO: Add comic search scripts-->
-
-
 <h1 align="center">
   <img src="dotfiles-logo.svg" alt="dotfiles logo" />
 </h1>
