@@ -3,35 +3,28 @@
 #description    :Update Doctor - check for user & system updates
 #author         :Timothy Merritt
 #date           :2021-02-09
-#version        :0.2.0
+#version        :0.3.0
 #usage          :./updoc.sh
 #notes          :
 #bash_version   :5.0.18(1)-release
 #============================================================================
-# COLOR REFERENCE
-# Black        0;30     Dark Gray     1;30
-# Red          0;31     Light Red     1;31
-# Green        0;32     Light Green   1;32
-# Brown/Orange 0;33     Yellow        1;33
-# Blue         0;34     Light Blue    1;34
-# Purple       0;35     Light Purple  1;35
-# Cyan         0;48     Light Cyan    1;48
-# Light Gray   0;37     White         1;37
+
+# Color codes for update status icons
 RED='\033[0;31m'
 YELLOW='\033[1;33m'
 GREEN='\033[0;32m'
-NC='\033[0m' # "No Color" - resets to default
+NO_COLOR='\033[0m'
 
-# STATUS OF AN UPDATE
-PENDING="${YELLOW}●${NC}"
-FAILED="${RED}𐄂${NC}"
-SUCCEEDED="${GREEN}✔${NC}"
+# Status of an update
+PENDING="${YELLOW}●${NO_COLOR}"
+FAILED="${RED}𐄂${NO_COLOR}"
+SUCCEEDED="${GREEN}✔${NO_COLOR}"
 
-# TEMPORARY LOGFILE FOR RESULTS OUTPUT - DELETED AFTER EACH RUN
+# Temporary logfile for results output - deleted after each run
 MAKE_TMPFILE=$(mktemp /tmp/updoc-log)
 TMPFILE="/tmp/updoc-log"
 
-# ENSURES CLEAN TEMPORARY LOGFILE IS CREATED DURING EACH RUN
+# Ensures clean temporary logfile is created during each run
 check_temp() {
   # If preexisting tmpfile exists, delete
   if test -f "/tmp/updoc-log"; then
@@ -42,7 +35,6 @@ check_temp() {
   fi
 }
 
-# FANCY ASCII LOGO
 LOGO="
                         ____
     __     __  ______  / __ \____  _____     __
@@ -54,15 +46,15 @@ LOGO="
 
               What's updated, Doc?
 "
-
-# WRAPS A STRING IN FANCY ASCII BOX THE HARD WAY
+# Wraps a string in fancy ASCII box (the hard way)
+# TODO: Add simpler/automated box drawing
 function box_wrap() {
   # Limit app name to prevent overflowing
   app=$(printf "%b" "${@}" | cut -c 1-18)
   # Get length of app name
   app_len=$(printf "%b" "${#app}")
   # Calculate whitespace needed to maintain box shape
-  get_whitespace=$((18 - ${app_len}))
+  get_whitespace=$((18 - app_len))
   whitespace=$(printf "%${get_whitespace}s\n")
   # Print the box!
   printf "%s" "┌"
@@ -75,7 +67,7 @@ function box_wrap() {
   printf "%s\n" "┘"
 }
 
-# MACOS-SPECIFIC OS UPDATES
+# Check for macOS-specific OS updates
 check_system() {
   box_wrap macOS
   # Get concise name of update(s) and whether it's recommended
@@ -89,6 +81,7 @@ check_system() {
   fi
 }
 
+# Check for brew (macOS package manager) updates
 check_brew() {
   box_wrap brew
 
@@ -99,7 +92,7 @@ check_brew() {
     printf "%b\n" "${FAILED} brew update unsuccessful." | tee -a "${TMPFILE}"
   fi
 
-  # Upgrade installed brew packages and casks
+  # Upgrade installed brew packages and casks (apps)
   if
     brew upgrade
     brew upgrade --cask
@@ -111,15 +104,14 @@ check_brew() {
 
   # Remove stale lock files, outdated downloads for all formulae and casks,
   # old versions of installed formulae, and all downloads > 120 days old.
-  if
-    brew cleanup
-  then
+  if brew cleanup; then
     printf "%b\n" "${SUCCEEDED} brew cleanup successful." | tee -a "${TMPFILE}"
   else
     printf "%b\n" "${FAILED} brew cleanup unsuccessful." | tee -a "${TMPFILE}"
   fi
 }
 
+# Check for zsh framework Oh My Zsh updates
 check_ohmyzsh() {
   box_wrap ohmyzsh
 
@@ -130,6 +122,7 @@ check_ohmyzsh() {
   fi
 }
 
+# Check for Node package manager updates
 check_npm() {
   box_wrap npm
 
@@ -140,6 +133,7 @@ check_npm() {
   fi
 }
 
+# Check for Vim package manager VimPlug updates
 check_vimplug() {
   box_wrap VimPlug
 
@@ -153,18 +147,18 @@ check_vimplug() {
   fi
 }
 
+# Check for newly indexed command TLDRs
 check_tldr() {
   box_wrap tldr
 
-  if
-    tldr --update
-  then
+  if tldr --update; then
     printf "%b\n" "${SUCCEEDED} tldr updates successful." | tee -a "${TMPFILE}"
   else
     printf "%b\n" "${FAILED} tldr updates unsuccessful." | tee -a "${TMPFILE}"
   fi
 }
 
+# Print formatted final results
 results() {
   printf "─%.0s" {1..48}
   echo
@@ -175,19 +169,30 @@ results() {
   printf "─%.0s" {1..48}
   echo
   cat /tmp/updoc-log
+
+  # TODO: If there are recommended updates, persist reminder in tempfile for next run
+  # if grep -q "Label" $TMPFILE; then
+  #   box_wrap There are recommended updates to install
+  # fi
+
   rm /tmp/updoc-log
 }
 
 main() {
+  # Clear the screen
   clear
+  # Check for tempfile and/or create one
   check_temp
+  # Show the pretty ASCII logo
   echo "${LOGO}"
+  # Check for updates
   check_system
   check_ohmyzsh
   check_brew
   check_npm
   check_vimplug
   check_tldr
+  # Show the resultss
   results
 }
 

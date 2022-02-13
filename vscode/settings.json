@@ -67,7 +67,7 @@
   "editor.tabSize": 2,
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "editor.wordWrap": "bounded",
-  "editor.wordWrapColumn": 85, // line length
+  "editor.wordWrapColumn": 90, // line length
   "editor.wrappingIndent": "deepIndent",
   "explorer.autoReveal": "focusNoScroll",
   "explorer.compactFolders": false,
@@ -172,6 +172,7 @@
   "material-icon-theme.showWelcomeMessage": false,
   // Faded icon saturation to better match Forest Night colorscheme
   "material-icon-theme.saturation": 0.8,
+  "workbench.colorTheme": "In Bed by 7pm",
   "workbench.colorCustomizations": {
     "merge.currentHeaderBackground": "#ffb54775",
     "merge.currentContentBackground": "#ffb54711",
@@ -488,5 +489,5 @@
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "svelte.enable-ts-plugin": true,
   "tailwindcss.hoverColorHint": "hex",
-  "workbench.colorTheme": "In Bed by 7pm"
+  "vsicons.dontShowNewVersionMessage": true
 }
