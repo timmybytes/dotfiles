@@ -63,11 +63,12 @@
   "editor.scrollPredominantAxis": true,
   "editor.smoothScrolling": true,
   "editor.snippetSuggestions": "inline",
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
   "editor.tabCompletion": "on",
   "editor.tabSize": 2,
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "editor.wordWrap": "bounded",
-  "editor.wordWrapColumn": 85, // line length
+  "editor.wordWrapColumn": 90, // line length
   "editor.wrappingIndent": "deepIndent",
   "explorer.autoReveal": "focusNoScroll",
   "explorer.compactFolders": false,
@@ -486,7 +487,7 @@
   "security.workspace.trust.enabled": false,
   "diffEditor.ignoreTrimWhitespace": false,
   "redhat.telemetry.enabled": false,
-  "editor.suggest.snippetsPreventQuickSuggestions": false,
   "svelte.enable-ts-plugin": true,
-  "tailwindcss.hoverColorHint": "hex"
+  "tailwindcss.hoverColorHint": "hex",
+  "vsicons.dontShowNewVersionMessage": true
 }
