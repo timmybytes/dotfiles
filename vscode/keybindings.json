@@ -177,5 +177,15 @@
   {
     "key": "cmd+k cmd+q",
     "command": "-workbench.action.navigateToLastEditLocation"
+  },
+  {
+    "key": "shift+cmd+g",
+    "command": "workbench.view.scm",
+    "when": "workbench.scm.active"
+  },
+  {
+    "key": "ctrl+shift+g",
+    "command": "-workbench.view.scm",
+    "when": "workbench.scm.active"
   }
 ]
