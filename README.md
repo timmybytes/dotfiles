@@ -7,7 +7,7 @@
 </div>
 
 <p align="center">
-  <sub>Made with  💾  by (and for)
+  <sub>Made by (and for)
   <a href="https://timmybytes.com">Timothy Merritt</a>
 </div>
 
