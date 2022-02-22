@@ -1,5 +1,3 @@
-<!-- TODO: Fix extension copying script -->
-
 # VS Code Settings
 
 > As a warning, these settings are the most volatile of my dotfiles, since I change my editor configuration almost daily. Often this is just switching themes, fonts, or turning extension settings on/off, but sometimes there may be unexpected breaking changes.
@@ -10,7 +8,7 @@ These settings mostly cover editor behavior and general aesthetics, arranged (mo
 
 ### Fonts & Typography
 
-I have fonts I prefer listed here and grouped by whether or not they include support for ligatures, with all but the current active font commented out. This makes switching back and forth easier when I get tired of a given font's look.
+I have fonts I prefer listed here and grouped by whether or not they include support for ligatures, with all but the current active font commented out. This makes switching back and forth easier when I get tired of a given font's look. If you plan to use any of the fonts listed in the settings, make sure you either have them downloaded and configured locally and/or have proper licenses for using them.
 
 ### Intellisense & Autocomplete
 
