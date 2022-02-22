@@ -173,7 +173,6 @@
   "material-icon-theme.showWelcomeMessage": false,
   // Faded icon saturation to better match Forest Night colorscheme
   "material-icon-theme.saturation": 0.8,
-  "workbench.colorTheme": "In Bed by 7pm",
   "workbench.colorCustomizations": {
     "merge.currentHeaderBackground": "#ffb54775",
     "merge.currentContentBackground": "#ffb54711",
@@ -489,5 +488,6 @@
   "redhat.telemetry.enabled": false,
   "svelte.enable-ts-plugin": true,
   "tailwindcss.hoverColorHint": "hex",
-  "vsicons.dontShowNewVersionMessage": true
+  "vsicons.dontShowNewVersionMessage": true,
+  "workbench.colorTheme": "In Bed by 7pm"
 }

@@ -11,8 +11,6 @@
   <a href="https://timmybytes.com">Timothy Merritt</a>
 </div>
 
-<!-- TODO: Fix extensions script for VS Code -->
-
 These are my personal dotfile/configurations, geared mostly towards a macOS-based web development environment.
 
 Forking or just implementing the configs here might end up breaking your stuff, but feel free to use whatever appeals to you.
@@ -34,5 +32,5 @@ Happy hacking!
 - [Rectangle Settings](./rectangle/)
 - [Scripts](./scripts/README.md)
 - [Tools](./tools/)
-- [VS Code Settings](./vscode/) - _Note that these settings change most often, and might not always be stable_
+- [VS Code Settings](./vscode/) - _Note that these settings are the ones that change most often, and might not always be stable_
 - [Zsh+Oh My Zsh Settings](./zsh/README.md)
