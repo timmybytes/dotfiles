@@ -5,6 +5,7 @@ anseki.vscode-color
 AntiAntiSepticeye.vscode-color-picker
 atomiks.moonlight
 cssho.vscode-svgviewer
+DanielKnights.vscode-mjml
 DavidAnson.vscode-markdownlint
 dbaeumer.vscode-eslint
 donjayamanne.githistory

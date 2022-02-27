@@ -42,11 +42,10 @@
   "editor.lineDecorationsWidth": 20, // Margin between line numbers and code
   "editor.linkedEditing": true,
   "editor.matchBrackets": "never",
-  "editor.minimap.enabled": false,
   "editor.minimap.maxColumn": 85,
-  "editor.minimap.renderCharacters": false,
+  "editor.minimap.renderCharacters": true,
   "editor.minimap.showSlider": "always",
-  "editor.minimap.scale": 1,
+  "editor.minimap.scale": 2,
   "editor.minimap.side": "right",
   "editor.minimap.size": "proportional",
   "editor.multiCursorModifier": "ctrlCmd",
@@ -174,6 +173,9 @@
   // Faded icon saturation to better match Forest Night colorscheme
   "material-icon-theme.saturation": 0.8,
   "workbench.colorCustomizations": {
+    "minimap.selectionHighlight": "#45c4ff",
+    "minimap.selectionOccurrenceHighlight": "#45c4ff",
+    "minimapSlider.background": "#ff70f848",
     "merge.currentHeaderBackground": "#ffb54775",
     "merge.currentContentBackground": "#ffb54711",
     "merge.incomingHeaderBackground": "#ff000071",
@@ -481,6 +483,12 @@
       "text": "TODO:",
       "color": "#1d1d1d",
       "isWholeLine": false
+    },
+    {
+      "text": "MARKER:",
+      "color": "#000",
+      "backgroundColor": "#0EB1D2",
+      "isWholeLine": true
     }
   ],
   "security.workspace.trust.enabled": false,
@@ -489,5 +497,6 @@
   "svelte.enable-ts-plugin": true,
   "tailwindcss.hoverColorHint": "hex",
   "vsicons.dontShowNewVersionMessage": true,
-  "workbench.colorTheme": "In Bed by 7pm"
+  "workbench.colorTheme": "In Bed by 7pm",
+  "editor.minimap.enabled": false
 }
