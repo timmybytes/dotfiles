@@ -192,7 +192,7 @@ main() {
   check_npm
   check_vimplug
   check_tldr
-  # Show the resultss
+  # Show the results
   results
 }
 
