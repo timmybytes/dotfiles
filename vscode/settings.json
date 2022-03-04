@@ -180,12 +180,23 @@
   // Editor theme
   "workbench.colorTheme": "In Bed by 7pm",
   "workbench.colorCustomizations": {
+<<<<<<< HEAD
     "editor.selectionHighlightBackground": "#45c4ff25",
     "editor.selectionBackground": "#45c4ff25",
+=======
+    // "editor.selectionHighlightBorder": "#45c4ffb9",
+    "editor.selectionHighlightBackground": "#45c4ff25",
+    "editor.selectionBackground": "#45c4ff25",
+    // Minimap colors
+>>>>>>> adfb1b5f85571786023ff5a1dd87a49e280e8c30
     "minimap.selectionHighlight": "#ffffff",
     "minimap.errorHighlight": "#ff0000",
     "minimap.selectionOccurrenceHighlight": "#45c4ff",
     "minimapSlider.background": "#70ff881e",
+<<<<<<< HEAD
+=======
+    // Merge conflict diff colors
+>>>>>>> adfb1b5f85571786023ff5a1dd87a49e280e8c30
     "merge.currentHeaderBackground": "#ffb54775",
     "merge.currentContentBackground": "#ffb54711",
     "merge.incomingHeaderBackground": "#ff000071",
@@ -501,8 +512,13 @@
   "redhat.telemetry.enabled": false,
   "svelte.enable-ts-plugin": true,
   "tailwindcss.hoverColorHint": "hex",
+<<<<<<< HEAD
   "vsicons.dontShowNewVersionMessage": true,
   "editor.minimap.enabled": false,
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true
 }
+=======
+  "vsicons.dontShowNewVersionMessage": true
+}
+>>>>>>> adfb1b5f85571786023ff5a1dd87a49e280e8c30
