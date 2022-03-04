@@ -6,10 +6,13 @@
   "editor.accessibilitySupport": "off",
   // Brackets
   "editor.bracketPairColorization.enabled": true,
-  "editor.guides.bracketPairs": "active",
+  "editor.guides.bracketPairsHorizontal": "active",
+  "editor.guides.bracketPairs": false,
+  "editor.guides.indentation": false,
+  "editor.guides.highlightActiveIndentation": true,
   "editor.guides.highlightActiveBracketPair": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll": true,
+    "source.fixAll": false,
     "source.organizeImports": false,
     "source.format.json": true,
     "source.format.js": true,
@@ -25,9 +28,9 @@
   "editor.emptySelectionClipboard": false,
   "editor.find.seedSearchStringFromSelection": "always",
   "editor.foldingHighlight": true,
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
-  "editor.formatOnType": true,
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": false,
+  "editor.formatOnType": false,
   "editor.glyphMargin": true,
   "editor.glyphMarginRightPadding": 0,
   "editor.gotoLocation.multipleDefinitions": "goto",
@@ -42,7 +45,7 @@
   "editor.lineDecorationsWidth": 20, // Margin between line numbers and code
   "editor.linkedEditing": true,
   "editor.matchBrackets": "never",
-  "editor.minimap.maxColumn": 85,
+  "editor.minimap.maxColumn": 20,
   "editor.minimap.renderCharacters": true,
   "editor.minimap.showSlider": "always",
   "editor.minimap.scale": 2,
@@ -66,7 +69,7 @@
   "editor.tabCompletion": "on",
   "editor.tabSize": 2,
   "editor.unicodeHighlight.ambiguousCharacters": false,
-  "editor.wordWrap": "bounded",
+  "editor.wordWrap": "on",
   "editor.wordWrapColumn": 90, // line length
   "editor.wrappingIndent": "deepIndent",
   "explorer.autoReveal": "focusNoScroll",
@@ -95,7 +98,6 @@
   "window.title": "${rootName}${separator}${dirty}${separator}${activeEditorMedium}",
   "window.titleSeparator": " — ",
   "window.titleBarStyle": "custom",
-  "workbench.editor.enablePreview": false,
   "workbench.editor.pinnedTabSizing": "shrink",
   "workbench.editor.showIcons": true,
   "workbench.editor.showTabs": true,
@@ -163,31 +165,33 @@
   "editor.suggest.showIcons": true,
   "editor.suggest.showStatusBar": true,
   "editor.suggestFontSize": 14,
-  // "editor.suggestLineHeight": 24,
   "editor.suggestSelection": "first",
   "editor.wordBasedSuggestions": true,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  // ---------------------------------------------------
+  // * * Theme & Colors
+  // ---------------------------------------------------
+  // Icon theme & colors
   "workbench.iconTheme": "material-icon-theme",
   "material-icon-theme.hidesExplorerArrows": true,
   "material-icon-theme.showWelcomeMessage": false,
-  // Faded icon saturation to better match Forest Night colorscheme
-  "material-icon-theme.saturation": 0.8,
+  "material-icon-theme.saturation": 1,
+  "material-icon-theme.opacity": 1,
+  // Editor theme
+  "workbench.colorTheme": "In Bed by 7pm",
   "workbench.colorCustomizations": {
-    "minimap.selectionHighlight": "#45c4ff",
+    "editor.selectionHighlightBackground": "#45c4ff25",
+    "editor.selectionBackground": "#45c4ff25",
+    "minimap.selectionHighlight": "#ffffff",
+    "minimap.errorHighlight": "#ff0000",
     "minimap.selectionOccurrenceHighlight": "#45c4ff",
-    "minimapSlider.background": "#ff70f848",
+    "minimapSlider.background": "#70ff881e",
     "merge.currentHeaderBackground": "#ffb54775",
     "merge.currentContentBackground": "#ffb54711",
     "merge.incomingHeaderBackground": "#ff000071",
     "merge.incomingContentBackground": "#ff000013",
     "[In Bed by 7pm]": {
       "editorSuggestWidget.highlightForeground": "#aa82ee",
-      // "editorSuggestWidget.selectedBackground": "#666A79",
-      // "editor.findMatchBackground": "#e6acd3",
-      // "editor.findMatchHighlightBackground": "#e6acd3",
-      // "editor.selectionBackground": "#e6acd3",
-      // "editor.selectionHighlightBackground": "#e6acd3",
-      // Command Palette selection color
       "quickInputList.focusBackground": "#aa82ee8e"
     },
     "[Everforest Dark]": {
@@ -238,8 +242,9 @@
       "titleBar.border": "#2a2426",
       "titleBar.inactiveBackground": "#2a2426"
     },
-    "editorIndentGuide.activeBackground": "#a7c080"
-    // "editorIndentGuide.background": "#2a2426"
+    "editorIndentGuide.activeBackground": "#a7c080",
+    "editor.lineHighlightBackground": "#1073cf2d",
+    "editor.lineHighlightBorder": "#9fced11f"
   },
   // ---------------------------------------------------
   //* Language-specific rules
@@ -497,6 +502,7 @@
   "svelte.enable-ts-plugin": true,
   "tailwindcss.hoverColorHint": "hex",
   "vsicons.dontShowNewVersionMessage": true,
-  "workbench.colorTheme": "In Bed by 7pm",
-  "editor.minimap.enabled": false
+  "editor.minimap.enabled": false,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true
 }
