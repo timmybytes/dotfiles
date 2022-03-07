@@ -70,7 +70,8 @@
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "editor.wordWrap": "on",
   "editor.wordWrapColumn": 90, // line length
-  "editor.wrappingIndent": "deepIndent",
+  "editor.wrappingIndent": "indent",
+  "editor.wrappingStrategy": "advanced",
   "explorer.autoReveal": "focusNoScroll",
   "explorer.compactFolders": false,
   "explorer.confirmDelete": false,
