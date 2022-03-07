@@ -24,6 +24,7 @@ formulahendry.auto-close-tag
 formulahendry.auto-complete-tag
 formulahendry.auto-rename-tag
 foxundermoon.shell-format
+gitkraken.gitkraken-authentication
 hoovercj.vscode-dimmer
 humao.rest-client
 kumar-harsh.graphql-for-vscode
@@ -66,4 +67,5 @@ wayou.vscode-todo-highlight
 whizkydee.material-palenight-theme
 xabikos.JavaScriptSnippets
 yzhang.markdown-all-in-one
+zhuangtongfa.material-theme
 Zignd.html-css-class-completion
