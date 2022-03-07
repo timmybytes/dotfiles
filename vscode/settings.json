@@ -184,7 +184,9 @@
     "editor.lineHighlightBackground": "#49a7ff4f",
     // Selections + Minimap
     "editor.selectionHighlightBackground": "#45c4ff25",
+    // "editor.selectionHighlightBorder": "#45c4ffb9",
     "editor.selectionBackground": "#45c4ff25",
+    // Minimap colors
     "minimap.selectionHighlight": "#ffffff",
     "minimap.errorHighlight": "#ff0000",
     "minimap.selectionOccurrenceHighlight": "#45c4ff",
