@@ -61,6 +61,7 @@ Tyriar.sort-lines
 VisualStudioExptTeam.vscodeintellicode
 vscode-icons-team.vscode-icons
 WakaTime.vscode-wakatime
+WallabyJs.quokka-vscode
 wayou.vscode-todo-highlight
 whizkydee.material-palenight-theme
 xabikos.JavaScriptSnippets
