@@ -21,7 +21,7 @@ These are some of the scripts I use in development, mostly written in Bash or Py
 <img src="./updoc-2.png" alt="Screenshot of OMGWDYD script on CLI" />
 
 
-## OMGWDYD
+## OMGWDYD (Currently non-operational)
 
 <h2 align="center">
 <img src="https://raw.githubusercontent.com/timmybytes/OMGWDYD/main/OMGWDYD-logo.png" alt="OMGWDYD logo with suprised emoji" />
