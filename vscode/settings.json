@@ -63,7 +63,7 @@
   "editor.scrollbar.verticalScrollbarSize": 10,
   "editor.scrollPredominantAxis": true,
   "editor.smoothScrolling": true,
-  "editor.snippetSuggestions": "inline",
+  "editor.snippetSuggestions": "top",
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "editor.tabCompletion": "on",
   "editor.tabSize": 2,
@@ -450,7 +450,7 @@
   "prettier.singleQuote": true,
   "prettier.proseWrap": "never",
   "prettier.tabWidth": 2,
-  "prettier.semi": true,
+  "prettier.semi": false,
   "prettier.endOfLine": "lf",
   // ---------------------------------------------------
   //* Settings Sync
