@@ -41,7 +41,7 @@
   "editor.hover.sticky": true,
   "editor.inlayHints.enabled": false,
   "editor.inlineSuggest.enabled": true,
-  "editor.lineDecorationsWidth": 20, // Margin between line numbers and code
+  "editor.lineDecorationsWidth": 10, // Margin between line numbers and code
   "editor.linkedEditing": true,
   "editor.matchBrackets": "never",
   "editor.minimap.maxColumn": 20,
@@ -506,6 +506,7 @@
   "redhat.telemetry.enabled": false,
   "svelte.enable-ts-plugin": true,
   "tailwindcss.hoverColorHint": "hex",
+  "tailwindcss.references": true,
   "vsicons.dontShowNewVersionMessage": true,
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true
