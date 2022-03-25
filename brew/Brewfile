@@ -50,6 +50,7 @@ brew "tldr"
 brew "tmux"
 brew "trash"
 brew "tree"
+brew "vips"
 brew "wget"
 brew "yarn"
 brew "youtube-dl"
@@ -65,7 +66,6 @@ cask "font-jetbrains-mono-nerd-font"
 cask "font-victor-mono"
 cask "google-chrome"
 cask "keka"
-cask "keycastr"
 cask "malwarebytes"
 cask "mkvtools"
 cask "mullvadvpn"
@@ -83,3 +83,16 @@ cask "raindropio"
 cask "signal"
 cask "stats"
 cask "vlc"
+mas "Amphetamine", id: 937984704
+mas "Bear", id: 1091189122
+mas "Bitwarden", id: 1352778147
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "LastPass", id: 926036361
+mas "monday.com", id: 1298450641
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "SimpleMind", id: 439654198
+mas "Slack", id: 803453959
+mas "Sorted", id: 1306893526
