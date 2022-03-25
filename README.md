@@ -3,11 +3,11 @@
 </h1>
 
 <div align="center">
-  <strong>Configurations & Customizations</strong>
+  <strong>Configurations, Customizations, and Scripts</strong>
 </div>
 
 <p align="center">
-  <sub>Made by (and for)
+  <sub>By 
   <a href="https://timmybytes.com">Timothy Merritt</a>
 </div>
 

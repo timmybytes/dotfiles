@@ -18,7 +18,7 @@ Often I've experienced issues with accepting Intellisense suggestions with the <
 
 ### Color & Theme
 
-I mainly switch between two themes: [In Bed By 7pm](https://marketplace.visualstudio.com/items?itemName=sdras.inbedby7pm) and [Everforest](https://marketplace.visualstudio.com/items?itemName=sainnhe.everforest), with the latter having a _ton_ of overrides I've set up to customize a lot of nuances in the editor, explorer, workbench, etc. Finding and customizing elements are often done with the CodeUI extension, then manually added here for a higher degree of control.
+I mainly switch between two themes: [In Bed By 7pm](https://marketplace.visualstudio.com/items?itemName=sdras.inbedby7pm) and [Everforest](https://marketplace.visualstudio.com/items?itemName=sainnhe.everforest), with the latter having a _ton_ of overrides I've set up to customize a lot of nuances in the editor, explorer, workbench, etc. Finding and customizing elements are often done with the CodeUI extension, then manually added here for a higher degree of control (however, currently these are still WIP with some elements like the Minimap, and may clash more than they blend).
 
 ### Language Rules
 
