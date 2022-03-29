@@ -44,6 +44,7 @@ brew "ruby"
 brew "rxvt-unicode"
 brew "shellcheck"
 brew "shfmt"
+brew "subversion"
 brew "task"
 brew "thefuck"
 brew "tldr"
@@ -63,6 +64,7 @@ cask "font-fantasque-sans-mono"
 cask "font-hack-nerd-font"
 cask "font-iosevka"
 cask "font-jetbrains-mono-nerd-font"
+cask "font-open-sans"
 cask "font-victor-mono"
 cask "google-chrome"
 cask "keka"
@@ -90,6 +92,7 @@ mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "LastPass", id: 926036361
+mas "Microsoft Word", id: 462054704
 mas "monday.com", id: 1298450641
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
