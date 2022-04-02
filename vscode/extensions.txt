@@ -58,7 +58,6 @@ taniarascia.new-moon-vscode
 timonwong.shellcheck
 tombonnike.vscode-status-bar-format-toggle
 Tyriar.sort-lines
-undefined_publisher.catppuccin-vsc
 VisualStudioExptTeam.vscodeintellicode
 vscode-icons-team.vscode-icons
 WakaTime.vscode-wakatime
