@@ -450,7 +450,7 @@
   "prettier.singleQuote": true,
   "prettier.proseWrap": "never",
   "prettier.tabWidth": 2,
-  "prettier.semi": false,
+  "prettier.semi": true,
   "prettier.endOfLine": "lf",
   // ---------------------------------------------------
   //* Settings Sync
