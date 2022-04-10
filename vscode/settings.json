@@ -22,6 +22,7 @@
   "editor.colorDecorators": true,
   "editor.comments.insertSpace": true,
   "editor.cursorBlinking": "phase",
+  "editor.cursorSurroundingLines": 10,
   "editor.cursorWidth": 3,
   "editor.detectIndentation": false,
   "editor.emptySelectionClipboard": false,
@@ -31,18 +32,18 @@
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
   "editor.glyphMargin": true,
-  "editor.glyphMarginRightPadding": 0,
+  // "editor.glyphMarginRightPadding": 10,
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.gotoLocation.multipleDeclarations": "goto",
   "editor.gotoLocation.multipleImplementations": "goto",
   "editor.gotoLocation.multipleReferences": "goto",
   "editor.gotoLocation.multipleTypeDefinitions": "goto",
-  "editor.hover.delay": 800,
+  "editor.hover.enabled": true,
+  "editor.hover.delay": 500,
   "editor.hover.sticky": true,
-  "editor.inlayHints.enabled": false,
+  "editor.inlayHints.enabled": true,
   "editor.inlineSuggest.enabled": true,
-  "editor.lineDecorationsWidth": 10, // Margin between line numbers and code
-  "editor.linkedEditing": true,
+  "editor.lineDecorationsWidth": 25, // Margin between line numbers and code
   "editor.matchBrackets": "never",
   "editor.minimap.maxColumn": 20,
   "editor.minimap.renderCharacters": true,
@@ -63,8 +64,7 @@
   "editor.scrollbar.verticalScrollbarSize": 10,
   "editor.scrollPredominantAxis": true,
   "editor.smoothScrolling": true,
-  "editor.snippetSuggestions": "top",
-  "editor.suggest.snippetsPreventQuickSuggestions": false,
+
   "editor.tabCompletion": "on",
   "editor.tabSize": 2,
   "editor.unicodeHighlight.ambiguousCharacters": false,
@@ -107,8 +107,7 @@
   },
   "workbench.settings.enableNaturalLanguageSearch": false,
   "workbench.startupEditor": "newUntitledFile",
-  "workbench.tips.enabled": false,
-  "workbench.tree.indent": 15,
+  "workbench.tree.indent": 15, // Explorer open folder/files indents
   "workbench.tree.renderIndentGuides": "none",
   "zenMode.fullScreen": false,
   "zenMode.hideLineNumbers": true,
@@ -141,7 +140,7 @@
   "editor.fontLigatures": "true",
   "editor.fontSize": 14,
   "editor.fontWeight": "400",
-  // "editor.lineHeight": 26,
+  "editor.lineHeight": 22,
   "scm.inputFontFamily": "Cascadia Code PL",
   "terminal.integrated.fontFamily": "Cascadia Code PL",
   "terminal.integrated.fontSize": 14,
@@ -149,35 +148,41 @@
   "terminal.integrated.fontWeightBold": "800",
   "terminal.integrated.lineHeight": 1,
   // ---------------------------------------------------
-  // * * Intellisense & Autocomplete
+  // * * Intellisense, Suggestions, and Autocomplete
   // ---------------------------------------------------
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.acceptSuggestionOnEnter": "on",
   "editor.autoClosingBrackets": "always",
-  "editor.parameterHints.enabled": true,
-  "editor.quickSuggestions": true,
-  "editor.quickSuggestionsDelay": 500,
+  "editor.parameterHints.enabled": false,
+  "editor.quickSuggestions": {
+    "strings": false,
+    "comments": false
+  },
+  "editor.quickSuggestionsDelay": 800,
+  "editor.snippetSuggestions": "inline",
   "editor.suggest.filterGraceful": true,
   "editor.suggest.insertMode": "replace",
   "editor.suggest.localityBonus": true,
   "editor.suggest.preview": true,
   "editor.suggest.showIcons": true,
   "editor.suggest.showStatusBar": true,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
   "editor.suggestFontSize": 14,
+  "editor.suggestLineHeight": 22,
   "editor.suggestSelection": "first",
-  "editor.wordBasedSuggestions": true,
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "editor.wordBasedSuggestions": false,
+  // "editor.inlayHints.displayStyle": "compact",
+  // "editor.inlayHints.fontSize": 28,
+  // "editor.inlayHints.fontFamily": "",
+  // "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   // ---------------------------------------------------
   // * * Theme & Colors
   // ---------------------------------------------------
   // Icon theme & colors
-  "workbench.iconTheme": "material-icon-theme",
   "material-icon-theme.hidesExplorerArrows": true,
   "material-icon-theme.showWelcomeMessage": false,
   "material-icon-theme.saturation": 1,
   "material-icon-theme.opacity": 1,
-  // Editor theme
-  "workbench.colorTheme": "In Bed by 7pm",
   "workbench.colorCustomizations": {
     // Indent guides
     "editorIndentGuide.activeBackground": "#aa82ee",
@@ -263,6 +268,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.autoClosingBrackets": "always"
   },
+  // "javascript.inlayHints.parameterNames.enabled": "none",
+  // "javascript.inlayHints.variableTypes.enabled": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "javascript.suggest.autoImports": true,
   "[jsonc]": {
@@ -292,6 +299,8 @@
     "editor.autoClosingBrackets": "always"
   },
   "typescript.suggest.autoImports": true,
+  // "typescript.inlayHints.parameterNames.enabled": "all",
+  // "typescript.inlayHints.parameterTypes.enabled": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
   // ---------------------------------------------------
   //* Emmet
@@ -365,41 +374,6 @@
     }
   },
   // ---------------------------------------------------
-  //* GitHub Copilot
-  // ---------------------------------------------------
-  "github.copilot.advanced": {
-    "enable": false,
-    "autoComplete": true,
-    "autoComplete.maxItems": 10,
-    "autoComplete.maxItemsToShow": 10,
-    "autoComplete.maxItemsToShowInDropdown": 10
-  },
-  "github.copilot.enable": {
-    "*": true,
-    "yaml": false,
-    "plaintext": true,
-    "markdown": true,
-    "json": true,
-    "yml": true
-  },
-  // ---------------------------------------------------
-  //* Live SASS
-  // ---------------------------------------------------
-  // NOTE: LiveSassCompiler is no longer maintained and can be buggy
-  //
-  // It's recommended to use a Dart Sass implementation instead:
-  // https://sass-lang.com/blog/libsass-is-deprecated
-  //
-  // "liveSassCompile.settings.formats": [
-  //   {
-  //     "format": "compressed",
-  //     "extensionName": ".min.css",
-  //     "savePath": null
-  //   }
-  // ],
-  // "liveSassCompile.settings.excludeList": ["**/node_modules/**", ".vscode/**"],
-  // "liveSassCompile.settings.generateMap": false,
-  // ---------------------------------------------------
   //* Live Server
   // ---------------------------------------------------
   "liveServer.settings.CustomBrowser": "firefox",
@@ -459,10 +433,6 @@
   "sync.autoUpload": true,
   "sync.quietSync": true,
   // ---------------------------------------------------
-  //* Tabnine
-  // ---------------------------------------------------
-  "tabnine.experimentalAutoImports": true,
-  // ---------------------------------------------------
   //* TODO Highlight
   // ---------------------------------------------------
   "todohighlight.include": [
@@ -509,5 +479,8 @@
   "tailwindcss.references": true,
   "vsicons.dontShowNewVersionMessage": true,
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
-  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+  "workbench.colorTheme": "In Bed by 7pm",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.linkedEditing": true
 }
