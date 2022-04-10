@@ -39,7 +39,11 @@
   "editor.gotoLocation.multipleReferences": "goto",
   "editor.gotoLocation.multipleTypeDefinitions": "goto",
   "editor.hover.enabled": true,
+<<<<<<< HEAD
   "editor.hover.delay": 500,
+=======
+  "editor.hover.delay": 0,
+>>>>>>> a19f39a4282fcb806b74dee7292ba08f88f5751b
   "editor.hover.sticky": true,
   "editor.inlayHints.enabled": true,
   "editor.inlineSuggest.enabled": true,
@@ -55,6 +59,10 @@
   "editor.occurrencesHighlight": false,
   "editor.padding.bottom": 100,
   "editor.padding.top": 100,
+  "editor.quickSuggestions": {
+    "strings": false,
+    "comments": false
+  },
   "editor.renderControlCharacters": false,
   "editor.renderLineHighlight": "line",
   "editor.renderWhitespace": "none",
@@ -64,7 +72,12 @@
   "editor.scrollbar.verticalScrollbarSize": 10,
   "editor.scrollPredominantAxis": true,
   "editor.smoothScrolling": true,
+<<<<<<< HEAD
 
+=======
+  "editor.snippetSuggestions": "bottom",
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+>>>>>>> a19f39a4282fcb806b74dee7292ba08f88f5751b
   "editor.tabCompletion": "on",
   "editor.tabSize": 2,
   "editor.unicodeHighlight.ambiguousCharacters": false,
@@ -153,6 +166,7 @@
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.acceptSuggestionOnEnter": "on",
   "editor.autoClosingBrackets": "always",
+<<<<<<< HEAD
   "editor.parameterHints.enabled": false,
   "editor.quickSuggestions": {
     "strings": false,
@@ -160,6 +174,10 @@
   },
   "editor.quickSuggestionsDelay": 800,
   "editor.snippetSuggestions": "inline",
+=======
+  "editor.parameterHints.enabled": true,
+  "editor.quickSuggestionsDelay": 0,
+>>>>>>> a19f39a4282fcb806b74dee7292ba08f88f5751b
   "editor.suggest.filterGraceful": true,
   "editor.suggest.insertMode": "replace",
   "editor.suggest.localityBonus": true,
@@ -481,6 +499,10 @@
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
   "workbench.colorTheme": "In Bed by 7pm",
+<<<<<<< HEAD
   "workbench.iconTheme": "material-icon-theme",
   "editor.linkedEditing": true
+=======
+  "workbench.iconTheme": "material-icon-theme"
+>>>>>>> a19f39a4282fcb806b74dee7292ba08f88f5751b
 }
