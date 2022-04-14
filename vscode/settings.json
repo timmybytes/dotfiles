@@ -158,7 +158,7 @@
     "comments": false
   },
   "editor.quickSuggestionsDelay": 500,
-  "editor.snippetSuggestions": "inline",
+  "editor.snippetSuggestions": "bottom",
   "editor.suggest.filterGraceful": true,
   "editor.suggest.insertMode": "replace",
   "editor.suggest.localityBonus": true,
