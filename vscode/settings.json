@@ -22,6 +22,7 @@
   "editor.colorDecorators": true,
   "editor.comments.insertSpace": true,
   "editor.cursorBlinking": "phase",
+  "editor.cursorSurroundingLines": 10,
   "editor.cursorWidth": 3,
   "editor.detectIndentation": false,
   "editor.emptySelectionClipboard": false,
@@ -38,7 +39,7 @@
   "editor.gotoLocation.multipleReferences": "goto",
   "editor.gotoLocation.multipleTypeDefinitions": "goto",
   "editor.hover.enabled": true,
-  "editor.hover.delay": 0,
+  "editor.hover.delay": 500,
   "editor.hover.sticky": true,
   "editor.inlayHints.enabled": true,
   "editor.inlineSuggest.enabled": true,
@@ -54,10 +55,6 @@
   "editor.occurrencesHighlight": false,
   "editor.padding.bottom": 100,
   "editor.padding.top": 100,
-  "editor.quickSuggestions": {
-    "strings": false,
-    "comments": false
-  },
   "editor.renderControlCharacters": false,
   "editor.renderLineHighlight": "line",
   "editor.renderWhitespace": "none",
@@ -67,8 +64,6 @@
   "editor.scrollbar.verticalScrollbarSize": 10,
   "editor.scrollPredominantAxis": true,
   "editor.smoothScrolling": true,
-  "editor.snippetSuggestions": "bottom",
-  "editor.suggest.snippetsPreventQuickSuggestions": false,
   "editor.tabCompletion": "on",
   "editor.tabSize": 2,
   "editor.unicodeHighlight.ambiguousCharacters": false,
@@ -152,23 +147,33 @@
   "terminal.integrated.fontWeightBold": "800",
   "terminal.integrated.lineHeight": 1,
   // ---------------------------------------------------
-  // * * Intellisense & Autocomplete
+  // * * Intellisense, Suggestions, and Autocomplete
   // ---------------------------------------------------
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.acceptSuggestionOnEnter": "on",
   "editor.autoClosingBrackets": "always",
-  "editor.parameterHints.enabled": true,
-  "editor.quickSuggestionsDelay": 0,
+  "editor.parameterHints.enabled": false,
+  "editor.quickSuggestions": {
+    "strings": false,
+    "comments": false
+  },
+  "editor.quickSuggestionsDelay": 500,
+  "editor.snippetSuggestions": "inline",
   "editor.suggest.filterGraceful": true,
   "editor.suggest.insertMode": "replace",
   "editor.suggest.localityBonus": true,
   "editor.suggest.preview": true,
   "editor.suggest.showIcons": true,
   "editor.suggest.showStatusBar": true,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
   "editor.suggestFontSize": 14,
+  "editor.suggestLineHeight": 22,
   "editor.suggestSelection": "first",
-  "editor.wordBasedSuggestions": true,
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "editor.wordBasedSuggestions": false,
+  // "editor.inlayHints.displayStyle": "compact",
+  // "editor.inlayHints.fontSize": 28,
+  // "editor.inlayHints.fontFamily": "",
+  // "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   // ---------------------------------------------------
   // * * Theme & Colors
   // ---------------------------------------------------
@@ -262,6 +267,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.autoClosingBrackets": "always"
   },
+  // "javascript.inlayHints.parameterNames.enabled": "none",
+  // "javascript.inlayHints.variableTypes.enabled": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "javascript.suggest.autoImports": true,
   "[jsonc]": {
@@ -291,6 +298,8 @@
     "editor.autoClosingBrackets": "always"
   },
   "typescript.suggest.autoImports": true,
+  // "typescript.inlayHints.parameterNames.enabled": "all",
+  // "typescript.inlayHints.parameterTypes.enabled": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
   // ---------------------------------------------------
   //* Emmet
@@ -471,5 +480,6 @@
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
   "workbench.colorTheme": "In Bed by 7pm",
-  "workbench.iconTheme": "material-icon-theme"
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.linkedEditing": true
 }
