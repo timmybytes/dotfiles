@@ -1,4 +1,4 @@
-<!-- TODO: Add keybindings for easier editor/terminal switching -->
+<!-- TODO: Add keybindings for easier editor/terminal switching + better keyboard navigation -->
 
 # VS Code Settings
 
