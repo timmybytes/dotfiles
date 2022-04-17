@@ -50,7 +50,6 @@ sainnhe.everforest
 sdras.inbedby7pm
 sdras.night-owl
 shailen.netlify
-Shan.code-settings-sync
 shd101wyy.markdown-preview-enhanced
 silvenon.mdx
 styled-components.vscode-styled-components
