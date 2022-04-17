@@ -17,8 +17,6 @@ Forking or just implementing the configs here might end up breaking your stuff, 
 
 I've tried to credit any inspirations for these files, but over a few years of constant tweaking I'm sure some sources have been lost along the way.
 
-Happy hacking!
-
 ## Contents
 
 - [Firefox Settings](./Firefox/README.md)
