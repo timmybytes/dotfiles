@@ -44,6 +44,7 @@
   "editor.inlayHints.enabled": true,
   "editor.inlineSuggest.enabled": true,
   "editor.lineDecorationsWidth": 25, // Margin between line numbers and code
+  "editor.linkedEditing": true,
   "editor.matchBrackets": "never",
   "editor.minimap.maxColumn": 20,
   "editor.minimap.renderCharacters": true,
@@ -480,6 +481,5 @@
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
   "workbench.colorTheme": "In Bed by 7pm",
-  "workbench.iconTheme": "material-icon-theme",
-  "editor.linkedEditing": true
+  "workbench.iconTheme": "material-icon-theme"
 }
