@@ -12,7 +12,7 @@
   "editor.guides.highlightActiveBracketPair": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": false,
-    "source.organizeImports": true,
+    "source.organizeImports": false,
     "source.format.json": true,
     "source.format.js": true,
     "source.format.css": true,
@@ -28,11 +28,11 @@
   "editor.emptySelectionClipboard": false,
   "editor.find.seedSearchStringFromSelection": "always",
   "editor.foldingHighlight": true,
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
-  "editor.formatOnType": true,
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": false,
+  "editor.formatOnType": false,
   "editor.glyphMargin": true,
-  // "editor.glyphMarginRightPadding": 10,
+  // "editor.glyphMarginRightPadding": 0, // deprecated
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.gotoLocation.multipleDeclarations": "goto",
   "editor.gotoLocation.multipleImplementations": "goto",
@@ -41,9 +41,10 @@
   "editor.hover.enabled": true,
   "editor.hover.delay": 500,
   "editor.hover.sticky": true,
-  "editor.inlayHints.enabled": true,
+  "editor.inlayHints.enabled": "on",
   "editor.inlineSuggest.enabled": true,
   "editor.lineDecorationsWidth": 25, // Margin between line numbers and code
+  "editor.linkedEditing": true,
   "editor.matchBrackets": "never",
   "editor.minimap.maxColumn": 20,
   "editor.minimap.renderCharacters": true,
@@ -256,7 +257,7 @@
     }
   },
   // ---------------------------------------------------
-  //* Language-specific rules
+  // * Language-specific rules
   // ---------------------------------------------------
   "html.format.contentUnformatted": "pre,code,textarea",
   "[html]": {
@@ -277,7 +278,11 @@
   "[markdown]": {
     "editor.wordWrap": "bounded",
     "editor.wordWrapColumn": 80,
-    "editor.quickSuggestions": true,
+    "editor.quickSuggestions": {
+      "comments": "on",
+      "strings": "on",
+      "other": "on"
+    },
     // "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -302,7 +307,7 @@
   // "typescript.inlayHints.parameterTypes.enabled": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
   // ---------------------------------------------------
-  //* Emmet
+  // * Emmet
   // ---------------------------------------------------
   "emmet.syntaxProfiles": {
     "javascript": "jsx"
@@ -316,11 +321,11 @@
   // ---------------------------------------------------
   // ////////////////// EXTENSIONS /////////////////////
   // ---------------------------------------------------
-  //* Code UI
+  // * Code UI
   // ---------------------------------------------------
   "codeui.targetingMode": "general",
   // ---------------------------------------------------
-  //* Dimmer
+  // * Dimmer
   // ---------------------------------------------------
   // Vim-Goyo-like behavior
   "dimmer.enabled": false,
@@ -328,11 +333,11 @@
   "dimmer.opacity": 12,
   "dimmer.delay": 10,
   // ---------------------------------------------------
-  //* ESLint
+  // * ESLint
   // ---------------------------------------------------
   "eslint.format.enable": true,
   // ---------------------------------------------------
-  //* Git Lens
+  // * Git Lens
   // ---------------------------------------------------
   "gitlens.menus": {
     "editor": {
@@ -373,7 +378,7 @@
     }
   },
   // ---------------------------------------------------
-  //* Live Server
+  // * Live Server
   // ---------------------------------------------------
   "liveServer.settings.CustomBrowser": "firefox",
   "liveServer.settings.fullReload": true,
@@ -381,7 +386,7 @@
   "liveServer.settings.port": 5500,
   "liveServer.settings.donotShowInfoMsg": true,
   // ---------------------------------------------------
-  //* Markdown Lint
+  // * Markdown Lint
   // ---------------------------------------------------
   "markdownlint.config": {
     // Allow multiple blank lines
@@ -400,7 +405,7 @@
     "MD041": false
   },
   // ---------------------------------------------------
-  //* Markdown Preview Enhanced
+  // * Markdown Preview Enhanced
   // ---------------------------------------------------
   "markdown-preview-enhanced.automaticallyShowPreviewOfMarkdownBeingEdited": false,
   "markdown-preview-enhanced.previewTheme": "github-light.css",
@@ -426,13 +431,13 @@
   "prettier.semi": false,
   "prettier.endOfLine": "lf",
   // ---------------------------------------------------
-  //* Settings Sync
+  // * Settings Sync
   // ---------------------------------------------------
   "sync.gist": "cf16c02e0234c0c7adbe5c305f30c5b5",
   "sync.autoUpload": true,
   "sync.quietSync": true,
   // ---------------------------------------------------
-  //* TODO Highlight
+  // * TODO Highlight
   // ---------------------------------------------------
   "todohighlight.include": [
     "**/*.js",
@@ -464,12 +469,21 @@
       "isWholeLine": false
     },
     {
+      "text": "WIP",
+      "color": "#000",
+      "backgroundColor": "#ffba53",
+      "isWholeLine": true
+    },
+    {
       "text": "MARKER:",
       "color": "#000",
       "backgroundColor": "#0EB1D2",
       "isWholeLine": true
     }
   ],
+  // ---------------------------------------------------
+  // * Misc
+  // ---------------------------------------------------
   "security.workspace.trust.enabled": false,
   "diffEditor.ignoreTrimWhitespace": false,
   "redhat.telemetry.enabled": false,
@@ -481,5 +495,6 @@
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
   "workbench.colorTheme": "In Bed by 7pm",
   "workbench.iconTheme": "material-icon-theme",
-  "editor.linkedEditing": true
+  "workbench.activityBar.visible": false,
+  "colorHelper.disableGpu": 0
 }
