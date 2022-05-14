@@ -1,7 +1,6 @@
 aaron-bond.better-comments
 albert.TabOut
 alexdauenhauer.nocterial-palenight
-anseki.vscode-color
 AntiAntiSepticeye.vscode-color-picker
 atomiks.moonlight
 cssho.vscode-svgviewer
