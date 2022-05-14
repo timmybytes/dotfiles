@@ -115,7 +115,7 @@ check_brew() {
 check_ohmyzsh() {
   box_wrap ohmyzsh
 
-  if /bin/zsh -i -c "omz update"; then
+  if /bin/zsh -i -c "omz update --unattended"; then
     printf "%b\n" "${SUCCEEDED} oh my zsh update successful." | tee -a "${TMPFILE}"
   else
     printf "%b\n" "${FAILED} oh my zsh update unsuccessful." | tee -a "${TMPFILE}"
