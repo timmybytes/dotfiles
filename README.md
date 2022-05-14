@@ -3,7 +3,7 @@
 </h1>
 
 <div align="center">
-  <strong>Configurations, Customizations, and Scripts</strong>
+  <strong>Configurations, Customizations, and Hacky Scripts</strong>
 </div>
 
 <p align="center">
