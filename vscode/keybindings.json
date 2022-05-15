@@ -187,5 +187,10 @@
     "key": "ctrl+shift+g",
     "command": "-workbench.view.scm",
     "when": "workbench.scm.active"
+  },
+  {
+    "key": "shift+cmd+/",
+    "command": "workbench.action.customizeLayout"
   }
+  // TODO: goToBracket,
 ]
