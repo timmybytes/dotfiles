@@ -3,7 +3,7 @@
 #description    :Update Doctor - check for user & system updates
 #author         :Timothy Merritt
 #date           :2021-02-09
-#version        :0.3.0
+#version        :0.2.1
 #usage          :./updoc.sh
 #notes          :
 #bash_version   :5.0.18(1)-release
@@ -42,7 +42,7 @@ LOGO="
 /_  __/  / /_/ / /_/ / /_/ / /_/ / /__   /_  __/
  /_/     \__,_/ .___/_____/\____/\___/    /_/
              /_/
-                     v0.2.0
+                     v0.2.1
 
               What's updated, Doc?
 "
