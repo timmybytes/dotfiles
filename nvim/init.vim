@@ -47,6 +47,10 @@ Plug 'preservim/nerdtree'
 
 Plug 'airblade/vim-gitgutter'
 
+Plug 'justinmk/vim-sneak'
+" Usage: ':s{char}{char}' Search for next instances of chars
+" Usage: ':``' Go back to start
+
 " Comfort
 " ---------------------------------------------------------
 " Plug 'tpope/vim-sleuth'
