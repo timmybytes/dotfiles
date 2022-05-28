@@ -28,9 +28,9 @@
   "editor.emptySelectionClipboard": false,
   "editor.find.seedSearchStringFromSelection": "always",
   "editor.foldingHighlight": true,
-  "editor.formatOnPaste": false,
-  "editor.formatOnSave": false,
-  "editor.formatOnType": false,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
   "editor.glyphMargin": true,
   // "editor.glyphMarginRightPadding": 0, // deprecated
   "editor.gotoLocation.multipleDefinitions": "goto",
@@ -43,6 +43,7 @@
   "editor.hover.sticky": true,
   "editor.inlayHints.enabled": "on",
   "editor.inlineSuggest.enabled": true,
+  "editor.largeFileOptimizations": true,
   "editor.lineDecorationsWidth": 25, // Margin between line numbers and code
   "editor.linkedEditing": true,
   "editor.matchBrackets": "never",
@@ -495,6 +496,6 @@
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
   "workbench.colorTheme": "In Bed by 7pm",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.activityBar.visible": false,
-  "colorHelper.disableGpu": 0
+  "colorHelper.disableGpu": 0,
+  "workbench.activityBar.visible": false
 }
