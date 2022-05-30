@@ -28,9 +28,9 @@
   "editor.emptySelectionClipboard": false,
   "editor.find.seedSearchStringFromSelection": "always",
   "editor.foldingHighlight": true,
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
-  "editor.formatOnType": true,
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": false,
+  "editor.formatOnType": false,
   "editor.glyphMargin": true,
   // "editor.glyphMarginRightPadding": 0, // deprecated
   "editor.gotoLocation.multipleDefinitions": "goto",
@@ -497,5 +497,6 @@
   "workbench.colorTheme": "In Bed by 7pm",
   "workbench.iconTheme": "material-icon-theme",
   "colorHelper.disableGpu": 0,
-  "workbench.activityBar.visible": false
+  "workbench.activityBar.visible": false,
+  "editor.minimap.enabled": false
 }
