@@ -11,7 +11,7 @@
   "editor.guides.highlightActiveIndentation": true,
   "editor.guides.highlightActiveBracketPair": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll": false,
+    "source.fixAll": true,
     "source.organizeImports": true,
     "source.format.json": true,
     "source.format.js": true,
