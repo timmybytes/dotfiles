@@ -11,12 +11,12 @@
   "editor.guides.highlightActiveIndentation": true,
   "editor.guides.highlightActiveBracketPair": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll": true,
-    "source.organizeImports": true,
-    "source.format.json": true,
-    "source.format.js": true,
-    "source.format.css": true,
-    "source.format.html": true
+    "source.fixAll": false,
+    "source.organizeImports": false,
+    "source.format.json": false,
+    "source.format.js": false,
+    "source.format.css": false,
+    "source.format.html": false
   },
   "editor.codeLens": false,
   "editor.colorDecorators": true,
@@ -479,6 +479,12 @@
       "text": "MARKER:",
       "color": "#000",
       "backgroundColor": "#0EB1D2",
+      "isWholeLine": true
+    },
+    {
+      "text": "DONE:",
+      "color": "#000",
+      "backgroundColor": "#25ee46",
       "isWholeLine": true
     }
   ],
