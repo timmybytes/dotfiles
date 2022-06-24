@@ -18,7 +18,6 @@
     "source.format.css": false,
     "source.format.html": false
   },
-  "editor.codeLens": false,
   "editor.colorDecorators": true,
   "editor.comments.insertSpace": true,
   "editor.cursorBlinking": "phase",
@@ -333,6 +332,12 @@
   "dimmer.context": 4,
   "dimmer.opacity": 12,
   "dimmer.delay": 10,
+  // ---------------------------------------------------
+  // * GitHub Copilot
+  // ---------------------------------------------------
+  "github.copilot.enable": {
+    "*": true
+  },
   // ---------------------------------------------------
   // * ESLint
   // ---------------------------------------------------
