@@ -9,6 +9,8 @@
 #bash_version   :5.0.18(1)-release
 #============================================================================
 
+# TODO: Add yarn cache clean, verify brew's cleaning cache files
+
 # Color codes for update status icons
 RED='\033[0;31m'
 YELLOW='\033[1;33m'
