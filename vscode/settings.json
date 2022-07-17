@@ -8,17 +8,17 @@
   "editor.guides.bracketPairs": true,
   "editor.guides.bracketPairsHorizontal": true,
   "editor.guides.indentation": true, // Important for HTML
-  "editor.guides.highlightActiveIndentation": true,
+  "editor.guides.highlightActiveIndentation": "always",
   "editor.guides.highlightActiveBracketPair": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll": false,
-    "source.organizeImports": false,
-    "source.format.json": false,
-    "source.format.js": false,
-    "source.format.css": false,
-    "source.format.html": false
+    "source.fixAll": true,
+    "source.organizeImports": true,
+    "source.format.json": true,
+    "source.format.js": true,
+    "source.format.css": true,
+    "source.format.html": true
   },
-  "editor.codeLens": false,
+  "editor.codeLens": true,
   "editor.colorDecorators": true,
   "editor.comments.insertSpace": true,
   "editor.cursorBlinking": "phase",
@@ -28,9 +28,9 @@
   "editor.emptySelectionClipboard": false,
   "editor.find.seedSearchStringFromSelection": "always",
   "editor.foldingHighlight": true,
-  "editor.formatOnPaste": false,
-  "editor.formatOnSave": false,
-  "editor.formatOnType": false,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
   "editor.glyphMargin": true,
   // "editor.glyphMarginRightPadding": 0, // deprecated
   "editor.gotoLocation.multipleDefinitions": "goto",
@@ -504,5 +504,12 @@
   "workbench.iconTheme": "material-icon-theme",
   "colorHelper.disableGpu": 0,
   "workbench.activityBar.visible": false,
-  "editor.minimap.enabled": false
+  "editor.minimap.enabled": false,
+  "workbench.editor.enablePreview": false,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": true,
+    "markdown": false
+  }
 }

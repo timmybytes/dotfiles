@@ -30,6 +30,7 @@ hoovercj.vscode-dimmer
 humao.rest-client
 kumar-harsh.graphql-for-vscode
 lightyen.tailwindcss-intellisense-twin
+maptz.regionfolder
 mgmcdermott.vscode-language-babel
 mhutchie.git-graph
 mikestead.dotenv
