@@ -511,5 +511,6 @@
     "yaml": false,
     "plaintext": true,
     "markdown": false
-  }
+  },
+  "search.useIgnoreFiles": false
 }
