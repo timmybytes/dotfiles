@@ -2,9 +2,8 @@
 
 These are some of the scripts I use in development, mostly written in Bash or Python.
 
-* [OMGWDYD](#omgwdyd) - git commits from the last 24 hours
-* [Clear Caches](#clear-caches) - Clear user and system caches
-* [Bash Header Generator](#bash-header-generator) - Create header information for new bash scripts
+- [Clear Caches](#clear-caches) - Clear user and system caches
+- [Bash Header Generator](#bash-header-generator) - Create header information for new bash scripts
 
 ---
 
@@ -19,25 +18,6 @@ These are some of the scripts I use in development, mostly written in Bash or Py
 <img src="./updoc-1.png" alt="Screenshot of OMGWDYD script on CLI" />
 
 <img src="./updoc-2.png" alt="Screenshot of OMGWDYD script on CLI" />
-
-
-## OMGWDYD (Currently non-operational)
-
-<h2 align="center">
-<img src="https://raw.githubusercontent.com/timmybytes/OMGWDYD/main/OMGWDYD-logo.png" alt="OMGWDYD logo with suprised emoji" />
-</h2>
-
-<p align="center">
-  <strong>A CLI tool to motivate (or shame) you</strong>
-</p>
-
-<div align="center">
-  <img src="https://github.com/timmybytes/OMGWDYD/workflows/CI%20-%20ShellCheck/badge.svg" alt="CI - ShellCheck badge" />
-</div>
-
-**OMGWDYD (Oh My God, What Did You Do?!)** is a Bash script that displays your git commits from the last 24 hours. It's a simple tool to keep track of what you've been working on and motivate you to keep it up (or shame you by showing your lack of ambition...). You can learn more about it [here](https://github.com/timmybytes/OMGWDYD).
-
-<img src="https://raw.githubusercontent.com/timmybytes/OMGWDYD/main/OMGWDYD.png" alt="Screenshot of OMGWDYD script on CLI" />
 
 ## Clear Caches
 
