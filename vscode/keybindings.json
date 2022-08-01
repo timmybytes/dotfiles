@@ -191,6 +191,10 @@
   {
     "key": "shift+cmd+/",
     "command": "workbench.action.customizeLayout"
+  },
+  {
+    "key": "shift+alt+e",
+    "command": "workbench.action.focusActiveEditorGroup"
   }
   // TODO: goToBracket,
 ]
