@@ -12,7 +12,7 @@
 # https://code.activestate.com/recipes/577862-bash-script-to-create-a-header-for-bash-scripts/
 
 today=$(date +%Y-%m-%d)
-div=======================================
+div="======================================"
 
 /usr/bin/clear
 
@@ -28,13 +28,13 @@ _select_title() {
   # Convert uppercase to lowercase.
   # title=${title,,} - Can cause errors on older Bash versions, use translate
   # instead
-  title=$( tr 'A-Z' 'a-z' <<<"$title" )
+  title=$(tr 'A-Z[:lower:]' 'a-z[:lower:]' <<<"$title")
 
   # Add .sh to the end of the title if it is not there already.
   [ "${title: -3}" != '.sh' ] && title=${title}.sh
 
   # Check to see if the file exists already.
-  if [ -e $title ]; then
+  if [ -e "$title" ]; then
     printf "\n%s\n%s\n\n" "The script \"$title\" already exists." \
       "Please select another title."
     _select_title
@@ -64,13 +64,13 @@ printf "%-16s\n\
 %s\n\n\n" '#!/usr/bin/env bash' '#title' ":$title" '#description' \
   ":${dscrpt}" '#author' ":$name" '#date' ":$today" '#version' \
   ":$vnum" '#usage' ":./$title" '#notes' ':' '#bash_version' \
-  ":${BASH_VERSION}" \#$div${div} >$title
+  ":${BASH_VERSION}" \#$div${div} >"$title"
 
 # Make the file executable.
-chmod +x $title
+chmod +x "$title"
 
 # Clear screen
 /usr/bin/clear
 
 # Open with default editor on 12th line
-nvim +12 $title
+nvim +12 "$title"
