@@ -12,9 +12,9 @@
 # Current WIP running only the most superficial of checks with mgitstatus
 clear
 echo "Checking repos..."
-cd ~
+cd ~ || return
 mgitstatus -d 2
-cd ~/Work
+cd ~/Work || return
 mgitstatus -d 2
-cd ~/Projects/Repos
+cd ~/Projects/Repos || return
 mgitstatus -d 2
