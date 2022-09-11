@@ -11,12 +11,12 @@
   "editor.guides.highlightActiveIndentation": "always",
   "editor.guides.highlightActiveBracketPair": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll": false,
+    "source.fixAll": true,
     "source.organizeImports": false,
-    "source.format.json": false,
-    "source.format.js": false,
-    "source.format.css": false,
-    "source.format.html": false
+    "source.format.json": true,
+    "source.format.js": true,
+    "source.format.css": true,
+    "source.format.html": true
   },
   "editor.codeLens": true,
   "editor.colorDecorators": true,
@@ -112,7 +112,6 @@
   "workbench.tree.renderIndentGuides": "none",
   "zenMode.fullScreen": false,
   "zenMode.hideLineNumbers": true,
-  "zenMode.hideStatusBar": false,
   "zenMode.hideTabs": true,
   // ---------------------------------------------------
   // * * Fonts & Typography () => <= 0 O 1 l
@@ -185,25 +184,23 @@
   "material-icon-theme.saturation": 1,
   "material-icon-theme.opacity": 1,
   "workbench.colorCustomizations": {
-    // Indent guides
     "editorIndentGuide.activeBackground": "#aa82ee",
-    "editorIndentGuide.background": "#9fced100", // transparent/invisible
+    "editorIndentGuide.background": "#9fced100",
     "editor.lineHighlightBackground": "#49a7ff4f",
-    // Selections + Minimap
-    "editor.selectionHighlightBackground": "#45c4ff25",
-    // "editor.selectionHighlightBorder": "#45c4ffb9",
-    "editor.selectionBackground": "#45c4ff25",
-    // Minimap colors
+    "editor.selectionHighlightBackground": "#0000006f",
+    "editor.selectionHighlightBorder": "#cfb9f5",
+    "editor.selectionBackground": "#49a7ff4f",
     "minimap.selectionHighlight": "#ffffff",
+    "minimap.warningHighlight": "#ffd000",
     "minimap.errorHighlight": "#ff0000",
     "minimap.selectionOccurrenceHighlight": "#45c4ff",
-    "minimapSlider.background": "#70ff881e",
-    // Git diffing
+    "minimapSlider.background": "#70ff8830",
+    "minimapSlider.hoverBackground": "#70ff8869",
+    "minimapSlider.activeBackground": "#70ff8869",
     "merge.currentHeaderBackground": "#ffb54775",
     "merge.currentContentBackground": "#ffb54711",
     "merge.incomingHeaderBackground": "#ff000071",
     "merge.incomingContentBackground": "#ff000013",
-    // Theme-specific
     "[In Bed by 7pm]": {
       "editorSuggestWidget.highlightForeground": "#aa82ee",
       "quickInputList.focusBackground": "#aa82ee8e"
@@ -414,6 +411,61 @@
   "markdown.preview.scrollPreviewWithEditor": false,
   "markdown-preview-enhanced.scrollSync": true,
   // ---------------------------------------------------
+  // * Peacock - Currently overrides local .vscode settings for workspaces :(
+  // ---------------------------------------------------
+  "peacock.affectActivityBar": true,
+  "peacock.affectTitleBar": true,
+  "peacock.favoriteColors": [
+    {
+      "name": "Uro Blue",
+      "value": "#00aeeb"
+    },
+    {
+      "name": "Jel Purple",
+      "value": "#4e4084"
+    },
+    {
+      "name": "Yall Red",
+      "value": "#be362d"
+    },
+    {
+      "name": "Angular Red",
+      "value": "#dd0531"
+    },
+    {
+      "name": "Azure Blue",
+      "value": "#007fff"
+    },
+    {
+      "name": "JavaScript Yellow",
+      "value": "#f9e64f"
+    },
+    {
+      "name": "Mandalorian Blue",
+      "value": "#1857a4"
+    },
+    {
+      "name": "Node Green",
+      "value": "#215732"
+    },
+    {
+      "name": "React Blue",
+      "value": "#61dafb"
+    },
+    {
+      "name": "Something Different",
+      "value": "#832561"
+    },
+    {
+      "name": "Svelte Orange",
+      "value": "#ff3d00"
+    },
+    {
+      "name": "Vue Green",
+      "value": "#42b883"
+    }
+  ],
+  // ---------------------------------------------------
   // * Polacode
   // ---------------------------------------------------
   "polacode.transparentBackground": true,
@@ -424,7 +476,7 @@
   "prettier.configPath": "", // Makes Prettier respect local configs
   "prettier.arrowParens": "avoid",
   "prettier.bracketSpacing": true,
-  "prettier.jsxBracketSameLine": true,
+  "prettier.bracketSameLine": true,
   "prettier.jsxSingleQuote": true,
   "prettier.singleQuote": true,
   "prettier.proseWrap": "never",
@@ -504,13 +556,8 @@
   "workbench.iconTheme": "material-icon-theme",
   "colorHelper.disableGpu": 0,
   "workbench.activityBar.visible": false,
-  "editor.minimap.enabled": false,
   "workbench.editor.enablePreview": false,
-  "github.copilot.enable": {
-    "*": true,
-    "yaml": false,
-    "plaintext": true,
-    "markdown": false
-  },
-  "search.useIgnoreFiles": false
+  "search.useIgnoreFiles": false,
+  "window.commandCenter": true,
+  "workbench.experimental.settingsProfiles.enabled": true
 }
