@@ -12,7 +12,7 @@
   "editor.guides.highlightActiveBracketPair": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
-    "source.organizeImports": false,
+    "source.organizeImports": true,
     "source.format.json": true,
     "source.format.js": true,
     "source.format.css": true,
@@ -560,21 +560,4 @@
   "search.useIgnoreFiles": false,
   "window.commandCenter": true,
   "workbench.experimental.settingsProfiles.enabled": true
-  // "scss.validate": false,
-  // "editor.quickSuggestions": {
-  //   "strings": true
-  // },
-  // "editor.autoClosingQuotes": "always",
-  // "tailwindCSS.experimental.classRegex": [
-  //   "tw`([^`]*)", // tw`...`
-  //   "tw=\"([^\"]*)", // <div tw="..." />
-  //   "tw={\"([^\"}]*)", // <div tw={"..."} />
-  //   "tw\\.\\w+`([^`]*)", // tw.xxx`...`
-  //   "tw\\(.*?\\)`([^`]*)" // tw(Component)`...`
-  // ],
-  // "tailwindCSS.includeLanguages": {
-  //   "typescript": "javascript",
-  //   "typescriptreact": "javascript"
-  // }
-  // "tailwindcss.jsxPropImportChecking": false
 }
