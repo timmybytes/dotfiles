@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "prepare": "husky install",
-    "vscode:extensions": "code --list-extensions > ~/.dotfiles/vscode/extensions.txt && git add ~/.dotfiles/vscode/extensions.txt"
+    "vscode:extensions": "./scripts/check_extensions.sh && git add $HOME/.dotfiles/vscode/extensions.txt"
   },
   "devDependencies": {
     "husky": "^7.0.2"
