@@ -15,30 +15,26 @@ vs_ext_file=$HOME/.dotfiles/vscode/extensions.txt
 # List VS Code extensions and write to file
 write_ext() {
   printf "Writing extensions to %s\n" "$vs_ext_file"
+  sleep .5
   code-insiders --list-extensions >"$vs_ext_file"
 }
 
 # Main script
 main() {
-  printf "%s\n%s\n\n" "List & Write VS Code Extensions" "-------------------------------"
+  printf "\e[1;33m%-4s\e[mChecking VS Code Extensions\n" "●"
+  sleep .5
   # Check if file exists
   if [ -f "$vs_ext_file" ]; then
-    printf "%s exists!\n" "$vs_ext_file"
-    # Check if file is not empty
-    if [ -s "$vs_ext_file" ]; then
-      write_ext
-    else
-      printf "%s is empty.\n" "$vs_ext_file"
-      write_ext
-    fi
-    printf "Checking write process\n"
-
+    printf "Writing extensions...\n"
+    write_ext
   else
-    printf "%s does not exist. Creating extension file.\n" "$vs_ext_file"
+    printf "Extension file does not exist, creating new.\n"
+    sleep .5
     touch "$vs_ext_file"
     write_ext
   fi
-  printf "Finished.\n"
+  printf "\e[0;32m%-4s\e[mFinished\n" "✔"
+  exit 0
 }
 
 main
