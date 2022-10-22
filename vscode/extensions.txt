@@ -28,7 +28,6 @@ formulahendry.auto-rename-tag
 foxundermoon.shell-format
 hoovercj.vscode-dimmer
 humao.rest-client
-johnpapa.vscode-peacock
 josee9988.minifyall
 kumar-harsh.graphql-for-vscode
 lightyen.tailwindcss-intellisense-twin
@@ -63,6 +62,7 @@ taniarascia.new-moon-vscode
 timonwong.shellcheck
 tombonnike.vscode-status-bar-format-toggle
 Tyriar.sort-lines
+VisualStudioExptTeam.intellicode-api-usage-examples
 VisualStudioExptTeam.vscodeintellicode
 vscode-icons-team.vscode-icons
 WakaTime.vscode-wakatime
