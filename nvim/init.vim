@@ -29,6 +29,8 @@ Plug 'catppuccin/nvim', { 'branch': 'main', 'as': 'catppuccin' }
 
 " Enhancements
 " ---------------------------------------------------------
+Plug 'chrisbra/Colorizer'
+" Usage: ':h Colorizer'
 Plug 'junegunn/goyo.vim'
 " Usage: ':Goyo'
 
