@@ -51,7 +51,7 @@
 }
 
 /* Urlbar frame/border color */
-#urlbar[breakout][breakout-extend] > #urlbar-background {
+#urlbar[breakout][breakout-extend]>#urlbar-background {
   border-color: #383838 !important;
   color: #383838 !important;
   background: #383838 !important;
@@ -155,19 +155,19 @@
 }
 
 /* Prevent shift of URL bar contents */
-#urlbar[breakout][breakout-extend] > #urlbar-input-container {
+#urlbar[breakout][breakout-extend]>#urlbar-input-container {
   height: var(--urlbar-height) !important;
 
   padding: 0 !important;
 }
 
 /* Do not animate */
-#urlbar[breakout][breakout-extend] > #urlbar-background {
+#urlbar[breakout][breakout-extend]>#urlbar-background {
   animation: none !important;
 }
 
 /* Remove shadows */
-#urlbar[breakout][breakout-extend] > #urlbar-background {
+#urlbar[breakout][breakout-extend]>#urlbar-background {
   box-shadow: none !important;
 }
 
@@ -286,12 +286,20 @@
   border-left: 3px !important;
 }
 
+/* FF v106 fixes for squished tabs/overflowing favicons */
+.tabbrowser-tab {
+  min-width: 32px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+
+}
+
 /* Default tab favicon */
 .tabbrowser-tab[label^="New Tab"] .tab-icon-image {
   background: url("traffic.png") !important;
   background-repeat: no-repeat !important;
   background-size: 16px !important;
-  margin-right: 3.5px !important;
+  margin-right: 16px !important;
   padding-left: 16px !important;
   width: 0 !important;
 }
@@ -354,8 +362,8 @@ browser[type="content"] {
 
 menupopup,
 popup,
-popup > menu > menupopup,
-menupopup > menu > menupopup {
+popup>menu>menupopup,
+menupopup>menu>menupopup {
   -moz-appearance: none !important;
   background: #383838 !important;
   border: 0px !important;
@@ -388,4 +396,20 @@ menuitem:hover {
 /*Invert submenu arrow > color*/
 .menu-right {
   filter: invert(95%) !important;
+}
+
+/* v106 FIXES */
+/* https: //www.reddit.com/r/FirefoxCSS/comments/xk3v7w/firefox_106_beta_customization_to_remove/ */
+#firefox-view-button,
+#wrapper-firefox-view-button,
+#alltabs-button {
+  display: none !important;
+}
+
+#firefox-view-button,
+#wrapper-firefox-view-button,
+#tabbrowser-tabs {
+  border: 0px hidden transparent !important;
+  padding-inline-start: 0 !important;
+  margin-inline-start: 0 !important;
 }
