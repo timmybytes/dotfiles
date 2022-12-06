@@ -73,6 +73,10 @@
   "editor.wordWrapColumn": 90, // line length
   "editor.wrappingIndent": "indent",
   "editor.wrappingStrategy": "advanced",
+  // Prevent expanding directory when jumping to nested file
+  "explorer.autoRevealExclude": {
+    "**/node_modules": true
+  },
   "explorer.autoReveal": "focusNoScroll",
   "explorer.compactFolders": false,
   "explorer.confirmDelete": false,
