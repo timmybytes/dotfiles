@@ -36,6 +36,7 @@ mgmcdermott.vscode-language-babel
 mhutchie.git-graph
 mikestead.dotenv
 mrmlnc.vscode-duplicate
+ms-python.isort
 ms-python.python
 ms-python.vscode-pylance
 ms-vscode.sublime-keybindings
@@ -62,7 +63,7 @@ taniarascia.new-moon-vscode
 timonwong.shellcheck
 tombonnike.vscode-status-bar-format-toggle
 Tyriar.sort-lines
-undefined_publisher.catppuccin-vsc
+ue.alphabetical-sorter
 VisualStudioExptTeam.intellicode-api-usage-examples
 VisualStudioExptTeam.vscodeintellicode
 vscode-icons-team.vscode-icons
