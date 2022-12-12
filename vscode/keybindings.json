@@ -205,6 +205,10 @@
     "key": "cmd+f2",
     "command": "-editor.action.changeAll",
     "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+enter",
+    "command": "editor.action.peekTypeDefinition"
   }
   // TODO: goToBracket,
 ]
