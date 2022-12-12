@@ -366,6 +366,7 @@ popup>menu>menupopup,
 menupopup>menu>menupopup {
   -moz-appearance: none !important;
   background: #383838 !important;
+  color: #f7f7f7;
   border: 0px !important;
   border-radius: 5px !important;
   padding: 2px 0px 2px 0px !important;
@@ -374,6 +375,7 @@ menupopup>menu>menupopup {
 menupopup menuseparator {
   -moz-appearance: none !important;
   background: #525a6d !important;
+  color: #f7f7f7;
   margin: 2px 0px 2px 0px !important;
   padding: 0 !important;
   border-top: none !important;
@@ -383,7 +385,7 @@ menupopup menuseparator {
 menupopup menu,
 menuitem {
   -moz-appearance: none !important;
-  /* color: #f7f7f7 !important; */
+  color: #f7f7f7 !important;
 }
 
 menupopup menu:hover,
