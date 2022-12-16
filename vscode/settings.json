@@ -507,6 +507,7 @@
   "workbench.activityBar.visible": false,
   "workbench.editor.enablePreview": false,
   "search.useIgnoreFiles": false,
-  "window.commandCenter": true,
-  "workbench.experimental.settingsProfiles.enabled": true
+  "workbench.experimental.settingsProfiles.enabled": true,
+  "editor.minimap.enabled": false,
+  "workbench.layoutControl.enabled": false
 }
