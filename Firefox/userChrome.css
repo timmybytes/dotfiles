@@ -415,3 +415,7 @@ menuitem:hover {
   padding-inline-start: 0 !important;
   margin-inline-start: 0 !important;
 }
+
+#back-button>.toolbarbutton-icon, #forward-button>.toolbarbutton-icon {
+  transform: scale(2.85, 2.85) !important;
+}
