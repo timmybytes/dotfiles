@@ -416,6 +416,7 @@ menuitem:hover {
   margin-inline-start: 0 !important;
 }
 
+/* TODO: Improve styling here for button sizes/padding, investigate more toolbar tweaks */
 #back-button>.toolbarbutton-icon, #forward-button>.toolbarbutton-icon {
   transform: scale(2.85, 2.85) !important;
 }
