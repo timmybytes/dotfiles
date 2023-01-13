@@ -508,6 +508,5 @@
   "workbench.editor.enablePreview": false,
   "search.useIgnoreFiles": false,
   "workbench.experimental.settingsProfiles.enabled": true,
-  "editor.minimap.enabled": false,
   "workbench.layoutControl.enabled": false
 }
