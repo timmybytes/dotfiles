@@ -508,5 +508,11 @@
   "workbench.editor.enablePreview": false,
   "search.useIgnoreFiles": false,
   "workbench.experimental.settingsProfiles.enabled": true,
-  "workbench.layoutControl.enabled": false
+  "workbench.layoutControl.enabled": false,
+  "github.copilot.enable": {
+    "*": false,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": false
+  }
 }
