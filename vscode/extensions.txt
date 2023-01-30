@@ -26,7 +26,6 @@ formulahendry.auto-close-tag
 formulahendry.auto-complete-tag
 formulahendry.auto-rename-tag
 foxundermoon.shell-format
-GitHub.copilot
 hoovercj.vscode-dimmer
 humao.rest-client
 josee9988.minifyall
@@ -37,9 +36,6 @@ mgmcdermott.vscode-language-babel
 mhutchie.git-graph
 mikestead.dotenv
 mrmlnc.vscode-duplicate
-ms-python.isort
-ms-python.python
-ms-python.vscode-pylance
 ms-vscode.sublime-keybindings
 ms-vscode.vscode-js-profile-flame
 ms-vsliveshare.vsliveshare
