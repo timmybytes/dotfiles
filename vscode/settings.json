@@ -77,7 +77,6 @@
   "explorer.autoRevealExclude": {
     "**/node_modules": true
   },
-  "explorer.autoReveal": "focusNoScroll",
   "explorer.compactFolders": false,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
