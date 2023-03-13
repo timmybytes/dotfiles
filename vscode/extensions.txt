@@ -1,6 +1,7 @@
 aaron-bond.better-comments
 albert.TabOut
 alexdauenhauer.nocterial-palenight
+amandeepmittal.pug
 AntiAntiSepticeye.vscode-color-picker
 astro-build.astro-vscode
 atomiks.moonlight
@@ -36,6 +37,7 @@ mgmcdermott.vscode-language-babel
 mhutchie.git-graph
 mikestead.dotenv
 mrmlnc.vscode-duplicate
+mrmlnc.vscode-pugbeautify
 ms-vscode.sublime-keybindings
 ms-vscode.vscode-js-profile-flame
 ms-vsliveshare.vsliveshare
