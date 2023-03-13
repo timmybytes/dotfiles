@@ -43,6 +43,7 @@
   "editor.hover.sticky": true,
   "editor.inlayHints.enabled": "on",
   "editor.inlineSuggest.enabled": true,
+  "editor.insertSpaces": true,
   "editor.largeFileOptimizations": true,
   "editor.lineDecorationsWidth": 25, // Margin between line numbers and code
   "editor.linkedEditing": true,
