@@ -58,6 +58,7 @@ shd101wyy.markdown-preview-enhanced
 silvenon.mdx
 styled-components.vscode-styled-components
 svelte.svelte-vscode
+tamasfe.even-better-toml
 taniarascia.new-moon-vscode
 timonwong.shellcheck
 tombonnike.vscode-status-bar-format-toggle

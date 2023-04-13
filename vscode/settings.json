@@ -70,8 +70,8 @@
   "editor.tabCompletion": "on",
   "editor.tabSize": 2,
   "editor.unicodeHighlight.ambiguousCharacters": false,
-  "editor.wordWrap": "on",
-  "editor.wordWrapColumn": 90, // line length
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 80, // line length
   "editor.wrappingIndent": "indent",
   "editor.wrappingStrategy": "advanced",
   // Prevent expanding directory when jumping to nested file
@@ -115,7 +115,6 @@
   "workbench.tree.indent": 15, // Explorer open folder/files indents
   "workbench.tree.renderIndentGuides": "none",
   "zenMode.fullScreen": false,
-  "zenMode.hideLineNumbers": true,
   "zenMode.hideTabs": true,
   // ---------------------------------------------------
   // * * Fonts & Typography () => <= 0 O 1 l
@@ -510,5 +509,6 @@
   "workbench.editor.enablePreview": false,
   "search.useIgnoreFiles": false,
   "workbench.experimental.settingsProfiles.enabled": true,
-  "workbench.layoutControl.enabled": false
+  "workbench.layoutControl.enabled": false,
+  "editor.minimap.enabled": false
 }
