@@ -17,7 +17,6 @@ dunstontc.viml
 eamodio.gitlens
 ecmel.vscode-html-css
 EditorConfig.EditorConfig
-embertooling.prettier-for-handlebars-vscode
 Equinusocio.vsc-community-material-theme
 Equinusocio.vsc-material-theme
 equinusocio.vsc-material-theme-icons
@@ -27,6 +26,9 @@ formulahendry.auto-close-tag
 formulahendry.auto-complete-tag
 formulahendry.auto-rename-tag
 foxundermoon.shell-format
+GitHub.copilot-chat
+GitHub.copilot-labs
+GitHub.copilot-nightly
 hoovercj.vscode-dimmer
 humao.rest-client
 josee9988.minifyall
@@ -55,7 +57,6 @@ sdras.inbedby7pm
 sdras.night-owl
 shailen.netlify
 shd101wyy.markdown-preview-enhanced
-silvenon.mdx
 styled-components.vscode-styled-components
 svelte.svelte-vscode
 tamasfe.even-better-toml
@@ -65,6 +66,7 @@ tombonnike.vscode-status-bar-format-toggle
 Tyriar.sort-lines
 ue.alphabetical-sorter
 undefined_publisher.catppuccin-vsc
+unifiedjs.vscode-mdx
 VisualStudioExptTeam.intellicode-api-usage-examples
 VisualStudioExptTeam.vscodeintellicode
 vscode-icons-team.vscode-icons
@@ -73,6 +75,7 @@ WallabyJs.quokka-vscode
 wayou.vscode-todo-highlight
 whizkydee.material-palenight-theme
 xabikos.JavaScriptSnippets
+yoavbls.pretty-ts-errors
 yzhang.markdown-all-in-one
 zhuangtongfa.material-theme
 Zignd.html-css-class-completion
