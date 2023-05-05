@@ -158,8 +158,8 @@
   "editor.autoClosingBrackets": "always",
   "editor.parameterHints.enabled": false,
   "editor.quickSuggestions": {
-    "strings": false,
-    "comments": false
+    "comments": false,
+    "strings": "inline"
   },
   "editor.quickSuggestionsDelay": 500,
   "editor.snippetSuggestions": "inline",
@@ -173,7 +173,6 @@
   "editor.suggestFontSize": 14,
   "editor.suggestLineHeight": 22,
   "editor.suggestSelection": "first",
-  "editor.wordBasedSuggestions": false,
   // "editor.inlayHints.displayStyle": "compact",
   // "editor.inlayHints.fontSize": 28,
   // "editor.inlayHints.fontFamily": "",
@@ -294,7 +293,6 @@
   "[python]": {
     "editor.formatOnPaste": false
   },
-
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.autoClosingBrackets": "always"
@@ -318,7 +316,6 @@
     "javascript": "javascriptreact"
   },
   "emmet.triggerExpansionOnTab": false,
-
   // ---------------------------------------------------
   // ////////////////// EXTENSIONS /////////////////////
   // ---------------------------------------------------
@@ -510,5 +507,12 @@
   "search.useIgnoreFiles": false,
   "workbench.experimental.settingsProfiles.enabled": true,
   "workbench.layoutControl.enabled": false,
-  "editor.minimap.enabled": false
+  "tailwindcss.colorDecorators": "on",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "editor.stickyScroll.enabled": true
 }
