@@ -236,7 +236,7 @@
 :root:not([customizing]) .tabbrowser-tab:not([pinned="true"]) {
   --tab-min-width: fit-content;
   -moz-box-flex: 0 !important;
-  max-width: 70px;
+  max-width: 30px !important;
 }
 
 :root:not([customizing]) .tabbrowser-tab:not([pinned="true"]) .tab-stack {
@@ -288,10 +288,8 @@
 
 /* FF v106 fixes for squished tabs/overflowing favicons */
 .tabbrowser-tab {
-  min-width: 32px !important;
   margin: 0 !important;
   padding: 0 !important;
-
 }
 
 /* Default tab favicon */
@@ -306,6 +304,12 @@
 
 .tab-favicon {
   margin-top: 8px;
+}
+
+/* Cushion on x-axis around tab favicon */
+.tab-throbber:not([pinned]), .tab-icon-pending:not([pinned]), .tab-icon-image:not([pinned]), .tab-sharing-icon-overlay:not([pinned]), .tab-icon-overlay:not([pinned]) {
+  margin-inline-end: 5.5px;
+  margin-inline-start: 5.5px;
 }
 
 /* **************************** O T H E R ******************************** */
