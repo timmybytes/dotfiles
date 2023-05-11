@@ -122,9 +122,9 @@ let g:indentLine_char = '│'
 " Auto reload changed files
 set autoread
 
-set scrolloff=5 
+set scrolloff=5
 " Leave 5 lines of buffer when scrolling
-set sidescrolloff=10 
+set sidescrolloff=10
 " Leave 10 characters of horizontal buffer when scrolling
 
 " Writing/Prose
@@ -134,6 +134,7 @@ set spellfile=~/.dotfiles/nvim/spell/en.utf-8.add
 setlocal textwidth=80
 setlocal wrapmargin=0
 
+" TODO: Broken
 " Statusline
 " ---------------------------------------------------------
-source ~/.config/nvim/statusline.vim
+" source ~/.config/nvim/statusline.vim
