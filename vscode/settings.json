@@ -514,6 +514,5 @@
     "markdown": false,
     "scminput": false
   },
-  "editor.stickyScroll.enabled": true,
-  "chatgpt.apiKey": "nope"
+  "editor.stickyScroll.enabled": true
 }
