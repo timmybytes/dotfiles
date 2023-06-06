@@ -234,9 +234,16 @@
 /* **************************** T A B S ******************************** */
 
 :root:not([customizing]) .tabbrowser-tab:not([pinned="true"]) {
-  --tab-min-width: fit-content;
-  -moz-box-flex: 0 !important;
-  max-width: 30px !important;
+  /* --tab-min-width: 40px !important; */
+  flex: 0 !important;
+  max-width: 40px !important;
+  min-width: 40px !important;
+}
+
+.tabbrowser-tab:not([pinned]) {
+  flex: 0 !important;
+  max-width: 40px !important;
+  min-width: 40px !important;
 }
 
 :root:not([customizing]) .tabbrowser-tab:not([pinned="true"]) .tab-stack {
