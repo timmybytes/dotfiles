@@ -510,7 +510,7 @@
   "tailwindcss.colorDecorators": "on",
   "github.copilot.enable": {
     "*": true,
-    "plaintext": false,
+    "plaintext": true,
     "markdown": false,
     "scminput": false
   },
