@@ -26,9 +26,9 @@ formulahendry.auto-close-tag
 formulahendry.auto-complete-tag
 formulahendry.auto-rename-tag
 foxundermoon.shell-format
+GitHub.copilot
 GitHub.copilot-chat
 GitHub.copilot-labs
-GitHub.copilot-nightly
 hoovercj.vscode-dimmer
 humao.rest-client
 josee9988.minifyall
@@ -67,11 +67,9 @@ Tyriar.sort-lines
 ue.alphabetical-sorter
 undefined_publisher.catppuccin-vsc
 unifiedjs.vscode-mdx
-VisualStudioExptTeam.intellicode-api-usage-examples
 VisualStudioExptTeam.vscodeintellicode
 vscode-icons-team.vscode-icons
 WakaTime.vscode-wakatime
-WallabyJs.quokka-vscode
 wayou.vscode-todo-highlight
 whizkydee.material-palenight-theme
 xabikos.JavaScriptSnippets

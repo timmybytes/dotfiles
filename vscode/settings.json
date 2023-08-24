@@ -514,5 +514,6 @@
     "markdown": false,
     "scminput": false
   },
-  "editor.stickyScroll.enabled": true
+  "editor.stickyScroll.enabled": true,
+  "editor.minimap.enabled": false
 }
