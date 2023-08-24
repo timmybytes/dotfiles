@@ -510,8 +510,8 @@
   "tailwindcss.colorDecorators": "on",
   "github.copilot.enable": {
     "*": true,
-    "plaintext": false,
     "markdown": true,
+    "plaintext": true,
     "scminput": false
   },
   "editor.stickyScroll.enabled": true
