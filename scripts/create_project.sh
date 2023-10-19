@@ -1,4 +1,5 @@
 #!/bin/bash
+# WIP: Needs refined config/error handling
 
 if [ "$#" -ne 2 ]; then
   echo "Usage: ./create_project.sh <project_name> <framework>"
