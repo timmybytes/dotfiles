@@ -7,8 +7,8 @@
 </div>
 
 <p align="center">
-  <sub>By 
-  <a href="https://timmybytes.com">Timothy Merritt</a>
+  <sub>By
+   <a href="https://timmybytes.com">Timothy Merritt</a>
 </div>
 
 These are my personal dotfile/configurations, geared mostly towards a macOS web development environment.
