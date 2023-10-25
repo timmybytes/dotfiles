@@ -6,6 +6,7 @@ AntiAntiSepticeye.vscode-color-picker
 astro-build.astro-vscode
 atomiks.moonlight
 bradlc.vscode-tailwindcss
+christian-kohler.npm-intellisense
 cssho.vscode-svgviewer
 DanielKnights.vscode-mjml
 DavidAnson.vscode-markdownlint
@@ -21,6 +22,7 @@ Equinusocio.vsc-community-material-theme
 Equinusocio.vsc-material-theme
 equinusocio.vsc-material-theme-icons
 esbenp.prettier-vscode
+figma.figma-vscode-extension
 firefox-devtools.vscode-firefox-debug
 formulahendry.auto-close-tag
 formulahendry.auto-complete-tag
@@ -29,6 +31,7 @@ foxundermoon.shell-format
 GitHub.copilot
 GitHub.copilot-chat
 GitHub.copilot-labs
+github.vscode-github-actions
 hoovercj.vscode-dimmer
 humao.rest-client
 josee9988.minifyall
@@ -40,6 +43,8 @@ mhutchie.git-graph
 mikestead.dotenv
 mrmlnc.vscode-duplicate
 mrmlnc.vscode-pugbeautify
+ms-azuretools.vscode-docker
+ms-vscode-remote.remote-containers
 ms-vscode.sublime-keybindings
 ms-vscode.vscode-js-profile-flame
 ms-vsliveshare.vsliveshare
@@ -57,6 +62,7 @@ sdras.inbedby7pm
 sdras.night-owl
 shailen.netlify
 shd101wyy.markdown-preview-enhanced
+silvenon.mdx
 styled-components.vscode-styled-components
 svelte.svelte-vscode
 tamasfe.even-better-toml
@@ -65,7 +71,6 @@ timonwong.shellcheck
 tombonnike.vscode-status-bar-format-toggle
 Tyriar.sort-lines
 ue.alphabetical-sorter
-undefined_publisher.catppuccin-vsc
 unifiedjs.vscode-mdx
 VisualStudioExptTeam.vscodeintellicode
 vscode-icons-team.vscode-icons
@@ -73,7 +78,6 @@ WakaTime.vscode-wakatime
 wayou.vscode-todo-highlight
 whizkydee.material-palenight-theme
 xabikos.JavaScriptSnippets
-yoavbls.pretty-ts-errors
 yzhang.markdown-all-in-one
 zhuangtongfa.material-theme
 Zignd.html-css-class-completion
