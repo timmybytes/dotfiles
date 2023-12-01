@@ -507,13 +507,5 @@
   "search.useIgnoreFiles": false,
   "workbench.experimental.settingsProfiles.enabled": true,
   "workbench.layoutControl.enabled": false,
-  "tailwindcss.colorDecorators": "on",
-  "github.copilot.enable": {
-    "*": true,
-    "markdown": true,
-    "plaintext": true,
-    "scminput": false
-  },
-  "editor.stickyScroll.enabled": true,
-  "editor.minimap.enabled": false
+  "tailwindcss.colorDecorators": "on"
 }

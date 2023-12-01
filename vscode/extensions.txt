@@ -40,6 +40,7 @@ mhutchie.git-graph
 mikestead.dotenv
 mrmlnc.vscode-duplicate
 mrmlnc.vscode-pugbeautify
+ms-vscode-remote.remote-containers
 ms-vscode.sublime-keybindings
 ms-vscode.vscode-js-profile-flame
 ms-vsliveshare.vsliveshare
