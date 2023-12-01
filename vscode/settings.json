@@ -48,6 +48,7 @@
   "editor.lineDecorationsWidth": 25, // Margin between line numbers and code
   "editor.linkedEditing": true,
   "editor.matchBrackets": "never",
+  "editor.minimap.enabled": false,
   "editor.minimap.maxColumn": 20,
   "editor.minimap.renderCharacters": true,
   "editor.minimap.showSlider": "always",
@@ -67,11 +68,12 @@
   "editor.scrollbar.verticalScrollbarSize": 10,
   "editor.scrollPredominantAxis": true,
   "editor.smoothScrolling": true,
+  "editor.stickyScroll.enabled": true,
   "editor.tabCompletion": "on",
   "editor.tabSize": 2,
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "editor.wordWrap": "wordWrapColumn",
-  "editor.wordWrapColumn": 80, // line length
+  "editor.wordWrapColumn": 85, // line length
   "editor.wrappingIndent": "indent",
   "editor.wrappingStrategy": "advanced",
   // Prevent expanding directory when jumping to nested file
@@ -83,7 +85,7 @@
   "explorer.confirmDragAndDrop": false,
   "explorer.decorations.badges": true,
   "explorer.incrementalNaming": "smart",
-  "explorer.openEditors.visible": 0,
+  "explorer.openEditors.visible": 1,
   "explorer.sortOrder": "default",
   "files.autoSave": "onFocusChange",
   "files.exclude": {
@@ -103,19 +105,25 @@
   "window.title": "${rootName}${separator}${dirty}${separator}${activeEditorMedium}",
   "window.titleSeparator": " — ",
   "window.titleBarStyle": "custom",
+  "workbench.activityBar.visible": false,
+  "workbench.colorTheme": "In Bed by 7pm",
+  "workbench.editor.enablePreview": false,
   "workbench.editor.pinnedTabSizing": "shrink",
   "workbench.editor.showIcons": true,
-  "workbench.editor.showTabs": true,
+  "workbench.editor.showTabs": "multiple",
   "workbench.editor.tabSizing": "shrink",
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
   },
+  "workbench.experimental.settingsProfiles.enabled": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.layoutControl.enabled": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
   "workbench.startupEditor": "newUntitledFile",
   "workbench.tree.indent": 15, // Explorer open folder/files indents
   "workbench.tree.renderIndentGuides": "none",
   "zenMode.fullScreen": false,
-  "zenMode.hideTabs": true,
+  "zenMode.showTabs": "single",
   // ---------------------------------------------------
   // * * Fonts & Typography () => <= 0 O 1 l
   // ---------------------------------------------------
@@ -186,13 +194,12 @@
   "material-icon-theme.saturation": 1,
   "material-icon-theme.opacity": 1,
   "workbench.colorCustomizations": {
-    "editorIndentGuide.activeBackground": "#aa82ee",
-    "editorIndentGuide.background": "#9fced100",
-    "editor.lineHighlightBackground": "#49a7ff4f",
+    "editorIndentGuide.activeBackground1": "#aa82ee",
+    "editorIndentGuide.background1": "#9fced100",
+    "editor.lineHighlightBackground": "#49a7ff36",
     "editor.selectionHighlightBackground": "#0000006f",
     "editor.selectionHighlightBorder": "#cfb9f5",
-    "editor.selectionBackground": "#49a7ff4f",
-    "minimap.selectionHighlight": "#ffffff",
+    "editor.selectionBackground": "#fffc494f",
     "minimap.warningHighlight": "#ffd000",
     "minimap.errorHighlight": "#ff0000",
     "minimap.selectionOccurrenceHighlight": "#45c4ff",
@@ -203,6 +210,8 @@
     "merge.currentContentBackground": "#ffb54711",
     "merge.incomingHeaderBackground": "#ff000071",
     "merge.incomingContentBackground": "#ff000013",
+    "editor.findMatchBackground": "#00cc44a8", //Current SEARCH MATCH
+    "editor.findMatchHighlightBackground": "#ff7b00a1", //Other SEARCH MATCHES
     "[In Bed by 7pm]": {
       "editorSuggestWidget.highlightForeground": "#aa82ee",
       "quickInputList.focusBackground": "#aa82ee8e"
@@ -210,8 +219,8 @@
     "[Everforest Dark]": {
       "activityBar.background": "#2a2426",
       "editor.background": "#2a2426",
-      "editor.findMatchBackground": "#2a2426",
       "editorGroupHeader.tabsBackground": "#2a2426",
+      "editor.findMatchBackground": "#2a2426",
       "editorHoverWidget.background": "#2a2426",
       "editorHoverWidget.border": "#a7c080",
       "editorHoverWidget.foreground": "#e6d6ac",
@@ -231,8 +240,8 @@
       "scrollbarSlider.activeBackground": "#e6d6ac",
       "scrollbarSlider.background": "#e6d6ac",
       "scrollbarSlider.hoverBackground": "#ffefc5",
-      "searchEditor.findMatchBackground": "#2a2426",
       "sideBar.background": "#2a2426",
+      "searchEditor.findMatchBackground": "#2a2426",
       "sideBar.border": "#868d80",
       "sideBarSectionHeader.border": "#868d80",
       "statusBar.background": "#2a2426",
@@ -264,14 +273,15 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.autoClosingBrackets": "always"
   },
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+  // "javascript.inlayHints.parameterNames.enabled": "none",
+  // "javascript.inlayHints.variableTypes.enabled": false,
+  "javascript.suggest.autoImports": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.autoClosingBrackets": "always"
   },
-  // "javascript.inlayHints.parameterNames.enabled": "none",
-  // "javascript.inlayHints.variableTypes.enabled": false,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "javascript.suggest.autoImports": true,
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -293,6 +303,14 @@
   "[python]": {
     "editor.formatOnPaste": false
   },
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  // "typescript.inlayHints.parameterNames.enabled": "all",
+  // "typescript.inlayHints.parameterTypes.enabled": true,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+  "typescript.suggest.autoImports": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.autoClosingBrackets": "always"
@@ -301,10 +319,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.autoClosingBrackets": "always"
   },
-  "typescript.suggest.autoImports": true,
-  // "typescript.inlayHints.parameterNames.enabled": "all",
-  // "typescript.inlayHints.parameterTypes.enabled": true,
-  "typescript.updateImportsOnFileMove.enabled": "always",
   // ---------------------------------------------------
   // * Emmet
   // ---------------------------------------------------
@@ -334,47 +348,6 @@
   // * ESLint
   // ---------------------------------------------------
   "eslint.format.enable": true,
-  // ---------------------------------------------------
-  // * Git Lens
-  // ---------------------------------------------------
-  "gitlens.menus": {
-    "editor": {
-      "blame": false,
-      "clipboard": true,
-      "compare": true,
-      "history": false,
-      "remote": false
-    },
-    "editorGroup": {
-      "blame": true,
-      "compare": true
-    },
-    "editorTab": false,
-    "explorer": {
-      "clipboard": true,
-      "compare": true,
-      "history": true,
-      "remote": true
-    },
-    "scm": {
-      "authors": true
-    },
-    "scmGroupInline": {
-      "stash": true
-    },
-    "scmGroup": {
-      "compare": true,
-      "openClose": true,
-      "stash": true
-    },
-    "scmItem": {
-      "clipboard": true,
-      "compare": true,
-      "history": true,
-      "remote": false,
-      "stash": true
-    }
-  },
   // ---------------------------------------------------
   // * Live Server
   // ---------------------------------------------------
@@ -431,11 +404,11 @@
   "prettier.semi": false,
   "prettier.endOfLine": "lf",
   // ---------------------------------------------------
-  // * Settings Sync
+  // * Tailwind
   // ---------------------------------------------------
-  "sync.gist": "cf16c02e0234c0c7adbe5c305f30c5b5",
-  "sync.autoUpload": true,
-  "sync.quietSync": true,
+  "tailwindcss.hoverColorHint": "hex",
+  "tailwindcss.references": true,
+  "tailwindcss.colorDecorators": "on",
   // ---------------------------------------------------
   // * TODO Highlight
   // ---------------------------------------------------
@@ -490,22 +463,17 @@
   // ---------------------------------------------------
   // * Misc
   // ---------------------------------------------------
-  "security.workspace.trust.enabled": false,
+  "colorHelper.disableGpu": 0,
   "diffEditor.ignoreTrimWhitespace": false,
   "redhat.telemetry.enabled": false,
-  "svelte.enable-ts-plugin": true,
-  "tailwindcss.hoverColorHint": "hex",
-  "tailwindcss.references": true,
-  "vsicons.dontShowNewVersionMessage": true,
-  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
-  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
-  "workbench.colorTheme": "In Bed by 7pm",
-  "workbench.iconTheme": "material-icon-theme",
-  "colorHelper.disableGpu": 0,
-  "workbench.activityBar.visible": false,
-  "workbench.editor.enablePreview": false,
   "search.useIgnoreFiles": false,
-  "workbench.experimental.settingsProfiles.enabled": true,
-  "workbench.layoutControl.enabled": false,
-  "tailwindcss.colorDecorators": "on"
+  "security.workspace.trust.enabled": false,
+  "svelte.enable-ts-plugin": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": false
+  }
 }
