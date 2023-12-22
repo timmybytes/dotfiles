@@ -28,7 +28,6 @@ formulahendry.auto-rename-tag
 foxundermoon.shell-format
 GitHub.copilot
 GitHub.copilot-chat
-GitHub.copilot-labs
 github.vscode-github-actions
 hoovercj.vscode-dimmer
 humao.rest-client
