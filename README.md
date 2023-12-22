@@ -17,8 +17,6 @@ Forking or just implementing the configs here might end up breaking your stuff, 
 
 I've tried to credit any inspirations for these files, but over a few years of constant tweaking I'm sure some sources have been lost along the way.
 
-**UPDATE 11/8/23**: There is [currently a bug](https://github.com/microsoft/vscode/issues/195539#issuecomment-1763255597) in VS Code that prevents symlinks from working with custom user settings.json files. As such, the VS Code settings here are not updated, as I haven't yet implemented the workaround. Use at your own risk.
-
 ## Contents
 
 - [Firefox Settings](./Firefox/README.md)
