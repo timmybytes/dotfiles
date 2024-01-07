@@ -477,6 +477,5 @@
   "svelte.enable-ts-plugin": true,
   "vsicons.dontShowNewVersionMessage": true,
   "colorHelper.disableGpu": 0,
-  "search.useIgnoreFiles": false,
-  "workbench.activityBar.location": "hidden"
+  "search.useIgnoreFiles": false
 }
