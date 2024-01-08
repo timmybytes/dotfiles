@@ -48,7 +48,6 @@
   "editor.lineDecorationsWidth": 25, // Margin between line numbers and code
   "editor.linkedEditing": true,
   "editor.matchBrackets": "never",
-  "editor.minimap.enabled": false,
   "editor.minimap.maxColumn": 20,
   "editor.minimap.renderCharacters": true,
   "editor.minimap.showSlider": "always",
@@ -466,18 +465,24 @@
   // * Misc
   // ---------------------------------------------------
   "colorHelper.disableGpu": 0,
+  "colorHelper.disableGpu": 0,
   "diffEditor.ignoreTrimWhitespace": false,
   "redhat.telemetry.enabled": false,
   "search.useIgnoreFiles": false,
   "security.workspace.trust.enabled": false,
+  "search.useIgnoreFiles": false,
+  "security.workspace.trust.enabled": false,
   "svelte.enable-ts-plugin": true,
   "vsicons.dontShowNewVersionMessage": true,
-  "github.copilot.enable": {
-    "*": true,
-    "plaintext": true,
-    "markdown": true,
-    "scminput": false
-  },
-  "workbench.activityBar.location": "hidden",
-  "explorer.confirmPasteNative": false
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+  "workbench.colorTheme": "In Bed by 7pm",
+  "workbench.iconTheme": "material-icon-theme",
+  "colorHelper.disableGpu": 0,
+  "workbench.activityBar.visible": false,
+  "workbench.editor.enablePreview": false,
+  "search.useIgnoreFiles": false,
+  "workbench.experimental.settingsProfiles.enabled": true,
+  "workbench.layoutControl.enabled": false,
+  "tailwindcss.colorDecorators": "on"
 }
