@@ -200,7 +200,7 @@
     "editor.selectionBackground": "#fffc494f",
     "minimap.warningHighlight": "#ffd000",
     "minimap.errorHighlight": "#ff0000",
-    "minimap.selectionOccurrenceHighlight": "#45c4ff",
+    "minimap.selectionOccurrenceHighlight": "#45c4ff0f",
     "minimapSlider.background": "#70ff8830",
     "minimapSlider.hoverBackground": "#70ff8869",
     "minimapSlider.activeBackground": "#70ff8869",
@@ -432,6 +432,14 @@
       "isWholeLine": false
     },
     {
+      "text": "TEST:",
+      "color": "#000",
+      "backgroundColor": "#ff8a28",
+      "overviewRulerColor": "grey",
+      "isWholeLine": true,
+      "border": "2px solid #000"
+    },
+    {
       "text": "FIXME:",
       "color": "#1d1d1d",
       "backgroundColor": "#ee6868",
@@ -464,25 +472,11 @@
   // ---------------------------------------------------
   // * Misc
   // ---------------------------------------------------
-  "colorHelper.disableGpu": 0,
-  "colorHelper.disableGpu": 0,
   "diffEditor.ignoreTrimWhitespace": false,
   "redhat.telemetry.enabled": false,
-  "search.useIgnoreFiles": false,
-  "security.workspace.trust.enabled": false,
-  "search.useIgnoreFiles": false,
-  "security.workspace.trust.enabled": false,
   "svelte.enable-ts-plugin": true,
   "vsicons.dontShowNewVersionMessage": true,
-  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
-  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
-  "workbench.colorTheme": "In Bed by 7pm",
-  "workbench.iconTheme": "material-icon-theme",
   "colorHelper.disableGpu": 0,
-  "workbench.activityBar.visible": false,
-  "workbench.editor.enablePreview": false,
   "search.useIgnoreFiles": false,
-  "workbench.experimental.settingsProfiles.enabled": true,
-  "workbench.layoutControl.enabled": false,
-  "tailwindcss.colorDecorators": "on"
+  "workbench.activityBar.location": "hidden"
 }
