@@ -11,12 +11,12 @@
   "editor.guides.highlightActiveIndentation": "always",
   "editor.guides.highlightActiveBracketPair": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll": "explicit",
-    "source.organizeImports": "explicit",
-    "source.format.json": "explicit",
-    "source.format.js": "explicit",
-    "source.format.css": "explicit",
-    "source.format.html": "explicit"
+    "source.fixAll": "always",
+    "source.organizeImports": "always",
+    "source.format.json": "always",
+    "source.format.js": "always",
+    "source.format.css": "always",
+    "source.format.html": "always"
   },
   "editor.codeLens": true,
   "editor.colorDecorators": true,
