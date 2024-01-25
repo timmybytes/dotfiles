@@ -208,8 +208,8 @@
     "merge.currentContentBackground": "#ffb54711",
     "merge.incomingHeaderBackground": "#ff000071",
     "merge.incomingContentBackground": "#ff000013",
-    "editor.findMatchBackground": "#00cc44a8", //Current SEARCH MATCH
-    "editor.findMatchHighlightBackground": "#ff7b00a1", //Other SEARCH MATCHES
+    // "editor.findMatchBackground": "#00cc44a8", //Current SEARCH MATCH
+    // "editor.findMatchHighlightBackground": "#ff7b004f", //Other SEARCH MATCHES
     "[In Bed by 7pm]": {
       "editorSuggestWidget.highlightForeground": "#aa82ee",
       "quickInputList.focusBackground": "#aa82ee8e"
@@ -294,7 +294,7 @@
       "strings": "on",
       "other": "on"
     },
-    // "editor.formatOnSave": true,
+    "editor.formatOnSave": false,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[mdx]": {
@@ -478,5 +478,10 @@
   "vsicons.dontShowNewVersionMessage": true,
   "colorHelper.disableGpu": 0,
   "search.useIgnoreFiles": false,
-  "workbench.activityBar.location": "hidden"
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  }
 }
