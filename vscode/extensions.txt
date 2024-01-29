@@ -3,6 +3,7 @@ albert.tabout
 alexdauenhauer.nocterial-palenight
 amandeepmittal.pug
 antiantisepticeye.vscode-color-picker
+assisrmatheus.sidebar-markdown-notes
 astro-build.astro-vscode
 atomiks.moonlight
 bradlc.vscode-tailwindcss
@@ -11,6 +12,9 @@ cssho.vscode-svgviewer
 danielknights.vscode-mjml
 davidanson.vscode-markdownlint
 dbaeumer.vscode-eslint
+dendron.dendron
+dendron.dendron-markdown-shortcuts
+dendron.dendron-paste-image
 donjayamanne.githistory
 dracula-theme.theme-dracula
 dsznajder.es7-react-js-snippets
@@ -29,8 +33,8 @@ formulahendry.auto-rename-tag
 foxundermoon.shell-format
 github.copilot
 github.copilot-chat
-github.copilot-labs
 github.vscode-github-actions
+gruntfuggly.todo-tree
 hoovercj.vscode-dimmer
 humao.rest-client
 josee9988.minifyall
@@ -69,7 +73,6 @@ timonwong.shellcheck
 tombonnike.vscode-status-bar-format-toggle
 tyriar.sort-lines
 ue.alphabetical-sorter
-undefined_publisher.catppuccin-vsc
 unifiedjs.vscode-mdx
 visualstudioexptteam.vscodeintellicode
 vscode-icons-team.vscode-icons
