@@ -161,16 +161,6 @@
     "command": "workbench.action.terminal.kill"
   },
   {
-    "key": "shift+cmd+enter",
-    "command": "editor.action.revealDefinition",
-    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
-  },
-  {
-    "key": "f12",
-    "command": "-editor.action.revealDefinition",
-    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
-  },
-  {
     "key": "ctrl+shift+cmd",
     "command": "workbench.action.navigateToLastEditLocation"
   },
@@ -255,5 +245,15 @@
   {
     "key": "shift+cmd+t",
     "command": "workbench.view.extension.todo-tree-container"
+  },
+  {
+    "key": "shift+cmd+enter",
+    "command": "editor.action.goToImplementation",
+    "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "cmd+f12",
+    "command": "-editor.action.goToImplementation",
+    "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
   }
 ]
