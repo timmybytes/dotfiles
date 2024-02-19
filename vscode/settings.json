@@ -451,6 +451,12 @@
       "isWholeLine": false
     },
     {
+      "text": "WARNING:",
+      "color": "#000",
+      "backgroundColor": "#ff0000",
+      "isWholeLine": true
+    },
+    {
       "text": "WIP",
       "color": "#000",
       "backgroundColor": "#ff9253",
@@ -498,5 +504,6 @@
     "plaintext": false,
     "markdown": true,
     "scminput": false
-  }
+  },
+  "window.customTitleBarVisibility": "windowed"
 }
