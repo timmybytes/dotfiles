@@ -12,9 +12,7 @@ cssho.vscode-svgviewer
 danielknights.vscode-mjml
 davidanson.vscode-markdownlint
 dbaeumer.vscode-eslint
-dendron.dendron
 dendron.dendron-markdown-shortcuts
-dendron.dendron-paste-image
 donjayamanne.githistory
 dracula-theme.theme-dracula
 dsznajder.es7-react-js-snippets
