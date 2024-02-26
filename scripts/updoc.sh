@@ -3,7 +3,7 @@
 #description    :Update Doctor - check for user & system updates
 #author         :Timothy Merritt
 #date           :2021-02-09
-#version        :0.2.1
+#version        :0.3.1
 #usage          :./updoc.sh
 #notes          :
 #bash_version   :5.0.18(1)-release
@@ -73,7 +73,8 @@ function box_wrap() {
 check_system() {
   box_wrap macOS
   # Get concise name of update(s) and whether it's recommended
-  local softup=$(softwareupdate --list --all | grep --after-context=2 "Label")
+  local softup
+  softup=$(softwareupdate --list --all | grep --after-context=2 "Label")
 
   if [ "$?" ]; then
     printf "%b\n" "${softup}" | tee -a "${TMPFILE}"
@@ -160,6 +161,43 @@ check_tldr() {
   fi
 }
 
+check_vscode() {
+  # Check if VPN is connected, if connected, disconnect
+  local vpn_connected
+  vpn_connected=$(mullvad status | grep "Connected")
+  vpn_disconnected=$(mullvad status | grep "Disconnected")
+
+  if [ "$vpn_connected" ]; then
+    mullvad disconnect
+  fi
+
+  # Check for VSCode updates
+  box_wrap VSCode
+  if [ ! "$vpn_connected" ]; then
+    printf "%b\n" "${SUCCEEDED} VPN disconnected for VSCode updates."
+    if code --update-extensions; then
+      printf "%b\n" "${SUCCEEDED} VSCode extensions updates successful." | tee -a "${TMPFILE}"
+    else
+      printf "%b\n" "${FAILED} VSCode extensions updates unsuccessful." | tee -a "${TMPFILE}"
+    fi
+
+    # Compare if updated extensions differ from ~/.dotfiles/vscode/extensions.txt, if so, update extensions.txt
+    if code --list-extensions >~/.dotfiles/vscode/extensions.txt; then
+      printf "%b\n" "${SUCCEEDED} dotfiles' VSCode extensions list updated." | tee -a "${TMPFILE}"
+      # Print reminder to commit and push updated extensions.txt
+      printf "%b\n" "  → → → Remember to commit and push updated .dotfiles to GitHub!" | tee -a "${TMPFILE}"
+    else
+      printf "%b\n" "${FAILED} dotfiles' VSCode extensions list update unsuccessful." | tee -a "${TMPFILE}"
+    fi
+  fi
+
+  # If vpn is disconnected, reconnect
+  if [ "$vpn_disconnected" ]; then
+    mullvad connect &
+    printf "%b\n" "${SUCCEEDED} VPN reconnected."
+  fi
+}
+
 # Print formatted final results
 results() {
   printf "─%.0s" {1..48}
@@ -194,6 +232,7 @@ main() {
   check_npm
   check_vimplug
   check_tldr
+  check_vscode
   # Show the results
   results
 }
