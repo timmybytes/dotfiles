@@ -9,7 +9,12 @@
 #bash_version   :5.0.18(1)-release
 #============================================================================
 
+# TODO: Add support for getopts, config file, and install script
 # TODO: Add yarn cache clean, verify brew's cleaning cache files
+
+#============================================================================
+# Global Variables
+#============================================================================
 
 # Color codes for update status icons
 RED='\033[0;31m'
@@ -26,17 +31,6 @@ SUCCEEDED="${GREEN}✔${NO_COLOR}"
 MAKE_TMPFILE=$(mktemp /tmp/updoc-log)
 TMPFILE="/tmp/updoc-log"
 
-# Ensures clean temporary logfile is created during each run
-check_temp() {
-  # If preexisting tmpfile exists, delete
-  if test -f "/tmp/updoc-log"; then
-    rm /tmp/updoc-log
-  else
-    # Create tmpfile to store final update results
-    ${MAKE_TMPFILE}
-  fi
-}
-
 LOGO="
                         ____
     __     __  ______  / __ \____  _____     __
@@ -48,16 +42,66 @@ LOGO="
 
               What's updated, Doc?
 "
+
+#============================================================================
+# Option Parsing
+#============================================================================
+
+# Implementing getopts for future use
+# while getopts ":hv" option; do
+# case "${option}" in
+# h)
+# echo "Usage: ${0} [-h] [-v] [-u <tool_name>]"
+# echo "-h: Display this help message."
+# echo "-v: Enable verbose output."
+# echo "-u: Update a specific tool only (e.g., npm, brew)."
+# exit 0
+# ;;
+# v)
+# verbose=1
+# ;;
+# u)
+# update_specific_tool="${OPTARG}"
+# ;;
+# \?)
+# echo "Invalid option: -${OPTARG}" >&2
+# exit 1
+# ;;
+# :)
+# echo "Option -${OPTARG} requires an argument." >&2
+# exit 1
+# ;;
+# esac
+# done
+
+#============================================================================
+# Functions
+#============================================================================
+
+# Ensures clean temporary logfile is created during each run
+check_temp_file() {
+  # If preexisting tmpfile exists, delete
+  if test -f "/tmp/updoc-log"; then
+    rm /tmp/updoc-log
+  else
+    # Create tmpfile to store final update results
+    ${MAKE_TMPFILE}
+  fi
+}
+
 # Wraps a string in fancy ASCII box (the hard way)
 # TODO: Add simpler/automated box drawing
 function box_wrap() {
   # Limit app name to prevent overflowing
   app=$(printf "%b" "${@}" | cut -c 1-18)
+
   # Get length of app name
   app_len=$(printf "%b" "${#app}")
+
   # Calculate whitespace needed to maintain box shape
   get_whitespace=$((18 - app_len))
   whitespace=$(printf "%${get_whitespace}s\n")
+
   # Print the box!
   printf "%s" "┌"
   printf "─%.0s" {1..46}
@@ -73,6 +117,7 @@ function box_wrap() {
 check_system() {
   box_wrap macOS
   # Get concise name of update(s) and whether it's recommended
+
   local softup
   softup=$(softwareupdate --list --all | grep --after-context=2 "Label")
 
@@ -118,6 +163,7 @@ check_brew() {
 check_ohmyzsh() {
   box_wrap ohmyzsh
 
+  # A workaround for
   if /bin/zsh -i -c "omz update --unattended"; then
     printf "%b\n" "${SUCCEEDED} oh my zsh update successful." | tee -a "${TMPFILE}"
   else
@@ -140,6 +186,7 @@ check_npm() {
 check_vimplug() {
   box_wrap VimPlug
 
+  # Run Neovim commands for
   if
     nvim -c "PlugUpgrade" +qa
     nvim -c "PlugUpdate" +qa
@@ -161,6 +208,9 @@ check_tldr() {
   fi
 }
 
+# WIP
+# TODO: Add better VPN handling
+# TODO: Check for VSCode updates
 check_vscode() {
   # Check if VPN is connected, if connected, disconnect
   local vpn_connected
@@ -198,6 +248,8 @@ check_vscode() {
   fi
 }
 
+# TODO: Add crontab support for scheduled updates
+
 # Print formatted final results
 results() {
   printf "─%.0s" {1..48}
@@ -218,11 +270,15 @@ results() {
   rm /tmp/updoc-log
 }
 
+#============================================================================
+# Main Execution
+#============================================================================
+
 main() {
   # Clear the screen
   clear
   # Check for tempfile and/or create one
-  check_temp
+  check_temp_file
   # Show the pretty ASCII logo
   echo "${LOGO}"
   # Check for updates
