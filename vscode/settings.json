@@ -286,6 +286,8 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  // Throws errors in mdx frontmatter arrays, keep disabled
+  "mdx.validate.validateReferences": "ignore",
   "[markdown]": {
     "editor.wordWrap": "bounded",
     "editor.wordWrapColumn": 80,
@@ -505,5 +507,6 @@
     "markdown": true,
     "scminput": false
   },
-  "window.customTitleBarVisibility": "windowed"
+  "window.customTitleBarVisibility": "windowed",
+  "workbench.activityBar.location": "hidden"
 }
