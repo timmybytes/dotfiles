@@ -507,6 +507,5 @@
     "markdown": true,
     "scminput": false
   },
-  "window.customTitleBarVisibility": "windowed",
-  "workbench.activityBar.location": "hidden"
+  "window.customTitleBarVisibility": "windowed"
 }
