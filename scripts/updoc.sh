@@ -223,16 +223,16 @@ check_vscode() {
 
   # Check for VSCode updates
   box_wrap VSCode
-  if [ ! "$vpn_connected" ]; then
+  if [ "$vpn_connected" ]; then
     printf "%b\n" "${SUCCEEDED} VPN disconnected for VSCode updates."
-    if code --update-extensions; then
+    if code-insiders --update-extensions; then
       printf "%b\n" "${SUCCEEDED} VSCode extensions updates successful." | tee -a "${TMPFILE}"
     else
       printf "%b\n" "${FAILED} VSCode extensions updates unsuccessful." | tee -a "${TMPFILE}"
     fi
 
     # Compare if updated extensions differ from ~/.dotfiles/vscode/extensions.txt, if so, update extensions.txt
-    if code --list-extensions >~/.dotfiles/vscode/extensions.txt; then
+    if code-insiders --list-extensions >~/.dotfiles/vscode/extensions.txt; then
       printf "%b\n" "${SUCCEEDED} dotfiles' VSCode extensions list updated." | tee -a "${TMPFILE}"
       # Print reminder to commit and push updated extensions.txt
       printf "%b\n" "  → → → Remember to commit and push updated .dotfiles to GitHub!" | tee -a "${TMPFILE}"
@@ -282,12 +282,12 @@ main() {
   # Show the pretty ASCII logo
   echo "${LOGO}"
   # Check for updates
-  check_system
-  check_ohmyzsh
-  check_brew
-  check_npm
-  check_vimplug
-  check_tldr
+  # check_system
+  # check_ohmyzsh
+  # check_brew
+  # check_npm
+  # check_vimplug
+  # check_tldr
   check_vscode
   # Show the results
   results
