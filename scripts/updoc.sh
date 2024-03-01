@@ -212,18 +212,9 @@ check_tldr() {
 # TODO: Add better VPN handling
 # TODO: Check for VSCode updates
 check_vscode() {
-  # Check if VPN is connected, if connected, disconnect
-  local vpn_connected
-  vpn_connected=$(mullvad status | grep "Connected")
-  vpn_disconnected=$(mullvad status | grep "Disconnected")
-
-  if [ "$vpn_connected" ]; then
-    mullvad disconnect
-  fi
-
   # Check for VSCode updates
   box_wrap VSCode
-  if [ "$vpn_connected" ]; then
+  if mullvad status | grep "Connected"; then
     printf "%b\n" "${SUCCEEDED} VPN disconnected for VSCode updates."
     if code-insiders --update-extensions; then
       printf "%b\n" "${SUCCEEDED} VSCode extensions updates successful." | tee -a "${TMPFILE}"
@@ -241,10 +232,9 @@ check_vscode() {
     fi
   fi
 
-  # If vpn is disconnected, reconnect
-  if [ "$vpn_disconnected" ]; then
-    mullvad connect &
-    printf "%b\n" "${SUCCEEDED} VPN reconnected."
+  # Ensure VPN is reconnected before finishing function
+  if mullvad status | grep "Disconnected"; then
+    mullvad connect
   fi
 }
 
@@ -282,12 +272,12 @@ main() {
   # Show the pretty ASCII logo
   echo "${LOGO}"
   # Check for updates
-  # check_system
-  # check_ohmyzsh
-  # check_brew
-  # check_npm
-  # check_vimplug
-  # check_tldr
+  check_system
+  check_ohmyzsh
+  check_brew
+  check_npm
+  check_vimplug
+  check_tldr
   check_vscode
   # Show the results
   results
