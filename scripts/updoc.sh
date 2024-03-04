@@ -212,27 +212,18 @@ check_tldr() {
 # TODO: Add better VPN handling
 # TODO: Check for VSCode updates
 check_vscode() {
-  # Check if VPN is connected, if connected, disconnect
-  local vpn_connected
-  vpn_connected=$(mullvad status | grep "Connected")
-  vpn_disconnected=$(mullvad status | grep "Disconnected")
-
-  if [ "$vpn_connected" ]; then
-    mullvad disconnect
-  fi
-
   # Check for VSCode updates
   box_wrap VSCode
-  if [ ! "$vpn_connected" ]; then
+  if mullvad status | grep "Connected"; then
     printf "%b\n" "${SUCCEEDED} VPN disconnected for VSCode updates."
-    if code --update-extensions; then
+    if code-insiders --update-extensions; then
       printf "%b\n" "${SUCCEEDED} VSCode extensions updates successful." | tee -a "${TMPFILE}"
     else
       printf "%b\n" "${FAILED} VSCode extensions updates unsuccessful." | tee -a "${TMPFILE}"
     fi
 
     # Compare if updated extensions differ from ~/.dotfiles/vscode/extensions.txt, if so, update extensions.txt
-    if code --list-extensions >~/.dotfiles/vscode/extensions.txt; then
+    if code-insiders --list-extensions >~/.dotfiles/vscode/extensions.txt; then
       printf "%b\n" "${SUCCEEDED} dotfiles' VSCode extensions list updated." | tee -a "${TMPFILE}"
       # Print reminder to commit and push updated extensions.txt
       printf "%b\n" "  → → → Remember to commit and push updated .dotfiles to GitHub!" | tee -a "${TMPFILE}"
@@ -241,10 +232,9 @@ check_vscode() {
     fi
   fi
 
-  # If vpn is disconnected, reconnect
-  if [ "$vpn_disconnected" ]; then
-    mullvad connect &
-    printf "%b\n" "${SUCCEEDED} VPN reconnected."
+  # Ensure VPN is reconnected before finishing function
+  if mullvad status | grep "Disconnected"; then
+    mullvad connect
   fi
 }
 
