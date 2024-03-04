@@ -1,0 +1,17 @@
+/* WIP */
+
+:root {
+  --tree-view-bg: #504e76 !important;
+  --message-bar-background-color: #504e76 !important;
+  --foldertree-background: #504e76 !important;
+  --color-gray-90: #504e76 !important;
+  --color-gray-80: #504e76 !important;
+}
+
+#folderPane {
+  background-color: #504e76 !important;
+}
+
+html body.layout-classic.layout-table div#folderPane.no-overscroll {
+  background-color: #504e76 !important;
+}
