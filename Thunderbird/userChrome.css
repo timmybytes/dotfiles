@@ -1,17 +1,112 @@
 /* WIP */
 
 :root {
-  --tree-view-bg: #504e76 !important;
-  --message-bar-background-color: #504e76 !important;
-  --foldertree-background: #504e76 !important;
-  --color-gray-90: #504e76 !important;
-  --color-gray-80: #504e76 !important;
-}
+    /* Initial Variables */
+    --button-bgcolor: rgb(43, 42, 51);
+    --button-hover-bgcolor: rgb(82, 82, 94);
+    --button-active-bgcolor: rgb(91, 91, 102);
+    --button-primary-bgcolor: rgb(0, 221, 255);
+    --button-primary-hover-bgcolor: rgb(128, 235, 255);
+    --button-primary-active-bgcolor: rgb(170, 242, 255);
+    --button-primary-color: rgb(43, 42, 51);
+    --input-bgcolor: rgb(66, 65, 77);
+    --input-color: rgb(251, 251, 254);
+    --input-border-color: rgb(143, 143, 157);
+    --autocomplete-popup-separator-color: rgb(82, 82, 94);
+    --panel-banner-item-update-supported-bgcolor: rgb(84, 255, 189);
+    --panel-banner-item-info-icon-bgcolor: rgb(128, 235, 255);
+    --tab-icon-overlay-stroke: rgb(66, 65, 77);
+    --tab-icon-overlay-fill: rgb(251, 251, 254);
+    --panel-item-hover-bgcolor: color-mix(in srgb, currentColor 9%, transparent);
+    --arrowpanel-dimmed-further: color-mix(in srgb, currentColor 14%, transparent);
+    --panel-item-active-bgcolor: color-mix(in srgb, currentColor 25%, transparent);
+    --urlbar-icon-fill-opacity: 1;
+    --panel-separator-zap-gradient: linear-gradient(90deg, #9059FF 0%, #FF4AA2 52.08%, #FFBD4F 100%);
+    --lwt-accent-color: rgb(28, 27, 34);
+    --lwt-text-color: rgba(251, 251, 254);
+    --arrowpanel-background: rgb(66, 65, 77);
+    --arrowpanel-color: rgb(251, 251, 254);
+    --arrowpanel-border-color: rgb(82, 82, 94);
+    --toolbar-field-background-color: rgb(28, 27, 34);
+    --toolbar-field-color: rgb(251, 251, 254);
+    --toolbar-field-border-color: rgba(0, 0, 0, 0);
+    --toolbar-field-focus-background-color: rgba(66, 65, 77, 1);
+    --toolbar-field-focus-color: rgb(251, 251, 254);
+    --lwt-tab-text: rgb(251, 251, 254);
+    --lwt-tab-line-color: rgba(0, 0, 0, 0);
+    --toolbar-bgcolor: rgb(43, 42, 51);
+    --toolbar-color: rgb(251, 251, 254);
+    --lwt-tabs-border-color: rgba(0, 0, 0, 0);
+    --chrome-content-separator-color: rgb(12, 12, 13);
+    --toolbarbutton-icon-fill: rgb(251, 251, 254);
+    --lwt-selected-tab-background-color: rgb(66, 65, 77);
+    --autocomplete-popup-highlight-background: rgb(43, 42, 51);
+    --sidebar-background-color: rgb(56, 56, 61);
+    --sidebar-text-color: rgb(249, 249, 250);
+    --sidebar-border-color: rgba(255, 255, 255, 0.10000000149011612);
+    font-size: 12px;
+    --calendar-761844bf-ux2d-c309-ux2d-4a4f-ux2d-9bea-ux2d-99b3c932bad1-backcolor: #ff2968;
+    --calendar-761844bf-ux2d-c309-ux2d-4a4f-ux2d-9bea-ux2d-99b3c932bad1-forecolor: white;
+    --calendar-fa49e3ee-ux2d-4e9e-ux2d-44ae-ux2d-bb23-ux2d-5f23400f4ab4-backcolor: #9a9cff;
+    --calendar-fa49e3ee-ux2d-4e9e-ux2d-44ae-ux2d-bb23-ux2d-5f23400f4ab4-forecolor: #222;
+    --calendar-851b9abe-ux2d-31a3-ux2d-4590-ux2d-a502-ux2d-c6076f641326-backcolor: #a8c2e1;
+    --calendar-851b9abe-ux2d-31a3-ux2d-4590-ux2d-a502-ux2d-c6076f641326-forecolor: #222;
+    --calendar-cfdcafb1-ux2d-5b40-ux2d-4ba0-ux2d-a3fc-ux2d-9209cff0be9e-backcolor: #1b9952;
+    --calendar-cfdcafb1-ux2d-5b40-ux2d-4ba0-ux2d-a3fc-ux2d-9209cff0be9e-forecolor: white;
+    --calendar-8f9b05f6-ux2d-06cc-ux2d-40af-ux2d-a20a-ux2d-03d5bc0f1e7d-backcolor: #92e1c0;
+    --calendar-8f9b05f6-ux2d-06cc-ux2d-40af-ux2d-a20a-ux2d-03d5bc0f1e7d-forecolor: #222;
+    --calendar-8bc0f304-ux2d-b49e-ux2d-4ac6-ux2d-b4f9-ux2d-5530a46a3b18-backcolor: #9fe1e7;
+    --calendar-8bc0f304-ux2d-b49e-ux2d-4ac6-ux2d-b4f9-ux2d-5530a46a3b18-forecolor: #222;
+    --category-follow_up-color: #6600CC;
+    --category-gifts-color: #FF99FF;
+    --category-miscellaneous-color: #FFCC00;
+    --category-competition-color: #CC9933;
+    --category-issues-color: #99FFFF;
+    --category-meeting-color: #FFFF66;
+    --category-travel-color: #663300;
+    --category-calls-color: #99FF99;
+    --category-ideas-color: #003333;
+    --category-favorites-color: #3366FF;
+    --category-personal-color: #003333;
+    --category-birthday-color: #996633;
+    --category-anniversary-color: #333333;
+    --category-vacation-color: #660000;
+    --category-customer-color: #CCCCCC;
+    --category-clients-color: #FF9900;
+    --category-public_holiday-color: #FFCC66;
+    --category-business-color: #FFFFCC;
+    --category-projects-color: #FFCC99;
+    --category-status-color: #FFFF33;
+    --category-holidays-color: #663366;
+    --category-suppliers-color: #000099;
+
+    /* ------------------------------------- */
+    /*           Custom Variables            */
+    /* ------------------------------------- */
+
+    --custom-active-bgcolor: #292c3d !important;
+    --custom-inactive-bgcolor: #292c3d !important;
+    --custom-active-fgcolor: #eeefff !important;
+    --custom-inactive-fgcolor: #cccccc99 !important;
+
+
+    /* Title & Tab bar */
+    --lwt-accent-color: #24273a !important;
+    --tabs-toolbar-background-color: #24273a !important;
+
+    --lwt-tab-text: #ffffff !important;
+
+    --tree-view-bg: #24273a !important;
+    --message-bar-background-color: #24273a !important;
+    --foldertree-background: #24273a !important;
+    --color-gray-90: #24273a !important;
+    --color-gray-80: #24273a !important;
+  }
 
 #folderPane {
-  background-color: #504e76 !important;
+  background-color: #24273a !important;
 }
 
 html body.layout-classic.layout-table div#folderPane.no-overscroll {
-  background-color: #504e76 !important;
+  background-color: #24273a !important;
 }
