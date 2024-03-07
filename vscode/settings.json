@@ -192,24 +192,33 @@
   "material-icon-theme.saturation": 1,
   "material-icon-theme.opacity": 1,
   "workbench.colorCustomizations": {
-    "editorIndentGuide.activeBackground1": "#aa82ee",
-    "editorIndentGuide.background1": "#9fced100",
-    "editor.lineHighlightBackground": "#49a7ff36",
-    "editor.selectionHighlightBackground": "#0000006f",
-    "editor.selectionHighlightBorder": "#cfb9f5",
-    "editor.selectionBackground": "#fffc494f",
+    // Note: Selection colors can easily become unreadable—the editor defaults are usually best
+    // "editorIndentGuide.activeBackground1": "#aa82ee",
+    // "editorIndentGuide.background1": "#9fced100",
+    // "editor.lineHighlightBackground": "#49a7ff36",
+
+    // Colors for in-file search matches
+    // "editor.findMatchBackground": "#323232",
+    // "editor.findMatchHighlightBackground": "#1e1e2835", // Unselected matches
+    // "editor.findMatchBorder": "#b1e3ad",
+
+    // Colors for selections
+    // "editor.selectionHighlightBorder": "#ff9253",
+    // "editor.selectionBackground": "#1e1e28", // Active selection
+    // "editor.selectionHighlightBackground": "#1e1e28a8", // Matches the current active selection
+
+    // Mini-map colors
     "minimap.warningHighlight": "#ffd000",
     "minimap.errorHighlight": "#ff0000",
     "minimap.selectionOccurrenceHighlight": "#45c4ff0f",
     "minimapSlider.background": "#70ff8830",
     "minimapSlider.hoverBackground": "#70ff8869",
     "minimapSlider.activeBackground": "#70ff8869",
+    // Git colors
     "merge.currentHeaderBackground": "#ffb54775",
     "merge.currentContentBackground": "#ffb54711",
     "merge.incomingHeaderBackground": "#ff000071",
     "merge.incomingContentBackground": "#ff000013",
-    // "editor.findMatchBackground": "#00cc44a8", //Current SEARCH MATCH
-    // "editor.findMatchHighlightBackground": "#ff7b004f", //Other SEARCH MATCHES
     "[In Bed by 7pm]": {
       "editorSuggestWidget.highlightForeground": "#aa82ee",
       "quickInputList.focusBackground": "#aa82ee8e"
@@ -507,5 +516,6 @@
     "markdown": true,
     "scminput": false
   },
-  "window.customTitleBarVisibility": "windowed"
+  "window.customTitleBarVisibility": "windowed",
+  "liveServer.settings.donotVerifyTags": true
 }
