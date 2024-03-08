@@ -480,6 +480,36 @@
       "isWholeLine": true
     },
     {
+      "text": "MARKER 1:",
+      "color": "#000",
+      "backgroundColor": "#D299C2",
+      "isWholeLine": true
+    },
+    {
+      "text": "MARKER 2:",
+      "color": "#000",
+      "backgroundColor": "#AED9E0",
+      "isWholeLine": true
+    },
+    {
+      "text": "MARKER 3:",
+      "color": "#000",
+      "backgroundColor": "#FFA69E",
+      "isWholeLine": true
+    },
+    {
+      "text": "MARKER 4:",
+      "color": "#000",
+      "backgroundColor": "#A6C0FE",
+      "isWholeLine": true
+    },
+    {
+      "text": "MARKER 5:",
+      "color": "#000",
+      "backgroundColor": "#FAF3DD",
+      "isWholeLine": true
+    },
+    {
       "text": "DONE:",
       "color": "#000",
       "backgroundColor": "#25ee46",
