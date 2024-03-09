@@ -57,6 +57,7 @@ pnp.polacode
 redhat.vscode-yaml
 remisa.shellman
 ritwickdey.liveserver
+robbowen.synthwave-vscode
 ryanraposo.codeui
 sainnhe.everforest
 sdras.inbedby7pm

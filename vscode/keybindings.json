@@ -248,12 +248,12 @@
   },
   {
     "key": "shift+cmd+enter",
-    "command": "editor.action.goToImplementation",
+    "command": "typescript.goToSourceDefinition",
     "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
   },
   {
     "key": "cmd+f12",
-    "command": "-editor.action.goToImplementation",
+    "command": "-typescript.goToSourceDefinition",
     "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
   }
 ]
