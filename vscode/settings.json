@@ -546,6 +546,5 @@
     "markdown": true,
     "scminput": false
   },
-  "window.customTitleBarVisibility": "windowed",
-  "liveServer.settings.donotVerifyTags": true
+  "window.customTitleBarVisibility": "windowed"
 }
