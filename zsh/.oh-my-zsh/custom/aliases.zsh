@@ -15,7 +15,6 @@
 _='sudo '
 afind='ack -il'
 cache='cd ~/.dotfiles/Scripts/ && ./clear_caches.sh'
-code=code-insiders
 ct='clear; pwd; tree -aFL 1'
 cv=clear
 egrep='egrep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'

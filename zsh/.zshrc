@@ -169,7 +169,9 @@ eval $(thefuck --alias)
 # Use Neovim over vim
 alias vim="nvim"
 # Prefer VS Code-Insiders over VS Code
-alias code="code-insiders"
+alias in-code="code-insiders"
+# Make regular VS Code still available
+alias vs-code="code"
 # Check/delete contents and size of User/System caches
 alias cache="clear_caches.sh"
 # npm
