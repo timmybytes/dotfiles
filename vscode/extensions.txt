@@ -72,7 +72,6 @@ timonwong.shellcheck
 tombonnike.vscode-status-bar-format-toggle
 tyriar.sort-lines
 ue.alphabetical-sorter
-undefined_publisher.catppuccin-vsc
 unifiedjs.vscode-mdx
 visualstudioexptteam.vscodeintellicode
 vscode-icons-team.vscode-icons
