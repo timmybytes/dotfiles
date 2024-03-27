@@ -3,7 +3,7 @@
   // ////////////////////// CORE ///////////////////////
   // ---------------------------------------------------
   "editor.find.autoFindInSelection": "never",
-  "editor.accessibilitySupport": "off",
+  "editor.accessibilitySupport": "off", 
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": true,
   "editor.guides.bracketPairsHorizontal": true,
