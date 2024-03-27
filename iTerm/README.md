@@ -12,3 +12,6 @@ These are my iTerm settings for macOS.
 ## Neovim
 
 <img alt="terminal window running Neovim showing a README file" src="./iterm-nvim.png" />
+
+
+*See also: https://shyr.io/blog/sync-iterm2-configs*
