@@ -1,0 +1,31 @@
+# Alt-Tab
+
+Alt-Tab is a window switcher for Mac OS X. It allows you to switch between different windows of the same application just like you would on Windows, with the biggest benefit being that you get a small preview of the actual window instead of just an icon.
+
+## Installation
+
+Alt-Tab doesn't have a proper settings export function, but you can manually use `defaults` to handle the settings.
+
+```sh
+# defaults write com.lwouis.alt-tab-macos <key> <value>
+
+# Example
+defaults write com.lwouis.alt-tab-macos showDesktopIcon -bool true
+
+# To reset a setting
+defaults delete com.lwouis.alt-tab-macos <key>
+
+# To list all settings
+defaults read com.lwouis.alt-tab-macos
+```
+
+Or, you could just use the GUI :D.
+
+If you're in VS Code, here's a cool little extension for making `.plist` files pleasant to work with: https://github.com/ivanhernandez13/vscode-plist
+
+
+1. Download: [GitHub](https://github.com/lwouis/alt-tab-macos) | [AltTab Website](https://alt-tab-macos.netlify.app/)
+2. Make sure [`com.lwouis.alt-tab-macos.plist`](./com.lwouis.alt-tab-macos.plist) file is in `~/Library/Preferences/`—I prefer using a symlink for this to keep my settings in one place.
+   1. `ln -s ~/where-you-keep-your-dotfiles/com.lwouis.alt-tab-macos.plist ~/Library/Preferences/com.lwouis.alt-tab-macos.plist`
+
+*For more info: See https://github.com/lwouis/alt-tab-macos/issues/1219*

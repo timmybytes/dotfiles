@@ -35,6 +35,7 @@ github.vscode-github-actions
 gruntfuggly.todo-tree
 hoovercj.vscode-dimmer
 humao.rest-client
+ivhernandez.vscode-plist
 josee9988.minifyall
 kumar-harsh.graphql-for-vscode
 lightyen.tailwindcss-intellisense-twin
@@ -72,7 +73,6 @@ timonwong.shellcheck
 tombonnike.vscode-status-bar-format-toggle
 tyriar.sort-lines
 ue.alphabetical-sorter
-undefined_publisher.catppuccin-vsc
 unifiedjs.vscode-mdx
 visualstudioexptteam.vscodeintellicode
 vscode-icons-team.vscode-icons
