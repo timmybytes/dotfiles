@@ -3,7 +3,7 @@
   // ////////////////////// CORE ///////////////////////
   // ---------------------------------------------------
   "editor.find.autoFindInSelection": "never",
-  "editor.accessibilitySupport": "off", 
+  "editor.accessibilitySupport": "off",
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": true,
   "editor.guides.bracketPairsHorizontal": true,
@@ -421,6 +421,16 @@
   "tailwindcss.hoverColorHint": "hex",
   "tailwindcss.references": true,
   "tailwindcss.colorDecorators": "on",
+  "tailwindCSS.includeLanguages": {
+    "typescript": "javascript", // if you are using typescript
+    "typescriptreact": "javascript" // if you are using typescript with react
+  },
+
+  "tailwindCSS.experimental.classRegex": [
+    "tw`([^`]*)", // tw`...`
+    "tw\\.[^`]+`([^`]*)`", // tw.xxx<xxx>`...`
+    "tw\\(.*?\\).*?`([^`]*)" // tw(Component)<xxx>`...`
+  ],
   // ---------------------------------------------------
   // * TODO Highlight
   // ---------------------------------------------------
@@ -547,5 +557,8 @@
     "scminput": false
   },
   "window.customTitleBarVisibility": "windowed",
-  "security.workspace.trust.untrustedFiles": "open"
+  "security.workspace.trust.untrustedFiles": "open",
+  "workbench.activityBar.location": "hidden",
+  "editor.minimap.enabled": false,
+  "gitlens.mode.active": "zen"
 }

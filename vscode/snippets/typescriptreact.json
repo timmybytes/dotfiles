@@ -13,9 +13,7 @@
   // 	"description": "Log output to console"
   // }
   "()=> Fragment Component": {
-    "prefix": [
-      "raff"
-    ],
+    "prefix": ["raff"],
     "body": [
       "import React from 'react'\n",
       "const ${1:Name} = (${2:props}) => {",
@@ -28,4 +26,64 @@
     ],
     "description": "React arrow function component with enclosing React.Fragment elements."
   },
+  "Twin Functional Component: Styled w/props": {
+    "prefix": ["tfc"],
+    "body": [
+      "import React, { FC } from 'react'\n",
+      "import tw, { css, styled } from 'twin.macro'\n",
+      "\n",
+      "type ${1:Name}Props = {",
+      "\t// ${2:Types}",
+      "}",
+      "",
+      "const ${1:Name}: FC<${1:Name}Props> = ({",
+      "\t/**",
+      "\t*",
+      "\t*/",
+      "\tchildren,",
+      "}) => {",
+      "\treturn <Container>${3}{children}</Container>",
+      "}",
+      "",
+      "type ContainerProps = {",
+      "\t${4: }",
+      "}",
+      "const Container = styled.div<{}>(({}) => [])"
+    ],
+    "description": "A functional Typescript component with Twin"
+  },
+  "Twin Functional Component: Twin w/o props": {
+    "prefix": "fc",
+    "description": "React Functional Component template",
+    "body": [
+      "import React, { FC } from 'react';",
+      "import tw, { css, styled } from 'twin.macro';",
+      "",
+      "type $1Props = {",
+      "  //",
+      "};",
+      "",
+      "/**",
+      " * $2",
+      " */",
+      "export const $1: FC<$1Props> = (props) => {",
+      "  return (",
+      "    <Container>",
+      "      Hello!",
+      "    </Container>",
+      "  );",
+      "};",
+      "",
+      "const Container = tw.div`w-full`;"
+    ]
+  },
+  "Twin Macro Basic Component": {
+    "prefix": "twc",
+    "description": "Twin Macro Basic Component template",
+    "body": [
+      "export const ${1:name} = styled.div(({ customCss }: CustomCssProps) => (",
+      "[tw`$2`, customCss]));",
+      ""
+    ]
+  }
 }
