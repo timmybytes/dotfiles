@@ -558,7 +558,6 @@
   },
   "window.customTitleBarVisibility": "windowed",
   "security.workspace.trust.untrustedFiles": "open",
-  "workbench.activityBar.location": "hidden",
   "editor.minimap.enabled": false,
   "gitlens.mode.active": "zen"
 }
