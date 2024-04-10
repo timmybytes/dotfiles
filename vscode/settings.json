@@ -103,7 +103,6 @@
   "terminal.integrated.scrollback": 10000,
   "window.title": "${rootName}${separator}${dirty}${separator}${activeEditorMedium}",
   "window.titleSeparator": " — ",
-  "window.titleBarStyle": "custom",
   "workbench.colorTheme": "In Bed by 7pm",
   "workbench.editor.enablePreview": false,
   "workbench.editor.pinnedTabSizing": "shrink",
@@ -203,9 +202,10 @@
     // "editor.findMatchBorder": "#b1e3ad",
 
     // Colors for selections
-    // "editor.selectionHighlightBorder": "#ff9253",
+    "editor.selectionHighlightBorder": "#fff",
+
     // "editor.selectionBackground": "#1e1e28", // Active selection
-    // "editor.selectionHighlightBackground": "#1e1e28a8", // Matches the current active selection
+    "editor.selectionHighlightBackground": "#5858b0bf", // Matches the current active selection
 
     // Mini-map colors
     "minimap.warningHighlight": "#ffd000",
@@ -271,6 +271,11 @@
       "titleBar.border": "#2a2426",
       "titleBar.inactiveBackground": "#2a2426"
     }
+  },
+  "workbench.editor.customLabels.enabled": true,
+  "workbench.editor.customLabels.patterns": {
+    "**/app/**/page.tsx": "${dirname}.${extname}",
+    "**/app/**/layout.tsx": "${dirname}/layout.${extname}"
   },
   // ---------------------------------------------------
   // * Language-specific rules
@@ -558,6 +563,5 @@
   },
   "window.customTitleBarVisibility": "windowed",
   "security.workspace.trust.untrustedFiles": "open",
-  "editor.minimap.enabled": false,
   "gitlens.mode.active": "zen"
 }
