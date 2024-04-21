@@ -323,6 +323,10 @@
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
+  "[toml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+
+  },
   // "typescript.inlayHints.parameterNames.enabled": "all",
   // "typescript.inlayHints.parameterTypes.enabled": true,
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
@@ -563,5 +567,6 @@
   },
   "window.customTitleBarVisibility": "windowed",
   "security.workspace.trust.untrustedFiles": "open",
-  "gitlens.mode.active": "zen"
+  "gitlens.mode.active": "zen",
+  "editor.minimap.enabled": false
 }
