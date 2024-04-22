@@ -203,7 +203,6 @@
 
     // Colors for selections
     "editor.selectionHighlightBorder": "#fff",
-
     // "editor.selectionBackground": "#1e1e28", // Active selection
     "editor.selectionHighlightBackground": "#5858b0bf", // Matches the current active selection
 
@@ -322,10 +321,6 @@
   },
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
-  },
-  "[toml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-
   },
   // "typescript.inlayHints.parameterNames.enabled": "all",
   // "typescript.inlayHints.parameterTypes.enabled": true,
@@ -567,6 +562,6 @@
   },
   "window.customTitleBarVisibility": "windowed",
   "security.workspace.trust.untrustedFiles": "open",
-  "gitlens.mode.active": "zen",
-  "editor.minimap.enabled": false
+  "editor.minimap.enabled": false,
+  "gitlens.mode.active": "zen"
 }
