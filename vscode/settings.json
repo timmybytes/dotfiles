@@ -563,5 +563,6 @@
   "window.customTitleBarVisibility": "windowed",
   "security.workspace.trust.untrustedFiles": "open",
   "editor.minimap.enabled": false,
-  "gitlens.mode.active": "zen"
+  "gitlens.mode.active": "zen",
+  "github.copilot.editor.enableAutoCompletions": true
 }
