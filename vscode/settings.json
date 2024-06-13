@@ -279,6 +279,9 @@
   // ---------------------------------------------------
   // * Language-specific rules
   // ---------------------------------------------------
+  "[handlebars]": {
+    "editor.formatOnSave": false
+  },
   "html.format.contentUnformatted": "pre,code,textarea",
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
