@@ -41,7 +41,7 @@ export UPDATE_ZSH_DAYS=6
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -119,6 +119,9 @@ if [[ "${terminfo[kcud1]}" != "" ]]; then
   bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
 fi
 
+# Turn off the godforsaken corrections
+unsetopt correct_all
+
 # ---------------------- * * SHORTCUTS * * --------------------------#
 # Shortcut to custom Firefox CSS
 alias userchrome="cd -P $HOME/Library/Application\ Support/Firefox/Profiles/p3khxkfo.default-release/chrome"
@@ -153,8 +156,7 @@ alias ct="clear; pwd; tree -aFL 1"
 # Check files/directories for associated macos tags
 alias tags="mdls -raw -name kMDItemUserTags"
 
-if command -v kitty &> /dev/null
-then
+if command -v kitty &>/dev/null; then
   # For kitty autocompletion
   autoload -Uz compinit
   compinit
@@ -236,14 +238,14 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 BEAR_AC_ZSH_SETUP_PATH=$HOME/Library/Caches/@sloansparger/bear/autocomplete/zsh_setup && test -f $BEAR_AC_ZSH_SETUP_PATH && source $BEAR_AC_ZSH_SETUP_PATH
 
 # added for npm-completion https://github.com/Jephuff/npm-bash-completion
-[ -d "/usr/local/lib/node_modules/npm-completion" ] && PATH_TO_NPM_COMPLETION="/usr/local/lib/node_modules/npm-completion" ||  PATH_TO_NPM_COMPLETION="/Users/$USER/.nvm/versions/node/v14.18.1/lib/node_modules/npm-completion"
+[ -d "/usr/local/lib/node_modules/npm-completion" ] && PATH_TO_NPM_COMPLETION="/usr/local/lib/node_modules/npm-completion" || PATH_TO_NPM_COMPLETION="/Users/$USER/.nvm/versions/node/v14.18.1/lib/node_modules/npm-completion"
 
 source $PATH_TO_NPM_COMPLETION/npm-completion.sh
 
 export PATH="/usr/local/bin:$PATH"
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 export PATH="$PATH:$HOME/ngrok"
 export PATH="/opt/homebrew/bin:$PATH"
