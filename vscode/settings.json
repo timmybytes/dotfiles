@@ -101,6 +101,7 @@
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.gpuAcceleration": "on",
   "terminal.integrated.scrollback": 10000,
+  "window.confirmBeforeClose": "always",
   "window.title": "${rootName}${separator}${dirty}${separator}${activeEditorMedium}",
   "window.titleSeparator": " — ",
   "workbench.colorTheme": "In Bed by 7pm",
