@@ -356,6 +356,8 @@
 	<integer>0</integer>
 	<key>DimOnlyText</key>
 	<true/>
+	<key>DisableWindowSizeSnap</key>
+	<integer>1</integer>
 	<key>EnableDivisionView</key>
 	<false/>
 	<key>FlashTabBarInFullscreen</key>
