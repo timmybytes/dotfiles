@@ -413,15 +413,15 @@
   // * Prettier
   // ---------------------------------------------------
   "prettier.configPath": "", // Makes Prettier respect local configs
-  "prettier.arrowParens": "avoid",
-  "prettier.bracketSpacing": true,
-  "prettier.bracketSameLine": true,
-  "prettier.jsxSingleQuote": true,
-  "prettier.singleQuote": true,
-  "prettier.proseWrap": "never",
+  // "prettier.arrowParens": "avoid",
+  // "prettier.bracketSpacing": true,
+  // "prettier.bracketSameLine": true,
+  // "prettier.jsxSingleQuote": true, // NOTE: This will override the singleQuote setting
+  "prettier.singleQuote": false,
+  // "prettier.proseWrap": "never",
   "prettier.tabWidth": 2,
-  "prettier.semi": false,
-  "prettier.endOfLine": "lf",
+  // "prettier.semi": false,
+  // "prettier.endOfLine": "lf",
   // ---------------------------------------------------
   // * Tailwind
   // ---------------------------------------------------
