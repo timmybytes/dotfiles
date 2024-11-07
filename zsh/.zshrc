@@ -187,8 +187,8 @@ alias updoc="updoc.sh"
 # Run gitchecks on all local repos
 alias gitcheckall="gitcheckall.sh"
 # Use preferred Node version if .nvmrc exists
-alias nu="nvm use"
-
+# alias nu="nvm use"
+alias nu="nodeswitch.sh"
 # ------------------------- * * GIT * * -----------------------------#
 alias gs="git status"
 alias ga="git add"
