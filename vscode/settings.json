@@ -113,7 +113,7 @@
     "*.ipynb": "jupyter-notebook"
   },
   "workbench.experimental.settingsProfiles.enabled": true,
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "catppuccin-perfect-macchiato",
   "workbench.layoutControl.enabled": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
   "workbench.startupEditor": "newUntitledFile",
@@ -485,7 +485,7 @@
       "isWholeLine": true
     },
     {
-      "text": "WIP",
+      "text": "WIP:",
       "color": "#000",
       "backgroundColor": "#ff9253",
       "isWholeLine": true
