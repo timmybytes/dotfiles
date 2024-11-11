@@ -43,6 +43,10 @@ LOGO="
               What's updated, Doc?
 "
 
+# Arrays of personal and work git repositories
+PERSONAL_REPOS="$HOME/Projects/Repos"
+WORK_REPOS="$HOME/Work"
+
 #============================================================================
 # Option Parsing
 #============================================================================
@@ -208,6 +212,88 @@ check_tldr() {
   fi
 }
 
+# Check git repos for uncommitted changes, unpushed commits, and changes to remote branches to be pulled
+check_git() {
+  box_wrap git
+  TEMP_FILE=$(mktemp) # Temporary file to store results
+  ERROR_FLAG=0
+
+  # Helper function to check an individual repository
+  check_repo() {
+    local repo_path=$1
+    cd "$repo_path" || return 1
+
+    # Verify if the repository has any commits
+    if ! git rev-parse HEAD >/dev/null 2>&1; then
+      echo "Repo: $repo_path" >>"$TEMP_FILE"
+      echo "  No commits in this repository." >>"$TEMP_FILE"
+      return 0
+    fi
+
+    # Check for uncommitted changes
+    local uncommitted
+    uncommitted=$(git status --porcelain)
+
+    # Check for unpushed commits
+    local branch_name
+    branch_name=$(git rev-parse --abbrev-ref HEAD)
+    local unpushed=""
+    if git rev-parse --verify "origin/$branch_name" >/dev/null 2>&1; then
+      unpushed=$(git log "origin/$branch_name..HEAD" --oneline)
+    fi
+
+    # Check if there are remote changes to pull
+    local pull_needed
+    pull_needed=$(git fetch --dry-run 2>&1)
+
+    # Append findings to temp file if there are relevant changes
+    if [[ -n "$uncommitted" || -n "$unpushed" || -n "$pull_needed" ]]; then
+      echo "Repo: $repo_path" >>"$TEMP_FILE"
+      [[ -n "$uncommitted" ]] && echo "  Uncommitted changes present." >>"$TEMP_FILE"
+      [[ -n "$unpushed" ]] && echo "  Unpushed commits:" >>"$TEMP_FILE" && echo "$unpushed" >>"$TEMP_FILE"
+      [[ -n "$pull_needed" ]] && echo "  Remote changes to pull." >>"$TEMP_FILE"
+      echo >>"$TEMP_FILE" # Add extra line for readability
+    fi
+  }
+
+  # Helper function to process repositories within a given directory
+  process_directory() {
+    local dir_path=$1
+    local group_label=$2
+
+    echo "Checking $group_label repositories in $dir_path..."
+
+    # Find Git repos, excluding any directory containing "Archive" (case insensitive)
+    find "$dir_path" -type d -name ".git" -prune ! -path "*[Aa]rchive*" | while IFS= read -r git_dir; do
+      local repo_path
+      repo_path=$(dirname "$git_dir")
+      check_repo "$repo_path" || ERROR_FLAG=1
+    done
+  }
+
+  # Process personal and work directories
+  process_directory "$PERSONAL_REPOS" "Personal"
+  process_directory "$WORK_REPOS" "Work"
+
+  # Display results
+  if [[ -s $TEMP_FILE ]]; then
+    echo "Recommended updates:"
+    cat "$TEMP_FILE"
+  else
+    echo "No recommended updates found."
+  fi
+
+  # Persist reminder if there were updates found
+  [[ -s $TEMP_FILE ]] && cp "$TEMP_FILE" /path/to/last_check_tempfile
+
+  # Handle any errors encountered during repo checks
+  if [[ $ERROR_FLAG -ne 0 ]]; then
+    echo "Error: Unable to check some git repos."
+  fi
+
+  rm -f "$TEMP_FILE" # Clean up temporary file
+}
+
 # WIP
 # TODO: Add better VPN handling
 # TODO: Check for VSCode updates
@@ -245,7 +331,7 @@ results() {
   printf "─%.0s" {1..48}
   echo
   printf "%s\n" "Done."
-  clear
+  # clear
   printf "%b\n" "${LOGO}"
   printf "%b\n" "$(date +"upDoc results for %c")"
   printf "─%.0s" {1..48}
@@ -272,13 +358,14 @@ main() {
   # Show the pretty ASCII logo
   echo "${LOGO}"
   # Check for updates
-  check_system
-  check_ohmyzsh
-  check_brew
-  check_npm
-  check_vimplug
-  check_tldr
-  check_vscode
+  # check_system
+  # check_ohmyzsh
+  # check_brew
+  # check_npm
+  # check_vimplug
+  # check_tldr
+  # check_vscode
+  check_git
   # Show the results
   results
 }
