@@ -247,7 +247,7 @@
     "command": "workbench.view.extension.todo-tree-container"
   },
   {
-    "key": "ctrl+shift+enter",
+    "key": "shift+cmd+enter",
     "command": "typescript.goToSourceDefinition",
     "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
   },
@@ -257,7 +257,7 @@
     "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
   },
   {
-    "key": "shift+cmd+enter",
+    "key": "ctrl+shift+enter",
     "command": "editor.action.revealDefinition",
     "when": "editorHasDefinitionProvider && editorTextFocus"
   },
