@@ -186,6 +186,8 @@ alias omg="omgwdyd.sh"
 alias updoc="updoc.sh"
 # Run gitchecks on all local repos
 alias gitcheckall="gitcheckall.sh"
+# Remove empty lines from a file
+alias bye-lines="bye-lines.sh"
 # Use preferred Node version if .nvmrc exists
 alias nu="nvm use"
 
