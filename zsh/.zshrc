@@ -189,8 +189,8 @@ alias gitcheckall="gitcheckall.sh"
 # Remove empty lines from a file
 alias bye-lines="bye-lines.sh"
 # Use preferred Node version if .nvmrc exists
-alias nu="nvm use"
-
+# alias nu="nvm use"
+alias nu="nodeswitch.sh"
 # ------------------------- * * GIT * * -----------------------------#
 alias gs="git status"
 alias ga="git add"
