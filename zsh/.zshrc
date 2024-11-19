@@ -191,6 +191,8 @@ alias bye-lines="bye-lines.sh"
 # Use preferred Node version if .nvmrc exists
 # alias nu="nvm use"
 alias nu="nodeswitch.sh"
+# Use dice roller
+alias roll="dice_roller.sh"
 # ------------------------- * * GIT * * -----------------------------#
 alias gs="git status"
 alias ga="git add"
