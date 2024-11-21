@@ -202,7 +202,8 @@ alias gmsg="git commit"
 alias gac="git add . && git commit -m "
 alias gpo="git push origin"
 alias gitcheck="mgitstatus -d 1 ."
-
+# Push an empty commit to trigger deploy, action, etc.
+alias gem="git commit --allow-empty -m 'Trigger Build'"
 # ------------------------ * * MACOS * * ----------------------------#
 # Quicklook
 alias ql="qlmanage -p"

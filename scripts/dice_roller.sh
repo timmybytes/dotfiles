@@ -43,24 +43,31 @@ input=$1
 
 num_dice=$(echo "$input" | grep -o '^[0-9]\+' | head -1)
 num_sides=$(echo "$input" | grep -o 'd[0-9]\+' | cut -d'd' -f2)
-multiplier=$(echo "$input" | grep -o '\*[0-9]\+' | cut -d'*' -f2)
-modifier=$(echo "$input" | grep -o '\+[0-9]\+' | cut -d'+' -f2)
-
-multiplier=${multiplier:-1}
-modifier=${modifier:-0}
-num_sides=$(echo "$input" | grep -oE 'd[0-9]+' | cut -d'd' -f2)
 multiplier=$(echo "$input" | grep -oE '\*[0-9]+' | cut -d'*' -f2)
 modifier=$(echo "$input" | grep -oE '\+[0-9]+' | cut -d'+' -f2)
 
-if [[ -z "$multiplier" ]]; then
-  multiplier=1
+multiplier=${multiplier:-1}
+modifier=${modifier:-0}
+
+# Display individual rolls and calculate total
+rolls=()
+total=0
+for ((i = 0; i < num_dice; i++)); do
+  roll=$((RANDOM % num_sides + 1))
+  rolls+=("$roll")
+  total=$((total + roll))
+done
+
+# Apply multiplier and modifier
+total=$((total * multiplier + modifier))
+
+rolls_str=$(
+  IFS=" + "
+  echo "${rolls[*]}"
+)
+
+if [[ $modifier -ne 0 ]]; then
+  echo "${num_dice}d${num_sides}: $total ($rolls_str) + $modifier"
+else
+  echo "${num_dice}d${num_sides}: $total ($rolls_str)"
 fi
-
-if [[ -z "$modifier" ]]; then
-  modifier=0
-fi
-
-result=$(roll_dice "$num_dice" "$num_sides")
-result=$((result * multiplier + modifier))
-
-echo "Result: $result"

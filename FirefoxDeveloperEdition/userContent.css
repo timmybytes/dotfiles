@@ -1,0 +1,42 @@
+/*------ HOME/NEWTAB PAGE (About:home, about:newtab) ------*/
+@-moz-document url-prefix(about:home), url-prefix(about:newtab) {
+  body {
+    background-color: #393838 !important;
+    color: var(--home-text) !important;
+    overflow: auto !important;
+  }
+}
+
+/*------ READER-VIEW ------*/
+@-moz-document url-prefix("about:reader") {
+  body.dark {
+    color: #e6d6ac !important;
+    background-color: #2a2426 !important;
+  }
+
+  body.light {
+    color: #222 !important;
+    background-color: rgb(201, 186, 186) !important;
+  }
+
+  body.sepia {
+    color: #5b4636 !important;
+    background-color: #f4ecd8 !important;
+  }
+
+  body.serif {
+    font-family: serif !important;
+  }
+
+  body.sans-serif {
+    font-family: "HK Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+    font-weight: 200;
+  }
+}
+
+@-moz-document url(chrome://devtools/content/webconsole/index.html){
+:root {
+  min-width: 33vw;
+}
+}
