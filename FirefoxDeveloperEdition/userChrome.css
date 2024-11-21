@@ -1,8 +1,441 @@
+
+::-moz-selection {
+  background-color: #fd3b6f !important;
+}
+
+:root {
+  /* Number of pixels of enlargement when URL bar is focused */
+
+  --mbarstyler-popout-pixels: 0px;
+  /* [0px - 7px] */
+
+  /* Top Bar Display or Not */
+
+  --mbarstyler-top-bar-display: block;
+  /* [block,none] */
+
+  /* Font sizes (default: 13.8px for title, 10.2px for URL) */
+
+  /* Size of site names in search dropdown */
+  --mbarstyler-title-font-size: 13px;
+  /* [13px - 18px] */
+
+  /* Size of links displayed to right of site names */
+  --mbarstyler-url-font-size: 12px;
+  /* [12px - 16px] */
+
+  /* Rows to show without scrolling */
+
+  /* --mbarstyler-max-rows-without-scrolling: 0; */
+
+  /* Bottom border for each result row */
+  --mbarstyler-bottom-border-width: 0px;
+  /* [0px or 1px] */
+
+  /* Match display style */
+
+  --mbarstyler-match-weight: 700;
+  /* [400,700] */
+
+  --mbarstyler-match-background-opacity: 0;
+  /* [0.0,0.05,0.1] */
+}
+
+/* *MEGABAR NIGHTMARE FIX via u/skyyblaze - reddit */
+#urlbar,
+#searchbar,
+.searchbar-textbox {
+  margin: 0px !important;
+  min-height: 0px !important;
+  height: 24px !important;
+  font-size: 12px !important;
+}
+
+/* Urlbar frame/border color */
+#urlbar[breakout][breakout-extend]>#urlbar-background {
+  border-color: #383838 !important;
+  color: #383838 !important;
+  background: #383838 !important;
+}
+
+.urlbar-icon,
+#main-window[uidensity="compact"] .urlbar-icon,
+#main-window[uidensity="touch"] .urlbar-icon {
+  width: 16px !important;
+  height: 16px !important;
+  padding: 0px 1px !important;
+  margin: 1 !important;
+  margin-left: 5px !important;
+  margin-right: 5px !important;
+}
+
+#urlbar #reader-mode-button,
+#main-window[uidensity="compact"] #urlbar #reader-mode-button,
+#main-window[uidensity="touch"] #urlbar #reader-mode-button {
+  padding: 1px !important;
+}
+
+.searchbar-search-icon {
+  margin-inline-start: 4px !important;
+  margin-inline-end: 4px !important;
+}
+
+/* reduce toolbar button height to match location bars button height (this will cause major glitches) */
+#nav-bar .toolbarbutton-1 {
+  padding-top: 1px !important;
+  padding-bottom: 1px !important;
+  min-height: 0px !important;
+  /* height: 24px !important; */
+}
+
+/* No Search Suggestion Icons */
+#urlbar .search-one-offs:not([hidden]) {
+  display: none !important;
+}
+
+/* We don't need the text */
+/* #urlbar .search-one-offs .search-panel-header {
+  display: none !important;
+} */
+
+#urlbar-background {
+  background-color: yellow;
+  border-radius: 5px 5px 5px 5px !important;
+  /* box-shadow: 0px 0px 0px 0px rgb(208, 61, 120) !important; */
+  box-shadow: 0px 0px 0px 0px #98c4ef !important;
+}
+
+#urlbar[focused="true"] {
+  /*! Dont touch */
+  margin-top: 2px !important;
+}
+
+/* Dropdown search results */
+#urlbar-results {
+  background: #383838 !important;
+  /* border: 1px solid rgb(238, 104, 104) !important; */
+  border: 1px solid #383838 !important;
+  border-radius: 0px 5px 0px 5px !important;
+  margin-top: 0px !important;
+}
+
+/*  */
+#urlbar-results {
+  padding: 0px 0px !important;
+}
+
+/* border color between result rows */
+.urlbarView-row:not(:last-of-type) {
+  border-bottom: var(--mbarstyler-bottom-border-width) solid #383838 !important;
+}
+
+/*** Megabar Styler General - version 2020-04-19 ***/
+
+/*** General Preferences ***/
+
+/*** URL bar enlargement or lack thereof ***/
+
+/* Compute new position, width, and padding */
+
+#urlbar[breakout][breakout-extend] {
+  /* MARKER: v133 main break happens here */
+  /* top: calc(5px - var(--mbarstyler-popout-pixels)) !important;
+  left: calc(0px - var(--mbarstyler-popout-pixels)) !important;
+  width: calc(100% + (2 * var(--mbarstyler-popout-pixels))) !important;
+  padding: var(--mbarstyler-popout-pixels) !important; */
+}
+
+[uidensity="compact"] #urlbar[breakout][breakout-extend] {
+  /* top: calc(3px - var(--mbarstyler-popout-pixels)) !important; */
+}
+
+[uidensity="touch"] #urlbar[breakout][breakout-extend] {
+  /* top: calc(4px - var(--mbarstyler-popout-pixels)) !important; */
+}
+
+/* Prevent shift of URL bar contents */
+#urlbar[breakout][breakout-extend]>#urlbar-input-container {
+  /* height: var(--urlbar-height) !important; */
+
+  padding: 0 !important;
+}
+
+/* Do not animate */
+#urlbar[breakout][breakout-extend]>#urlbar-background {
+  /* animation: none !important; */
+}
+
+/* Remove shadows */
+#urlbar[breakout][breakout-extend]>#urlbar-background {
+  box-shadow: none !important;
+}
+
+/*** Top "Blue Bar" Display ***/
+.urlbarView-row:first-of-type {
+  display: var(--mbarstyler-top-bar-display) !important;
+}
+
+/*** Font Sizes and Scrolling ***/
+/* Title font-size */
+.urlbarView-row .urlbarView-title {
+  font-size: var(--mbarstyler-title-font-size) !important;
+}
+
+/* URL / action font-size */
+.urlbarView-row .urlbarView-secondary,
+.urlbarView-row .urlbarView-url,
+.urlbarView-row .urlbarView-action {
+  font-size: var(--mbarstyler-url-font-size) !important;
+}
+
+#urlbar-results {
+  overflow-y: auto !important;
+}
+
+#urlbar,
+.searchbar-textbox {
+  background-color: #383838 !important;
+  font-size: 10pt !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#urlbar[breakout] {
+  /* top: 3px !important;
+  left: 0px !important;
+  width: 100% !important;
+  padding: 0px !important; */
+}
+
+/* Titlebar color */
+:root:not([customizing]) #navigator-toolbox {
+  background-color: #383838 !important;
+  border: none !important;
+}
+
+:root:not([customizing]) #navigator-toolbox #nav-bar {
+  background-color: none !important;
+  min-height: 0 !important;
+  /* max-height: 0; */
+  /* height: 0; */
+  /* This will hide dropdown for search results */
+  /* overflow: scroll !important; */
+  border: none !important;
+}
+
+/* Matches urlbar/navbar to titlebar color */
+:root:not([customizing]) #navigator-toolbox:focus-within #nav-bar {
+  background-color: #383838 !important;
+  max-height: 32px;
+  height: 32px;
+}
+
+/* **************************** T A B S ******************************** */
+
+:root:not([customizing]) .tabbrowser-tab:not([pinned="true"]) {
+  /* --tab-min-width: 40px !important; */
+  /* flex: 0 !important; */
+  max-width: 20px !important;
+  /* min-width: 40px !important; */
+}
+
+.tabbrowser-tab:not([pinned]) {
+  flex: 0 !important;
+  max-width: 40px !important;
+  /* min-width: 40px !important; */
+}
+
+:root:not([customizing]) .tabbrowser-tab:not([pinned="true"]) .tab-stack {
+  /* flex-basis: 1; */
+}
+
+:root:not([customizing]) .tab-content {
+  padding: 0 0px;
+}
+
+:root:not([customizing]) .tab-line,
+:root:not([customizing]) .tab-text,
+:root:not([customizing]) .tab-close-button {
+  /* display: none; */
+}
+
+/* :root:not([customizing]) .tab-icon-image {
+	margin: 0!important;
+} */
+
+/* hide new tab button so tab-bar can collapse */
+#tabs-newtab-button {
+  background-color: #383838 !important;
+  display: none;
+}
+
+/* hide the one pixel top border for tabs */
+.tab-background {
+  border-top: none !important;
+  background-color: #383838 !important;
+}
+
+/* no blue line on top of the focused tab */
+#tabbrowser-tabs {
+  --tab-line-color: -moz-win-accentcolor !important;
+  --tab-loading-fill: -moz-win-accentcolor !important;
+  box-shadow: 1px 1px 1px #383838 !important;
+}
+
+/* Removes space just to left of tabs */
+.titlebar-spacer[type="pre-tabs"] {
+  display: none;
+}
+
+.tabbrowser-tab::after,
+.tabbrowser-tab::before {
+  border-left: 3px !important;
+}
+
+/* FF v106 fixes for squished tabs/overflowing favicons */
+.tabbrowser-tab {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Default tab favicon */
+.tabbrowser-tab[label^="New Tab"] .tab-icon-image {
+  background: url("traffic.png") !important;
+  background-repeat: no-repeat !important;
+  background-size: 16px !important;
+  margin-right: 16px !important;
+  padding-left: 16px !important;
+  width: 0 !important;
+}
+
+.tab-favicon {
+  margin-top: 8px;
+}
+
+/* Cushion on x-axis around tab favicon */
+/* .tab-throbber:not([pinned]), .tab-icon-pending:not([pinned]), .tab-icon-image:not([pinned]), .tab-sharing-icon-overlay:not([pinned]), .tab-icon-overlay:not([pinned]) {
+  margin-inline-end: 5.5px;
+  margin-inline-start: 5.5px;
+} */
+
+/* **************************** O T H E R ******************************** */
+
+/* Get rid of that annoying flash of white when loading new pages. */
+browser,
+browser.display.background_color,
+tabbrowser tabpanels {
+  background-color: #383838 !important;
+}
+
+/* white flash fix */
+browser[type="content-primary"],
+browser[type="content"] {
+  background: #383838 !important;
+}
+
+/* ! COLOR VARIABLES */
+/* :root { */
+/*Change the background color of just the toolbar*/
+/* --toolbar-bgcolor: <COLOR> !important; */
+
+/*change the default blue accent color in many different elements.*/
+/* --lwt-accent-color: <COLOR> !important; */
+
+/*Color the tabstrip background*/
+/* --chrome-background-color: <COLOR> !important; */
+
+/*Color the background of an un-selected tab*/
+/* --tab-background-color: <COLOR> !important; */
+
+/*Color the background of the selected tab*/
+/* --tab-selection-background-color: green !important; */
+
+/*Color the background of a hovered tab. not sure if this still works.*/
+/* --tab-hover-background-color: #45545E !important; */
+
+/*Background color of the toolbar and urlbar wrapper*/
+/* --chrome-secondary-background-color: red !important; */
+
+/* --url-and-searchbar-background-color: blue !important; */
+
+/*color of highlighted text in the urlbar, searchbar, and other UI elements*/
+/* --chrome-selection-background-color: <COLOR> !important; */
+
+/*color of the urlbar border*/
+/* --chrome-nav-bar-controls-border-color: #ffffff !important; */
+
+/*color of the "tab-burst" effect you see when a tab finishes loading*/
+/* --tab-loading-fill: <COLOR> !important; */
+/* } */
+
+/* CONTEXT MENUS */
+
+menupopup,
+popup,
+popup>menu>menupopup,
+menupopup>menu>menupopup {
+  -moz-appearance: none !important;
+  background: #383838 !important;
+  color: #f7f7f7;
+  border: 0px !important;
+  border-radius: 5px !important;
+  padding: 2px 0px 2px 0px !important;
+}
+
+menupopup menuseparator {
+  -moz-appearance: none !important;
+  background: #525a6d !important;
+  color: #f7f7f7;
+  margin: 2px 0px 2px 0px !important;
+  padding: 0 !important;
+  border-top: none !important;
+  border-color: transparent !important;
+}
+
+menupopup menu,
+menuitem {
+  -moz-appearance: none !important;
+  color: #f7f7f7 !important;
+}
+
+menupopup menu:hover,
+menuitem:hover {
+  -moz-appearance: none !important;
+  color: #f7f7f7 !important;
+  background-color: #4c5ff9 !important;
+}
+
+/*Invert submenu arrow > color*/
+.menu-right {
+  filter: invert(95%) !important;
+}
+
+/* v106 FIXES */
+/* https: //www.reddit.com/r/FirefoxCSS/comments/xk3v7w/firefox_106_beta_customization_to_remove/ */
+/* #firefox-view-button,
+#wrapper-firefox-view-button,
+#alltabs-button {
+  display: none !important;
+}
+
+#firefox-view-button,
+#wrapper-firefox-view-button,
+#tabbrowser-tabs {
+  border: 0px hidden transparent !important;
+  padding-inline-start: 0 !important;
+  margin-inline-start: 0 !important;
+} */
+
+
+/* ------------------------------------------------------------------ */
+/* Vertical FF snippet                                                */
+/* ------------------------------------------------------------------ */
+
 /* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/hide_tabs_toolbar_v2.css made available under Mozilla Public License v. 2.0
 See the above repository for updates as well as full license text. */
 
 /* This requires Firefox 133+ to work */
-
+/*
 @media (-moz-bool-pref: "sidebar.verticalTabs") {
   #sidebar-main {
     visibility: collapse;
@@ -58,3 +491,5 @@ See the above repository for updates as well as full license text. */
     }
   }
 }
+
+ */
