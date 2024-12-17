@@ -1,7 +1,13 @@
-#!/bin/bash
-# Auto Git Script for macOS
-# Checks a git repo for changes every hour, commits changes, pulls from remote, and pushes to remote.
-# Uses macOS's `launchd` for scheduling. Includes secure error handling and logging.
+#!/usr/bin/env bash
+#title          :auto_git.sh
+#description    :Automated git repo commits and pushes
+#author         :Timothy Merritt
+#date           :2024-11-22
+#version        :0.1
+#usage          :./auto_git.sh
+#notes          :
+#bash_version   :5.1.8(1)-release
+#============================================================================
 
 # Enable strict mode
 set -euo pipefail

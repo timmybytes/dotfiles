@@ -101,7 +101,6 @@
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.gpuAcceleration": "on",
   "terminal.integrated.scrollback": 10000,
-  "window.confirmBeforeClose": "always",
   "window.title": "${rootName}${separator}${dirty}${separator}${activeEditorMedium}",
   "window.titleSeparator": " — ",
   "workbench.colorTheme": "In Bed by 7pm",
@@ -570,5 +569,8 @@
   "editor.minimap.enabled": false,
   "gitlens.mode.active": "zen",
   "github.copilot.editor.enableAutoCompletions": true,
-  "workbench.editor.enablePreview": false
+  "workbench.editor.enablePreview": false,
+  "workbench.navigationControl.enabled": false,
+  "chat.commandCenter.enabled": false,
+  "window.commandCenter": false
 }

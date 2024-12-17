@@ -1,4 +1,3 @@
-
 ::-moz-selection {
   background-color: #fd3b6f !important;
 }
@@ -85,13 +84,13 @@
   padding-top: 1px !important;
   padding-bottom: 1px !important;
   min-height: 0px !important;
-  /* height: 24px !important; */
+  height: 24px !important;
 }
 
 /* No Search Suggestion Icons */
-#urlbar .search-one-offs:not([hidden]) {
+/* #urlbar .search-one-offs:not([hidden]) {
   display: none !important;
-}
+} */
 
 /* We don't need the text */
 /* #urlbar .search-one-offs .search-panel-header {
@@ -138,31 +137,33 @@
 /* Compute new position, width, and padding */
 
 #urlbar[breakout][breakout-extend] {
-  /* MARKER: v133 main break happens here */
-  /* top: calc(5px - var(--mbarstyler-popout-pixels)) !important;
+  top: calc(5px - var(--mbarstyler-popout-pixels)) !important;
+
   left: calc(0px - var(--mbarstyler-popout-pixels)) !important;
+
   width: calc(100% + (2 * var(--mbarstyler-popout-pixels))) !important;
-  padding: var(--mbarstyler-popout-pixels) !important; */
+
+  padding: var(--mbarstyler-popout-pixels) !important;
 }
 
 [uidensity="compact"] #urlbar[breakout][breakout-extend] {
-  /* top: calc(3px - var(--mbarstyler-popout-pixels)) !important; */
+  top: calc(3px - var(--mbarstyler-popout-pixels)) !important;
 }
 
 [uidensity="touch"] #urlbar[breakout][breakout-extend] {
-  /* top: calc(4px - var(--mbarstyler-popout-pixels)) !important; */
+  top: calc(4px - var(--mbarstyler-popout-pixels)) !important;
 }
 
 /* Prevent shift of URL bar contents */
 #urlbar[breakout][breakout-extend]>#urlbar-input-container {
-  /* height: var(--urlbar-height) !important; */
+  height: var(--urlbar-height) !important;
 
   padding: 0 !important;
 }
 
 /* Do not animate */
 #urlbar[breakout][breakout-extend]>#urlbar-background {
-  /* animation: none !important; */
+  animation: none !important;
 }
 
 /* Remove shadows */
@@ -201,10 +202,10 @@
 }
 
 #urlbar[breakout] {
-  /* top: 3px !important;
+  top: 3px !important;
   left: 0px !important;
   width: 100% !important;
-  padding: 0px !important; */
+  padding: 0px !important;
 }
 
 /* Titlebar color */
@@ -216,8 +217,8 @@
 :root:not([customizing]) #navigator-toolbox #nav-bar {
   background-color: none !important;
   min-height: 0 !important;
-  /* max-height: 0; */
-  /* height: 0; */
+  max-height: 0;
+  height: 0;
   /* This will hide dropdown for search results */
   /* overflow: scroll !important; */
   border: none !important;
@@ -234,8 +235,8 @@
 
 :root:not([customizing]) .tabbrowser-tab:not([pinned="true"]) {
   /* --tab-min-width: 40px !important; */
-  /* flex: 0 !important; */
-  max-width: 20px !important;
+  flex: 0 !important;
+  max-width: 40px !important;
   /* min-width: 40px !important; */
 }
 
@@ -246,7 +247,7 @@
 }
 
 :root:not([customizing]) .tabbrowser-tab:not([pinned="true"]) .tab-stack {
-  /* flex-basis: 1; */
+  flex-basis: 1;
 }
 
 :root:not([customizing]) .tab-content {
@@ -256,7 +257,7 @@
 :root:not([customizing]) .tab-line,
 :root:not([customizing]) .tab-text,
 :root:not([customizing]) .tab-close-button {
-  /* display: none; */
+  display: none;
 }
 
 /* :root:not([customizing]) .tab-icon-image {
@@ -313,10 +314,10 @@
 }
 
 /* Cushion on x-axis around tab favicon */
-/* .tab-throbber:not([pinned]), .tab-icon-pending:not([pinned]), .tab-icon-image:not([pinned]), .tab-sharing-icon-overlay:not([pinned]), .tab-icon-overlay:not([pinned]) {
+.tab-throbber:not([pinned]), .tab-icon-pending:not([pinned]), .tab-icon-image:not([pinned]), .tab-sharing-icon-overlay:not([pinned]), .tab-icon-overlay:not([pinned]) {
   margin-inline-end: 5.5px;
   margin-inline-start: 5.5px;
-} */
+}
 
 /* **************************** O T H E R ******************************** */
 
@@ -425,71 +426,3 @@ menuitem:hover {
   padding-inline-start: 0 !important;
   margin-inline-start: 0 !important;
 } */
-
-
-/* ------------------------------------------------------------------ */
-/* Vertical FF snippet                                                */
-/* ------------------------------------------------------------------ */
-
-/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/hide_tabs_toolbar_v2.css made available under Mozilla Public License v. 2.0
-See the above repository for updates as well as full license text. */
-
-/* This requires Firefox 133+ to work */
-/*
-@media (-moz-bool-pref: "sidebar.verticalTabs") {
-  #sidebar-main {
-    visibility: collapse;
-  }
-}
-
-@media (-moz-bool-pref: "userchrome.force-window-controls-on-left.enabled") {
-  #nav-bar>.titlebar-buttonbox-container {
-    order: -1 !important;
-
-    >.titlebar-buttonbox {
-      flex-direction: row-reverse;
-    }
-  }
-}
-
-@media not (-moz-bool-pref: "sidebar.verticalTabs") {
-  #TabsToolbar {
-    visibility: collapse;
-  }
-
-  :root[sizemode="fullscreen"] #nav-bar>.titlebar-buttonbox-container {
-    display: flex !important;
-  }
-
-  :root[tabsintitlebar] #toolbar-menubar:not([autohide="false"])~#nav-bar {
-    >.titlebar-buttonbox-container {
-      display: flex !important;
-    }
-
-    :root[sizemode="normal"] & {
-      >.titlebar-spacer {
-        display: flex !important;
-      }
-    }
-
-    :root[sizemode="maximized"] & {
-      >.titlebar-spacer[type="post-tabs"] {
-        display: flex !important;
-      }
-
-      @media (-moz-bool-pref: "userchrome.force-window-controls-on-left.enabled"),
-      (-moz-gtk-csd-reversed-placement),
-      (-moz-platform: macos) {
-        >.titlebar-spacer[type="post-tabs"] {
-          display: none !important;
-        }
-
-        >.titlebar-spacer[type="pre-tabs"] {
-          display: flex !important;
-        }
-      }
-    }
-  }
-}
-
- */
