@@ -565,10 +565,10 @@
     "markdown": true,
     "scminput": false
   },
-  "window.customTitleBarVisibility": "windowed",
+  "window.customTitleBarVisibility": "never",
   "security.workspace.trust.untrustedFiles": "open",
   "editor.minimap.enabled": false,
-  "gitlens.mode.active": "zen",
   "github.copilot.editor.enableAutoCompletions": true,
-  "workbench.editor.enablePreview": false
+  "workbench.editor.enablePreview": false,
+  "gitlens.mode.active": "zen"
 }
