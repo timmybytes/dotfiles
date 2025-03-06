@@ -20,7 +20,7 @@ FAILED="${RED}𐄂${NO_COLOR}"
 SUCCEEDED="${GREEN}✔${NO_COLOR}"
 
 # Create a persistent log file in /tmp with a consistent path.
-LOGFILE=$(mktemp /tmp/updoc-log-XXXXXX)
+LOGFILE=$(mktemp /tmp/updoc-log-$(date +%Y%m%d-%H%M%S)-XXXXXX)
 
 # Configuration file path and update options placeholder
 CONFIG_FILE="$HOME/.updoc_config"
@@ -71,7 +71,7 @@ run_command() {
 log() {
   local msg="$1"
   local timestamp
-  timestamp=$(date +"%H:%M:%S")
+  timestamp=$(date +"%Y-%m-%d %H:%M:%S")
   echo -e "[$timestamp] $msg" >>"$LOGFILE"
   if [ "$verbose" -eq 1 ]; then
     echo -e "[$timestamp] $msg"
