@@ -1,37 +1,34 @@
 #!/usr/bin/env bash
-#title          :updoc.sh
-#description    :Update Doctor - check for user & system updates
-#author         :Timothy Merritt
-#date           :2021-02-09
-#version        :0.3.1
-#usage          :./updoc.sh
-#notes          :
-#bash_version   :5.0.18(1)-release
-#============================================================================
+# updoc.sh - Update Doctor: Check for user & system updates
+# Author: Timothy Merritt
+# Date: 2025-02-14
+# Version: 0.3.1
 
-# TODO: Add support for getopts, config file, and install script
-# TODO: Add yarn cache clean, verify brew's cleaning cache files
+# Set strict error handling
+set -euo pipefail
 
 #============================================================================
 # Global Variables
 #============================================================================
 
-# Color codes for update status icons
+# Color Codes
 RED='\033[0;31m'
 YELLOW='\033[1;33m'
 GREEN='\033[0;32m'
 NO_COLOR='\033[0m'
 
-# Status of an update
+# Status Icons
 PENDING="${YELLOW}●${NO_COLOR}"
 FAILED="${RED}𐄂${NO_COLOR}"
 SUCCEEDED="${GREEN}✔${NO_COLOR}"
 
-# Temporary logfile for results output - deleted after each run
-MAKE_TMPFILE=$(mktemp /tmp/updoc-log)
-TMPFILE="/tmp/updoc-log"
+# Create a temporary logfile in a portable location; cleanup on exit.
+LOGFILE=$(mktemp "${TMPDIR:-/tmp}/updoc-log.XXXXXX")
+trap 'rm -f "${LOGFILE}"' EXIT
 
-LOGO="
+# ASCII Logo
+LOGO=$(
+  cat <<'EOF'
                         ____
     __     __  ______  / __ \____  _____     __
  __/ /_   / / / / __ \/ / / / __ \/ ___/  __/ /_
@@ -41,237 +38,267 @@ LOGO="
                      v0.2.1
 
               What's updated, Doc?
-"
+EOF
+)
+
+# Default verbosity (0: silent, 1: verbose)
+verbose=0
 
 #============================================================================
 # Option Parsing
 #============================================================================
 
-# Implementing getopts for future use
-# while getopts ":hv" option; do
-# case "${option}" in
-# h)
-# echo "Usage: ${0} [-h] [-v] [-u <tool_name>]"
-# echo "-h: Display this help message."
-# echo "-v: Enable verbose output."
-# echo "-u: Update a specific tool only (e.g., npm, brew)."
-# exit 0
-# ;;
-# v)
-# verbose=1
-# ;;
-# u)
-# update_specific_tool="${OPTARG}"
-# ;;
-# \?)
-# echo "Invalid option: -${OPTARG}" >&2
-# exit 1
-# ;;
-# :)
-# echo "Option -${OPTARG} requires an argument." >&2
-# exit 1
-# ;;
-# esac
-# done
+usage() {
+  echo "Usage: ${0##*/} [-h] [-v]"
+  echo "  -h  Show this help message"
+  echo "  -v  Enable verbose output"
+}
+
+while getopts "hv" opt; do
+  case ${opt} in
+  h)
+    usage
+    exit 0
+    ;;
+  v) verbose=1 ;;
+  *)
+    usage
+    exit 1
+    ;;
+  esac
+done
+shift $((OPTIND - 1))
 
 #============================================================================
-# Functions
+# Utility Functions
 #============================================================================
 
-# Ensures clean temporary logfile is created during each run
-check_temp_file() {
-  # If preexisting tmpfile exists, delete
-  if test -f "/tmp/updoc-log"; then
-    rm /tmp/updoc-log
-  else
-    # Create tmpfile to store final update results
-    ${MAKE_TMPFILE}
+# Log messages to logfile and, if verbose is enabled, to stdout.
+log() {
+  local msg="$1"
+  echo -e "$msg" >>"${LOGFILE}"
+  if [ "${verbose}" -eq 1 ]; then
+    echo -e "$msg"
   fi
 }
 
-# Wraps a string in fancy ASCII box (the hard way)
-# TODO: Add simpler/automated box drawing
-function box_wrap() {
-  # Limit app name to prevent overflowing
-  app=$(printf "%b" "${@}" | cut -c 1-18)
-
-  # Get length of app name
-  app_len=$(printf "%b" "${#app}")
-
-  # Calculate whitespace needed to maintain box shape
-  get_whitespace=$((18 - app_len))
-  whitespace=$(printf "%${get_whitespace}s\n")
-
-  # Print the box!
-  printf "%s" "┌"
-  printf "─%.0s" {1..46}
-  printf "%s" "┐"
-  echo
-  printf "%b\n" "│ ${PENDING} Checking for ${app} updates...${whitespace} │"
-  printf "%s" "└"
-  printf "─%.0s" {1..46}
-  printf "%s\n" "┘"
+# Draw a fancy ASCII box with a status message.
+box_wrap() {
+  local app="$1"
+  local label="${2:-Checking for ${app} updates...}"
+  # Print an empty line for spacing
+  echo ""
+  printf "%b %s%s \n" "${PENDING}" "${label}" | boxes -d ansi-rounded -p h2 -a hc -s 48
 }
 
-# Check for macOS-specific OS updates
+#============================================================================
+# Update Check Functions
+#============================================================================
+
 check_system() {
-  box_wrap macOS
-  # Get concise name of update(s) and whether it's recommended
-
-  local softup
-  softup=$(softwareupdate --list --all | grep --after-context=2 "Label")
-
-  if [ "$?" ]; then
-    printf "%b\n" "${softup}" | tee -a "${TMPFILE}"
-    printf "%b\n" "${SUCCEEDED} macOS updates fetch successful." | tee -a "${TMPFILE}"
+  box_wrap "macOS" "Checking for macOS updates..."
+  if command -v softwareupdate >/dev/null 2>&1; then
+    local output condensed
+    if output=$(softwareupdate --list --all 2>&1); then
+      # Condenses the overly verbose macos update output to a more readable format
+      # E.g., "* Update: macOS Big Sur 11.7.9 - Recommended - Restart Required"
+      condensed=$(echo "${output}" | awk '
+        /^\* Label:/ {
+          label = $0;
+          sub(/^\* Label: /, "", label);
+          getline details;
+          recommended = "";
+          action = "";
+          n = split(details, fields, ",");
+          for (i = 1; i <= n; i++) {
+            if (fields[i] ~ /Recommended:/) {
+              gsub(/.*Recommended: */, "", fields[i]);
+              if (fields[i] ~ /YES/) { recommended = "Recommended" }
+            }
+            if (fields[i] ~ /Action:/) {
+              gsub(/.*Action: */, "", fields[i]);
+              if (fields[i] ~ /restart/) { action = "Restart Required" }
+            }
+          }
+          printf "* Update: %s", label;
+          if (recommended != "") {
+            printf " - %s", recommended;
+          }
+          if (action != "") {
+            printf " - %s", action;
+          }
+          printf "\n";
+        }')
+      echo -e "${condensed}" | tee -a "${LOGFILE}"
+      log "${SUCCEEDED} macOS updates fetch successful."
+    else
+      log "${FAILED} macOS updates fetch unsuccessful."
+    fi
   else
-    printf "%b\n" "${FAILED} macOS updates fetch unsuccessful." | tee -a "${TMPFILE}"
+    log "${FAILED} softwareupdate command not found."
   fi
 }
 
-# Check for brew (macOS package manager) updates
 check_brew() {
-  box_wrap brew
+  box_wrap "brew" "Checking for Homebrew updates..."
+  if command -v brew >/dev/null 2>&1; then
+    local brew_status=0
 
-  # Update brew itself
-  if brew update; then
-    printf "%b\n" "${SUCCEEDED} brew update successful." | tee -a "${TMPFILE}"
-  else
-    printf "%b\n" "${FAILED} brew update unsuccessful." | tee -a "${TMPFILE}"
-  fi
+    if brew update; then
+      log "${SUCCEEDED} brew update successful."
+    else
+      log "${FAILED} brew update unsuccessful."
+      brew_status=1
+    fi
 
-  # Upgrade installed brew packages and casks (apps)
-  if
-    brew upgrade
-    brew upgrade --cask
-  then
-    printf "%b\n" "${SUCCEEDED} brew formulae upgraded." | tee -a "${TMPFILE}"
-  else
-    printf "%b\n" "${FAILED} brew formulae upgrades unsuccessful." | tee -a "${TMPFILE}"
-  fi
+    if brew upgrade; then
+      log "${SUCCEEDED} brew formulae upgraded."
+    else
+      log "${FAILED} brew formulae upgrades unsuccessful."
+      brew_status=1
+    fi
 
-  # Remove stale lock files, outdated downloads for all formulae and casks,
-  # old versions of installed formulae, and all downloads > 120 days old.
-  if brew cleanup; then
-    printf "%b\n" "${SUCCEEDED} brew cleanup successful." | tee -a "${TMPFILE}"
+    if brew upgrade --cask; then
+      log "${SUCCEEDED} brew casks upgraded."
+    else
+      log "${FAILED} brew casks upgrades unsuccessful."
+      brew_status=1
+    fi
+
+    # Update outdated casks (using a portable loop instead of GNU-specific xargs -r)
+    local outdated_casks
+    outdated_casks=$(brew outdated --cask | cut -f1)
+    if [ -n "$outdated_casks" ]; then
+      while IFS= read -r cask; do
+        if brew reinstall --cask "$cask"; then
+          log "${SUCCEEDED} Reinstalled cask: $cask"
+        else
+          log "${FAILED} Failed to reinstall cask: $cask"
+          brew_status=1
+        fi
+      done <<<"$outdated_casks"
+    fi
+
+    if brew doctor && brew missing && brew cleanup -s; then
+      log "${SUCCEEDED} brew cleanup successful."
+    else
+      log "${FAILED} brew cleanup unsuccessful."
+      brew_status=1
+    fi
+
+    if [ $brew_status -eq 0 ]; then
+      log "${SUCCEEDED} All brew updates successful."
+    else
+      log "${FAILED} Some brew updates failed."
+    fi
   else
-    printf "%b\n" "${FAILED} brew cleanup unsuccessful." | tee -a "${TMPFILE}"
+    log "${FAILED} brew is not installed."
   fi
 }
 
-# Check for zsh framework Oh My Zsh updates
 check_ohmyzsh() {
-  box_wrap ohmyzsh
-
-  # A workaround for
-  if /bin/zsh -i -c "omz update --unattended"; then
-    printf "%b\n" "${SUCCEEDED} oh my zsh update successful." | tee -a "${TMPFILE}"
+  box_wrap "ohmyzsh" "Checking for Oh My Zsh updates..."
+  # Use the default ZSH directory or fallback to ~/.oh-my-zsh
+  if /bin/zsh -i -c "omz update"; then
+    log "${SUCCEEDED} Oh My Zsh update successful."
   else
-    printf "%b\n" "${FAILED} oh my zsh update unsuccessful." | tee -a "${TMPFILE}"
+    log "${FAILED} Oh My Zsh update unsuccessful."
   fi
 }
 
-# Check for Node package manager updates
 check_npm() {
-  box_wrap npm
+  box_wrap "npm" "Checking for npm updates..."
+  if command -v npm >/dev/null 2>&1; then
+    local npm_status=0
+    if npm update; then
+      log "${SUCCEEDED} npm update successful."
+    else
+      log "${FAILED} npm update unsuccessful."
+      npm_status=1
+    fi
 
-  if npm update; then
-    printf "%b\n" "${SUCCEEDED} npm updates successful." | tee -a "${TMPFILE}"
+    if npm install npm@latest -g; then
+      log "${SUCCEEDED} npm version updated to latest."
+    else
+      log "${FAILED} npm version update unsuccessful."
+      npm_status=1
+    fi
+
+    if npm outdated -g --depth=0; then
+      log "${SUCCEEDED} npm outdated packages fetched."
+    else
+      log "${FAILED} npm outdated packages fetch unsuccessful."
+      npm_status=1
+    fi
+
+    if [ $npm_status -eq 0 ]; then
+      log "${SUCCEEDED} All npm updates successful."
+    else
+      log "${FAILED} Some npm updates failed."
+    fi
   else
-    printf "%b\n" "${FAILED} npm updates unsuccessful." | tee -a "${TMPFILE}"
+    log "${FAILED} npm is not installed."
   fi
 }
 
-# Check for Vim package manager VimPlug updates
 check_vimplug() {
-  box_wrap VimPlug
-
-  # Run Neovim commands for
-  if
-    nvim -c "PlugUpgrade" +qa
-    nvim -c "PlugUpdate" +qa
-  then
-    printf "%b\n" "${SUCCEEDED} VimPlug updates successful." | tee -a "${TMPFILE}"
+  box_wrap "VimPlug" "Checking for VimPlug updates..."
+  if command -v nvim >/dev/null 2>&1; then
+    if nvim -c "PlugUpgrade" +qa && nvim -c "PlugUpdate" +qa; then
+      log "${SUCCEEDED} VimPlug upgrade successful."
+    else
+      log "${FAILED} VimPlug upgrade unsuccessful."
+    fi
   else
-    printf "%b\n" "${FAILED} VimPlug updates unsuccessful." | tee -a "${TMPFILE}"
+    log "${FAILED} nvim is not installed."
   fi
 }
 
-# Check for newly indexed command TLDRs
 check_tldr() {
-  box_wrap tldr
-
-  if tldr --update; then
-    printf "%b\n" "${SUCCEEDED} tldr updates successful." | tee -a "${TMPFILE}"
+  box_wrap "tldr" "Checking for tldr updates..."
+  if command -v tldr >/dev/null 2>&1; then
+    if tldr --update; then
+      log "${SUCCEEDED} tldr updates successful."
+    else
+      log "${FAILED} tldr updates unsuccessful."
+    fi
   else
-    printf "%b\n" "${FAILED} tldr updates unsuccessful." | tee -a "${TMPFILE}"
+    log "${FAILED} tldr is not installed."
   fi
 }
 
-# WIP
-# TODO: Add better VPN handling
-# TODO: Check for VSCode updates
 check_vscode() {
-  # Check for VSCode updates
-  box_wrap VSCode
-  if mullvad status | grep "Connected"; then
-    printf "%b\n" "${SUCCEEDED} VPN disconnected for VSCode updates."
-    if code-insiders --update-extensions; then
-      printf "%b\n" "${SUCCEEDED} VSCode extensions updates successful." | tee -a "${TMPFILE}"
+  box_wrap "VSCode" "Checking for VSCode extension updates..."
+  if command -v code >/dev/null 2>&1; then
+    if code --update-extensions; then
+      log "${SUCCEEDED} VSCode extensions update successful."
     else
-      printf "%b\n" "${FAILED} VSCode extensions updates unsuccessful." | tee -a "${TMPFILE}"
+      log "${FAILED} VSCode extensions update unsuccessful."
     fi
-
-    # Compare if updated extensions differ from ~/.dotfiles/vscode/extensions.txt, if so, update extensions.txt
-    if code-insiders --list-extensions >~/.dotfiles/vscode/extensions.txt; then
-      printf "%b\n" "${SUCCEEDED} dotfiles' VSCode extensions list updated." | tee -a "${TMPFILE}"
-      # Print reminder to commit and push updated extensions.txt
-      printf "%b\n" "  → → → Remember to commit and push updated .dotfiles to GitHub!" | tee -a "${TMPFILE}"
-    else
-      printf "%b\n" "${FAILED} dotfiles' VSCode extensions list update unsuccessful." | tee -a "${TMPFILE}"
-    fi
-  fi
-
-  # Ensure VPN is reconnected before finishing function
-  if mullvad status | grep "Disconnected"; then
-    mullvad connect
+  else
+    log "${FAILED} VSCode (code) command not found."
   fi
 }
 
-# TODO: Add crontab support for scheduled updates
+#============================================================================
+# Final Results & Main Execution
+#============================================================================
 
-# Print formatted final results
 results() {
-  printf "─%.0s" {1..48}
-  echo
-  printf "%s\n" "Done."
-  clear
-  printf "%b\n" "${LOGO}"
-  printf "%b\n" "$(date +"upDoc results for %c")"
-  printf "─%.0s" {1..48}
-  echo
-  cat /tmp/updoc-log
-
-  # TODO: If there are recommended updates, persist reminder in tempfile for next run
-  # if grep -q "Label" $TMPFILE; then
-  #   box_wrap There are recommended updates to install
-  # fi
-
-  rm /tmp/updoc-log
+  local line
+  line=$(printf '─%.0s' $(seq 1 48))
+  echo "${line}"
+  echo "Done."
+  # clear
+  echo -e "${LOGO}"
+  echo -e "$(date +"upDoc results for %c")"
+  echo "${line}"
+  cat "${LOGFILE}"
 }
-
-#============================================================================
-# Main Execution
-#============================================================================
 
 main() {
-  # Clear the screen
   clear
-  # Check for tempfile and/or create one
-  check_temp_file
-  # Show the pretty ASCII logo
-  echo "${LOGO}"
-  # Check for updates
+  echo -e "${LOGO}"
   check_system
   check_ohmyzsh
   check_brew
@@ -279,7 +306,6 @@ main() {
   check_vimplug
   check_tldr
   check_vscode
-  # Show the results
   results
 }
 
