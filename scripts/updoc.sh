@@ -2,7 +2,7 @@
 # updoc.sh - Update Doctor: General Update Check Utility
 # Author: Timothy Merritt (Refactored by ChatGPT)
 # Date: 2025-03-06
-# Version: 0.4.4
+# Version: 0.4.7
 
 # Set strict error handling
 set -euo pipefail
@@ -19,11 +19,8 @@ PENDING="${YELLOW}●${NO_COLOR}"
 FAILED="${RED}𐄂${NO_COLOR}"
 SUCCEEDED="${GREEN}✔${NO_COLOR}"
 
-# Determine a normalized temporary directory (strip any trailing slash)
-LOGDIR="${TMPDIR:-/tmp}"
-LOGDIR="${LOGDIR%/}"
-LOGFILE=$(mktemp "$LOGDIR/updoc-log.XXXXXX")
-trap "rm -f \"$LOGFILE\"" EXIT
+# Create a persistent log file in /tmp with a consistent path.
+LOGFILE=$(mktemp /tmp/updoc-log-XXXXXX)
 
 # Configuration file path and update options placeholder
 CONFIG_FILE="$HOME/.updoc_config"
@@ -32,7 +29,7 @@ UPDATE_OPTIONS=""
 # Global summary associative array
 declare -A SUMMARY
 
-# ASCII Logo (with current version)
+# ASCII Logo
 LOGO=$(
   cat <<'EOF'
                         ____
@@ -41,7 +38,7 @@ LOGO=$(
 /_  __/  / /_/ / /_/ / /_/ / /_/ / /__   /_  __/
  /_/     \__,_/ .___/_____/\____/\___/    /_/
              /_/
-                     v0.4.4
+                     v0.4.7
 
               What's updated, Doc?
 EOF
@@ -54,12 +51,10 @@ verbose=0
 # Helper Functions
 #============================================================================
 
-# Check if a command exists in the current PATH.
 command_exists() {
   command -v "$1" >/dev/null 2>&1
 }
 
-# Run a command, piping its output live (via tee) to both stdout and the log.
 run_command() {
   local description="$1"
   shift
@@ -73,7 +68,6 @@ run_command() {
   fi
 }
 
-# Log messages with a timestamp to the log file and (if verbose) to stdout.
 log() {
   local msg="$1"
   local timestamp
@@ -84,7 +78,6 @@ log() {
   fi
 }
 
-# Display a status message inside an ASCII box if the 'boxes' command is available.
 box_wrap() {
   local app="$1"
   local label="${2:-Checking for ${app} updates...}"
@@ -99,6 +92,7 @@ box_wrap() {
 #============================================================================
 # CLI-based Configuration Menu
 #============================================================================
+
 configure_menu() {
   echo -e "$LOGO"
   echo "Welcome to the upDoc configuration wizard!"
@@ -146,8 +140,9 @@ configure_menu() {
 }
 
 #============================================================================
-# Usage Function & Argument Parsing
+# Usage & Argument Parsing
 #============================================================================
+
 usage() {
   echo "Usage: ${0##*/} [-h] [-v] [--configure]"
   echo "  -h            Show help message"
@@ -155,7 +150,6 @@ usage() {
   echo "  --configure   Run configuration setup"
 }
 
-# First, check for any long options before getopts
 for arg in "$@"; do
   if [[ "$arg" == "--configure" ]]; then
     configure_menu
@@ -163,7 +157,6 @@ for arg in "$@"; do
   fi
 done
 
-# Process short options
 while getopts "hv" opt; do
   case ${opt} in
   h)
@@ -181,12 +174,8 @@ while getopts "hv" opt; do
 done
 shift $((OPTIND - 1))
 
-#============================================================================
-# Load Configuration
-#============================================================================
 if [ -f "$CONFIG_FILE" ]; then
   source "$CONFIG_FILE"
-  # Convert the UPDATE_OPTIONS string into an array
   selected_updates=($UPDATE_OPTIONS)
 else
   echo "No configuration found. Run '$0 --configure' to set up your update checks."
@@ -197,7 +186,6 @@ fi
 # Update Check Functions
 #============================================================================
 
-# macOS updates using softwareupdate
 check_system() {
   box_wrap "macOS" "Checking for macOS updates..."
   if command_exists softwareupdate; then
@@ -225,17 +213,18 @@ check_system() {
             }
           }
           printf "* Update: %s", label;
-          if (recommended != "") {
-            printf " - %s", recommended;
-          }
-          if (action != "") {
-            printf " - %s", action;
-          }
+          if (recommended != "") { printf " - %s", recommended }
+          if (action != "") { printf " - %s", action }
           printf "\n";
         }' "$tmpfile")
       echo -e "$condensed" | tee -a "$LOGFILE"
       log "${SUCCEEDED} macOS updates fetch successful."
-      SUMMARY["macos"]="Success"
+      if [ -n "$condensed" ]; then
+        # Store only the update details (without the "Pending updates:" prefix)
+        SUMMARY["macos"]="Pending;$condensed"
+      else
+        SUMMARY["macos"]="Success"
+      fi
     else
       log "${FAILED} macOS updates fetch unsuccessful. See above for details."
       SUMMARY["macos"]="Failure"
@@ -247,7 +236,6 @@ check_system() {
   fi
 }
 
-# Homebrew update checks
 check_brew() {
   box_wrap "brew" "Checking for Homebrew updates..."
   if command_exists brew; then
@@ -264,7 +252,6 @@ check_brew() {
         run_command "Reinstall cask: $cask" brew reinstall --cask "$cask" || true
       done <<<"$outdated_casks"
     fi
-
     run_command "brew cleanup" bash -c 'brew doctor && brew missing && brew cleanup -s' || true
 
     if [ $brew_status -eq 0 ]; then
@@ -278,7 +265,6 @@ check_brew() {
   fi
 }
 
-# oh-my-zsh update checks
 check_ohmyzsh() {
   box_wrap "ohmyzsh" "Checking for oh‑my‑zsh updates..."
   if [ -d "$HOME/.oh-my-zsh" ]; then
@@ -289,12 +275,11 @@ check_ohmyzsh() {
       SUMMARY["ohmyzsh"]="Failure"
     fi
   else
-    log "${FAILED} oh‑my‑zsh not found in \$HOME/.oh-my-zsh."
+    log "${FAILED} oh‑my‑zsh not found in $HOME/.oh-my-zsh."
     SUMMARY["ohmyzsh"]="Not Installed"
   fi
 }
 
-# npm update checks
 check_npm() {
   box_wrap "npm" "Checking for npm updates..."
   if command_exists npm; then
@@ -302,10 +287,16 @@ check_npm() {
     local npm_status=0
     if ! run_command "npm update" npm update; then npm_status=1; fi
     if ! run_command "npm upgrade to latest" npm install npm@latest -g; then npm_status=1; fi
-    run_command "npm outdated check" npm outdated -g --depth=0 || true
-    if [ $npm_status -eq 0 ]; then
-      SUMMARY["npm"]="Success"
+    local npm_outdated
+    npm_outdated=$(npm outdated -g --depth=0 2>&1) || true
+    if [ -n "$npm_outdated" ] && [[ "$npm_outdated" != *"Package   Current"* ]]; then
+      local first_three
+      first_three=$(echo "$npm_outdated" | head -n 3 | tr '\n' ';')
+      SUMMARY["npm"]="Outdated packages;$first_three"
     else
+      SUMMARY["npm"]="Success"
+    fi
+    if [ $npm_status -ne 0 ]; then
       SUMMARY["npm"]="Failure"
     fi
   else
@@ -314,7 +305,6 @@ check_npm() {
   fi
 }
 
-# VimPlug update checks using Neovim in headless mode
 check_vimplug() {
   box_wrap "VimPlug" "Checking for VimPlug updates..."
   if command_exists nvim; then
@@ -334,7 +324,6 @@ check_vimplug() {
   fi
 }
 
-# tldr update checks
 check_tldr() {
   box_wrap "tldr" "Checking for tldr updates..."
   if command_exists tldr; then
@@ -350,7 +339,6 @@ check_tldr() {
   fi
 }
 
-# VSCode extension update checks
 check_vscode() {
   box_wrap "VSCode" "Checking for VSCode extension updates..."
   if command_exists code; then
@@ -366,7 +354,6 @@ check_vscode() {
   fi
 }
 
-# apt update checks (for Debian-based systems)
 check_apt() {
   box_wrap "apt" "Checking for apt updates..."
   if command_exists apt; then
@@ -381,7 +368,6 @@ check_apt() {
   fi
 }
 
-# pip update checks (for Python packages)
 check_pip() {
   box_wrap "pip" "Checking for pip updates..."
   if command_exists pip; then
@@ -398,17 +384,65 @@ check_pip() {
 #============================================================================
 # Final Results & Main Execution
 #============================================================================
+
 results() {
-  local line
-  line=$(printf '─%.0s' $(seq 1 48))
-  echo "$line"
-  echo "Update Summary:"
+  local separator
+  separator=$(printf '─%.0s' $(seq 1 48))
+  echo "$separator"
+  echo -e "${GREEN}Update Summary:${NO_COLOR}"
   for update in "${selected_updates[@]}"; do
-    printf "  %-8s : %s\n" "$update" "${SUMMARY[$update]}"
+    local value="${SUMMARY[$update]}"
+    [ -z "$value" ] && value="Success"
+    if [ "$update" == "macos" ]; then
+      if [[ "$value" == Pending* ]]; then
+        # For macOS, display "Pending" (in yellow) as the overall status.
+        printf "  %-8s: ${YELLOW}Pending${NO_COLOR}\n" "$update"
+        # Remove the "Pending;" prefix and then bullet each update.
+        local details="${value#Pending;}"
+        IFS=';' read -ra parts <<<"$details"
+        for part in "${parts[@]}"; do
+          part="$(echo "$part" | sed 's/^ *//;s/ *$//')"
+          [ -n "$part" ] && echo "    - $part"
+        done
+      else
+        # Otherwise, print as normal.
+        if [ "$value" == "Success" ]; then
+          printf "  %-8s: ${GREEN}%s${NO_COLOR}\n" "$update" "$value"
+        elif [ "$value" == "Failure" ] || [ "$value" == "Not Installed" ]; then
+          printf "  %-8s: ${RED}%s${NO_COLOR}\n" "$update" "$value"
+        else
+          printf "  %-8s: %s\n" "$update" "$value"
+        fi
+      fi
+    else
+      # For non-macOS, if the value has multiple parts separated by semicolons.
+      if [[ "$value" == *";"* ]]; then
+        # If the status is "Outdated packages;...", we display overall as Success in green.
+        if [[ "$value" == Outdated* ]]; then
+          printf "  %-8s: ${GREEN}Success${NO_COLOR}\n" "$update"
+        else
+          printf "  %-8s: %s\n" "$update" "$value"
+        fi
+        IFS=';' read -ra parts <<<"$value"
+        for part in "${parts[@]}"; do
+          part="$(echo "$part" | sed 's/^ *//;s/ *$//')"
+          if [[ "$part" != "Success" && "$part" != "Failure" && "$part" != "Not Installed" && "$part" != Outdated* ]]; then
+            [ -n "$part" ] && echo "    - $part"
+          fi
+        done
+      else
+        if [ "$value" == "Success" ]; then
+          printf "  %-8s: ${GREEN}%s${NO_COLOR}\n" "$update" "$value"
+        elif [ "$value" == "Failure" ] || [ "$value" == "Not Installed" ]; then
+          printf "  %-8s: ${RED}%s${NO_COLOR}\n" "$update" "$value"
+        else
+          printf "  %-8s: %s\n" "$update" "$value"
+        fi
+      fi
+    fi
   done
-  echo "$line"
-  echo "For full details, please check the log file:"
-  echo "  $LOGFILE"
+  echo "$separator"
+  echo -e "For full details, please check the log file:\n  ${YELLOW}${LOGFILE}${NO_COLOR}"
 }
 
 main() {
