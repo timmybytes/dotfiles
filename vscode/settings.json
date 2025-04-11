@@ -366,6 +366,9 @@
   // * ESLint
   // ---------------------------------------------------
   "eslint.format.enable": true,
+  "eslint.rules.customizations": [
+    { "rule": "react/react-in-jsx-scope", "severity": "off" }
+  ],
   // ---------------------------------------------------
   // * Live Server
   // ---------------------------------------------------
@@ -568,7 +571,6 @@
   "security.workspace.trust.untrustedFiles": "open",
   "editor.minimap.enabled": false,
   "gitlens.mode.active": "zen",
-  "github.copilot.editor.enableAutoCompletions": true,
   "workbench.editor.enablePreview": false,
   "workbench.navigationControl.enabled": false,
   "chat.commandCenter.enabled": false,
