@@ -6,5 +6,6 @@
   "prettier.singleQuote": true,
   "prettier.proseWrap": "never",
   "prettier.tabWidth": 2,
-  "prettier.requireConfig": true
+  "prettier.requireConfig": true,
+  "prettier.semi": true
 }
