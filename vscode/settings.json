@@ -109,7 +109,9 @@
   "workbench.editor.showTabs": "multiple",
   "workbench.editor.tabSizing": "shrink",
   "workbench.editorAssociations": {
-    "*.ipynb": "jupyter-notebook"
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "*.ipynb": "jupyter-notebook",
+    "*.svg": "default"
   },
   "workbench.experimental.settingsProfiles.enabled": true,
   "workbench.iconTheme": "catppuccin-perfect-macchiato",
@@ -574,5 +576,6 @@
   "workbench.editor.enablePreview": false,
   "workbench.navigationControl.enabled": false,
   "chat.commandCenter.enabled": false,
-  "window.commandCenter": false
+  "window.commandCenter": false,
+  "workbench.activityBar.location": "hidden"
 }
