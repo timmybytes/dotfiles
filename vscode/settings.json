@@ -565,7 +565,7 @@
   "search.useIgnoreFiles": false,
   "github.copilot.enable": {
     "*": true,
-    "plaintext": false,
+    "plaintext": true,
     "markdown": true,
     "scminput": false
   },
