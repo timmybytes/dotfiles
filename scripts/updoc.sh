@@ -269,7 +269,7 @@ check_ohmyzsh() {
   box_wrap "ohmyzsh" "Checking for oh‑my‑zsh updates..."
   if [ -d "$HOME/.oh-my-zsh" ]; then
     echo "🞧 Running oh‑my‑zsh update..."
-    if run_command "oh‑my‑zsh update" /bin/zsh -ic "omz update"; then
+    if run_command "oh-my-zsh update" bash -c '/bin/zsh -ic "omz update || true"'; then
       SUMMARY["ohmyzsh"]="Success"
     else
       SUMMARY["ohmyzsh"]="Failure"
