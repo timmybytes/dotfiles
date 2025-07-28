@@ -121,7 +121,6 @@
   "workbench.tree.indent": 15, // Explorer open folder/files indents
   "workbench.tree.renderIndentGuides": "none",
   "zenMode.fullScreen": false,
-  "zenMode.showTabs": "single",
   // ---------------------------------------------------
   // * * Fonts & Typography () => <= 0 O 1 l
   // ---------------------------------------------------
@@ -567,15 +566,17 @@
     "*": true,
     "plaintext": true,
     "markdown": true,
-    "scminput": false
+    "scminput": false,
+    "typescriptreact": true
   },
   "window.customTitleBarVisibility": "windowed",
   "security.workspace.trust.untrustedFiles": "open",
-  "editor.minimap.enabled": false,
   "gitlens.mode.active": "zen",
   "workbench.editor.enablePreview": false,
   "workbench.navigationControl.enabled": false,
   "chat.commandCenter.enabled": false,
   "window.commandCenter": false,
-  "workbench.activityBar.location": "hidden"
+  "workbench.activityBar.location": "hidden",
+  "workbench.editor.editorActionsLocation": "titleBar",
+  "editor.minimap.enabled": false
 }
