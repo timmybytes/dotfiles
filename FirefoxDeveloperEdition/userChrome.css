@@ -39,6 +39,8 @@
 
   --mbarstyler-match-background-opacity: 0;
   /* [0.0,0.05,0.1] */
+
+  --tab-min-width-pref: 150px !important;
 }
 
 /* *MEGABAR NIGHTMARE FIX via u/skyyblaze - reddit */
@@ -233,15 +235,15 @@
 /* **************************** T A B S ******************************** */
 
 :root:not([customizing]) .tabbrowser-tab:not([pinned="true"]) {
-  /* --tab-min-width: 40px !important; */
+
   /* flex: 0 !important; */
-  max-width: 20px !important;
+  max-width: 150px !important;
   /* min-width: 40px !important; */
 }
 
 .tabbrowser-tab:not([pinned]) {
   flex: 0 !important;
-  max-width: 40px !important;
+  max-width: 150px !important;
   /* min-width: 40px !important; */
 }
 
