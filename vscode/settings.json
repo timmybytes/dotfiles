@@ -114,7 +114,7 @@
     "*.svg": "default"
   },
   "workbench.experimental.settingsProfiles.enabled": true,
-  "workbench.iconTheme": "catppuccin-perfect-macchiato",
+  "workbench.iconTheme": "catppuccin-macchiato",
   "workbench.layoutControl.enabled": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
   "workbench.startupEditor": "newUntitledFile",
