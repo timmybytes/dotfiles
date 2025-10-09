@@ -577,6 +577,5 @@
   "chat.commandCenter.enabled": false,
   "window.commandCenter": false,
   "workbench.activityBar.location": "hidden",
-  "workbench.editor.editorActionsLocation": "titleBar",
-  "editor.minimap.enabled": false
+  "workbench.editor.editorActionsLocation": "titleBar"
 }
