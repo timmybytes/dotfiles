@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# updoc.sh - Update Doctor: General Update Check Utility
-# Author: Timothy Merritt (Refactored by ChatGPT)
+# upDoc (Update Doctor): General Update Check Utility
+# Author: Timothy Merritt
 # Date: 2025-03-06
 # Version: 0.4.7
 
@@ -19,8 +19,19 @@ PENDING="${YELLOW}●${NO_COLOR}"
 FAILED="${RED}𐄂${NO_COLOR}"
 SUCCEEDED="${GREEN}✔${NO_COLOR}"
 
-# Create a persistent log file in /tmp with a consistent path.
-LOGFILE=$(mktemp /tmp/updoc-log-$(date +%Y%m%d-%H%M%S)-XXXXXX)
+# Persistent logging (~/Library/Logs/upDoc)
+LOG_DIR="$HOME/Library/Logs/upDoc"
+
+# Ensure the log directory exists
+if [ ! -d "$LOG_DIR" ]; then
+  mkdir -p "$LOG_DIR"
+fi
+
+# Human-readable, time-stamped logfile name (avoid ":" for macOS/Finder)
+LOGFILE="$LOG_DIR/upDoc_$(date '+%Y-%m-%d_%H-%M-%S').log"
+
+# Optional: maintain a stable pointer to the most recent run
+ln -sf "$LOGFILE" "$LOG_DIR/latest.log"
 
 # Configuration file path and update options placeholder
 CONFIG_FILE="$HOME/.updoc_config"
@@ -152,8 +163,8 @@ usage() {
 
 for arg in "$@"; do
   if [[ "$arg" == "--configure" ]]; then
+    # configure_menu already exits internally
     configure_menu
-    exit 0
   fi
 done
 
@@ -175,8 +186,11 @@ done
 shift $((OPTIND - 1))
 
 if [ -f "$CONFIG_FILE" ]; then
+  # shellcheck source=~/.updoc_config
+  # shellcheck disable=SC1090
   source "$CONFIG_FILE"
-  selected_updates=($UPDATE_OPTIONS)
+  # Safely split UPDATE_OPTIONS into an array (prevents unintended globbing/word splitting issues)
+  read -r -a selected_updates <<< "$UPDATE_OPTIONS"
 else
   echo "No configuration found. Run '$0 --configure' to set up your update checks."
   exit 1
@@ -252,7 +266,10 @@ check_brew() {
         run_command "Reinstall cask: $cask" brew reinstall --cask "$cask" || true
       done <<<"$outdated_casks"
     fi
-    run_command "brew cleanup" bash -c 'brew doctor && brew missing && brew cleanup -s' || true
+    # (warn-only for doctor/missing; strict for cleanup):
+    brew doctor 2>&1 | tee -a "$LOGFILE" || true
+    brew missing 2>&1 | tee -a "$LOGFILE" || true
+    run_command "brew cleanup" brew cleanup -s || true
 
     if [ $brew_status -eq 0 ]; then
       SUMMARY["brew"]="Success"
