@@ -403,15 +403,10 @@
   // * Markdown Preview Enhanced
   // ---------------------------------------------------
   "markdown-preview-enhanced.automaticallyShowPreviewOfMarkdownBeingEdited": false,
-  "markdown-preview-enhanced.previewTheme": "github-light.css",
-  "markdown.preview.scrollEditorWithPreview": false,
-  "markdown.preview.scrollPreviewWithEditor": false,
+  "markdown-preview-enhanced.previewTheme": "atom-dark.css",
+  "markdown.preview.scrollEditorWithPreview": true,
+  "markdown.preview.scrollPreviewWithEditor": true,
   "markdown-preview-enhanced.scrollSync": true,
-  // ---------------------------------------------------
-  // * Polacode
-  // ---------------------------------------------------
-  "polacode.transparentBackground": true,
-  "polacode.shadow": "rgba(0, 0, 0, 0.55) 0px 20px 68px",
   // ---------------------------------------------------
   // * Prettier
   // ---------------------------------------------------
@@ -571,11 +566,12 @@
   },
   "window.customTitleBarVisibility": "windowed",
   "security.workspace.trust.untrustedFiles": "open",
-  "gitlens.mode.active": "zen",
+  "gitlens.mode.active": "review",
   "workbench.editor.enablePreview": false,
   "workbench.navigationControl.enabled": false,
   "chat.commandCenter.enabled": false,
   "window.commandCenter": false,
   "workbench.activityBar.location": "hidden",
-  "workbench.editor.editorActionsLocation": "titleBar"
+  "workbench.editor.editorActionsLocation": "titleBar",
+  "editor.minimap.enabled": false
 }
