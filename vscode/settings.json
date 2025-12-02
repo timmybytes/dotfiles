@@ -573,5 +573,6 @@
   "window.commandCenter": false,
   "workbench.activityBar.location": "hidden",
   "workbench.editor.editorActionsLocation": "titleBar",
-  "editor.minimap.enabled": false
+  "editor.minimap.enabled": false,
+  "explorer.confirmPasteNative": false
 }
