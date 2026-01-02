@@ -38,7 +38,7 @@
   "editor.gotoLocation.multipleImplementations": "goto",
   "editor.gotoLocation.multipleReferences": "goto",
   "editor.gotoLocation.multipleTypeDefinitions": "goto",
-  "editor.hover.enabled": true,
+  "editor.hover.enabled": "on",
   "editor.hover.delay": 500,
   "editor.hover.sticky": true,
   "editor.inlayHints.enabled": "on",
@@ -566,7 +566,6 @@
   },
   "window.customTitleBarVisibility": "windowed",
   "security.workspace.trust.untrustedFiles": "open",
-  "gitlens.mode.active": "review",
   "workbench.editor.enablePreview": false,
   "workbench.navigationControl.enabled": false,
   "chat.commandCenter.enabled": false,
@@ -574,5 +573,7 @@
   "workbench.activityBar.location": "hidden",
   "workbench.editor.editorActionsLocation": "titleBar",
   "editor.minimap.enabled": false,
-  "explorer.confirmPasteNative": false
+  "explorer.confirmPasteNative": false,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "git.blame.editorDecoration.enabled": false
 }
