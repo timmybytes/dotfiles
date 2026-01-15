@@ -11,3 +11,10 @@
 
 # Dependencies
 /node_modules
+
+# Builds
+/dist
+/dist-*
+/build
+/build-*
+/out
