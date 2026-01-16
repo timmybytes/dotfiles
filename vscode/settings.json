@@ -403,7 +403,6 @@
   // * Markdown Preview Enhanced
   // ---------------------------------------------------
   "markdown-preview-enhanced.automaticallyShowPreviewOfMarkdownBeingEdited": false,
-  "markdown-preview-enhanced.previewTheme": "atom-dark.css",
   "markdown.preview.scrollEditorWithPreview": true,
   "markdown.preview.scrollPreviewWithEditor": true,
   "markdown-preview-enhanced.scrollSync": true,
