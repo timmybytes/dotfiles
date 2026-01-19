@@ -574,5 +574,6 @@
   "editor.minimap.enabled": false,
   "explorer.confirmPasteNative": false,
   "github.copilot.nextEditSuggestions.enabled": true,
-  "git.blame.editorDecoration.enabled": false
+  "git.blame.editorDecoration.enabled": false,
+  "workbench.secondarySideBar.defaultVisibility": "hidden"
 }
