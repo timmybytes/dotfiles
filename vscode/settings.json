@@ -406,6 +406,7 @@
   "markdown.preview.scrollEditorWithPreview": true,
   "markdown.preview.scrollPreviewWithEditor": true,
   "markdown-preview-enhanced.scrollSync": true,
+  "markdown-preview-enhanced.previewTheme": "one-dark.css",
   // ---------------------------------------------------
   // * Prettier
   // ---------------------------------------------------
