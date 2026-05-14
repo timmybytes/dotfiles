@@ -97,6 +97,10 @@
     "default": "right",
     "jupyter-notebook": "left",
   },
+  "search.exclude": {
+    "**/node_modules": true,
+    ".git/": true,
+  },
   "telemetry.telemetryLevel": "off",
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.gpuAcceleration": "on",
@@ -182,6 +186,7 @@
   // "editor.inlayHints.fontSize": 28,
   // "editor.inlayHints.fontFamily": "",
   // "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+
   // ---------------------------------------------------
   // * * Theme & Colors
   // ---------------------------------------------------
@@ -580,4 +585,6 @@
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
+  "inlineChat.defaultModel": "GPT-5 mini (copilot)",
+  "editor.minimap.enabled": false,
 }
