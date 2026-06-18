@@ -567,7 +567,7 @@
     "plaintext": true,
     "markdown": true,
     "scminput": false,
-    "typescriptreact": true,
+    "typescriptreact": false,
   },
   "window.customTitleBarVisibility": "windowed",
   "security.workspace.trust.untrustedFiles": "open",
@@ -586,5 +586,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "inlineChat.defaultModel": "GPT-5 mini (copilot)",
-  "editor.minimap.enabled": false,
+  "todo-tree.ripgrep.ripgrep": "/opt/homebrew/Cellar/ripgrep/15.1.0",
+  "chat.titleBar.openInAgentsWindow.enabled": false,
 }
