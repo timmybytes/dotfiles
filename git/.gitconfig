@@ -36,3 +36,5 @@
 	required = true
 [credential]
 	helper = osxkeychain
+[http]
+	postBuffer = 550286400
