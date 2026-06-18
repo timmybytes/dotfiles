@@ -255,5 +255,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 export PATH="$PATH:$HOME/ngrok"
 export PATH="/opt/homebrew/bin:$PATH"
 
+export DISPLAY=:0
+
 # The next line updates PATH for Netlify's Git Credential Helper.
 test -f '/Users/timothymerritt/Library/Preferences/netlify/helper/path.zsh.inc' && source '/Users/timothymerritt/Library/Preferences/netlify/helper/path.zsh.inc'
