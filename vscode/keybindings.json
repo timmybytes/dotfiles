@@ -243,10 +243,6 @@
     "command": "-workbench.action.reopenClosedEditor",
   },
   {
-    "key": "shift+cmd+t",
-    "command": "workbench.view.extension.todo-tree-container",
-  },
-  {
     "key": "shift+cmd+enter",
     "command": "typescript.goToSourceDefinition",
     "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor",
@@ -302,5 +298,20 @@
     "key": "shift+cmd+enter",
     "command": "-editor.action.insertLineBefore",
     "when": "editorTextFocus && !editorReadonly",
+  },
+  {
+    "key": "shift+cmd+t",
+    "command": "-workbench.action.chat.focusTodosView",
+    "when": "inChatInput && chatAgentKind == 'agent' || inChatTodoList && chatAgentKind == 'agent'",
+  },
+  {
+    "key": "shift+cmd+t",
+    "command": "-mergeEditor.toggleBetweenInputs",
+    "when": "isMergeEditor",
+  },
+  {
+    "key": "shift+cmd+t",
+    "command": "-extension.openPreviewOnFocus",
+    "when": "editorTextFocus",
   },
 ]
