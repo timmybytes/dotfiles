@@ -16,7 +16,7 @@
     "source.format.json": "explicit",
     "source.format.js": "explicit",
     "source.format.css": "explicit",
-    "source.format.html": "explicit"
+    "source.format.html": "explicit",
   },
   "editor.codeLens": true,
   "editor.colorDecorators": true,
@@ -77,7 +77,7 @@
   "editor.wrappingStrategy": "advanced",
   // Prevent expanding directory when jumping to nested file
   "explorer.autoRevealExclude": {
-    "**/node_modules": true
+    "**/node_modules": true,
   },
   "explorer.compactFolders": false,
   "explorer.confirmDelete": false,
@@ -88,18 +88,18 @@
   "explorer.sortOrder": "default",
   "files.autoSave": "onFocusChange",
   "files.exclude": {
-    "**/.git": false // Show .git directory by default
+    "**/.git": false, // Show .git directory by default
   },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "git.decorations.enabled": true,
   "notebook.cellToolbarLocation": {
     "default": "right",
-    "jupyter-notebook": "left"
+    "jupyter-notebook": "left",
   },
   "search.exclude": {
     "**/node_modules": true,
-    ".git/": true
+    ".git/": true,
   },
   "telemetry.telemetryLevel": "off",
   "terminal.external.osxExec": "iTerm.app",
@@ -115,7 +115,7 @@
   "workbench.editorAssociations": {
     "*.copilotmd": "vscode.markdown.preview.editor",
     "*.ipynb": "jupyter-notebook",
-    "*.svg": "default"
+    "*.svg": "default",
   },
   "workbench.experimental.settingsProfiles.enabled": true,
   "workbench.iconTheme": "catppuccin-macchiato",
@@ -168,7 +168,7 @@
   "editor.parameterHints.enabled": false,
   "editor.quickSuggestions": {
     "comments": false,
-    "strings": "inline"
+    "strings": "inline",
   },
   "editor.quickSuggestionsDelay": 500,
   "editor.snippetSuggestions": "inline",
@@ -225,7 +225,7 @@
     "merge.incomingContentBackground": "#ff000013",
     "[In Bed by 7pm]": {
       "editorSuggestWidget.highlightForeground": "#aa82ee",
-      "quickInputList.focusBackground": "#aa82ee8e"
+      "quickInputList.focusBackground": "#aa82ee8e",
     },
     "[Everforest Dark]": {
       "activityBar.background": "#2a2426",
@@ -273,24 +273,24 @@
       "tab.unfocusedInactiveForeground": "#868d80",
       "titleBar.activeBackground": "#2a2426",
       "titleBar.border": "#2a2426",
-      "titleBar.inactiveBackground": "#2a2426"
-    }
+      "titleBar.inactiveBackground": "#2a2426",
+    },
   },
   "workbench.editor.customLabels.enabled": true,
   "workbench.editor.customLabels.patterns": {
     "**/app/**/page.tsx": "${dirname}.${extname}",
-    "**/app/**/layout.tsx": "${dirname}/layout.${extname}"
+    "**/app/**/layout.tsx": "${dirname}/layout.${extname}",
   },
   // ---------------------------------------------------
   // * Language-specific rules
   // ---------------------------------------------------
   "[handlebars]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
   },
   "html.format.contentUnformatted": "pre,code,textarea",
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.autoClosingBrackets": "always"
+    "editor.autoClosingBrackets": "always",
   },
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
   // "javascript.inlayHints.parameterNames.enabled": "none",
@@ -299,36 +299,36 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.autoClosingBrackets": "always"
+    "editor.autoClosingBrackets": "always",
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   // Throws errors in mdx frontmatter arrays, keep disabled
   "mdx.validate.validateReferences": "ignore",
   "[markdown]": {
     "editor.wordWrap": "bounded",
-    "editor.wordWrapColumn": 80,
+    "editor.wordWrapColumn": 130,
     "editor.quickSuggestions": {
       "comments": "on",
       "strings": "on",
-      "other": "on"
+      "other": "on",
     },
     "editor.formatOnSave": false,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[mdx]": {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[python]": {
-    "editor.formatOnPaste": false
+    "editor.formatOnPaste": false,
   },
   "[shellscript]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
+    "editor.defaultFormatter": "foxundermoon.shell-format",
   },
   // "typescript.inlayHints.parameterNames.enabled": "all",
   // "typescript.inlayHints.parameterTypes.enabled": true,
@@ -337,21 +337,21 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.autoClosingBrackets": "always"
+    "editor.autoClosingBrackets": "always",
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.autoClosingBrackets": "always"
+    "editor.autoClosingBrackets": "always",
   },
   // ---------------------------------------------------
   // * Emmet
   // ---------------------------------------------------
   "emmet.syntaxProfiles": {
-    "javascript": "jsx"
+    "javascript": "jsx",
   },
   "html-css-class-completion.enableEmmetSupport": true,
   "emmet.includeLanguages": {
-    "javascript": "javascriptreact"
+    "javascript": "javascriptreact",
   },
   "emmet.triggerExpansionOnTab": false,
   // ---------------------------------------------------
@@ -373,7 +373,7 @@
   // ---------------------------------------------------
   "eslint.format.enable": true,
   "eslint.rules.customizations": [
-    { "rule": "react/react-in-jsx-scope", "severity": "off" }
+    { "rule": "react/react-in-jsx-scope", "severity": "off" },
   ],
   // ---------------------------------------------------
   // * Live Server
@@ -402,7 +402,7 @@
     // Allow inline HTML
     "MD033": false,
     // First line should be top-level heading
-    "MD041": false
+    "MD041": false,
   },
   // ---------------------------------------------------
   // * Markdown Preview Enhanced
@@ -433,13 +433,13 @@
   "tailwindcss.colorDecorators": "on",
   "tailwindCSS.includeLanguages": {
     "typescript": "javascript", // if you are using typescript
-    "typescriptreact": "javascript" // if you are using typescript with react
+    "typescriptreact": "javascript", // if you are using typescript with react
   },
 
   "tailwindCSS.experimental.classRegex": [
     "tw`([^`]*)", // tw`...`
     "tw\\.[^`]+`([^`]*)`", // tw.xxx<xxx>`...`
-    "tw\\(.*?\\).*?`([^`]*)" // tw(Component)<xxx>`...`
+    "tw\\(.*?\\).*?`([^`]*)", // tw(Component)<xxx>`...`
   ],
   // ---------------------------------------------------
   // * TODO Highlight
@@ -452,7 +452,7 @@
     "**/*.html",
     "**/*.php",
     "**/*.css",
-    "**/*.scss"
+    "**/*.scss",
   ],
   "todohighlight.keywords": [
     {
@@ -460,7 +460,7 @@
       "color": "#000",
       "backgroundColor": "#B7CECE",
       "overviewRulerColor": "grey",
-      "isWholeLine": false
+      "isWholeLine": false,
     },
     {
       "text": "TEST:",
@@ -468,74 +468,74 @@
       "backgroundColor": "#ff8a28",
       "overviewRulerColor": "grey",
       "isWholeLine": true,
-      "border": "2px solid #000"
+      "border": "2px solid #000",
     },
     {
       "text": "FIXME:",
       "color": "#1d1d1d",
       "backgroundColor": "#ee6868",
-      "isWholeLine": true
+      "isWholeLine": true,
     },
     {
       "text": "TODO:",
       "color": "#1d1d1d",
-      "isWholeLine": false
+      "isWholeLine": false,
     },
     {
       "text": "WARNING:",
       "color": "#000",
       "backgroundColor": "#ff0000",
-      "isWholeLine": true
+      "isWholeLine": true,
     },
     {
       "text": "WIP:",
       "color": "#000",
       "backgroundColor": "#ff9253",
-      "isWholeLine": true
+      "isWholeLine": true,
     },
     {
       "text": "MARKER:",
       "color": "#000",
       "backgroundColor": "#0EB1D2",
-      "isWholeLine": true
+      "isWholeLine": true,
     },
     {
       "text": "MARKER 1:",
       "color": "#000",
       "backgroundColor": "#D299C2",
-      "isWholeLine": true
+      "isWholeLine": true,
     },
     {
       "text": "MARKER 2:",
       "color": "#000",
 
       "backgroundColor": "#22E08E",
-      "isWholeLine": true
+      "isWholeLine": true,
     },
     {
       "text": "MARKER 3:",
       "color": "#000",
       "backgroundColor": "#FFA69E",
-      "isWholeLine": true
+      "isWholeLine": true,
     },
     {
       "text": "MARKER 4:",
       "color": "#000",
       "backgroundColor": "#A6C0FE",
-      "isWholeLine": true
+      "isWholeLine": true,
     },
     {
       "text": "MARKER 5:",
       "color": "#000",
       "backgroundColor": "#FAF3DD",
-      "isWholeLine": true
+      "isWholeLine": true,
     },
     {
       "text": "DONE:",
       "color": "#000",
       "backgroundColor": "#25ee46",
-      "isWholeLine": true
-    }
+      "isWholeLine": true,
+    },
   ],
   // ---------------------------------------------------
   // * TODO Tree
@@ -549,7 +549,7 @@
     "WIP",
     "TEST",
     "[ ]",
-    "[x]"
+    "[x]",
   ],
   "todo-tree.general.statusBar": "tags",
 
@@ -568,7 +568,7 @@
     "plaintext": true,
     "markdown": true,
     "scminput": false,
-    "typescriptreact": false
+    "typescriptreact": false,
   },
   "github.copilot.editor.enableAutoCompletions": true,
   "window.customTitleBarVisibility": "windowed",
@@ -585,9 +585,9 @@
   "workbench.secondarySideBar.defaultVisibility": "hidden",
   "github.copilot.chat.anthropic.tools.websearch.enabled": true,
   "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "inlineChat.defaultModel": "GPT-5 mini (copilot)",
   "todo-tree.ripgrep.ripgrep": "/opt/homebrew/Cellar/ripgrep/15.1.0",
-  "chat.titleBar.openInAgentsWindow.enabled": false
+  "chat.titleBar.openInAgentsWindow.enabled": false,
 }
