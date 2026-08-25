@@ -248,7 +248,7 @@
       "peekViewResult.background": "#2e3440",
       "quickInput.background": "#2a2426",
       "quickInputTitle.background": "#2a2426",
-      "scrollbarSlider.activeBackground": "#e6d6ac",
+      "scrollbarSlider.activeBackground": "#e`6d6ac",
       "scrollbarSlider.background": "#e6d6ac",
       "scrollbarSlider.hoverBackground": "#ffefc5",
       "sideBar.background": "#2a2426",
@@ -311,14 +311,14 @@
   "mdx.validate.validateReferences": "ignore",
   "[markdown]": {
     "editor.wordWrap": "bounded",
-    "editor.wordWrapColumn": 80,
+    "editor.wordWrapColumn": 130,
     "editor.quickSuggestions": {
       "comments": "on",
       "strings": "on",
       "other": "on"
     },
     "editor.formatOnSave": false,
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[mdx]": {
     "editor.formatOnSave": true,
@@ -568,7 +568,7 @@
     "plaintext": true,
     "markdown": true,
     "scminput": false,
-    "typescriptreact": true
+    "typescriptreact": false
   },
   "github.copilot.editor.enableAutoCompletions": true,
   "window.customTitleBarVisibility": "windowed",
@@ -589,5 +589,6 @@
   },
   "inlineChat.defaultModel": "GPT-5 mini (copilot)",
   "chat.titleBar.openInAgentsWindow.enabled": false,
-  "github.copilot.nextEditSuggestions.eagerness": "high"
+  "github.copilot.nextEditSuggestions.eagerness": "high",
+  "todo-tree.ripgrep.ripgrep": "/opt/homebrew/Cellar/ripgrep/15.1.0"
 }
