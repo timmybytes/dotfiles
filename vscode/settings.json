@@ -566,7 +566,7 @@
   "github.copilot.enable": {
     "*": true,
     "plaintext": true,
-    "markdown": true,
+    "markdown": false,
     "scminput": false,
     "typescriptreact": false,
   },
@@ -592,4 +592,13 @@
   "github.copilot.nextEditSuggestions.eagerness": "high",
   "todo-tree.ripgrep.ripgrep": "/opt/homebrew/Cellar/ripgrep/15.1.0",
   "workbench.editor.useModal": "off",
+  "terminal.integrated.initialHint": false,
+  "yaml.disableSchemaDetection": [
+    "**/.github/workflows/*.yml",
+    "**/.github/workflows/*.yaml",
+    "**/.gitea/workflows/*.yml",
+    "**/.gitea/workflows/*.yaml",
+    "**/.forgejo/workflows/*.yml",
+    "**/.forgejo/workflows/*.yaml",
+  ],
 }
