@@ -277,6 +277,7 @@
     "**/app/**/page.tsx": "${dirname}.${extname}",
     "**/app/**/layout.tsx": "${dirname}/layout.${extname}"
   },
+  "workbench.experimental.modernUI": false,
   // ---------------------------------------------------
   // * Language-specific rules
   // ---------------------------------------------------
@@ -562,7 +563,7 @@
   "github.copilot.enable": {
     "*": true,
     "plaintext": true,
-    "markdown": false,
+    "markdown": true,
     "scminput": false,
     "typescriptreact": true
   },
