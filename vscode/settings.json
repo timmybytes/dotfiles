@@ -38,7 +38,7 @@
   "editor.gotoLocation.multipleImplementations": "goto",
   "editor.gotoLocation.multipleReferences": "goto",
   "editor.gotoLocation.multipleTypeDefinitions": "goto",
-  "editor.hover.enabled": "off",
+  "editor.hover.enabled": "on",
   "editor.hover.delay": 500,
   "editor.hover.sticky": true,
   "editor.inlayHints.enabled": "on",
@@ -598,11 +598,6 @@
     "**/.forgejo/workflows/*.yml",
     "**/.forgejo/workflows/*.yaml"
   ],
-  // "editor.quickSuggestions": {
-  //   "other": false,
-  //   "comments": false,
-  //   "strings": false,
-  // },
   "editor.suggest.preview": true
   // Comment to disable suggestions
   // "editor.acceptSuggestionOnEnter": "off",
